@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EcoFOCI_cnv_convert</class>
+ <widget class="QMainWindow" name="EcoFOCI_cnv_convert">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>459</width>
+    <height>765</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>460</y>
+      <width>193</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_lower">
+     <item row="4" column="0">
+      <widget class="QPushButton" name="btlSummaryButton">
+       <property name="text">
+        <string>Generate Bottle Summary</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="exitButton">
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="processButton">
+       <property name="text">
+        <string>Process Files</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="addMetaButton">
+       <property name="text">
+        <string>Add Cruise Meta Data</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>268</width>
+      <height>433</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="inputButton">
+       <property name="text">
+        <string>Select Cruise Directory</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Choose Input Directory</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="inputList"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Choose Output Directory</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="outputList"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>460</y>
+      <width>111</width>
+      <height>97</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>.cnv press label</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="presscomboBox">
+       <item>
+        <property name="text">
+         <string>prDM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>prdM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>prdm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>prSM</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="IPHCcheckBox">
+       <property name="text">
+        <string>is IPHC</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
