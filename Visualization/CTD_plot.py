@@ -99,11 +99,11 @@ else:
 for ncfile in sorted(nc_path):
  
     print "Working on file %s " % ncfile
-    nc = EcoFOCI_netCDF.EcoFOCI_netCDF(ncfile)
+    nc = EcoFOCI_netCDF(ncfile)
     ncdata = nc.ncreadfile_dic()
     g_atts = nc.get_global_atts()
     nc.close()
-    cast_time = EPIC2Datetime.EPIC2Datetime(ncdata['time'],ncdata['time2'])[0]
+    cast_time = EPIC2Datetime(ncdata['time'],ncdata['time2'])[0]
 
     if np.ndim(ncdata['dep']) == 1:
         ydata = ncdata['dep'][:]
