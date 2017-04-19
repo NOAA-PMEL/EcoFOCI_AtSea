@@ -20,6 +20,7 @@ usage `python CTD_plot.py {full/path/to/file.nc} -{plotflag}`
 
 plotflag options:
 ```
+  -h, --help            show this help message and exit
   -TSvD, --TSvD         Temperature, Salinity, SigmaT vs depth
   -OxyFluor, --OxyFluor
                         Temperature, Oxygen, Fluorometer vs depth
