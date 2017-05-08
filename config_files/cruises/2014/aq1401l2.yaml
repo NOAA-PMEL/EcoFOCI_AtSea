@@ -1,0 +1,34 @@
+---
+CruiseID: AQ1401
+Date_Ticks: multi_month
+start_time: ''
+end_time: ''
+EPIC_Key: S_41
+Ylabel: Depth
+Xlabel: Distance/Time
+Clabel: Salinity
+dtype: xsection
+depth_interval_m: 1
+maxdepth_m: 50 
+rangemin: 30.25
+rangemax: 32.25
+colormap_name: haline
+#S_42 - haline, T_28 - thermal, O_65 - oxy , F_903 - algae
+output_type: png
+plot_stylesheet: seaborn-poster
+ctd_data_path: /Volumes/WDC_internal/Users/bell/ecoraid/2014/CTDcasts/aq1401l2/final_data/ctd/
+ctd_files:
+
+- aq1401l2c013_ctd.nc
+- aq1401l2c012_ctd.nc
+- aq1401l2c011_ctd.nc
+- aq1401l2c010_ctd.nc
+- aq1401l2c009_ctd.nc
+- aq1401l2c008_ctd.nc
+- aq1401l2c007_ctd.nc
+- aq1401l2c006_ctd.nc
+- aq1401l2c005_ctd.nc
+
+
+notes:
+

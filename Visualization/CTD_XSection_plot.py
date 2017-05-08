@@ -18,6 +18,7 @@
 #System Stack
 import datetime
 import argparse
+import os
 
 import numpy as np
 import pandas as pd
@@ -114,7 +115,7 @@ ProfileTime = []
 
 fig = plt.figure(1, figsize=(12, 3), facecolor='w', edgecolor='w')
 ax1 = fig.add_subplot(111)		
-for castnum, cast in enumerate(sorted(ctd_files_path)):
+for castnum, cast in enumerate((ctd_files_path)):
 
 	#open/read netcdf files
 	print "Reading {cast}".format(cast=cast)
@@ -162,7 +163,7 @@ if not args.delta_x:
 
 	ax1.invert_yaxis()
 	ax1.xaxis.set_major_locator(DayLocator(bymonthday=15))
-	ax1.xaxis.set_minor_locator(DayLocator(bymonthday=[5,10,15,20,25,30]))
+	ax1.xaxis.set_minor_locator(DayLocator(bymonthday=range(1,32,1)))
 	ax1.xaxis.set_major_formatter(ticker.NullFormatter())
 	ax1.xaxis.set_minor_formatter(DateFormatter('%d'))
 	ax1.xaxis.set_major_formatter(DateFormatter('%b %y'))
