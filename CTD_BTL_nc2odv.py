@@ -25,7 +25,7 @@ from netCDF4 import Dataset
 import numpy as np
 
 #User Stack
-from calc.EPIC2Datetime import EPIC2Datetime, get_UDUNITS, Datetime2EPIC
+from calc.EPIC2Datetime import EPIC2Datetime
 from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF
 
 __author__   = 'Shaun Bell'
@@ -35,9 +35,6 @@ __modified__ = datetime.datetime(2014, 05, 22)
 __version__  = "0.1.0"
 __status__   = "Development"
 __keywords__ = 'netCDF','meta','header'
-
-"""--------------------------------EPIC Routines---------------------------------------"""
-
         
 """---------------------------------- Main --------------------------------------------"""
 
