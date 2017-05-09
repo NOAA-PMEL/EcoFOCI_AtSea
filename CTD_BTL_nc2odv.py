@@ -9,7 +9,10 @@ Usage:
 -----
 python CTD_andbtl_nc2odv.py /Users/bell/Data_Local/FOCI/ecoraid/2014/CTDcasts/kh1401/working/ --btl_dir /Users/bell/Data_Local/FOCI/ecoraid/2014/CTDcasts/kh1401/working/ > kh1401_odv.txt
 
-Using Anaconda packaged Python 
+History:
+--------
+
+2017-05-09: SBELL - migrate to consistent placement of subroutines for nc read and time tools
 """
 
 #System Stack
@@ -21,6 +24,10 @@ import os
 from netCDF4 import Dataset
 import numpy as np
 
+#User Stack
+from calc.EPIC2Datetime import EPIC2Datetime, get_UDUNITS, Datetime2EPIC
+from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF
+
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
 __created__  = datetime.datetime(2014, 05, 22)
@@ -29,104 +36,8 @@ __version__  = "0.1.0"
 __status__   = "Development"
 __keywords__ = 'netCDF','meta','header'
 
-"""--------------------------------netcdf Routines---------------------------------------"""
-
-
-def get_global_atts(nchandle):
-
-    g_atts = {}
-    att_names = nchandle.ncattrs()
-    
-    for name in att_names:
-        g_atts[name] = nchandle.getncattr(name)
-        
-    return g_atts
-
-def get_vars(nchandle):
-    return nchandle.variables
-
-def get_var_atts(nchandle, var_name):
-    return nchandle.variables[var_name]
-
-def ncreadfile_dic(nchandle, params):
-    data = {}
-    for j, v in enumerate(params): 
-        if v in nchandle.variables.keys(): #check for nc variable
-                data[v] = nchandle.variables[v][:]
-
-        else: #if parameter doesn't exist fill the array with zeros
-            data[v] = None
-    return (data)
 """--------------------------------EPIC Routines---------------------------------------"""
 
-def EPICdate2udunits(time1, time2):
-    """
-    Inputs
-    ------
-          time1: array_like
-                 True Julian day
-          time2: array_like
-                 Milliseconds from 0000 GMT
-    Returns
-    -------
-          dictionary:
-            'timeint': python serial time
-            'interval_min': data interval in minutes
-    
-    Example
-    -------
-    Python uses days since 0001-01-01 and a gregorian calendar
-
-      
-    Reference
-    ---------
-    PMEL-EPIC Conventions (misprint) says 2400000
-    http://www.epic.noaa.gov/epic/eps-manual/epslib_ch5.html#SEC57 says:
-    May 23 1968 is 2440000 and July4, 1994 is 2449538
-              
-    """
-    ref_time_py = datetime.datetime.toordinal(datetime.datetime(1968, 5, 23))
-    ref_time_epic = 2440000
-    
-    offset = ref_time_epic - ref_time_py
-    
-    try:
-        pytime = [None] * len(time1)
-
-        for i, val in enumerate(time1):
-            pyday = time1[i] - offset 
-            pyfrac = time2[i] / (1000. * 60. * 60.* 24.) #milliseconds in a day
-        
-            pytime[i] = (pyday + pyfrac)
-            
-    except:
-        pytime = []
-    
-        pyday = time1 - offset 
-        pyfrac = time2 / (1000. * 60. * 60.* 24.) #milliseconds in a day
-        
-        pytime = (pyday + pyfrac)
-    
-    return pytime
-
-def pythondate2str(pdate):
-    (year,month,day) = datetime.datetime.fromordinal(int(pdate)).strftime('%Y-%m-%d').split('-')
-    delta_t = pdate - int(pdate)
-    dhour = str(int(np.floor(24 * (delta_t))))
-    dmin = str(int(np.floor(60 * ((24 * (delta_t)) - np.floor(24 * (delta_t))))))
-    dsec = str(int(np.floor(60 * ((60 * ((24 * (delta_t)) - np.floor(24 * (delta_t)))) - \
-                    np.floor(60 * ((24 * (delta_t)) - np.floor(24 * (delta_t))))))))
-                    
-    #add zeros to time
-    if len(dhour) == 1:
-        dhour = '0' + dhour
-    if len(dmin) == 1:
-        dmin = '0' + dmin
-    if len(dsec) == 1:
-        dsec = '0' + dsec
-                
-
-    return(year,month,day,dhour+':'+dmin)  
         
 """---------------------------------- Main --------------------------------------------"""
 
@@ -155,19 +66,20 @@ for ncfile in ctd_ncfiles:
     ncfile = ctd_ncpath + ncfile
 
     ###nc readin/out
-    nchandle = Dataset(ncfile,'r') 
-    global_atts = get_global_atts(nchandle)
-    vars_dic = get_vars(nchandle)
-    ncdata = ncreadfile_dic(nchandle, vars_dic.keys())
-    nchandle.close()
+    df = EcoFOCI_netCDF(ncfile)
+    global_atts = df.get_global_atts()
+    vars_dic = df.get_vars()
+    ncdata = df.ncreadfile_dic()
+    df.close()
+
     #btl file data assuming same naming convention
     missing_btl = False
     try:
-        nchandle = Dataset(btl_ncfile,'r') 
-        global_atts_btl = get_global_atts(nchandle)
-        vars_dic_btl = get_vars(nchandle)
-        ncdata_btl = ncreadfile_dic(nchandle, vars_dic_btl.keys())
-        nchandle.close()
+        df = EcoFOCI_netCDF(btl_ncfile)
+        global_atts_btl = df.get_global_atts()
+        vars_dic_btl = df.get_vars()
+        ncdata_btl = df.ncreadfile_dic()
+        df.close()
     except:
         #print "Missing btl file {0}".format(btl_ncfile)
         missing_btl = True
@@ -206,10 +118,10 @@ for ncfile in ctd_ncfiles:
     standard_header_val[7] = str(-1 * ncdata['lon'][0])       
     standard_header_val[8] = str(ncdata['lat'][0])
     try:       
-        date_raw = pythondate2str( EPICdate2udunits(ncdata['time'][0], ncdata['time2'][0]) )       
-        standard_header_val[6] = ("{0}-{1}-{2} {3}").format(date_raw[0], date_raw[1], date_raw[2], date_raw[3])
+        date_raw = EPIC2Datetime(ncdata['time'][0], ncdata['time2'][0])      
+        standard_header_val[6] = ("{:%Y-%m-%d %H:%M}").format(date_raw)
     except ValueError:
-        standard_header_val[6] = "2020-12-12-25 00:00"
+        standard_header_val[6] = "2020-12-25 00:00"
     ###screen output
 
     header = []
