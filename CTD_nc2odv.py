@@ -96,7 +96,7 @@ for ncfile in ncfiles:
     standard_header_val[7] = str(-1 * ncdata['lon'][0])       
     standard_header_val[8] = str(ncdata['lat'][0])
     try:       
-        date_raw = EPIC2Datetime(ncdata['time'][0], ncdata['time2'][0])      
+        date_raw = EPIC2Datetime([ncdata['time'][0]], [ncdata['time2'][0]])[0]      
         standard_header_val[6] = ("{:%Y-%m-%d %H:%M}").format(date_raw)
     except ValueError:
         standard_header_val[6] = "2020-12-12-25 00:00"
