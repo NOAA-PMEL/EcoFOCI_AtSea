@@ -7,7 +7,12 @@ TS plot
 
 Input - CruiseID
 
-Using Anaconda packaged Python 
+ History:
+ --------
+ 2017-06-21: Migrate to EcoFOCI_MooringAnalysis pkg and unify netcdf creation code so
+    that it is no longer instrument dependant
+
+
 """
 
 #System Stack
@@ -30,6 +35,12 @@ from matplotlib.ticker import AutoMinorLocator
 # User Stack
 from utilities import ncutilities as ncutil
 
+# Relative User Stack
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.sys.path.insert(1, parent_dir)
+from calc.EPIC2Datetime import EPIC2Datetime, get_UDUNITS
+from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF
+
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
 __created__  = datetime.datetime(2014, 05, 22)
@@ -38,53 +49,6 @@ __version__  = "0.2.0"
 __status__   = "Development"
 __keywords__ = 'CTD', 'Plots', 'Cruise', 'QC'
 
-"""--------------------------------netcdf Routines---------------------------------------"""
-def from_netcdf(infile):
-    """ Uses ncreadfile_dic which returns a dictionary of all data from netcdf"""
-
-    ###nc readin/out
-    nchandle = ncutil.ncopen(infile)
-    params = ncutil.get_vars(nchandle) #gets all of them
-
-    global_atts = ncutil.get_global_atts(nchandle)
-    
-    ncdata = ncutil.ncreadfile_dic(nchandle, params)
-    ncutil.ncclose(nchandle)
-    
-    return (ncdata, params, global_atts)
-
-"""--------------------------------time Routines---------------------------------------"""
-
-def date2pydate(file_time, file_time2=None, file_flag='EPIC'):
-
-    if file_flag == 'EPIC':
-        ref_time_py = datetime.datetime.toordinal(datetime.datetime(1968, 5, 23))
-        ref_time_epic = 2440000
-    
-        offset = ref_time_epic - ref_time_py
-    
-       
-        try: #if input is an array
-            python_time = [None] * len(file_time)
-
-            for i, val in enumerate(file_time):
-                pyday = file_time[i] - offset 
-                pyfrac = file_time2[i] / (1000. * 60. * 60.* 24.) #milliseconds in a day
-        
-                python_time[i] = (pyday + pyfrac)
-
-        except:
-    
-            pyday = file_time - offset 
-            pyfrac = file_time2 / (1000. * 60. * 60.* 24.) #milliseconds in a day
-        
-            python_time = (pyday + pyfrac)
-        
-    else:
-        print "time flag not recognized"
-        sys.exit()
-        
-    return np.array(python_time)    
 """--------------------------------Plot Routines---------------------------------------"""
 
 
@@ -163,7 +127,11 @@ else:
 for ncfile in sorted(nc_path):
  
     print "Working on file %s " % ncfile
-    (ncdata, params, g_atts) = from_netcdf(ncfile)
+
+    nc = EcoFOCI_netCDF(ncfile)
+    ncdata = nc.ncreadfile_dic()
+    g_atts = nc.get_global_atts()
+    nc.close()
 
     if not os.path.exists('images/' + g_atts['CRUISE']):
         os.makedirs('images/' + g_atts['CRUISE'])
@@ -174,9 +142,9 @@ for ncfile in sorted(nc_path):
         ncdata['S_41']
     except:
         continue
+
+    cast_time = EPIC2Datetime(ncdata['time'],ncdata['time2'])[0]
         
-    xtime = date2pydate(ncdata['time'],ncdata['time2'])[0]
-    cast_time = datetime.datetime.fromordinal(int(xtime)) + datetime.timedelta(xtime - int(xtime))
     ptitle = ("Plotted on: {0} from {1} \n\n"
               "Cruise: {2} Cast: {3}  Stn: {4} \n"
               "Lat: {5:3.3f}  Lon: {6:3.3f} at {7}\n").format(datetime.datetime.now().strftime('%Y/%m/%d %H:%M'), 
