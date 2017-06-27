@@ -178,6 +178,7 @@ class CTDProfilePlot(object):
       if secondary and not (xdata[1].size == 0):
         p1 = ax1.plot(xdata[1],ydata)
         plt.setp(p1, **(self.var2format(epic_key[1])))
+        ax1.set_xlim([np.nanmin(xdata[1]),np.nanmax(xdata[1])])
 
       ax1.invert_yaxis()
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
@@ -195,6 +196,7 @@ class CTDProfilePlot(object):
       if secondary and not (xdata[3].size == 0):
         p1 = ax2.plot(xdata[3],ydata)
         plt.setp(p1, **(self.var2format(epic_key[3])))
+        ax2.set_xlim([np.nanmin(xdata[3]),np.nanmax(xdata[3])])
 
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
@@ -214,6 +216,69 @@ class CTDProfilePlot(object):
       if secondary and not (xdata[5].size == 0):
         p1 = ax2.plot(xdata[5],ydata)
         plt.setp(p1, **(self.var2format(epic_key[5])))
+        ax3.set_xlim([np.nanmin(xdata[5]),np.nanmax(xdata[5])])
+
+      plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
+      plt.xlabel(xlabel[2], fontsize=self.labelsize, fontweight='bold')
+
+      #set bounds based on max and min values
+
+      #set xticks and labels to be at the same spot for all three vars
+      ax1.set_xticks(np.linspace(ax1.get_xbound()[0], ax1.get_xbound()[1], self.max_xticks))
+      ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
+      ax3.set_xticks(np.linspace(ax3.get_xbound()[0], ax3.get_xbound()[1], self.max_xticks))
+
+      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
+      fmt.set_scientific(False)
+      ax3.xaxis.set_major_formatter(fmt)
+      ax3.tick_params(axis='x', which='major', labelsize=self.labelsize)
+
+      return plt, fig
+
+    def plot3var2y(self, epic_key=None, xdata=None, ydata=None, ydata2=None, xlabel=None, secondary=False, **kwargs):
+      fig = plt.figure(1)
+      ax1 = fig.add_subplot(111)
+      p1 = ax1.plot(xdata[0], ydata)
+      plt.setp(p1, **(self.var2format(epic_key[0])))
+      if secondary and not (xdata[1].size == 0):
+        p1 = ax1.plot(xdata[1],ydata2)
+        plt.setp(p1, **(self.var2format(epic_key[1])))
+
+      ax1.invert_yaxis()
+      plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
+      plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
+    
+      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
+      fmt.set_scientific(False)
+      ax1.xaxis.set_major_formatter(fmt)
+      ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
+
+      #plot second param
+      ax2 = ax1.twiny()
+      p1 = ax2.plot(xdata[2], ydata)
+      plt.setp(p1, **(self.var2format(epic_key[2])))
+      if secondary and not (xdata[3].size == 0):
+        p1 = ax2.plot(xdata[3],ydata2)
+        plt.setp(p1, **(self.var2format(epic_key[3])))
+
+      plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
+      plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
+
+      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
+      fmt.set_scientific(False)
+      ax2.xaxis.set_major_formatter(fmt)
+      ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
+
+      ax3 = ax1.twiny()
+      ax3.spines["top"].set_position(("axes", 1.05))
+      self.make_patch_spines_invisible(ax3)
+      # Second, show the right spine.
+      ax3.spines["top"].set_visible(True)
+      p1 = ax3.plot(xdata[4], ydata)
+      plt.setp(p1, **(self.var2format(epic_key[4])))
+      if secondary and not (xdata[5].size == 0):
+        p1 = ax3.plot(xdata[5],ydata2)
+        plt.setp(p1, **(self.var2format(epic_key[5])))
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[2], fontsize=self.labelsize, fontweight='bold')
 
@@ -229,6 +294,7 @@ class CTDProfilePlot(object):
 
       return plt, fig
 
+
     @staticmethod
     def var2format(epic_key):
       """list of plot specifics based on variable name"""
@@ -241,15 +307,15 @@ class CTDProfilePlot(object):
         plotdic['color']='magenta'
         plotdic['linestyle']='--'
         plotdic['linewidth']=0.5
-      elif epic_key in ['S_41', 'OST_62']:
+      elif epic_key in ['S_41', 'OST_62', 'O_65']:
         plotdic['color']='blue'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
-      elif epic_key in ['S_42', 'CTDOST_4220']:
+      elif epic_key in ['S_42', 'CTDOST_4220', 'CTDOXY_4221']:
         plotdic['color']='cyan'
         plotdic['linestyle']='--'
         plotdic['linewidth']=0.5
-      elif epic_key in ['ST_70','Trb_980']:
+      elif epic_key in ['ST_70','Trb_980','SigmaT']:
         plotdic['color']='black'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
