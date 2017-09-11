@@ -175,10 +175,11 @@ if not args.delta_x:
 else:
 	cbar = plt.colorbar()
 	cbar.set_label(pointer_file['Clabel'],rotation=0, labelpad=90)
-	plt.contourf(ProfileDist,depth_array,temparray.T, 
+	plt.contourf(ProfileDist[::-1],depth_array,temparray.T, 
 		extend='both', cmap=cmocean.cm.cmap_d[pointer_file['colormap_name']], levels=np.arange(pointer_file['rangemin'],pointer_file['rangemax'],0.25), alpha=0.75)
 
 	ax1.invert_yaxis()
+	ax1.invert_xaxis()
 	plt.tight_layout()
 	plt.savefig('images/' + pointer_file['CruiseID'] + '_' + pointer_file['EPIC_Key'] + '.png', transparent=False, dpi = (300))
 	plt.close()
