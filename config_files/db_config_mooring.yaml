@@ -11,6 +11,5 @@ login:
   password: ''
   user: viewer  
 
-database: 
-  database: EcoFOCI
+database: EcoFOCI
   

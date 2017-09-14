@@ -11,5 +11,5 @@ login:
   password: ''
   user: viewer  
 
-database: EcoFOCI_Cruises
+database: EcoFOCI_Drifters
   
