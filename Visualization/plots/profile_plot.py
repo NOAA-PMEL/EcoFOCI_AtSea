@@ -24,8 +24,6 @@ import matplotlib.ticker as ticker
 class CTDProfilePlot(object):
 
 
-
-
     def __init__(self, fontsize=10, labelsize=10, plotstyle='k-.', stylesheet='seaborn-ticks'):
         """Initialize the timeseries with items that do not change.
 
@@ -123,8 +121,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel, fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -143,8 +140,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -163,8 +159,7 @@ class CTDProfilePlot(object):
       ax1.set_xticks(np.linspace(ax1.get_xbound()[0], ax1.get_xbound()[1], self.max_xticks))
       ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
 
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax2.xaxis.set_major_formatter(fmt)
       ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -178,14 +173,16 @@ class CTDProfilePlot(object):
       if secondary and not (xdata[1].size == 0):
         p1 = ax1.plot(xdata[1],ydata)
         plt.setp(p1, **(self.var2format(epic_key[1])))
-        ax1.set_xlim([np.nanmin(xdata[1]),np.nanmax(xdata[1])])
+        #set plot limits for two vars by finding the absolute range and adding 10%
+        abmin=np.min([np.nanmin(xdata[0]),np.nanmin(xdata[1])])
+        abmax=np.max([np.nanmax(xdata[0]),np.nanmax(xdata[1])])
+        ax1.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
 
       ax1.invert_yaxis()
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
     
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -196,13 +193,15 @@ class CTDProfilePlot(object):
       if secondary and not (xdata[3].size == 0):
         p1 = ax2.plot(xdata[3],ydata)
         plt.setp(p1, **(self.var2format(epic_key[3])))
-        ax2.set_xlim([np.nanmin(xdata[3]),np.nanmax(xdata[3])])
+        #set plot limits for two vars by finding the absolute range and adding 10%
+        abmin=np.min([np.nanmin(xdata[2]),np.nanmin(xdata[3])])
+        abmax=np.max([np.nanmax(xdata[2]),np.nanmax(xdata[3])])
+        ax2.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
 
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax2.xaxis.set_major_formatter(fmt)
       ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -216,7 +215,10 @@ class CTDProfilePlot(object):
       if secondary and not (xdata[5].size == 0):
         p1 = ax2.plot(xdata[5],ydata)
         plt.setp(p1, **(self.var2format(epic_key[5])))
-        ax3.set_xlim([np.nanmin(xdata[5]),np.nanmax(xdata[5])])
+        #set plot limits for two vars by finding the absolute range and adding 10%
+        abmin=np.min([np.nanmin(xdata[4]),np.nanmin(xdata[5])])
+        abmax=np.max([np.nanmax(xdata[4]),np.nanmax(xdata[5])])
+        ax3.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
 
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[2], fontsize=self.labelsize, fontweight='bold')
@@ -228,8 +230,7 @@ class CTDProfilePlot(object):
       ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
       ax3.set_xticks(np.linspace(ax3.get_xbound()[0], ax3.get_xbound()[1], self.max_xticks))
 
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax3.xaxis.set_major_formatter(fmt)
       ax3.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
