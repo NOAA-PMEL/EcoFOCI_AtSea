@@ -54,6 +54,8 @@ class CTDProfilePlot(object):
         self.max_xticks = 10
         plt.style.use(stylesheet)
         mpl.rcParams['svg.fonttype'] = 'none'
+        mpl.rcParams['ps.fonttype'] = 42 #truetype/type2 fonts instead of type3
+        mpl.rcParams['pdf.fonttype'] = 42 #truetype/type2 fonts instead of type3
         mpl.rcParams['axes.grid'] = True
         mpl.rcParams['axes.edgecolor'] = 'white'
         mpl.rcParams['axes.linewidth'] = 0.25
@@ -249,8 +251,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
     
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -265,8 +266,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax2.xaxis.set_major_formatter(fmt)
       ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -288,8 +288,7 @@ class CTDProfilePlot(object):
       ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
       ax3.set_xticks(np.linspace(ax3.get_xbound()[0], ax3.get_xbound()[1], self.max_xticks))
 
-      fmt=mpl.ticker.ScalarFormatter(useOffset=False)
-      fmt.set_scientific(False)
+      fmt=mpl.ticker.FormatStrFormatter('%.3f')
       ax3.xaxis.set_major_formatter(fmt)
       ax3.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
