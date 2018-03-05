@@ -4,10 +4,10 @@
 #       Script to run SCS_shptrack2gpx.py for each file in a directory
 #       and output as independant files per day
 
-cruiseid='DY1608L3'
-cruiseyear='2016'
+cruiseid='DY1705'
+cruiseyear='2017'
 
-data_dir="/Users/bell/ecoraid/${cruiseyear}/AlongTrack/${cruiseid}/SCSData/GPSGAR17N/*GPGGA*"
+data_dir="/Users/bell/ecoraid/${cruiseyear}/AlongTrack/${cruiseid}/SCS/GPSGAR17N/*GPGGA*"
 prog_dir="/Users/bell/Programs/Python/EcoFOCI_AtSea/"
 out_dir="/Users/bell/scratch/"
 
