@@ -51,8 +51,15 @@ def convert_dms_to_dec(value, dir):
 """------------------------------- MAIN------------------------------------------------"""
 
 parser = argparse.ArgumentParser(description='Convert SCS GPGGA gps files to .gpx files')
-parser.add_argument('-i','--input', type=str, help='path to data files')
-parser.add_argument('-o','--output', type=str, help='path to save files')
+parser.add_argument('-i','--input', 
+	type=str, 
+	help='path to data files')
+parser.add_argument('-o','--output', 
+	type=str, 
+	help='path to save files')
+parser.add_argument('-csv','--csv', 
+	action='store_true', 
+	help='save as csv instead')
 
 args = parser.parse_args()
 
@@ -66,6 +73,8 @@ if args.input:
 		lat = convert_dms_to_dec(row[4],row[5])
 		lon = convert_dms_to_dec(row[6],row[7])
 		timestamp = (pd.to_datetime(row[0]+' '+row[1][:-4], format='%m/%d/%Y %H:%M:%S')).to_pydatetime().isoformat()
-		print('<trkpt lat="{lat}" lon="{lon}"><ele>0.0</ele><time>{time}Z</time></trkpt>').format(lat=lat,lon=lon,time=timestamp)
-
+		if args.csv:
+			print('{lat},{lon},{time}').format(lat=lat,lon=lon,time=timestamp)
+		else:
+			print('<trkpt lat="{lat}" lon="{lon}"><ele>0.0</ele><time>{time}Z</time></trkpt>').format(lat=lat,lon=lon,time=timestamp)
 print("</trkseg>\n</trk>\n</gpx>\n")
