@@ -15,6 +15,7 @@ import os
 
 #science stack
 import pandas as pd
+import numpy as np
 from netCDF4 import date2num, num2date
 
 #User Stack
@@ -67,11 +68,14 @@ flist = [args.inpath + f for f in os.listdir(args.inpath) if 'GPGGA' in f]
 lat = lon = timestamp = []
 for fin in flist:
 	print('{currentfile}'.format(currentfile=fin))
-	rawdata = pd.read_csv(fin, header=None)
-	lat = lat + [convert_dms_to_dec(v1,v2) for v1,v2 in zip(rawdata[4].values,rawdata[5].values)]
-	lon = lon + [convert_dms_to_dec(v1,v2) for v1,v2 in zip(rawdata[6].values,rawdata[7].values)]
-	timestamp = timestamp + [(pd.to_datetime(v1+' '+v2[:-4], format='%m/%d/%Y %H:%M:%S')).to_pydatetime().isoformat() for v1,v2 in zip(rawdata[0].values,rawdata[1].values)]
-
+	try:
+		rawdata = pd.read_csv(fin, header=None, error_bad_lines=False)
+		lat = lat + [convert_dms_to_dec(v1,v2) for v1,v2 in zip(rawdata[4].values,rawdata[5].values)]
+		lon = lon + [convert_dms_to_dec(v1,v2) for v1,v2 in zip(rawdata[6].values,rawdata[7].values)]
+		timestamp = timestamp + [(pd.to_datetime(v1+' '+v2[:-4], format='%m/%d/%Y %H:%M:%S')).to_pydatetime().isoformat() for v1,v2 in zip(rawdata[0].values,rawdata[1].values)]
+		print( len(lat),len(lon),len(timestamp))
+	except:
+		print("something failed in file {0}".format(fin))
 
 data = pd.DataFrame({'DateTime':timestamp,'latitude':lat,'longitude':lon})
 data.set_index(pd.DatetimeIndex(data['DateTime']),inplace=True)
