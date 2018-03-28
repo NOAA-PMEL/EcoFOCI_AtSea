@@ -65,8 +65,8 @@ def plot_salvtemp(salt, temp, press, srange=[0,1], trange=[0,10], ptitle=""):
     tmax = trange[1]
 
     # Calculate how many gridcells we need in the x and y dimensions
-    xdim = round((smax-smin)/0.1+1,0)
-    ydim = round((tmax-tmin)+1,0)
+    xdim = int(round((smax-smin)/0.1+1,0))
+    ydim = int(round((tmax-tmin)+1,0))
     
     #print 'ydim: ' + str(ydim) + ' xdim: ' + str(xdim) + ' \n'
     if (xdim > 10000) or (ydim > 10000): 
