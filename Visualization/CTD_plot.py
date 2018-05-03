@@ -111,10 +111,18 @@ for ncfile in sorted(nc_path):
     nc.close()
     cast_time = EPIC2Datetime(ncdata['time'],ncdata['time2'])[0]
 
-    if np.ndim(ncdata['dep']) == 1:
-        ydata = ncdata['dep'][:]
-    else:
-        ydata = ncdata['dep'][0,:,0,0]
+    #dep v depth
+    for dkey in ncdata.keys():
+      if dkey in ['dep']:
+        if np.ndim(ncdata['dep']) == 1:
+            ydata = ncdata['dep'][:]
+        else:
+            ydata = ncdata['dep'][0,:,0,0]
+      elif dkey in ['depth']:
+        if np.ndim(ncdata['depth']) == 1:
+            ydata = ncdata['depth'][:]
+        else:
+            ydata = ncdata['depth'][0,:,0,0]
 
     for dkey in ncdata.keys():
         if not dkey in ['lat','lon','depth','dep','time','time2']:
