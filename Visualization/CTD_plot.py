@@ -123,10 +123,27 @@ for ncfile in sorted(nc_path):
             ydata = ncdata['depth'][:]
         else:
             ydata = ncdata['depth'][0,:,0,0]
+      elif dkey in ['pressure']:
+        if np.ndim(ncdata['pressure']) == 1:
+            ydata = ncdata['pressure'][:]
+        else:
+            ydata = ncdata['pressure'][0,:,0,0]
 
     for dkey in ncdata.keys():
-        if not dkey in ['lat','lon','depth','dep','time','time2']:
+        if not dkey in ['lat','latitude','lon','longitude','depth','dep','pressure','time','time2']:
             ncdata[dkey][0,ncdata[dkey][0,:,0,0] >= 1e30,0,0] = np.nan
+
+    #multiple lat/lon keys
+    try:
+      lat_data = ncdata['lat'][0]
+    except:
+      lat_data = ncdata['latitude'][0]
+
+    try:
+      lon_data = ncdata['lon'][0]
+    except:
+      lon_data = ncdata['longitude'][0]
+
 
     if not os.path.exists('images/' + g_atts['CRUISE']):
         os.makedirs('images/' + g_atts['CRUISE'])
@@ -144,6 +161,8 @@ for ncfile in sorted(nc_path):
         os.makedirs('images/' + g_atts['CRUISE'] + '/TransTurbFluor/')
     if not os.path.exists('images/' + g_atts['CRUISE'] + '/TransFluor/'):
         os.makedirs('images/' + g_atts['CRUISE'] + '/TransFluor/')
+    if not os.path.exists('images/' + g_atts['CRUISE'] + '/ParFluor/'):
+        os.makedirs('images/' + g_atts['CRUISE'] + '/ParFluor/')
 
     try:
         g_atts['STATION_NAME'] = g_atts['STATION_NAME']
@@ -167,8 +186,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -194,8 +213,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -227,8 +246,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -260,8 +279,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -291,8 +310,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -322,8 +341,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -354,8 +373,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -386,8 +405,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -418,8 +437,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -450,8 +469,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
@@ -481,8 +500,8 @@ for ncfile in sorted(nc_path):
                           castid=g_atts['CAST'],
                           stationid=g_atts['STATION_NAME'],
                           castdate=cast_time,
-                          lat=ncdata['lat'][0],
-                          lon=ncdata['lon'][0])
+                          lat=lat_data,
+                          lon=lon_data)
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)
