@@ -294,6 +294,24 @@ class CTDProfilePlot(object):
 
       return plt, fig
 
+    def change_range(self, plt=None, xlim=[None,None], ylim=[None,None]):
+
+      if not len(xlim) == 2:
+        raise ValueError('Modified xlim must be a list of two values')
+
+      if not len(ylim) == 2:
+        raise ValueError('Modified ylim must be a list of two values')
+
+      if xlim[0] != None:
+        ax = plt.gca()
+        ax.set_xlim(xlim)
+
+      if ylim[0] != None:
+        ax = plt.gca()
+        ax.set_ylim(ylim)
+        ax.invert_yaxis()
+
+      return plt
 
     @staticmethod
     def var2format(epic_key):
