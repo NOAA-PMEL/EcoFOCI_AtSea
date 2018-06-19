@@ -1,7 +1,7 @@
 ---
 systems:
   pavlof:
-    host: localhost
+    host: pavlof.pmel.noaa.gov
     port: 3306
   localhost:
     host: localhost

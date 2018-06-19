@@ -282,6 +282,7 @@ parser.add_argument("-png",'--png', action="store_true", help=('Make png Map') )
 parser.add_argument("-svg",'--svg', action="store_true", help=('Make svg Map') )
 parser.add_argument("-geojson",'--geojson', action="store_true", help=('Make GeoJSON Map') )
 parser.add_argument("-csv",'--csv', action="store_true", help=('Output .csv file') )
+parser.add_argument("-host",'--host', type=str, default='localhost', help=('local or pavlof') )
 
 ####
 # Data of interest resides in multiple databases on Pavlof
@@ -319,11 +320,11 @@ for cruiseID in cruiseID_input:
 
     #get db meta information for mooring
     ### connect to DB
-    (db,cursor) = connect_to_DB(host=db_config['systems']['localhost']['host'], 
+    (db,cursor) = connect_to_DB(host=db_config['systems'][args.host]['host'], 
                                 user=db_config['login']['user'], 
                                 password=db_config['login']['password'], 
                                 database=db_config['database'], 
-                                port=db_config['systems']['localhost']['port'])
+                                port=db_config['systems'][args.host]['port'])
     data = read_data(db, cursor, table, cruiseID, dbvar='UniqueCruiseID')
     close_DB(db)
     
@@ -332,11 +333,11 @@ for cruiseID in cruiseID_input:
 
     #get db meta information for mooring
     ### connect to DB
-    (db,cursor) = connect_to_DB(host=db_config['systems']['localhost']['host'], 
+    (db,cursor) = connect_to_DB(host=db_config['systems'][args.host]['host'], 
                                 user=db_config['login']['user'], 
                                 password=db_config['login']['password'], 
                                 database=db_config['database'], 
-                                port=db_config['systems']['localhost']['port'])
+                                port=db_config['systems'][args.host]['port'])
     data_mooring = read_data(db, cursor, mtable, cruiseID, dbvar='CruiseNumber', latvarname='Latitude')
     if not data_mooring.keys():
         cruiseIDt = cruiseID[:4]+'-'+cruiseID[4:]
@@ -353,11 +354,11 @@ for cruiseID in cruiseID_input:
     # mooring db
     db_config = ConfigParserLocal.get_config('../config_files/db_config_drifters.yaml')
 
-    (db,cursor) = connect_to_DB(host=db_config['systems']['localhost']['host'], 
+    (db,cursor) = connect_to_DB(host=db_config['systems'][args.host]['host'], 
                                 user=db_config['login']['user'], 
                                 password=db_config['login']['password'], 
                                 database=db_config['database'], 
-                                port=db_config['systems']['localhost']['port'])
+                                port=db_config['systems'][args.host]['port'])
     data_argo = read_data(db, cursor, argo_table, cruiseID, dbvar='CruiseID', latvarname='ReleaseLat')
     if not data_argo.keys():
         cruiseIDt = cruiseID[:4]+'-'+cruiseID[4:]
