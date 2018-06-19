@@ -1,38 +1,38 @@
 ---
 NH4_189: 
-	name: NH4
-	generic_name: NH4
-	EPIC_KEY: 189
-	units: uM/l
-	longname: AMMONIUM (micromoles/l)
+  name: NH4
+  generic_name: NH4
+  EPIC_KEY: 189
+  units: uM/l
+  longname: 'AMMONIUM (micromoles/l)'
 NO3_182: 
-	name: NO3
-	generic_name: NO3
-	EPIC_KEY: 182
-	units: uM/l
-	longname: NITRATE (micromoles/l)
+  name: NO3
+  generic_name: NO3
+  EPIC_KEY: 182
+  units: uM/l
+  longname: 'NITRATE (micromoles/l)'
 BTL_103: 
-	name: BTL
-	generic_name: 
-	EPIC_KEY: 103
-	units: ''
-	longname: NISKIN BOTTLE NUMBER
+  name: BTL
+  generic_name: BTL
+  EPIC_KEY: 103
+  units: ''
+  longname: 'NISKIN BOTTLE NUMBER'
 SI_188: 
-	name: SI
-	generic_name: SI
-	EPIC_KEY: 188
-	units: uM/l
-	longname: SILICATE (micromoles/l)
+  name: SI
+  generic_name: SI
+  EPIC_KEY: 188
+  units: uM/l
+  longname: 'SILICATE (micromoles/l)'
 PO4_186: 
-	name: PO4
-	generic_name: PO4
-	EPIC_KEY: 186
-	units: uM/l
-	longname: PHOSPHATE (micromoles/l)
+  name: PO4
+  generic_name: PO4
+  EPIC_KEY: 186
+  units: uM/l
+  longname: 'PHOSPHATE (micromoles/l)'
 NO2_184: 
-	name: NO2
-	generic_name: NO2
-	EPIC_KEY: 184
-	units: uM/l
-	longname: NITRITE (micromoles/l)
+  name: NO2
+  generic_name: NO2
+  EPIC_KEY: 184
+  units: uM/l
+  longname: 'NITRITE (micromoles/l)'
 

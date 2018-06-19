@@ -3,6 +3,7 @@ r'''Module to convert PMEL-EPIC timeword to a python datetime
 
     Modifications
     -------------
+    2018-06-19: SBELL - make python3 compliant
     2016-11-14: SBELL - create routine to add datetime offset
 
 '''
@@ -11,8 +12,8 @@ from netCDF4 import date2num
 
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
-__created__  = datetime.datetime(2016, 07, 21)
-__modified__ = datetime.datetime(2016, 07, 21)
+__created__  = datetime.datetime(2016, 7, 21)
+__modified__ = datetime.datetime(2016, 7, 21)
 __version__  = "0.1.0"
 __status__   = "Development"
 
@@ -162,29 +163,29 @@ def main():
 
 def test_1d():
     testdate = EPIC2Datetime([2440000,],[43200000+3600*1000,])
-    print "\n{0}\n".format(testdate)
+    print("\n{0}\n".format(testdate))
     for time_format in ['days','hours','seconds']:
         time_since_str = time_format + ' since 1900-1-1'
-        print "{0}:value \n{1}:units\n".format(get_UDUNITS(testdate,time_since_str),time_since_str)
+        print("{0}:value \n{1}:units\n".format(get_UDUNITS(testdate,time_since_str),time_since_str))
 
 def test_2d():
     testdate = EPIC2Datetime([2440000,2450000],[43200000,0])
-    print "\n{0}\n".format(testdate)
+    print("\n{0}\n".format(testdate))
     for time_format in ['days','hours','seconds']:
         time_since_str = time_format + ' since 1900-1-1'
-        print "{0}:value \n{1}:units\n".format(get_UDUNITS(testdate,time_since_str),time_since_str)
+        print("{0}:value \n{1}:units\n".format(get_UDUNITS(testdate,time_since_str),time_since_str))
 
 def test_1d_EPIC():
     testdate = EPIC2Datetime([2440000,],[43200000+3600*1000,])
-    print testdate
+    print(testdate)
     testdate1 = Datetime2EPIC(testdate)
-    print testdate1
+    print(testdate1)
 
 def test_2d_EPIC():
     testdate = EPIC2Datetime([2440000,2450000],[43200000,0])
-    print testdate
+    prin(testdate)
     testdate1 = Datetime2EPIC(testdate)
-    print testdate1
+    prin(testdate1)
 
 if __name__ == "__main__":
     main()

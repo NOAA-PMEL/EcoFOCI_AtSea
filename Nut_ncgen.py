@@ -1,29 +1,34 @@
 """
  Background:
- --------
+ ===========
  Nut_ncgen.py
  
  
  Purpose:
- --------
+ ========
  Creates EPIC flavored .nc files for bottle (nutrient) data
  Todo: switch from EPIC to CF
 
  File Format:
- ------------
+ ============
  - E.Wisegarver - nutrient csv output
-
  - S.Bell - combined seabird btl report output
-
  - Pavlof DB for cruise/cast metadata
 
+ (Very Long) Example Usage:
+ ==========================
+
+ 'python Nut_ncgen.pyDY1707 /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/dy1707l1.report_btl 
+ /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/DiscreteNutrients/DY1707\ Nutrient\ Data.csv 
+ /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/ /Users/bell/Programs/Python/EcoFOCI_AtSea/config_files/nut_uml_epickeys.yaml'
+
  History:
- --------
+ ========
  2018-06-14: Bell - refactor starting with old NCnut_create.py routines
 
  Compatibility:
- --------------
- python >=3.6 - ?
+ ==============
+ python >=3.6 
  python 2.7 - ?
 
 """
@@ -56,21 +61,21 @@ __keywords__ = 'netCDF','meta','header', 'QC', 'bottle', 'discreet'
 
 parser = argparse.ArgumentParser(description='Merge and archive nutrient csv data and bottle data')
 parser.add_argument('CruiseID', 
-	metavar='CruiseID', 
-	type=str, 
-	help='provide the cruiseid')
+    metavar='CruiseID', 
+    type=str, 
+    help='provide the cruiseid')
 parser.add_argument('btlpath', 
-	metavar='btlpath', 
-	type=str, 
-	help='full path to .btl_report')
+    metavar='btlpath', 
+    type=str, 
+    help='full path to .btl_report')
 parser.add_argument('nutpath', 
-	metavar='nutpath', 
-	type=int, 
-	help='full path to nutrient csv file')
+    metavar='nutpath', 
+    type=str, 
+    help='full path to nutrient csv file')
 parser.add_argument('output', 
-	metavar='output', 
-	type=str, 
-	help='full path to output folder (files will be generated there')
+    metavar='output', 
+    type=str, 
+    help='full path to output folder (files will be generated there')
 parser.add_argument('config_file_name', 
     metavar='config_file_name', 
     type=str, 
@@ -92,9 +97,9 @@ print(reportdf.info())
 
 #strip ctd from cast name and make integer
 try:
-	reportdf['CastNum'] = [int(x.lower().split('ctd')[-1]) for y,x in reportdf.cast.iteritems()]
+    reportdf['CastNum'] = [int(x.lower().split('ctd')[-1]) for y,x in reportdf.cast.iteritems()]
 except ValueError:
-	sys.exit("Exiting: Report file doesn't have casts named as expected... ctdxxx")
+    sys.exit("Exiting: Report file doesn't have casts named as expected... ctdxxx")
 
 #make a cast_niskin column to index on
 print("Matching on Cast/Niskin pair.")
@@ -115,12 +120,11 @@ gb =temp.groupby('cast')
 
 # get config file for output content
 if args.config_file_name.split('.')[-1] in ['json','pyini']:
-	EPIC_VARS_dict = get_config(args.config_file_name,'json')
+    EPIC_VARS_dict = ConfigParserLocal.get_config(args.config_file_name,'json')
 elif args.config_file_name.split('.')[-1] in ['yaml']:
-	EPIC_VARS_dict = get_config(args.config_file_name,'yaml')
+    EPIC_VARS_dict = ConfigParserLocal.get_config(args.config_file_name,'yaml')
 else:
-	print "config files must have .pyini, .json, or .yaml endings"
-	sys.exit()
+    sys.exit("Exiting: config files must have .pyini, .json, or .yaml endings")
 
 
 for i,cast in enumerate(gb.groups):
@@ -129,30 +133,40 @@ for i,cast in enumerate(gb.groups):
     data_dic={}
     #prep dictionary to send to netcdf gen
     data_dic.update({'time':tdata['date_time'].values})
+    data_dic.update({'dep':tdata['PrDM'].values})
+    data_dic.update({'NH4_189':tdata['NH4 (uM)'].values})
+    data_dic.update({'NO3_182':tdata['NO3 (uM)'].values})
+    data_dic.update({'SI_188':tdata['Sil (uM)'].values})
+    data_dic.update({'PO4_186':tdata['PO4 (uM)'].values})
+    data_dic.update({'NO2_184':tdata['NO2 (uM)'].values})
+    data_dic.update({'BTL_103':tdata['nb'].values})
 
-    cruise = list(tdata.groupby('Cruise').groups.keys())[0]
+    cruise = args.CruiseID.lower()
     cast = list(tdata.groupby('cast').groups.keys())[0]
     profile_name = args.output + cruise +\
                    cast.replace('ctd','c') +\
                    '_nut.nc' 
     
+    history = 'File created by merging nutrient analysis and bottle report files'
     #build netcdf file - filename is castid
-	### Time should be consistent in all files as a datetime object
-	#convert timestamp to datetime to epic time
-	time_datetime = [x.to_pydatetime() for x in data_dic['time']]
-	time1,time2 = np.array(Datetime2EPIC(time_datetime), dtype='f8')
-	ncinstance = NetCDF_Create_Profile(savefile=profile_name)
-	ncinstance.file_create()
-	ncinstance.sbeglobal_atts(raw_data_file=args.nutpath.split('/')[-1],
-								CruiseID=cruise,
-                                     Cast=cast)
-	ncinstance.dimension_init(depth_len=len(tdata))
-	ncinstance.variable_init(EPIC_VARS_dict)
-	ncinstance.add_coord_data(depth=data_dic['dep'], 
-								latitude=float(data_dic['lat'][0]), 
-								longitude=float(data_dic['lon'][0]), 
-								time1=time1[0], time2=time2[0])
-	ncinstance.add_data(EPIC_VARS_dict,data_dic=data_dic)
-	ncinstance.add_history(history)
-	ncinstance.close()
+    ### Time should be consistent in all files as a datetime object
+    #convert timestamp to datetime to epic time
+    data_dic['time'] =  pd.to_datetime(data_dic['time'], format='%Y%m%d %H:%M:%S')
+    time_datetime = [x.to_pydatetime() for x in data_dic['time']]
+    time1,time2 = np.array(Datetime2EPIC(time_datetime), dtype='f8')
+
+    ncinstance = EcF_write.NetCDF_Create_Profile(savefile=profile_name)
+    ncinstance.file_create()
+    ncinstance.sbeglobal_atts(raw_data_file=args.nutpath.split('/')[-1],
+                                CruiseID=cruise,
+                                Cast=cast)
+    ncinstance.dimension_init(depth_len=len(tdata))
+    ncinstance.variable_init(EPIC_VARS_dict)
+    ncinstance.add_coord_data(depth=data_dic['dep'], 
+                                latitude=1e35, 
+                                longitude=1e35, 
+                                time1=time1[0], time2=time2[0])
+    ncinstance.add_data(EPIC_VARS_dict,data_dic=data_dic)
+    ncinstance.add_history(history)
+    ncinstance.close()
 
