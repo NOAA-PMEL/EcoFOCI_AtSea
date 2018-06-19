@@ -11,12 +11,11 @@
 
  File Format:
  ------------
- - E.Wisegarver nutrient csv output
+ - E.Wisegarver - nutrient csv output
 
- - combined seabird btl report output
+ - S.Bell - combined seabird btl report output
 
-
- must specify the units (micromoles/kg or micromoles/l)
+ - Pavlof DB for cruise/cast metadata
 
  History:
  --------
@@ -42,6 +41,7 @@ import pandas as pd
 # User Packages
 import io_utils.ConfigParserLocal as ConfigParserLocal
 from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
+import io_utils.EcoFOCI_netCDF_write as EcF_write
 
 
 __author__   = 'Shaun Bell'
@@ -74,23 +74,22 @@ parser.add_argument('output',
 parser.add_argument('config_file_name', 
     metavar='config_file_name', 
     type=str, 
-    help='full path to config file - eof_config.yaml')
+    help='full path to config file - nut_config.yaml')
 
 args = parser.parse_args()
 
+### Read Nutrient file - processed by E. Weisgarver and
+# Bottle Report file obtained by concatenating bottle files without headers
 ndf = pd.read_csv(args.nutpath)
 
 print("Nutrient Header Summary:")
 print(ndf.info())
 
-ndf.sort_values(['Cast','Niskin'],inplace=True)
-
-reportdf = pd.read_csv(args.btlpath,delimiter='\s+')
+reportdf = pd.read_csv(args.btlpath,delimiter='\s+',parse_dates=[['date','time']])
 
 print("Btl Report Header Summary:")
 print(reportdf.info())
 
-reportdf.sort_values(['cast','nb'],inplace=True)
 #strip ctd from cast name and make integer
 try:
 	reportdf['CastNum'] = [int(x.lower().split('ctd')[-1]) for y,x in reportdf.cast.iteritems()]
@@ -113,3 +112,47 @@ temp.sort_values(['Cast_Niskin'],inplace=True)
 # print out to screen data not saved due to lack of cast info (CTD)
 # missing data is automatically excluded (NA groups)
 gb =temp.groupby('cast')
+
+# get config file for output content
+if args.config_file_name.split('.')[-1] in ['json','pyini']:
+	EPIC_VARS_dict = get_config(args.config_file_name,'json')
+elif args.config_file_name.split('.')[-1] in ['yaml']:
+	EPIC_VARS_dict = get_config(args.config_file_name,'yaml')
+else:
+	print "config files must have .pyini, .json, or .yaml endings"
+	sys.exit()
+
+
+for i,cast in enumerate(gb.groups):
+    tdata=gb.get_group(cast).sort_values('CastNum')
+    
+    data_dic={}
+    #prep dictionary to send to netcdf gen
+    data_dic.update({'time':tdata['date_time'].values})
+
+    cruise = list(tdata.groupby('Cruise').groups.keys())[0]
+    cast = list(tdata.groupby('cast').groups.keys())[0]
+    profile_name = args.output + cruise +\
+                   cast.replace('ctd','c') +\
+                   '_nut.nc' 
+    
+    #build netcdf file - filename is castid
+	### Time should be consistent in all files as a datetime object
+	#convert timestamp to datetime to epic time
+	time_datetime = [x.to_pydatetime() for x in data_dic['time']]
+	time1,time2 = np.array(Datetime2EPIC(time_datetime), dtype='f8')
+	ncinstance = NetCDF_Create_Profile(savefile=profile_name)
+	ncinstance.file_create()
+	ncinstance.sbeglobal_atts(raw_data_file=args.nutpath.split('/')[-1],
+								CruiseID=cruise,
+                                     Cast=cast)
+	ncinstance.dimension_init(depth_len=len(tdata))
+	ncinstance.variable_init(EPIC_VARS_dict)
+	ncinstance.add_coord_data(depth=data_dic['dep'], 
+								latitude=float(data_dic['lat'][0]), 
+								longitude=float(data_dic['lon'][0]), 
+								time1=time1[0], time2=time2[0])
+	ncinstance.add_data(EPIC_VARS_dict,data_dic=data_dic)
+	ncinstance.add_history(history)
+	ncinstance.close()
+
