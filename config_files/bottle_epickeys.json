@@ -1,0 +1,138 @@
+{
+	"Tr_904": {
+		"name": "Tr",
+		"generic_name": "",
+		"fortran": "",
+		"EPIC_KEY": 904,
+		"units": "%",
+		"longname": "Transmissometry (CTD)"
+	},
+	"Trb_980": {
+		"name": "Trb",
+		"generic_name": "turb",
+		"fortran": "f10.2",
+		"EPIC_KEY": 980,
+		"units": "FNU",
+		"longname": "Turbidity(FNU)"
+	},
+	"S_42": {
+		"name": "S",
+		"generic_name": "sal",
+		"fortran": "",
+		"EPIC_KEY": 42,
+		"units": "psu",
+		"longname": "SALINITY (PSU)"
+	},
+	"S_41": {
+		"name": "S",
+		"generic_name": "sal",
+		"fortran": "",
+		"EPIC_KEY": 41,
+		"units": "psu",
+		"longname": "SALINITY (PSU)"
+	},
+	"CTDOXY_4221": {
+		"name": "CTDOXY",
+		"generic_name": "ox",
+		"fortran": "",
+		"EPIC_KEY": 4221,
+		"units": "umol/kg",
+		"longname": "OXYGEN (UMOL/KG)"
+	},
+	"D_3": {
+		"name": "D",
+		"generic_name": "depth",
+		"fortran": "",
+		"EPIC_KEY": 3,
+		"units": "m",
+		"longname": "DEPTH (M)"
+	},
+	"fWS_973": {
+		"name": "fWS",
+		"generic_name": "fWS",
+		"fortran": "",
+		"EPIC_KEY": 973,
+		"units": "ug/L",
+		"longname": "wetStar fluorometer chl"
+	},
+	"T_28": {
+		"name": "T",
+		"generic_name": "temp",
+		"fortran": "f10.2",
+		"EPIC_KEY": 28,
+		"units": "C",
+		"longname": "TEMPERATURE (C)"
+	},
+	"OST_62": {
+		"name": "OST",
+		"generic_name": "ox",
+		"fortran": "",
+		"EPIC_KEY": 62,
+		"units": "%",
+		"longname": "OXYGEN, %SAT"
+	},
+	"O_65": {
+		"name": "O",
+		"generic_name": "ox",
+		"fortran": "",
+		"EPIC_KEY": 65,
+		"units": "umol/kg",
+		"longname": "OXYGEN (UMOL/KG)"
+	},
+	"T2_35": {
+		"name": "T2",
+		"generic_name": "temp",
+		"fortran": "f10.2",
+		"EPIC_KEY": 35,
+		"units": "C",
+		"longname": "Secondary Temperature"
+	},
+	"BTL_103": {
+		"name": "BTL",
+		"generic_name": "",
+		"fortran": "",
+		"EPIC_KEY": 103,
+		"units": "",
+		"longname": "NISKIN BOTTLE NUMBER"
+	},
+	"PAR_905": {
+		"name": "PAR",
+		"generic_name": "par",
+		"fortran": "",
+		"EPIC_KEY": 905,
+		"units": "uEin m-2 s-1",
+		"longname": "Photosynthetic Active Radiation"
+	},
+	"F_903": {
+		"name": "F",
+		"generic_name": "",
+		"fortran": "f10.2",
+		"EPIC_KEY": 903,
+		"units": "mg m-3",
+		"longname": "Fluorometer (CTD)"
+	},
+	"CTDOST_4220": {
+		"name": "CTDOST",
+		"generic_name": "ox",
+		"fortran": "",
+		"EPIC_KEY": 4220,
+		"units": "%",
+		"longname": "OXYGEN, %SAT"
+	},
+	"ST_70": {
+		"name": "ST",
+		"generic_name": "den",
+		"fortran": "f10.2",
+		"EPIC_KEY": 70,
+		"units": "kg m-3",
+		"longname": "SIGMA-T (KG/M**3)"
+	},
+	"STH_71": {
+		"name": "STH",
+		"generic_name": "potden",
+		"fortran": "f10.2",
+		"EPIC_KEY": 71,
+		"units": "kg m-3",
+		"longname": "SIGMA-THETA (KG/M**3)"
+	}
+}
