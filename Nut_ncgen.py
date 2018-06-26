@@ -55,7 +55,7 @@ __created__  = datetime.datetime(2018, 7, 14)
 __modified__ = datetime.datetime(2018, 7, 14)
 __version__  = "0.1.0"
 __status__   = "Development"
-__keywords__ = 'netCDF','meta','header', 'QC', 'bottle', 'discreet'
+__keywords__ = 'netCDF','meta','header', 'QC', 'bottle', 'discreet', 'nutrient'
 
 """------------------------------- MAIN--------------------------------------------"""
 
