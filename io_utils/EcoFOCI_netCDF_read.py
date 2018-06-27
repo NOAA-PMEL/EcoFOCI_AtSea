@@ -61,15 +61,25 @@ class EcoFOCI_netCDF(object):
             self.nchandle.variables[var_name][:] = val
         return
 
-    def ncreadfile_dic(self):
+    def ncreadfile_dic(self,output='array'):
 
         data = {}
-        for j, v in enumerate(self.nchandle.variables): 
-            if v in self.nchandle.variables.keys(): #check for nc variable
-                    data[v] = self.nchandle.variables[v][:]
+        if output in ['array']:
+            for j, v in enumerate(self.nchandle.variables): 
+                if v in self.nchandle.variables.keys(): #check for nc variable
+                        data[v] = self.nchandle.variables[v][:]
 
-            else: #if parameter doesn't exist fill the array with zeros
-                data[v] = None
+                else: #if parameter doesn't exist fill the array with zeros
+                    data[v] = None
+        elif output in ['vector']:
+            for j, v in enumerate(self.nchandle.variables): 
+                if v in self.nchandle.variables.keys(): #check for nc variable
+                    try:
+                        data[v] = self.nchandle.variables[v][0,:,0,0]
+                    except:
+                        data[v] = self.nchandle.variables[v][:]
+                else: #if parameter doesn't exist fill the array with zeros
+                    data[v] = None
         return (data)
 
     def add_history(self, prev_history, new_history):

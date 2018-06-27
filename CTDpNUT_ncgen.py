@@ -6,7 +6,10 @@
  
  Purpose:
  ========
- Creates EPIC flavored, merged .nc files downcast ctd and  nutrient data
+ Creates EPIC flavored, merged .nc files downcast ctd and  nutrient data.
+    Data assumes a sparse grid for nutrient data, scales it up to the full 1m grid of 
+    ctd data and then matches on depth.  Finally, it writes a new file (mirrored to the 
+    ctd file but with addtional variables defined by the nut config file)
  Todo: switch from EPIC to CF
 
  File Format:
@@ -77,6 +80,12 @@ parser.add_argument('config_file_name',
     type=str,
     default='', 
     help='full path to config file - ctdpnut_epickeys.yaml')
+parser.add_argument("-v","--verbose", 
+    action="store_true", 
+    help='output messages')
+parser.add_argument("-csv","--csv", 
+    action="store_true", 
+    help='output merged data as csv')
 
 args = parser.parse_args()
 
@@ -84,22 +93,98 @@ args = parser.parse_args()
 ctd_ncfiles = [args.ctd_ncpath + f for f in os.listdir(args.ctd_ncpath) if f.endswith('.nc')]
 nut_ncfiles = [args.nut_ncpath + f for f in os.listdir(args.nut_ncpath) if f.endswith('.nc')]
 
+# get config file for output content
+if args.config_file_name.split('.')[-1] in ['json','pyini']:
+    EPIC_VARS_dict = ConfigParserLocal.get_config(args.config_file_name,'json')
+elif args.config_file_name.split('.')[-1] in ['yaml']:
+    EPIC_VARS_dict = ConfigParserLocal.get_config(args.config_file_name,'yaml')
+else:
+    sys.exit("Exiting: config files must have .pyini, .json, or .yaml endings")
+
+
 #loop through all ctd files - skip files without downcast for now
 for ind,cast in enumerate(ctd_ncfiles):
     
+    nut_cast = cast.split('/')[-1].replace('_ctd','_nut')
+    print("Merging {ctdfile} and {nutfile}".format(ctdfile=cast,nutfile=(args.nut_ncpath + nut_cast)))
     ###nc readin/out
     df = EcoFOCI_netCDF(cast)
     global_atts = df.get_global_atts()
     vars_dic = df.get_vars()
-    ncdata = df.ncreadfile_dic()
+    ncdata = df.ncreadfile_dic(output='vector')
+    ncdata_coords=[ncdata.pop(x, '-9999') for x in ['time','time2','lat','lon']]
     df.close()
 
     ### read paired nut file
     try:
-        dfn = EcoFOCI_netCDF(nut_ncfiles[ind])
+        ncdata_nut = {}
+        dfn = EcoFOCI_netCDF(args.nut_ncpath + nut_cast)
         global_atts_nut = dfn.get_global_atts()
         vars_dic_nut = dfn.get_vars()
-        ncdata_nut = dfn.ncreadfile_dic()
+        ncdata_nut = dfn.ncreadfile_dic(output='vector')
         dfn.close()
     except:
         print("No matched Nutrient Data from cast:ctd{}".format(global_atts['CAST']))
+        continue
+
+
+
+    data_dic={}
+    #prep dictionary to send to netcdf gen
+
+    try:
+        data_dic.update({'dep':ncdata_nut['depth'][:].round()})
+    except KeyError:
+        data_dic.update({'dep':ncdata_nut['dep'][:].round()})
+
+    #check for all variables in ctdfile
+    for key in EPIC_VARS_dict.keys():
+        if key in ncdata.keys():
+            if args.verbose:
+                print("{} as defined found in ctd nc file".format(key))
+        else:
+            if args.verbose:
+                print("{} as defined not in ctd nc file".format(key))
+    #using config file, build datadic by looping through each variable and using
+    for key in EPIC_VARS_dict.keys():
+        try:
+            data_dic.update({key:ncdata_nut[key][:]})
+            if args.verbose:
+                print("{} as defined found in nut nc file".format(key))
+        except KeyError:
+            if args.verbose:
+                print("{} as defined not in nut nc file".format(key))
+
+    cruise = args.CruiseID.lower()        
+
+    #build complete dataframe from nuts to match to ctd
+    nut_df = pd.merge(pd.DataFrame.from_dict(ncdata),pd.DataFrame.from_dict(data_dic),
+                how='outer',on=['dep'])
+
+    if args.csv:
+        nut_df.to_csv(args.output + args.CruiseID + '_merged.csv')
+    else:
+        
+        history = 'File created by merging xxx_nut.nc  and xxx_ctd.nc files'
+        #build netcdf file - filename is castid
+        ### Time should be consistent in all files as a datetime object
+        #convert timestamp to datetime to epic time
+
+        ncinstance = EcF_write.NetCDF_Create_Profile(savefile=profile_name)
+        ncinstance.file_create()
+        ncinstance.sbeglobal_atts(raw_data_file=args.ctd_ncpath.split('/')[-1] + ',' +\
+                                                args.nut_ncpath.split('/')[-1],
+                                  CruiseID=cruise,
+                                  Cast=cast)
+        ncinstance.dimension_init(depth_len=len(nut_df))
+        ncinstance.variable_init(EPIC_VARS_dict)
+        ncinstance.add_coord_data(depth=nut_df['dep'].values, 
+                                    latitude=ncdata_coords[2], 
+                                    longitude=ncdata_coords[3], 
+                                    time1=ncdata_coords[0], time2=ncdata_coords[1])
+        ncinstance.add_data(EPIC_VARS_dict,data_dic=nut_df.to_dict('list'))
+        ncinstance.add_history(history)
+        ncinstance.close()
+
+
+
