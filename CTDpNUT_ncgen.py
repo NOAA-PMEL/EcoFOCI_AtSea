@@ -35,6 +35,7 @@ import datetime
 import argparse
 import sys
 import os
+from shutil import copyfile
 
 #Science Stack
 from netCDF4 import Dataset
@@ -125,6 +126,8 @@ for ind,cast in enumerate(ctd_ncfiles):
         dfn.close()
     except:
         print("No matched Nutrient Data from cast:ctd{}".format(global_atts['CAST']))
+        print("Copy CTD file to output dir")
+        copyfile(cast,args.output+cast.split('/')[-1])
         continue
 
 
@@ -147,13 +150,14 @@ for ind,cast in enumerate(ctd_ncfiles):
                 print("{} as defined not in ctd nc file".format(key))
     #using config file, build datadic by looping through each variable and using
     for key in EPIC_VARS_dict.keys():
-        try:
-            data_dic.update({key:ncdata_nut[key][:]})
-            if args.verbose:
-                print("{} as defined found in nut nc file".format(key))
-        except KeyError:
-            if args.verbose:
-                print("{} as defined not in nut nc file".format(key))
+        if not key in ncdata.keys():
+            try:
+                data_dic.update({key:ncdata_nut[key][:]})
+                if args.verbose:
+                    print("{} as defined found in nut nc file".format(key))
+            except KeyError:
+                if args.verbose:
+                    print("{} as defined not in nut nc file".format(key))
 
     cruise = args.CruiseID.lower()        
 
@@ -162,13 +166,15 @@ for ind,cast in enumerate(ctd_ncfiles):
                 how='outer',on=['dep'])
 
     if args.csv:
-        nut_df.to_csv(args.output + args.CruiseID + '_merged.csv')
+        nut_df.to_csv(args.output + nut_cast.replace('nut.nc','merged.csv'))
     else:
         
-        history = 'File created by merging xxx_nut.nc  and xxx_ctd.nc files'
+        history = ':File created by merging {nutfile} and {ctdfile} files'.format(nutfile=nut_cast,ctdfile=cast.split('/')[-1])
         #build netcdf file - filename is castid
         ### Time should be consistent in all files as a datetime object
         #convert timestamp to datetime to epic time
+
+        profile_name = args.output + nut_cast.replace('nut','merged')
 
         ncinstance = EcF_write.NetCDF_Create_Profile(savefile=profile_name)
         ncinstance.file_create()
