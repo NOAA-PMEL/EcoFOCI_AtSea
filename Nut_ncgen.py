@@ -85,7 +85,7 @@ args = parser.parse_args()
 
 ### Read Nutrient file - processed by E. Weisgarver and
 # Bottle Report file obtained by concatenating bottle files without headers
-ndf = pd.read_csv(args.nutpath)
+ndf = pd.read_csv(args.nutpath,sep="\t|,",engine='python')
 
 print("Nutrient Header Summary:")
 print(ndf.info())
@@ -103,7 +103,7 @@ except ValueError:
 
 #make a cast_niskin column to index on
 print("Matching on Cast/Niskin pair.")
-ndf['Cast_Niskin'] = [str(x['Cast']).zfill(3) + '_' + str(x['Niskin']).zfill(2) for y,x in ndf.iterrows()]
+ndf['Cast_Niskin'] = [str(int(x['Cast'])).zfill(3) + '_' + str(int(x['Niskin'])).zfill(2) for y,x in ndf.iterrows()]
 reportdf['Cast_Niskin'] = [str(x['CastNum']).zfill(3) + '_' + str(x['nb']).zfill(2) for y,x in reportdf.iterrows()]
 
 ###three potential merged results
@@ -144,7 +144,7 @@ for i,cast in enumerate(gb.groups):
     cruise = args.CruiseID.lower()
     cast = list(tdata.groupby('cast').groups.keys())[0]
     profile_name = args.output + cruise +\
-                   cast.replace('ctd','c') +\
+                   cast.lower().replace('ctd','c') +\
                    '_nut.nc' 
     
     history = 'File created by merging nutrient analysis and bottle report files'
