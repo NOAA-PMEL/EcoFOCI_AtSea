@@ -144,7 +144,7 @@ for i,cast in enumerate(gb.groups):
 
     ncinstance = EcF_write.NetCDF_Create_Profile(savefile=profile_name)
     ncinstance.file_create()
-    ncinstance.sbeglobal_atts(raw_data_file=args.nutpath.split('/')[-1],
+    ncinstance.sbeglobal_atts(raw_data_file=args.btlpath.split('/')[-1],
                                 CruiseID=cruise,
                                 Cast=cast)
     ncinstance.dimension_init(depth_len=len(tdata))
