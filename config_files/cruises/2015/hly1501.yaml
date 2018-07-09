@@ -5,7 +5,8 @@ Trb_980:
   EPIC_KEY: 980
   units: FNU
   longname: Turbidity(FNU)
-  sbe_label: TurbWETntu0
+  sbe_label: Obs
+#  sbe_label: TurbWETntu0
 S_42:
   name: S
   generic_name: sal
@@ -104,3 +105,17 @@ STH_71:
   units: kg m-3
   longname: SIGMA-THETA (KG/M**3)
   sbe_label:  
+ATTN_55:
+  name: ATTN
+  generic_name: attn
+  EPIC_KEY: 55
+  units: 'm-1'
+  longname: "ATTENUATION"
+  sbe_label: CStarAt0
+Tr_904:
+  name: Tr
+  generic_name: ''
+  EPIC_KEY: 904
+  units: '%'
+  longname: "Transmissometery (CTD)"
+  sbe_label: CStarTr0

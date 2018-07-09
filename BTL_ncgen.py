@@ -114,7 +114,10 @@ for i,cast in enumerate(gb.groups):
     data_dic={}
     #prep dictionary to send to netcdf gen
     data_dic.update({'time':tdata['date_time'].values})
-    data_dic.update({'dep':tdata['PrDM'].values})
+    try:
+        data_dic.update({'dep':tdata['PrDM'].values})
+    except KeyError:
+        data_dic.update({'dep':tdata['PrSM'].values})
 
     #using config file, build datadic by looping through each variable and using
     #'sbe_label'

@@ -1,11 +1,4 @@
 ---
-Trb_980:
-  name: Trb
-  generic_name: turb
-  EPIC_KEY: 980
-  units: FNU
-  longname: Turbidity(FNU)
-  sbe_label: TurbWETntu0
 S_42:
   name: S
   generic_name: sal
@@ -76,13 +69,13 @@ PAR_905:
   units: uEin m-2 s-1
   longname: Photosynthetic Active Radiation
   sbe_label: Par
-F_903:
-  name: F
-  generic_name: f
-  EPIC_KEY: 903
-  units: mg m-3
-  longname: Fluorometer (CTD)
-  sbe_label: FlECO-AFL
+fWS_973:
+  name: fWS
+  generic_name: ''
+  EPIC_KEY: 973
+  units: ug/L
+  longname: wetStar fluorometer chl
+  sbe_label: wetStar
 CTDOST_4220:
   name: CTDOST
   generic_name: ox
@@ -104,3 +97,17 @@ STH_71:
   units: kg m-3
   longname: SIGMA-THETA (KG/M**3)
   sbe_label:  
+ATTN_55:
+  name: ATTN
+  generic_name: attn
+  EPIC_KEY: 55
+  units: 'm-1'
+  longname: "ATTENUATION"
+  sbe_label: CStarAt0
+Tr_904:
+  name: Tr
+  generic_name: ''
+  EPIC_KEY: 904
+  units: '%'
+  longname: "Transmissometery (CTD)"
+  sbe_label: CStarTr0

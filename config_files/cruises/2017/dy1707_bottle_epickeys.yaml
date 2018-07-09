@@ -1,11 +1,4 @@
 ---
-Trb_980:
-  name: Trb
-  generic_name: turb
-  EPIC_KEY: 980
-  units: FNU
-  longname: Turbidity(FNU)
-  sbe_label: TurbWETntu0
 S_42:
   name: S
   generic_name: sal
@@ -26,14 +19,7 @@ CTDOXY_4221:
   EPIC_KEY: 4221
   units: umol/kg
   longname: OXYGEN (UMOL/KG)
-  sbe_label: Sbeox1Mm/Kg
-D_3:
-  name: D
-  generic_name: depth
-  EPIC_KEY: 3
-  units: m
-  longname: DEPTH (M)
-  sbe_label: DepSM
+  sbe_label: Sbox1Mm/Kg
 T_28:
   name: T
   generic_name: temp
@@ -54,7 +40,7 @@ O_65:
   EPIC_KEY: 65
   units: umol/kg
   longname: OXYGEN (UMOL/KG)
-  sbe_label: Sbeox0Mm/Kg
+  sbe_label: Sbox0Mm/Kg
 T2_35:
   name: T2
   generic_name: temp

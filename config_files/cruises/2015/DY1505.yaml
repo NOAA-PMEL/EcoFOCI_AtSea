@@ -1,11 +1,4 @@
 ---
-Trb_980:
-  name: Trb
-  generic_name: turb
-  EPIC_KEY: 980
-  units: FNU
-  longname: Turbidity(FNU)
-  sbe_label: TurbWETntu0
 S_42:
   name: S
   generic_name: sal

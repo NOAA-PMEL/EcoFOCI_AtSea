@@ -1,0 +1,71 @@
+---
+S_42:
+  name: S
+  generic_name: sal
+  EPIC_KEY: 42
+  units: psu
+  longname: SALINITY (PSU)
+  sbe_label: Sal11
+D_3:
+  name: D
+  generic_name: depth
+  EPIC_KEY: 3
+  units: m
+  longname: DEPTH (M)
+  sbe_label: DepSM
+T_28:
+  name: T
+  generic_name: temp
+  EPIC_KEY: 28
+  units: C
+  longname: TEMPERATURE (C)
+  sbe_label: T090C
+BTL_103:
+  name: BTL
+  generic_name: btl
+  EPIC_KEY: 103
+  units: ''
+  longname: NISKIN BOTTLE NUMBER
+  sbe_label: nb
+PAR_905:
+  name: PAR
+  generic_name: par
+  EPIC_KEY: 905
+  units: uEin m-2 s-1
+  longname: Photosynthetic Active Radiation
+  sbe_label: Par
+fWS_973:
+  name: fWS
+  generic_name: ''
+  EPIC_KEY: 973
+  units: ug/L
+  longname: wetStar fluorometer chl
+  sbe_label: WetStar
+ST_70:
+  name: ST
+  generic_name: den
+  EPIC_KEY: 70
+  units: kg m-3
+  longname: SIGMA-T (KG/M**3)
+  sbe_label: Sigma-t00
+STH_71:
+  name: STH
+  generic_name: potden
+  EPIC_KEY: 71
+  units: kg m-3
+  longname: SIGMA-THETA (KG/M**3)
+  sbe_label:  
+ATTN_55:
+  name: ATTN
+  generic_name: attn
+  EPIC_KEY: 55
+  units: 'm-1'
+  longname: "ATTENUATION"
+  sbe_label: CStarAt0
+Tr_904:
+  name: Tr
+  generic_name: ''
+  EPIC_KEY: 904
+  units: '%'
+  longname: "Transmissometery (CTD)"
+  sbe_label: CStarTr0

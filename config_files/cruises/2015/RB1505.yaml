@@ -76,13 +76,13 @@ PAR_905:
   units: uEin m-2 s-1
   longname: Photosynthetic Active Radiation
   sbe_label: Par
-F_903:
-  name: F
-  generic_name: f
-  EPIC_KEY: 903
-  units: mg m-3
-  longname: Fluorometer (CTD)
-  sbe_label: FlECO-AFL
+fWS_973:
+  name: fWS
+  generic_name: ''
+  EPIC_KEY: 973
+  units: ug/L
+  longname: wetStar fluorometer chl
+  sbe_label: wetStar
 CTDOST_4220:
   name: CTDOST
   generic_name: ox
