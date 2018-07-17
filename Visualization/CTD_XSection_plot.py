@@ -10,10 +10,21 @@
  --------
  Various routines for visualizing ALAMO data
 
- History:
- --------
+ History
+ -------
+
+ 2018-07-13: Make python3 compliant
+
+
+ Compatibility:
+ ==============
+ python >=3.6 
+ python 2.7 
 
 """
+
+from __future__ import (absolute_import, division, print_function)
+
 
 #System Stack
 import datetime
@@ -101,8 +112,7 @@ if args.PointerFile.split('.')[-1] == 'pyini':
 elif args.PointerFile.split('.')[-1] == 'yaml':
 	pointer_file = ConfigParserLocal.get_config_yaml(args.PointerFile)
 else:
-	print "PointerFile format not recognized"
-	sys.exit()
+	sys.exit("PointerFile format not recognized")
 
 
 CTDDataPath = pointer_file['ctd_data_path']
@@ -118,7 +128,7 @@ ax1 = fig.add_subplot(111)
 for castnum, cast in enumerate((ctd_files_path)):
 
 	#open/read netcdf files
-	print "Reading {cast}".format(cast=cast)
+	print("Reading {cast}".format(cast=cast))
 	df = EcoFOCI_netCDF(cast)
 	global_atts = df.get_global_atts()
 	vars_dic = df.get_vars()

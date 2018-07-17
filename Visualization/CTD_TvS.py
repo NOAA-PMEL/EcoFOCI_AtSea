@@ -11,13 +11,22 @@ Options - temperature and salinity bounds
 Options - individual profiles or entire cruises
 
  History:
- --------
+ ========
+ 2018-07-13: Make python3 compliant
  2018-03-27: Modify so that an entire cruise can be plotted on one plot with
     options for colorcoding data.
  2017-06-21: Migrate to EcoFOCI_MooringAnalysis pkg and unify netcdf creation
     code so that it is no longer instrument dependant
 
+
+ Compatibility:
+ ==============
+ python >=3.6 
+ python 2.7 
+
 """
+
+from __future__ import (absolute_import, division, print_function)
 
 #System Stack
 import datetime
@@ -70,7 +79,7 @@ def plot_salvtemp(salt, temp, press, srange=[0,1], trange=[0,10], ptitle=""):
     
     #print 'ydim: ' + str(ydim) + ' xdim: ' + str(xdim) + ' \n'
     if (xdim > 10000) or (ydim > 10000): 
-        print 'To many dimensions for grid in ' + cruise + cast + ' file. Likely  missing data \n'
+        print('To many dimensions for grid in {0} {1} file. Likely  missing data \n'.format(cruise,cast))
         return
  
     # Create empty grid of zeros
@@ -191,7 +200,7 @@ else:
     #Individual plots per file/cast  
     for ncfile in sorted(nc_path):
      
-        print "Working on file %s " % ncfile
+        print("Working on file {} ".format(ncfile))
 
         nc = EcoFOCI_netCDF(ncfile)
         ncdata = nc.ncreadfile_dic()

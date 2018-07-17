@@ -3,6 +3,7 @@ r'''Module to convert PMEL-EPIC timeword to a python datetime
 
     Modifications
     -------------
+    2018-07-17: SBELL - force numpy ints to be datetime compliant
     2018-06-19: SBELL - make python3 compliant
     2016-11-14: SBELL - create routine to add datetime offset
 
@@ -89,7 +90,7 @@ def EPIC2Datetime( timeword_1, timeword_2):
     delta_days = [x - ref_time_epic for x in timeword_1]
     delta_seconds = [x/1000 for x in timeword_2]
     
-    epic_dt = [ref_time_dt + datetime.timedelta(a,c) for a,c in zip(delta_days,delta_seconds)]
+    epic_dt = [ref_time_dt + datetime.timedelta(int(a),int(c)) for a,c in zip(delta_days,delta_seconds)]
 
     return(epic_dt)
 

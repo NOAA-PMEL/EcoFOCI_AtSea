@@ -6,12 +6,19 @@ CTD_plot.py
 Plot data from cruises
 
 Currently
----------
+=========
 ctd plots
 
 Input - CruiseID
 
+History
+=======
+
+2018-07-13: Make python3 compliant
+
 """
+
+from __future__ import (absolute_import, division, print_function)
 
 #System Stack
 import datetime
@@ -104,7 +111,7 @@ else:
     
 for ncfile in sorted(nc_path):
  
-    print "Working on file %s " % ncfile
+    print("Working on file {}".format(ncfile))
     nc = EcoFOCI_netCDF(ncfile)
     ncdata = nc.ncreadfile_dic()
     g_atts = nc.get_global_atts()

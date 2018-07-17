@@ -10,11 +10,20 @@ Input - CruiseID
 Output - png map and kml map
 
 History
--------
+=======
 
+2018-07-13: Make python3 compliant
 2016-09-09: Begin migration to classes for reused routines (db_io)
 
+
+ Compatibility:
+ ==============
+ python >=3.6 
+ python 2.7 
+
 """
+
+from __future__ import (absolute_import, division, print_function)
 
 #System Stack
 import datetime
@@ -105,7 +114,7 @@ def read_data(db, cursor, table, cruiseID, dbvar='CruiseID', latvarname='Latitud
         which have valide latitude variables"""
     
     sql = ("SELECT * from `{0}` WHERE `{1}`='{2}' AND `{3}` NOT LIKE '' AND `{3}` NOT LIKE 'NOT DEPLOYED' AND `{3}` NOT LIKE '-99'").format(table, dbvar, cruiseID, latvarname)
-    print sql
+    print(sql)
     
     result_dic = {}
     try:
@@ -124,7 +133,7 @@ def read_data(db, cursor, table, cruiseID, dbvar='CruiseID', latvarname='Latitud
             result_dic[row['id']] ={keys: row[keys] for val, keys in enumerate(row.keys())} 
         return (result_dic)
     except:
-        print "Error: unable to fecth data"
+        print("Error: unable to fecth data")
 
 """------------------------------------- MAPS -----------------------------------------"""
 
@@ -313,7 +322,7 @@ argo_table='argofloat_drifter_ids'
 
 for cruiseID in cruiseID_input:
     
-    print 'Working on Cruise: ' + cruiseID
+    print('Working on Cruise: {}'.format(cruiseID))
     # ctd db
     #get information from local config file - a json formatted file
     db_config = ConfigParserLocal.get_config('../config_files/db_config_cruises.yaml')
@@ -372,9 +381,8 @@ for cruiseID in cruiseID_input:
     
     ## exit if db is empty
     if (len(data.keys()) == 0):
-        print ("Sorry, this cruise is either not in the database or was entered "
-                "incorrectly.  Please start the program and try again.")
-        sys.exit()
+        sys.exit("Sorry, this cruise is either not in the database or was entered "
+                 "incorrectly.  Please start the program and try again.")
 
     ########
         
@@ -429,7 +437,7 @@ for cruiseID in cruiseID_input:
                 
     ### Basemap Visualization
     if args.png or args.svg:
-        print "Generating image"
+        print("Generating image")
         ## plot
         #(topoin_tot, elats_tot, elons_tot) = etopo5_data()
         (topoin, elats, elons) = etopo5_data()
@@ -504,7 +512,7 @@ for cruiseID in cruiseID_input:
         
     ### KML for google Earth
     if args.kml:
-        print "Generating .kml"
+        print("Generating .kml")
     
         kml_header = (
             '<?xml version=\'1.0\' encoding=\'UTF-8\'?>\n'
@@ -643,7 +651,7 @@ for cruiseID in cruiseID_input:
           ]
         }"""
 
-        print "Generating .geojson as single points per cast"
+        print("Generating .geojson as single points per cast")
         geojson_header = (
             '{\n'
             '"type": "FeatureCollection",\n'

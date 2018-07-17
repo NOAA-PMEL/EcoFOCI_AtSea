@@ -12,7 +12,14 @@ plots prawler data as secondary
 
 Input - CruiseID
 
+
+ Compatibility:
+ ==============
+ python >=3.6 
+ python 2.7 
+
 """
+from __future__ import (absolute_import, division, print_function)
 
 #System Stack
 import datetime

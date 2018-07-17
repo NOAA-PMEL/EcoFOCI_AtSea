@@ -5,8 +5,19 @@ CTD_isosfc_map.py
 
 Generates png map of isosurface for all casts in a designated cruise
 
-Using Anaconda packaged Python 
+ History
+ =======
+
+ 2018-07-13: Make python3 compliant
+
+ Compatibility:
+ ==============
+ python >=3.6 
+ python 2.7 
+
 """
+
+from __future__ import (absolute_import, division, print_function)
 
 #System Stack
 import datetime
@@ -80,7 +91,7 @@ def date2pydate(file_time, file_time2=None, file_flag='EPIC'):
             python_time = (pyday + pyfrac)
         
     else:
-        print "time flag not recognized"
+        print("time flag not recognized")
         sys.exit()
         
     return np.array(python_time)    
@@ -129,8 +140,8 @@ ctd_data_files = sorted(ctd_data_files)
 isemptydata = True
 ctd_data = {}
 for count, ncfile in enumerate(ctd_data_files): #cycle through all available files for an id
-    print "Working on file {0}".format(args.sourcedir + ncfile)
-    print "Retreiving {0} at {1} dBar".format(args.EPIC_Key, args.Depth)
+    print("Working on file {0}".format(args.sourcedir + ncfile))
+    print("Retreiving {0} at {1} dBar".format(args.EPIC_Key, args.Depth))
     ###nc readin
     nchandle = Dataset(args.sourcedir + ncfile,'a')
     vars_dic = get_vars(nchandle)
@@ -160,7 +171,7 @@ topoin = topoin[find_nearest(elats,lat.min()-5):find_nearest(elats,lat.max()+5),
 elons = elons[find_nearest(elons,-1*(lon.max()+5)):find_nearest(elons,-1*(lon.min()-5))]
 elats = elats[find_nearest(elats,lat.min()-5):find_nearest(elats,lat.max()+5)]
 
-print "Generating image"
+print("Generating image")
 
 #determine regional bounding
 y1 = np.floor(lat.min()-1)
