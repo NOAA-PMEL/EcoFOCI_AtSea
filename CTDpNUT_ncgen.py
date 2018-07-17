@@ -59,7 +59,7 @@ __keywords__ = 'netCDF','meta','header', 'QC', 'bottle', 'discreet'
 
 """------------------------------- MAIN--------------------------------------------"""
 
-parser = argparse.ArgumentParser(description='Merge and archive nutrient csv data and bottle data')
+parser = argparse.ArgumentParser(description='Merge and archive nutrient csv data and 1m downcast data')
 parser.add_argument('CruiseID', 
     metavar='CruiseID', 
     type=str, 

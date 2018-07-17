@@ -1,7 +1,7 @@
 ---
 BTL_OXY:
   standard_name: mole_concentration_of_dissolved_molecular_oxygen_in_sea_water
-  units: psu
+  units: micromole kg-1
   long_name: 'Bottle Sampled - Winkler Titrated Dissolved Oxygen'
 BTL_OXY_QC:
   standard_name: ''

@@ -7,10 +7,14 @@ Collection of utilites for processing and visualizing common data that is gather
 - UnderWay Data   
 
 #### EPIC/CF netcdf generation
-- From Nutrient Data (with bottle data)
-- From upcast Bottle Data
+**TODO:**
 - From discrete Oxygen/Salinity Calibration/Characterization measurements
 
+##### Nutrient netcdf archive instructions
+- From Nutrient Data (with bottle data)
+
+##### Bottle netcdf archive instructions
+- From upcast Bottle Data
 
 #### SCS_shptrack2gpx.py
 
