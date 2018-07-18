@@ -13,7 +13,7 @@ from netCDF4 import MFDataset
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
 __created__  = datetime.datetime(2013, 12, 20)
-__modified__ = datetime.datetime(2014, 03, 14) #<-- PI DAY :)
+__modified__ = datetime.datetime(2014, 3, 14) #<-- PI DAY :)
 __version__  = "0.1.1"
 __status__   = "Development"
 

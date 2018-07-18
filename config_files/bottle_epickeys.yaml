@@ -66,7 +66,7 @@ BTL_103:
   name: BTL
   generic_name: btl
   EPIC_KEY: 103
-  units: 
+  units: ''
   longname: NISKIN BOTTLE NUMBER
   sbe_label: nb
 PAR_905:

@@ -55,8 +55,8 @@ from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF
 
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
-__created__  = datetime.datetime(2014, 05, 22)
-__modified__ = datetime.datetime(2014, 06, 24)
+__created__  = datetime.datetime(2014, 5, 22)
+__modified__ = datetime.datetime(2014, 6, 24)
 __version__  = "0.3.0"
 __status__   = "Development"
 __keywords__ = 'CTD', 'Plots', 'Cruise', 'QC'
@@ -126,11 +126,10 @@ parser.add_argument('DataPath',
         type=str,
         help='full path to directory of processed nc files. \
         This plots each file individually unless -fc flag is passed')
-parser.add_argument('-fc', 
-        metavar='full_cruise', 
+parser.add_argument('-fc', '--full_cruise', 
+        action="store_true",
+        help='Use all cruise casts')
 parser.add_argument('-ss','--sal_scale', 
-        type=str,
-        help='plots entire cruise on one plot')
         nargs='+',
         type=float,
         help='fixed salinity scale (min max)')
@@ -154,15 +153,26 @@ else:
 #  Its poor coding so fix later 
 if args.full_cruise:
 
-        if not os.path.exists('images/' + g_atts['CRUISE']):
-            os.makedirs('images/' + g_atts['CRUISE'])
-        if not os.path.exists('images/' + g_atts['CRUISE'] + '/TS_plot/'):
-            os.makedirs('images/' + g_atts['CRUISE'] + '/TS_plot/')
+
+    for ncfile in sorted(nc_path):
+
+        print("Working on file {} ".format(ncfile))
+
+        nc = EcoFOCI_netCDF(ncfile)
+        ncdata = nc.ncreadfile_dic()
+        g_atts = nc.get_global_atts()
+        nc.close()
 
         try:
             ncdata['S_41']
         except:
             continue
+
+        if not os.path.exists('images/' + g_atts['CRUISE']):
+            os.makedirs('images/' + g_atts['CRUISE'])
+        if not os.path.exists('images/' + g_atts['CRUISE'] + '/TS_plot/'):
+            os.makedirs('images/' + g_atts['CRUISE'] + '/TS_plot/')
+
 
         cast_time = EPIC2Datetime(ncdata['time'],ncdata['time2'])[0]
         all_temperature = all_salinity = all_depth = all_times = [] 
@@ -171,30 +181,33 @@ if args.full_cruise:
         all_salinity = all_salinity + [ncdata['S_41'][0,:,0,0]]
         all_depth = all_depth + [ncdata['dep']]
 
-        ptitle = ("Plotted on: {0} from {1} \n\n"
-                  "Cruise: {2} Cast: {3}  Stn: {4} \n"
-                  "Lat: {5:3.3f}  Lon: {6:3.3f} at {7}\n").format(datetime.datetime.now().strftime('%Y/%m/%d %H:%M'), 
-                                                  'All', g_atts['CRUISE'], 'All', g_atts['STATION_NAME'], 
-                                                  ncdata['lat'][0], ncdata['lon'][0], datetime.datetime.strftime(cast_time,"%Y-%m-%d %H:%M GMT" ))
 
+    ptitle = ("Plotted on: {0} from {1} \n\n"
+              "Cruise: {2} Cast: {3}  Stn: {4} \n"
+              "Lat: {5:3.3f}  Lon: {6:3.3f} at {7}\n").format(datetime.datetime.now().strftime('%Y/%m/%d %H:%M'), 
+                                              'All', g_atts['CRUISE'], 'All', g_atts['STATION_NAME'], 
+                                              ncdata['lat'][0], ncdata['lon'][0], datetime.datetime.strftime(cast_time,"%Y-%m-%d %H:%M GMT" ))
 
+    all_salinity = np.array(all_salinity)
+    all_temperature = np.array(all_temperature)
+    all_depth = np.array(all_depth)
 
-        if args.sal_scale and args.temp_scale:
-            fig = plot_salvtemp(all_salinity, all_temperature, ncdata['dep'],\
-                                args.sal_scale, args.temp_scale, ptitle)
-        else:
-            # Figure out boudaries (mins and maxs)
-            smin = all_salinity.min() - (0.01 * all_salinity.min())
-            smax = all_salinity.max() + (0.01 * all_salinity.max())
-            tmin = all_temperature.min() - (0.1 * all_temperature.max())
-            tmax = all_temperature.max() + (0.1 * all_temperature.max())
-            fig = plot_salvtemp(all_salinity, all_temperature, all_depth,\
-                                [smin, smax], [tmin, tmax], ptitle)
+    if args.sal_scale and args.temp_scale:
+        fig = plot_salvtemp(all_salinity, all_temperature, all_depth,\
+                            args.sal_scale, args.temp_scale, ptitle)
+    else:
+        # Figure out boudaries (mins and maxs)
+        smin = all_salinity.min() - (0.01 * all_salinity.min())
+        smax = all_salinity.max() + (0.01 * all_salinity.max())
+        tmin = all_temperature.min() - (0.1 * all_temperature.max())
+        tmax = all_temperature.max() + (0.1 * all_temperature.max())
+        fig = plot_salvtemp(all_salinity, all_temperature, all_depth,\
+                            [smin, smax], [tmin, tmax], ptitle)
 
-        DefaultSize = fig.get_size_inches()
-        fig.set_size_inches( (DefaultSize[0], DefaultSize[1]) )
-        plt.savefig('images/' + g_atts['CRUISE'] + '/TS_plot/' + g_atts['CRUISE'] + '_TSplot.png', bbox_inches='tight', dpi = (300))
-        plt.close()
+    DefaultSize = fig.get_size_inches()
+    fig.set_size_inches( (DefaultSize[0], DefaultSize[1]) )
+    plt.savefig('images/' + g_atts['CRUISE'] + '/TS_plot/' + g_atts['CRUISE'] + '_TSplot.png', bbox_inches='tight', dpi = (300))
+    plt.close()
 
 else:
     #Individual plots per file/cast  

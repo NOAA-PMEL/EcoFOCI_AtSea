@@ -6,7 +6,12 @@ Collection of utilites for processing and visualizing common data that is gather
 - CTD Data
 - UnderWay Data   
 
-#### EPIC/CF netcdf generation
+### CTD Basic Editing Utilities
+#### Interp2SFC
+- extrapolate all variables to surface from chosen depth and resave.
+
+
+### EPIC/CF netcdf generation
 **TODO:**
 - From discrete Oxygen/Salinity Calibration/Characterization measurements
 
