@@ -12,13 +12,13 @@ Output - png map and kml map
 History
 =======
 
-2018-07-13: Make python3 compliant
+2018-07-13: Make python3 compliant: WIP
 2016-09-09: Begin migration to classes for reused routines (db_io)
 
 
  Compatibility:
  ==============
- python >=3.6 
+ python >=3.6 - Not working
  python 2.7 
 
 """
@@ -52,8 +52,8 @@ from io_utils import ConfigParserLocal
 
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
-__created__  = datetime.datetime(2014, 05, 22)
-__modified__ = datetime.datetime(2014, 05, 22)
+__created__  = datetime.datetime(2014, 5, 22)
+__modified__ = datetime.datetime(2014, 5, 22)
 __version__  = "0.1.0"
 __status__   = "Development"
 __keywords__ = 'CTD', 'Cruise Map', 'Cruise', 'MySQL'
@@ -380,7 +380,7 @@ for cruiseID in cruiseID_input:
     close_DB(db)
     
     ## exit if db is empty
-    if (len(data.keys()) == 0):
+    if (len(list(data.keys())) == 0):
         sys.exit("Sorry, this cruise is either not in the database or was entered "
                  "incorrectly.  Please start the program and try again.")
 
@@ -391,11 +391,11 @@ for cruiseID in cruiseID_input:
         os.makedirs('images/' + cruiseID)
     
     ## get relevant data for plotting
-    cast_name = [data[a_ind]['ConsecutiveCastNo'] for a_ind in data.keys()]
-    cast_lat = np.array([float(data[a_ind]['LatitudeDeg']) + float(data[a_ind]['LatitudeMin'])/60.0 for a_ind in data.keys()])
-    cast_lon = np.array([float(data[a_ind]['LongitudeDeg']) + float(data[a_ind]['LongitudeMin'])/60.0 for a_ind in data.keys()])
-    cast_date = [str(data[a_ind]['GMTYear'])+'-'+data[a_ind]['GMTMonth']+'-'+str(data[a_ind]['GMTDay']) for a_ind in data.keys()]
-    cast_time = [convert_timedelta(data[a_ind]['GMTTime']) for a_ind in data.keys()]
+    cast_name = [data[a_ind]['ConsecutiveCastNo'] for a_ind in list(data.keys())]
+    cast_lat = np.array([float(data[a_ind]['LatitudeDeg']) + float(data[a_ind]['LatitudeMin'])/60.0 for a_ind in list(data.keys())])
+    cast_lon = np.array([float(data[a_ind]['LongitudeDeg']) + float(data[a_ind]['LongitudeMin'])/60.0 for a_ind in list(data.keys())])
+    cast_date = [str(data[a_ind]['GMTYear'])+'-'+data[a_ind]['GMTMonth']+'-'+str(data[a_ind]['GMTDay']) for a_ind in list(data.keys())]
+    cast_time = [convert_timedelta(data[a_ind]['GMTTime']) for a_ind in list(data.keys())]
 
     
     #deployed moorings
@@ -576,7 +576,7 @@ for cruiseID in cruiseID_input:
             )
     
         kml = ''
-        for ind, value in enumerate(data.keys()):
+        for ind, value in enumerate(list(data.keys())):
         
             kml = kml + (
                '        <Placemark>\n'
@@ -658,7 +658,7 @@ for cruiseID in cruiseID_input:
             '"features": [\n'
             )
         geojson_Features = ''
-        for ind, value in enumerate(data.keys()):
+        for ind, value in enumerate(list(data.keys())):
             geojson_Features = geojson_Features + (
             '{{\n'
             '"type": "Feature",\n'
@@ -680,7 +680,7 @@ for cruiseID in cruiseID_input:
             data[value]['ConsecutiveCastNo'],data[value]['StationNameID'],data[value]['GMTYear'],
             data[value]['GMTMonth'],data[value]['GMTDay'],data[value]['GMTTime'])
             
-            if value is not data.keys()[-1]:
+            if value is not list(data.keys())[-1]:
                 geojson_Features = geojson_Features + '}\n, '
 
         geojson_tail = (
