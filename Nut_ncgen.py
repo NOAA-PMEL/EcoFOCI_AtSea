@@ -104,7 +104,7 @@ except ValueError:
 
 #make a cast_niskin column to index on
 print("Matching on Cast/Niskin pair.")
-ndf['Cast_Niskin'] = [str(int(x['Cast'])).zfill(3) + '_' + str(int(x['Niskin'])).zfill(2) for y,x in ndf.iterrows()]
+ndf['Cast_Niskin'] = [str(int(x['cast'])).zfill(3) + '_' + str(int(x['niskin'])).zfill(2) for y,x in ndf.iterrows()]
 reportdf['Cast_Niskin'] = [str(x['CastNum']).zfill(3) + '_' + str(x['nb']).zfill(2) for y,x in reportdf.iterrows()]
 
 ###three potential merged results
