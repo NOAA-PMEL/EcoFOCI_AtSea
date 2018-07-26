@@ -145,7 +145,7 @@ for i,cast in enumerate(gb.groups):
     data_dic.update({'BTL_103':tdata['nb'].values})
 
     cruise = args.CruiseID.lower()
-    cast = list(tdata.groupby('cast').groups.keys())[0]
+    cast = list(tdata.groupby('cast_y').groups.keys())[0]
     profile_name = args.output + cruise +\
                    cast.lower().replace('ctd','c') +\
                    '_nut.nc' 
