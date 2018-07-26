@@ -117,6 +117,8 @@ temp.sort_values(['Cast_Niskin'],inplace=True)
 # Groupby Cast and write to file
 # print out to screen data not saved due to lack of cast info (CTD)
 # missing data is automatically excluded (NA groups)
+print(temp.info())
+
 gb =temp.groupby('cast')
 
 # get config file for output content
