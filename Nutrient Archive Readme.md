@@ -41,7 +41,7 @@ cast	niskin	PO4 (uM)	Sil (uM)	NO3 (uM)	NO2 (uM)	NH4 (uM)
 
 (tab delimited, cast and niskin order do not matter as it will be sorted in the software)
 
-and in order to match niskin and cast information, the *.btl_report file must be used (generated during intial processing of CTD data).
+and in order to match niskin and cast information, the *.report_btl file must be used (generated during intial processing of CTD data).
 
 The report file is expected to have the format:
 
@@ -69,7 +69,7 @@ Merge and archive nutrient csv data and bottle data
 
 positional arguments:
   CruiseID          provide the cruiseid
-  btlpath           full path to .btl_report
+  btlpath           full path to .report_btl
   nutpath           full path to nutrient csv file
   output            full path to output folder (files will be generated there
   config_file_name  full path to config file - nut_config.yaml
@@ -87,11 +87,11 @@ python Nut_ncgen.py DY1707 /full-path-to/dy1707l1.report_btl
  /full-path-to/working/ /full-path-to/config_files/nut_uml_epickeys.yaml
 ```
 
-the `nut_uml_epickeys.yaml` is the file that spells out all of the netcdf metainformation for building variables (but not for adding deployment meta-information).  Any properly constructed file can be used as the configuration setup but the `nut_uml_epickeys.yaml` is likely the one most relevant until it is replaced with a CF compliant version.
+the `nut_uml_epickeys.yaml` is the file that spells out all of the netcdf metainformation for building variables (but not for adding deployment meta-information).  Any properly constructed file can be used as the configuration setup but the `config_files/nut_uml_epickeys.yaml` is likely the one most relevant until it is replaced with a CF compliant version.
 
 A CF compliant file exists but is being held until 2018 processing (2019) as QC flags still need to be determined.
 
-Content looks as follows:
+Content looks as follows: 
 ```
 ---
 NH4_189: 

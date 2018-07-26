@@ -29,7 +29,7 @@
  Compatibility:
  ==============
  python >=3.6 
- python 2.7 - ?
+ python 2.7 
 
 """
 
@@ -67,7 +67,7 @@ parser.add_argument('CruiseID',
 parser.add_argument('btlpath', 
     metavar='btlpath', 
     type=str, 
-    help='full path to .btl_report')
+    help='full path to .report_btl')
 parser.add_argument('nutpath', 
     metavar='nutpath', 
     type=str, 
@@ -86,6 +86,7 @@ args = parser.parse_args()
 ### Read Nutrient file - processed by E. Weisgarver and
 # Bottle Report file obtained by concatenating bottle files without headers
 ndf = pd.read_csv(args.nutpath,sep="\t|,",engine='python')
+ndf.rename(index=str, columns={"Cast": "cast", "Niskin": "niskin", "Niskin": "niskin"}, inplace=True)
 
 print("Nutrient Header Summary:")
 print(ndf.info())

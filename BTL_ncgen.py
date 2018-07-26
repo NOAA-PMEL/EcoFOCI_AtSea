@@ -26,7 +26,7 @@
  Compatibility:
  ==============
  python >=3.6 
- python 2.7 - ?
+ python 2.7 
 
 """
 from __future__ import (absolute_import, division, print_function)
@@ -65,7 +65,7 @@ parser.add_argument('CruiseID',
 parser.add_argument('btlpath', 
     metavar='btlpath', 
     type=str, 
-    help='full path to .btl_report')
+    help='full path to .report_btl')
 parser.add_argument('output', 
     metavar='output', 
     type=str, 
