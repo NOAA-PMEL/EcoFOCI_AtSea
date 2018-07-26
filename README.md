@@ -14,12 +14,44 @@ Collection of utilites for processing and visualizing common data that is gather
 ### EPIC/CF netcdf generation
 **TODO:**
 - From discrete Oxygen/Salinity Calibration/Characterization measurements
+- Add CF/COARDS netCDF routines
 
 ##### Nutrient netcdf archive instructions
 - From Nutrient Data (with bottle data)
+- Routines have been tested with python - 3.6
+- Output is EPIC Format netcdf
+
+Help Documentation:   
+
+```
+usage: Nut_ncgen.py [-h] CruiseID btlpath nutpath output config_file_name
+
+Merge and archive nutrient csv data and bottle data
+
+positional arguments:
+  CruiseID          provide the cruiseid
+  btlpath           full path to .btl_report
+  nutpath           full path to nutrient csv file
+  output            full path to output folder (files will be generated there
+  config_file_name  full path to config file - nut_config.yaml
+
+optional arguments:
+  -h, --help        show this help message and exit
+```
+
+Long example of usage:   
+```
+python Nut_ncgen.py DY1707 /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/dy1707l1.report_btl 
+ /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/DiscreteNutrients/DY1707\ Nutrient\ Data.csv 
+ /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/ /Users/bell/Programs/Python/EcoFOCI_AtSea/config_files/nut_uml_epickeys.yaml
+```
+
+The config file is a YAML formatted file that specifies the variables and attributes of the netcdf file.  There are many examples in the config_files directory herein.
+
 
 ##### Bottle netcdf archive instructions
 - From upcast Bottle Data
+- Routines have been tested with python - 3.6
 
 #### SCS_shptrack2gpx.py
 
