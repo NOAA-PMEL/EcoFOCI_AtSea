@@ -118,7 +118,7 @@ temp.sort_values(['Cast_Niskin'],inplace=True)
 # print out to screen data not saved due to lack of cast info (CTD)
 # missing data is automatically excluded (NA groups)
 
-#hack - both dataframes have 'cast' use the one from report
+#hack - both dataframes have 'cast' use the one from *.report_btl
 gb =temp.groupby('cast_y')
 
 # get config file for output content
