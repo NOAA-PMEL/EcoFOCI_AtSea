@@ -10,7 +10,9 @@
     Data assumes a sparse grid for nutrient data, scales it up to the full 1m grid of 
     ctd data and then matches on depth.  Finally, it writes a new file (mirrored to the 
     ctd file but with addtional variables defined by the nut config file)
- Todo: switch from EPIC to CF
+
+ Todo: switch from EPIC to CF , copy global attributes and ctd files from CTD/Nut casts instead
+    of specifying config files.
 
  File Format:
  ============
@@ -29,6 +31,8 @@
  python 2.7 - ?
 
 """
+
+from __future__ import (absolute_import, division, print_function)
 
 #System Stack
 import datetime
