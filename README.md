@@ -89,6 +89,11 @@ plotflag options:
                         Flag to indicate plotting secondary values too
 ```
 
+#### CruiseMap.py
+
+Plots maps in different formats (kml,png,svg,geojson) of cruises in Pavlof database
+
+usage `python CruiseMap.py {cruiseid} -{filetype_flag}`
 
 ################
 

@@ -1,20 +1,24 @@
 #!/usr/bin/env python
 
 """
-PostCruiseMapDB.py
+ CruiseMap.py
 
-Generates a cruise map of CTD locations from CruiseLog Database and 
-Mooring Locations for all available information
+ Generates a cruise map of CTD locations from CruiseLog Database and 
+ Mooring Locations for all available information
 
-Input - CruiseID
-Output - png map and kml map
+ Input - CruiseID
+ Output - png map and kml map
 
-History
-=======
+ History
+ =======
 
-2018-07-13: Make python3 compliant: WIP
-2016-09-09: Begin migration to classes for reused routines (db_io)
+ 2018-07-13: Make python3 compliant: WIP
+ 2016-09-09: Begin migration to classes for reused routines (db_io)
 
+ Future
+ ======
+ Remove Basemap dependancy for cartopy
+ Full python 3.6 compatibility
 
  Compatibility:
  ==============
