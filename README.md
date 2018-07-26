@@ -55,7 +55,7 @@ The config file is a YAML formatted file that specifies the variables and attrib
 
 #### SCS_shptrack2gpx.py
 
-Routine to convert GPGGA gps data to gpx files for later processing into shape files.
+Routine to convert GPGGA gps data to gpx files for later processing into shape files.  If data and plots for the Underway System of a noaa vessel is wanted, using SAMOS data from Florida State University is a better option. (erddap)[https://coastwatch.pfeg.noaa.gov/erddap/search/index.html?page=1&itemsPerPage=1000&searchFor=samos]
 
 ### Visualizations
 #### CTD_plot.py
