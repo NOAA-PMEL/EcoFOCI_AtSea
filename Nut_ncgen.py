@@ -117,9 +117,9 @@ temp.sort_values(['Cast_Niskin'],inplace=True)
 # Groupby Cast and write to file
 # print out to screen data not saved due to lack of cast info (CTD)
 # missing data is automatically excluded (NA groups)
-print(temp.info())
 
-gb =temp.groupby('cast')
+#hack - both dataframes have 'cast' use the one from report
+gb =temp.groupby('cast_y')
 
 # get config file for output content
 if args.config_file_name.split('.')[-1] in ['json','pyini']:
