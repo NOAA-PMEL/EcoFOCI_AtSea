@@ -104,3 +104,10 @@ ATTN_55:
   units: m-1
   longname: ATTENUATION
   sbe_label: CStarAt0
+Trb_980:
+  name: Trb
+  generic_name: turb
+  EPIC_KEY: 980
+  units: FNU
+  longname: Turbidity(FNU)
+  sbe_label: Obs3+
