@@ -1,0 +1,13 @@
+---
+BO_61: 
+  name: BO
+  generic_name: BO
+  EPIC_KEY: 61
+  units: uM/l
+  longname: 'BOTTLE OXYGEN (micromoles/l)'
+BTL_103: 
+  name: BTL
+  generic_name: BTL
+  EPIC_KEY: 103
+  units: ''
+  longname: 'NISKIN BOTTLE NUMBER'
