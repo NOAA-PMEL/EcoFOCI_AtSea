@@ -1,0 +1,8022 @@
+{
+	"1": {
+		"COMMENTS": "",
+		"EPIC_KEY": "P_1",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "depth",
+		"KEY": "1",
+		"LONGNAME": "PRESSURE (DB)            ",
+		"NAME": "P  ",
+		"UNITS": "dbar"
+	},
+	"2": {
+		"COMMENTS": "",
+		"EPIC_KEY": "D_2",
+		"FORMAT": " ",
+		"GENERIC_NAME": "depth",
+		"KEY": "2",
+		"LONGNAME": "DEPTH (CM)               ",
+		"NAME": "D  ",
+		"UNITS": "cm"
+	},
+	"3": {
+		"COMMENTS": "",
+		"EPIC_KEY": "D_3",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "depth",
+		"KEY": "3",
+		"LONGNAME": "DEPTH (M)                ",
+		"NAME": "D  ",
+		"UNITS": "m"
+	},
+	"4": {
+		"COMMENTS": "",
+		"EPIC_KEY": "P_4",
+		"FORMAT": " ",
+		"GENERIC_NAME": "depth",
+		"KEY": "4",
+		"LONGNAME": "PRESSURE (PASCALS)       ",
+		"NAME": "P  ",
+		"UNITS": "Pa"
+	},
+	"5": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PD_5",
+		"FORMAT": " ",
+		"GENERIC_NAME": "depth",
+		"KEY": "5",
+		"LONGNAME": "PRESSURE DIFFERENCE (DB) ",
+		"NAME": "PD ",
+		"UNITS": "dbar"
+	},
+	"6": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ISO_6",
+		"FORMAT": " ",
+		"GENERIC_NAME": "depth",
+		"KEY": "6",
+		"LONGNAME": "ISOTHERM DEPTH (M)       ",
+		"NAME": "ISO",
+		"UNITS": "m"
+	},
+	"7": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SL_7",
+		"FORMAT": " ",
+		"GENERIC_NAME": "depth",
+		"KEY": "7",
+		"LONGNAME": "SEA LEVEL ANOMALY (M)    ",
+		"NAME": "SL ",
+		"UNITS": "m"
+	},
+	"8": {
+		"COMMENTS": "Program MIXDEP",
+		"EPIC_KEY": "MLD_8",
+		"FORMAT": " ",
+		"GENERIC_NAME": "depth",
+		"KEY": "8",
+		"LONGNAME": "MIXED LAYER DEPTH (M)    ",
+		"NAME": "MLD",
+		"UNITS": "m"
+	},
+	"9": {
+		"COMMENTS": "For Ferret",
+		"EPIC_KEY": "P_9",
+		"FORMAT": " ",
+		"GENERIC_NAME": "depth",
+		"KEY": "9",
+		"LONGNAME": "SEA LEVEL PRESSURE (MB)  ",
+		"NAME": "P  ",
+		"UNITS": "mbar"
+	},
+	"10": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DYN_10",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "dynhgt",
+		"KEY": "10",
+		"LONGNAME": "DYNAMIC METERS           ",
+		"NAME": "DYN",
+		"UNITS": "dyn-m"
+	},
+	"11": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DYN_11",
+		"FORMAT": " ",
+		"GENERIC_NAME": "dynhgt",
+		"KEY": "11",
+		"LONGNAME": "DYM HT (SUBSAMPLED DATA) ",
+		"NAME": "DYN",
+		"UNITS": " "
+	},
+	"12": {
+		"COMMENTS": "Diff of North and South Dyn Ht.",
+		"EPIC_KEY": "dDN_12",
+		"FORMAT": "f10.5",
+		"GENERIC_NAME": "dynhgt",
+		"KEY": "12",
+		"LONGNAME": "DYNn-DYNs                ",
+		"NAME": "dDN",
+		"UNITS": " "
+	},
+	"13": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DYN_13",
+		"FORMAT": " ",
+		"GENERIC_NAME": "dynhgt",
+		"KEY": "13",
+		"LONGNAME": "DYNAMIC HEIGHT (DYN CM)  ",
+		"NAME": "DYN",
+		"UNITS": "dyn-cm"
+	},
+	"14": {
+		"COMMENTS": "Delta-Dyn (ctd1-ctd2) for geost vel calc",
+		"EPIC_KEY": "dD_14",
+		"FORMAT": " ",
+		"GENERIC_NAME": "dynhgt",
+		"KEY": "14",
+		"LONGNAME": "dDYN1-dDYN2 (DYN M)      ",
+		"NAME": " dD",
+		"UNITS": "dyn-m"
+	},
+	"15": {
+		"COMMENTS": "Dyn1 (ctd1) for geost vel calc",
+		"EPIC_KEY": "d1_15",
+		"FORMAT": " ",
+		"GENERIC_NAME": "dynhgt",
+		"KEY": "15",
+		"LONGNAME": "DYN1 (DYN M)             ",
+		"NAME": "d1 ",
+		"UNITS": "dyn-m"
+	},
+	"16": {
+		"COMMENTS": "Dyn2 (ctd2) for geost vel calc",
+		"EPIC_KEY": "d2_16",
+		"FORMAT": " ",
+		"GENERIC_NAME": "dynhgt",
+		"KEY": "16",
+		"LONGNAME": "DYN2 (DYN M)             ",
+		"NAME": "d2 ",
+		"UNITS": "dyn-m"
+	},
+	"17": {
+		"COMMENTS": "Calculated for specific areas",
+		"EPIC_KEY": "ZPG_17",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "17",
+		"LONGNAME": "ZONAL PRESSURE GRAD      ",
+		"NAME": "ZPG",
+		"UNITS": " "
+	},
+	"18": {
+		"COMMENTS": "",
+		"EPIC_KEY": "hght_18",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "height",
+		"KEY": "18",
+		"LONGNAME": "height (m)              ",
+		"NAME": "hght",
+		"UNITS": "m"
+	},
+	"20": {
+		"COMMENTS": "IPTS-1968 standard",
+		"EPIC_KEY": "T_20",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "temp",
+		"KEY": "20",
+		"LONGNAME": "TEMPERATURE (C)          ",
+		"NAME": "T  ",
+		"UNITS": "C"
+	},
+	"21": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AT_21",
+		"FORMAT": " ",
+		"GENERIC_NAME": "atemp",
+		"KEY": "21",
+		"LONGNAME": "AIR TEMPERATURE (C)      ",
+		"NAME": "AT ",
+		"UNITS": "C"
+	},
+	"22": {
+		"COMMENTS": "Reversing therm. 1E35 indicates no therm.",
+		"EPIC_KEY": "T0_22",
+		"FORMAT": " ",
+		"GENERIC_NAME": "temp",
+		"KEY": "22",
+		"LONGNAME": "THERM TEMPERATURE (C)    ",
+		"NAME": "T0 ",
+		"UNITS": "C"
+	},
+	"23": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AT_23",
+		"FORMAT": " ",
+		"GENERIC_NAME": "atemp",
+		"KEY": "23",
+		"LONGNAME": "AIR TEMPERATURE MIN (C)  ",
+		"NAME": "AT ",
+		"UNITS": "C"
+	},
+	"24": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AT_24",
+		"FORMAT": " ",
+		"GENERIC_NAME": "atemp",
+		"KEY": "24",
+		"LONGNAME": "AIR TEMPERATURE MAX (C)  ",
+		"NAME": "AT ",
+		"UNITS": "C"
+	},
+	"25": {
+		"COMMENTS": "",
+		"EPIC_KEY": "T_25",
+		"FORMAT": " ",
+		"GENERIC_NAME": "temp",
+		"KEY": "25",
+		"LONGNAME": "SST (C)                  ",
+		"NAME": "T  ",
+		"UNITS": "C"
+	},
+	"26": {
+		"COMMENTS": "",
+		"EPIC_KEY": "T_26",
+		"FORMAT": " ",
+		"GENERIC_NAME": "temp",
+		"KEY": "26",
+		"LONGNAME": "SST MIN (C)              ",
+		"NAME": "T  ",
+		"UNITS": "C"
+	},
+	"27": {
+		"COMMENTS": "",
+		"EPIC_KEY": "T_27",
+		"FORMAT": " ",
+		"GENERIC_NAME": "temp",
+		"KEY": "27",
+		"LONGNAME": "SST MAX (C)              ",
+		"NAME": "T  ",
+		"UNITS": "C"
+	},
+	"28": {
+		"COMMENTS": "ITS-1990 Standard",
+		"EPIC_KEY": "T_28",
+		"FORMAT": "f10.2 ",
+		"GENERIC_NAME": "temp",
+		"KEY": "28",
+		"LONGNAME": "TEMPERATURE (C)          ",
+		"NAME": "T  ",
+		"UNITS": "C"
+	},
+	"29": {
+		"COMMENTS": "Depth integrated temperature",
+		"EPIC_KEY": "IT_29",
+		"FORMAT": " ",
+		"GENERIC_NAME": "temp",
+		"KEY": "29",
+		"LONGNAME": "TEMP INTEGRAL            ",
+		"NAME": "IT ",
+		"UNITS": "C"
+	},
+	"30": {
+		"COMMENTS": "PT = Potential Temperature",
+		"EPIC_KEY": "PT_30",
+		"FORMAT": " ",
+		"GENERIC_NAME": "potemp",
+		"KEY": "30",
+		"LONGNAME": "POTENTIAL TEMP (C)       ",
+		"NAME": "PT ",
+		"UNITS": " "
+	},
+	"31": {
+		"COMMENTS": "Potential temp with 4000m reference level",
+		"EPIC_KEY": "P4_31",
+		"FORMAT": " ",
+		"GENERIC_NAME": "potemp",
+		"KEY": "31",
+		"LONGNAME": "POTENTIAL TEMP 4000 (C)  ",
+		"NAME": "P4 ",
+		"UNITS": " "
+	},
+	"32": {
+		"COMMENTS": "unknown standard",
+		"EPIC_KEY": "T_32",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "temp",
+		"KEY": "32",
+		"LONGNAME": "TEMPERATURE (C)          ",
+		"NAME": "T  ",
+		"UNITS": "C"
+	},
+	"33": {
+		"COMMENTS": "corrected for mooring motion",
+		"EPIC_KEY": "T_33",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "temp",
+		"KEY": "33",
+		"LONGNAME": "CORRECTED TEMPERATURE (C)",
+		"NAME": "T  ",
+		"UNITS": "C"
+	},
+	"34": {
+		"COMMENTS": "IPTS-1968 standard",
+		"EPIC_KEY": "T2_34",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "temp",
+		"KEY": "34",
+		"LONGNAME": "Secondary Temperature    ",
+		"NAME": "T2 ",
+		"UNITS": "C"
+	},
+	"35": {
+		"COMMENTS": "ITS-1990 Standard",
+		"EPIC_KEY": "T2_35",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "temp",
+		"KEY": "35",
+		"LONGNAME": "Secondary Temperature    ",
+		"NAME": "T2 ",
+		"UNITS": "C"
+	},
+	"36": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DST_36",
+		"FORMAT": " ",
+		"GENERIC_NAME": "dsst/dt",
+		"KEY": "36",
+		"LONGNAME": "d(SST)/dt                ",
+		"NAME": "DST",
+		"UNITS": "C/day"
+	},
+	"38": {
+		"COMMENTS": "Potential Temperature (ITS-90)",
+		"EPIC_KEY": "PT_38",
+		"FORMAT": " ",
+		"GENERIC_NAME": "potemp",
+		"KEY": "38",
+		"LONGNAME": "POTENTIAL TEMP (C)       ",
+		"NAME": "PT ",
+		"UNITS": " "
+	},
+	"40": {
+		"COMMENTS": "From SALIN1",
+		"EPIC_KEY": "S_40",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "sal",
+		"KEY": "40",
+		"LONGNAME": "SALINITY (PPT)           ",
+		"NAME": "S  ",
+		"UNITS": "PPT"
+	},
+	"41": {
+		"COMMENTS": "Practical Salinity Units",
+		"EPIC_KEY": "S_41",
+		"FORMAT": " ",
+		"GENERIC_NAME": "sal",
+		"KEY": "41",
+		"LONGNAME": "SALINITY (PSU)           ",
+		"NAME": "S  ",
+		"UNITS": "PSU"
+	},
+	"42": {
+		"COMMENTS": "Practical Salinity Units",
+		"EPIC_KEY": "S_42",
+		"FORMAT": " ",
+		"GENERIC_NAME": "sal",
+		"KEY": "42",
+		"LONGNAME": "SALINITY (PSU)           ",
+		"NAME": "S  ",
+		"UNITS": "PSU"
+	},
+	"43": {
+		"COMMENTS": "From Salinometer. 1E35 indicates no sample.",
+		"EPIC_KEY": "S0_43",
+		"FORMAT": " ",
+		"GENERIC_NAME": "sal",
+		"KEY": "43",
+		"LONGNAME": "BOTTLE SALINITY (PSU)    ",
+		"NAME": "S0 ",
+		"UNITS": "PSU"
+	},
+	"44": {
+		"COMMENTS": "Practical Salinity Units",
+		"EPIC_KEY": "S3_44",
+		"FORMAT": " ",
+		"GENERIC_NAME": "sal",
+		"KEY": "44",
+		"LONGNAME": "Alternate Salinity       ",
+		"NAME": "S3 ",
+		"UNITS": " "
+	},
+	"45": {
+		"COMMENTS": "Practical Salinity Units",
+		"EPIC_KEY": "S4_45",
+		"FORMAT": " ",
+		"GENERIC_NAME": "sal",
+		"KEY": "45",
+		"LONGNAME": "Alternate Salinity       ",
+		"NAME": "S4 ",
+		"UNITS": " "
+	},
+	"48": {
+		"COMMENTS": "temperature compensated to 25C",
+		"EPIC_KEY": "SpC_48",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "con",
+		"KEY": "48",
+		"LONGNAME": "Specific Conductance    ",
+		"NAME": "SpC ",
+		"UNITS": "mS/cm"
+	},
+	"49": {
+		"COMMENTS": "calculated for XBT's from mean T-S curve, M McCarty",
+		"EPIC_KEY": "S_49",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "sal",
+		"KEY": "49",
+		"LONGNAME": "SALINITY                 ",
+		"NAME": "S  ",
+		"UNITS": " "
+	},
+	"50": {
+		"COMMENTS": "",
+		"EPIC_KEY": "C_50",
+		"FORMAT": " ",
+		"GENERIC_NAME": "con",
+		"KEY": "50",
+		"LONGNAME": "CONDUCTIVITY             ",
+		"NAME": "C  ",
+		"UNITS": "mmho/cm"
+	},
+	"51": {
+		"COMMENTS": "",
+		"EPIC_KEY": "C_51",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "con",
+		"KEY": "51",
+		"LONGNAME": "CONDUCTIVITY             ",
+		"NAME": "C  ",
+		"UNITS": "S/m"
+	},
+	"52": {
+		"COMMENTS": "Seabird cell raw conductivity",
+		"EPIC_KEY": "rcon_52",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "cond",
+		"KEY": "52",
+		"LONGNAME": "RAW CONDUCTIVITY (SEABIRD)",
+		"NAME": "rcon",
+		"UNITS": "counts"
+	},
+	"53": {
+		"COMMENTS": "vacm raw conductivity",
+		"EPIC_KEY": "rcon_53",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "cond",
+		"KEY": "53",
+		"LONGNAME": "RAW CONDUCTIVITY (VACM) ",
+		"NAME": "rcon",
+		"UNITS": "counts"
+	},
+	"54": {
+		"COMMENTS": "",
+		"EPIC_KEY": "C2_54",
+		"FORMAT": " ",
+		"GENERIC_NAME": "con",
+		"KEY": "54",
+		"LONGNAME": "Secondary Conductivity  ",
+		"NAME": "C2  ",
+		"UNITS": "mmho/cm"
+	},
+	"55": {
+		"COMMENTS": "added for r2d2 ctd data",
+		"EPIC_KEY": "ATTN_55",
+		"FORMAT": "f7.5",
+		"GENERIC_NAME": "attn",
+		"KEY": "55",
+		"LONGNAME": "ATTENUATION             ",
+		"NAME": "ATTN",
+		"UNITS": "m-1"
+	},
+	"56": {
+		"COMMENTS": " added for Dave Pashinski",
+		"EPIC_KEY": "NEP_56",
+		"FORMAT": "f10.6",
+		"GENERIC_NAME": "nephylometer",
+		"KEY": "56",
+		"LONGNAME": "BACKSCATTER INTENSITY    ",
+		"NAME": "NEP",
+		"UNITS": "v"
+	},
+	"60": {
+		"COMMENTS": "Dissolved oxygen calculated from CTD values",
+		"EPIC_KEY": "O_60",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "ox",
+		"KEY": "60",
+		"LONGNAME": "OXYGEN (ML/L)            ",
+		"NAME": "O  ",
+		"UNITS": "ml/l"
+	},
+	"61": {
+		"COMMENTS": "DO determined by titration. 1E35 ->no sample",
+		"EPIC_KEY": "BO_61",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ox",
+		"KEY": "61",
+		"LONGNAME": "BOTTLE OXYGEN (ML/L)     ",
+		"NAME": "BO ",
+		"UNITS": "ml/l"
+	},
+	"62": {
+		"COMMENTS": "",
+		"EPIC_KEY": "OST_62",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ox",
+		"KEY": "62",
+		"LONGNAME": "OXYGEN, %SAT             ",
+		"NAME": "OST",
+		"UNITS": "%"
+	},
+	"64": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOU_64",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ox",
+		"KEY": "64",
+		"LONGNAME": "APPARENT O2 UTILIZATION  ",
+		"NAME": "AOU",
+		"UNITS": "ml/l"
+	},
+	"65": {
+		"COMMENTS": "Dissolved oxygen calculated from CTD values",
+		"EPIC_KEY": "O_65",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "ox",
+		"KEY": "65",
+		"LONGNAME": "OXYGEN (UMOL/KG)         ",
+		"NAME": "O  ",
+		"UNITS": "umol/kg"
+	},
+	"66": {
+		"COMMENTS": "DO determined by titration. 1E35 ->no sample",
+		"EPIC_KEY": "BO_66",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ox",
+		"KEY": "66",
+		"LONGNAME": "BOTTLE OXYGEN (UMOL/KG)  ",
+		"NAME": "BO ",
+		"UNITS": "umol/kg"
+	},
+	"70": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ST_70",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "den",
+		"KEY": "70",
+		"LONGNAME": "SIGMA-T (KG/M**3)        ",
+		"NAME": "ST ",
+		"UNITS": "kg m-3"
+	},
+	"71": {
+		"COMMENTS": "",
+		"EPIC_KEY": "STH_71",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "potden",
+		"KEY": "71",
+		"LONGNAME": "SIGMA-THETA (KG/M**3)    ",
+		"NAME": "STH",
+		"UNITS": "kg m-3 "
+	},
+	"72": {
+		"COMMENTS": "sigma-theta ref to 2000m",
+		"EPIC_KEY": "S2_72",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "potden2",
+		"KEY": "72",
+		"LONGNAME": "SIGMA 2 (KG/M**3)        ",
+		"NAME": "S2 ",
+		"UNITS": "kg m-3"
+	},
+	"73": {
+		"COMMENTS": "sigma-theta ref to 3000m",
+		"EPIC_KEY": "S3_73",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "potden3",
+		"KEY": "73",
+		"LONGNAME": "SIGMA 3 (KG/M**3)        ",
+		"NAME": "S3 ",
+		"UNITS": "kg m-3"
+	},
+	"74": {
+		"COMMENTS": "sigma-theta ref to 4000m",
+		"EPIC_KEY": "S4_74",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "potden4",
+		"KEY": "74",
+		"LONGNAME": "SIGMA 4 (KG/M**3)        ",
+		"NAME": "S4 ",
+		"UNITS": "kg m-3"
+	},
+	"75": {
+		"COMMENTS": "sigma-theta ref to 5000m",
+		"EPIC_KEY": "S5_75",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "potden5",
+		"KEY": "75",
+		"LONGNAME": "SIGMA 5 (KG/M**3)        ",
+		"NAME": "S5 ",
+		"UNITS": "kg m-3"
+	},
+	"76": {
+		"COMMENTS": "sigma-theta ref to 1000m",
+		"EPIC_KEY": "S1_76",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "potden1",
+		"KEY": "76",
+		"LONGNAME": "SIGMA 1 (KG/M**3)        ",
+		"NAME": "S1 ",
+		"UNITS": "kg m-3"
+	},
+	"77": {
+		"COMMENTS": "Neutral Density",
+		"EPIC_KEY": "GN_77",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "gamma_n",
+		"KEY": "77",
+		"LONGNAME": "GAMMA N (KG/M**3)        ",
+		"NAME": "GN ",
+		"UNITS": "kg m-3"
+	},
+	"80": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SV_80",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "80",
+		"LONGNAME": "SOUND VELOCITY (M/S)     ",
+		"NAME": "SV ",
+		"UNITS": "m s-1"
+	},
+	"81": {
+		"COMMENTS": "corr. BASS currents for actual sound speed",
+		"EPIC_KEY": "FAC_81",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "factor",
+		"KEY": "81",
+		"LONGNAME": "SND SPD CORR. FACTOR     ",
+		"NAME": "FAC",
+		"UNITS": " "
+	},
+	"84": {
+		"COMMENTS": "",
+		"EPIC_KEY": "RHO_84",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "den",
+		"KEY": "84",
+		"LONGNAME": "DENSITY (KG/M**3)        ",
+		"NAME": "RHO",
+		"UNITS": "kg m-3"
+	},
+	"85": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SPV_85",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "85",
+		"LONGNAME": "SPECIFIC VOLUME          ",
+		"NAME": "SPV",
+		"UNITS": " "
+	},
+	"86": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SVA_86",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "86",
+		"LONGNAME": "SP VOL ANOM, 1E-8 M**3/KG",
+		"NAME": "SVA",
+		"UNITS": "m3 kg-1"
+	},
+	"90": {
+		"COMMENTS": "Brunt Vaisala Frequency",
+		"EPIC_KEY": "BV_90",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "90",
+		"LONGNAME": "BVF (CPH)                ",
+		"NAME": "BV ",
+		"UNITS": " "
+	},
+	"91": {
+		"COMMENTS": "Brunt Vaisala Frequency squared (N*ABS(N))",
+		"EPIC_KEY": "BV2_91",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "91",
+		"LONGNAME": "BVF SQUARED (CPH**2)     ",
+		"NAME": "BV2",
+		"UNITS": " "
+	},
+	"92": {
+		"COMMENTS": "Integral bvf*dz/pi*f",
+		"EPIC_KEY": "R_92",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "92",
+		"LONGNAME": "RADIUS OF DEFORM         ",
+		"NAME": "R  ",
+		"UNITS": " "
+	},
+	"93": {
+		"COMMENTS": "",
+		"EPIC_KEY": "RI_93",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "93",
+		"LONGNAME": "RICHARDSONS NUMBER       ",
+		"NAME": "RI ",
+		"UNITS": " "
+	},
+	"100": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SN_100",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "100",
+		"LONGNAME": "SCAN NUMBER              ",
+		"NAME": "SN ",
+		"UNITS": " "
+	},
+	"101": {
+		"COMMENTS": "FOR TOPS",
+		"EPIC_KEY": "FS_101",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "101",
+		"LONGNAME": "FRAME SYNC               ",
+		"NAME": "FS ",
+		"UNITS": " "
+	},
+	"102": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CL_102",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "102",
+		"LONGNAME": "PTG CLOCK WORD           ",
+		"NAME": "CL ",
+		"UNITS": " "
+	},
+	"103": {
+		"COMMENTS": "For Bottle files",
+		"EPIC_KEY": "BTL_103",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "103",
+		"LONGNAME": "NISKIN BOTTLE NUMBER     ",
+		"NAME": "BTL",
+		"UNITS": " "
+	},
+	"104": {
+		"COMMENTS": "See WOCE Document",
+		"EPIC_KEY": "IQ_104",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "104",
+		"LONGNAME": "WOCE QUALITY NUMBER      ",
+		"NAME": "IQ ",
+		"UNITS": " "
+	},
+	"105": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NAV_105",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "105",
+		"LONGNAME": "NUMBER POINTS IN AVERAGE ",
+		"NAME": "NAV",
+		"UNITS": " "
+	},
+	"106": {
+		"COMMENTS": "",
+		"EPIC_KEY": "BAT_106",
+		"FORMAT": "f6.2",
+		"GENERIC_NAME": "bat",
+		"KEY": "106",
+		"LONGNAME": "BATTERY VOLTAGE          ",
+		"NAME": "BAT",
+		"UNITS": "volts"
+	},
+	"107": {
+		"COMMENTS": "for P18 CTD data set",
+		"EPIC_KEY": "TRN_107",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "107",
+		"LONGNAME": "TRANSMISSOMETER VOLTAGE 7",
+		"NAME": "TRN",
+		"UNITS": " "
+	},
+	"110": {
+		"COMMENTS": "",
+		"EPIC_KEY": "OXC_110",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "110",
+		"LONGNAME": "OXYGEN CURRENT           ",
+		"NAME": "OXC",
+		"UNITS": " "
+	},
+	"111": {
+		"COMMENTS": "",
+		"EPIC_KEY": "OXT_111",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "111",
+		"LONGNAME": "OXYGEN TEMPERATURE       ",
+		"NAME": "OXT",
+		"UNITS": " "
+	},
+	"112": {
+		"COMMENTS": "Time rate of change of Oxygen current",
+		"EPIC_KEY": "DOC_112",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "112",
+		"LONGNAME": "dOXC/dt                  ",
+		"NAME": "DOC",
+		"UNITS": " "
+	},
+	"113": {
+		"COMMENTS": "",
+		"EPIC_KEY": "BAT1_113",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "bat",
+		"KEY": "113",
+		"LONGNAME": "BATTERY VOLTAGE 1       ",
+		"NAME": "BAT1",
+		"UNITS": "volts"
+	},
+	"114": {
+		"COMMENTS": "",
+		"EPIC_KEY": "BAT2_114",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "bat",
+		"KEY": "114",
+		"LONGNAME": "BATTERY VOLTAGE 2       ",
+		"NAME": "BAT2",
+		"UNITS": "volts"
+	},
+	"115": {
+		"COMMENTS": "",
+		"EPIC_KEY": "BAT3_115",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "bat",
+		"KEY": "115",
+		"LONGNAME": "BATTERY VOLTAGE 3       ",
+		"NAME": "BAT3",
+		"UNITS": "volts"
+	},
+	"120": {
+		"COMMENTS": "Program CTDGRD2",
+		"EPIC_KEY": "T'_120",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "120",
+		"LONGNAME": "GRADIENT DT/DZ           ",
+		"NAME": "T' ",
+		"UNITS": " "
+	},
+	"121": {
+		"COMMENTS": "Program CTDGRD3",
+		"EPIC_KEY": "DZT_121",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "121",
+		"LONGNAME": "GRADIENT DZ/DT           ",
+		"NAME": "DZT",
+		"UNITS": " "
+	},
+	"122": {
+		"COMMENTS": "X is longitude",
+		"EPIC_KEY": "T'X_122",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "122",
+		"LONGNAME": "GRADIENT DT/DX           ",
+		"NAME": "T'X",
+		"UNITS": " "
+	},
+	"123": {
+		"COMMENTS": "Y is latitude",
+		"EPIC_KEY": "T'Y_123",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "123",
+		"LONGNAME": "GRADIENT DT/DY           ",
+		"NAME": "T'Y",
+		"UNITS": " "
+	},
+	"124": {
+		"COMMENTS": "X is longitude",
+		"EPIC_KEY": "UTX_124",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "124",
+		"LONGNAME": "U * dT/dx                ",
+		"NAME": "UTX",
+		"UNITS": " "
+	},
+	"125": {
+		"COMMENTS": "Program CTDGRD3",
+		"EPIC_KEY": "DZT_125",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "125",
+		"LONGNAME": "GRADIENT DZ/DT           ",
+		"NAME": "DZT",
+		"UNITS": " "
+	},
+	"126": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ADT_126",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "126",
+		"LONGNAME": "AD TEMP GRAD,DEG-C/DB    ",
+		"NAME": "ADT",
+		"UNITS": " "
+	},
+	"130": {
+		"COMMENTS": "",
+		"EPIC_KEY": "HTC_130",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "130",
+		"LONGNAME": "HEAT CONTENT (JOU/M**2)  ",
+		"NAME": "HTC",
+		"UNITS": "J m-2"
+	},
+	"131": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SpH_131",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "131",
+		"LONGNAME": "SPECIFIC HEAT, J/KG-DEG-C",
+		"NAME": "SpH",
+		"UNITS": "J kg-1 C-1"
+	},
+	"132": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Qs_132",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "132",
+		"LONGNAME": "SHORTWAVE RADIATION      ",
+		"NAME": "Qs ",
+		"UNITS": "cal day-1 cm-2"
+	},
+	"133": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Qs_133",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "133",
+		"LONGNAME": "SHORTWAVE RADIATION      ",
+		"NAME": "Qs ",
+		"UNITS": "W m-2"
+	},
+	"134": {
+		"COMMENTS": "",
+		"EPIC_KEY": "HQ_134",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "134",
+		"LONGNAME": "LOCAL HEATING            ",
+		"NAME": "HQ ",
+		"UNITS": " "
+	},
+	"135": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Ql_135",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "135",
+		"LONGNAME": "LONGWAVE RADIATION       ",
+		"NAME": "Ql ",
+		"UNITS": "cal day-1 cm-2"
+	},
+	"136": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Ql_136",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "136",
+		"LONGNAME": "LONGWAVE RADIATION       ",
+		"NAME": "Ql ",
+		"UNITS": "W m-2"
+	},
+	"137": {
+		"COMMENTS": "",
+		"EPIC_KEY": "QH_137",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "137",
+		"LONGNAME": "LATENT HEAT              ",
+		"NAME": "QH ",
+		"UNITS": "W m-2"
+	},
+	"138": {
+		"COMMENTS": "",
+		"EPIC_KEY": "QB_138",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "138",
+		"LONGNAME": "SENSIBLE HEAT            ",
+		"NAME": "QB ",
+		"UNITS": "W m-2"
+	},
+	"140": {
+		"COMMENTS": "",
+		"EPIC_KEY": "QI_140",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "140",
+		"LONGNAME": "PENETRATIVE RADIA (PING) ",
+		"NAME": "QI ",
+		"UNITS": " "
+	},
+	"141": {
+		"COMMENTS": "",
+		"EPIC_KEY": "QT_141",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "141",
+		"LONGNAME": "QT=QS-QB-QE (PING)       ",
+		"NAME": "QT ",
+		"UNITS": " "
+	},
+	"142": {
+		"COMMENTS": "",
+		"EPIC_KEY": "QN_142",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "142",
+		"LONGNAME": "NET HEATING              ",
+		"NAME": "QN ",
+		"UNITS": "W m-2"
+	},
+	"143": {
+		"COMMENTS": "",
+		"EPIC_KEY": "VMF_143",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "143",
+		"LONGNAME": "VERTICAL+MERID HEAT FLUX ",
+		"NAME": "VMF",
+		"UNITS": "W m-2"
+	},
+	"144": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ZMA_144",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "144",
+		"LONGNAME": "ZONAL+MERID HEAT ADVECT  ",
+		"NAME": "ZMA",
+		"UNITS": "W m-2"
+	},
+	"145": {
+		"COMMENTS": "",
+		"EPIC_KEY": "VHF_145",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "145",
+		"LONGNAME": "VERTICAL HEAT FLUX       ",
+		"NAME": "VHF",
+		"UNITS": "W m-2"
+	},
+	"146": {
+		"COMMENTS": "",
+		"EPIC_KEY": "MHF_146",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "146",
+		"LONGNAME": "MERIDIONAL HEAT FLUX     ",
+		"NAME": "MHF",
+		"UNITS": "W m-2"
+	},
+	"147": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ZHA_147",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "147",
+		"LONGNAME": "ZONAL HEAT ADVECTION     ",
+		"NAME": "ZHA",
+		"UNITS": "W m-2"
+	},
+	"148": {
+		"COMMENTS": "",
+		"EPIC_KEY": "MHA_148",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "148",
+		"LONGNAME": "MERIDIONAL HEAT ADVECTION",
+		"NAME": "MHA",
+		"UNITS": "W m-2"
+	},
+	"150": {
+		"COMMENTS": "",
+		"EPIC_KEY": "FR_150",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "150",
+		"LONGNAME": "FREON                    ",
+		"NAME": "FR ",
+		"UNITS": " "
+	},
+	"152": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NO3_152",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NO3",
+		"KEY": "152",
+		"LONGNAME": "NITRATE (MG AT/L)        ",
+		"NAME": "NO3",
+		"UNITS": "mg at/l"
+	},
+	"154": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NO2_154",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NO2",
+		"KEY": "154",
+		"LONGNAME": "NITRITE (MG AT/L)        ",
+		"NAME": "NO2",
+		"UNITS": "mg at/l"
+	},
+	"156": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PO4_156",
+		"FORMAT": " ",
+		"GENERIC_NAME": "PO4",
+		"KEY": "156",
+		"LONGNAME": "PHOSPHATE (MG AT/L)      ",
+		"NAME": "PO4",
+		"UNITS": "mg at/l"
+	},
+	"157": {
+		"COMMENTS": "J. Reid data ",
+		"EPIC_KEY": "Ptl_157",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "157",
+		"LONGNAME": "TOTAL PHOSPHORUS         ",
+		"NAME": "Ptl",
+		"UNITS": "mg at/l"
+	},
+	"158": {
+		"COMMENTS": "mg at/l",
+		"EPIC_KEY": "SI_158",
+		"FORMAT": " ",
+		"GENERIC_NAME": "SiO4",
+		"KEY": "158",
+		"LONGNAME": "SILICATE (MG AT/L)       ",
+		"NAME": "SI ",
+		"UNITS": "mg at/l"
+	},
+	"159": {
+		"COMMENTS": "J. Reid data",
+		"EPIC_KEY": "pH_159",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "159",
+		"LONGNAME": "pH                       ",
+		"NAME": "pH ",
+		"UNITS": " "
+	},
+	"170": {
+		"COMMENTS": "From Phyllis Stabeno (CTD data)",
+		"EPIC_KEY": "SPC_170",
+		"FORMAT": " ",
+		"GENERIC_NAME": "spc ",
+		"KEY": "170",
+		"LONGNAME": "SPICE                    ",
+		"NAME": "SPC",
+		"UNITS": " "
+	},
+	"181": {
+		"COMMENTS": "J.Murray ",
+		"EPIC_KEY": "SI_181",
+		"FORMAT": " ",
+		"GENERIC_NAME": "SiO4",
+		"KEY": "181",
+		"LONGNAME": "SiO4                     ",
+		"NAME": "SI ",
+		"UNITS": "mg at/l"
+	},
+	"182": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "NO3_182",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NO3",
+		"KEY": "182",
+		"LONGNAME": "NITRATE (micromoles/l)   ",
+		"NAME": "NO3",
+		"UNITS": "uM/l"
+	},
+	"183": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NO3w_183",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NO3",
+		"KEY": "183",
+		"LONGNAME": "Nitrate in Water        ",
+		"NAME": "NO3w",
+		"UNITS": "umol/L"
+	},
+	"184": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "NO2_184",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NO2",
+		"KEY": "184",
+		"LONGNAME": "NITRITE (micromoles/l)   ",
+		"NAME": "NO2",
+		"UNITS": "uM/l"
+	},
+	"185": {
+		"COMMENTS": "Total nutrients",
+		"EPIC_KEY": "NN_185",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NO2+NO3",
+		"KEY": "185",
+		"LONGNAME": "Nitrate + Nitrite        ",
+		"NAME": "NN ",
+		"UNITS": "umoles/l"
+	},
+	"186": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "PO4_186",
+		"FORMAT": " ",
+		"GENERIC_NAME": "PO4",
+		"KEY": "186",
+		"LONGNAME": "PHOSPHATE (micromoles/l) ",
+		"NAME": "PO4",
+		"UNITS": "uM/l"
+	},
+	"187": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "UR_187",
+		"FORMAT": " ",
+		"GENERIC_NAME": "UR",
+		"KEY": "187",
+		"LONGNAME": "UREA (micromoles/l)      ",
+		"NAME": "UR ",
+		"UNITS": "uM/l"
+	},
+	"188": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "SI_188",
+		"FORMAT": " ",
+		"GENERIC_NAME": "SiO4",
+		"KEY": "188",
+		"LONGNAME": "SILICATE (micromoles/l)  ",
+		"NAME": "SI ",
+		"UNITS": "uM/l"
+	},
+	"189": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NH4_189",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NH4",
+		"KEY": "189",
+		"LONGNAME": "AMMONIUM (micromoles/L)  ",
+		"NAME": "NH4",
+		"UNITS": "umol/L"
+	},
+	"200": {
+		"COMMENTS": "From mean CTD profile",
+		"EPIC_KEY": "DIS_200",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "200",
+		"LONGNAME": "VERTICAL DISPLACEMENT    ",
+		"NAME": "DIS",
+		"UNITS": " "
+	},
+	"205": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SL_205",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "205",
+		"LONGNAME": "Sea Level                ",
+		"NAME": "SL ",
+		"UNITS": "mm"
+	},
+	"206": {
+		"COMMENTS": "hourly insitu sea level values",
+		"EPIC_KEY": "SL_h_206",
+		"FORMAT": "f7.3",
+		"GENERIC_NAME": "SLh",
+		"KEY": "206",
+		"LONGNAME": "SEA LEVEL (hourly)      ",
+		"NAME": "SL_h",
+		"UNITS": "m"
+	},
+	"207": {
+		"COMMENTS": "daily insitu sea level values",
+		"EPIC_KEY": "SL_d_207",
+		"FORMAT": "f7.3",
+		"GENERIC_NAME": "SLd",
+		"KEY": "207",
+		"LONGNAME": "SEA LEVEL (daily)       ",
+		"NAME": "SL_d",
+		"UNITS": "m"
+	},
+	"208": {
+		"COMMENTS": "monthly insitu sea level values",
+		"EPIC_KEY": "SL_m_208",
+		"FORMAT": "f7.3",
+		"GENERIC_NAME": "SLm",
+		"KEY": "208",
+		"LONGNAME": "SEA LEVEL (monthly)     ",
+		"NAME": "SL_m",
+		"UNITS": "m"
+	},
+	"210": {
+		"COMMENTS": "Mean value over grid block",
+		"EPIC_KEY": "SL_210",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "210",
+		"LONGNAME": "GEOSAT SEA LEVEL (M)     ",
+		"NAME": "SL ",
+		"UNITS": "m"
+	},
+	"220": {
+		"COMMENTS": "measure of ice floe rotation",
+		"EPIC_KEY": "AZ_220",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "az",
+		"KEY": "220",
+		"LONGNAME": "AZIMUTH                  ",
+		"NAME": "AZ ",
+		"UNITS": "degrees"
+	},
+	"221": {
+		"COMMENTS": "sqrt(u**2 + v**2) (current variance) ",
+		"EPIC_KEY": "VAR_221",
+		"FORMAT": " ",
+		"GENERIC_NAME": "var",
+		"KEY": "221",
+		"LONGNAME": "VARIANCE                 ",
+		"NAME": "VAR",
+		"UNITS": "cm s-1"
+	},
+	"250": {
+		"COMMENTS": "global horizontal radiation",
+		"EPIC_KEY": "GHR_250",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "ghr",
+		"KEY": "250",
+		"LONGNAME": "GLOBAL HORIZNTL RADIATION",
+		"NAME": "GHR",
+		"UNITS": "kJ s-2 d-1"
+	},
+	"251": {
+		"COMMENTS": "photosynthetically active radiation",
+		"EPIC_KEY": "PAR_251",
+		"FORMAT": "f5.2 ",
+		"GENERIC_NAME": "par",
+		"KEY": "251",
+		"LONGNAME": "PHOTOSYN ACTIVE RADIATION",
+		"NAME": "PAR",
+		"UNITS": "M ph m-2 d-1"
+	},
+	"252": {
+		"COMMENTS": "global horizontal radiation",
+		"EPIC_KEY": "GHR_252",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "ghr",
+		"KEY": "252",
+		"LONGNAME": "GLOBAL HORIZNTL RADIATION",
+		"NAME": "GHR",
+		"UNITS": "W m-2"
+	},
+	"282": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "NO3_282",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NO3",
+		"KEY": "282",
+		"LONGNAME": "NITRATE (micromoles/kg)  ",
+		"NAME": "NO3",
+		"UNITS": "uM/kg"
+	},
+	"284": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "NO2_284",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NO2",
+		"KEY": "284",
+		"LONGNAME": "NITRITE (micromoles/kg)  ",
+		"NAME": "NO2",
+		"UNITS": "uM/kg"
+	},
+	"286": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "PO4_286",
+		"FORMAT": " ",
+		"GENERIC_NAME": "PO4",
+		"KEY": "286",
+		"LONGNAME": "PHOSPHATE (micromoles/kg)",
+		"NAME": "PO4",
+		"UNITS": "uM/kg"
+	},
+	"287": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "UR_287",
+		"FORMAT": " ",
+		"GENERIC_NAME": "UR",
+		"KEY": "287",
+		"LONGNAME": "UREA (micromoles/kg)     ",
+		"NAME": "UR ",
+		"UNITS": "uM/kg"
+	},
+	"288": {
+		"COMMENTS": "From Jim Murray",
+		"EPIC_KEY": "SI_288",
+		"FORMAT": " ",
+		"GENERIC_NAME": "SiO4",
+		"KEY": "288",
+		"LONGNAME": "SILICATE (micromoles/kg) ",
+		"NAME": "SI ",
+		"UNITS": "uM/kg"
+	},
+	"289": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NH4_289",
+		"FORMAT": " ",
+		"GENERIC_NAME": "NH4",
+		"KEY": "289",
+		"LONGNAME": "AMMONIUM (micromoles/kg) ",
+		"NAME": "NH4",
+		"UNITS": "umol/kg"
+	},
+	"300": {
+		"COMMENTS": "oceanographic (going to)",
+		"EPIC_KEY": "CS_300",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "vspd",
+		"KEY": "300",
+		"LONGNAME": "CURRENT SPEED (CM/S)      ",
+		"NAME": "CS ",
+		"UNITS": "cm s-1"
+	},
+	"301": {
+		"COMMENTS": "calculated from lat,lon",
+		"EPIC_KEY": "BS_301",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "301",
+		"LONGNAME": "DRIFTER BUOY SPEED (M/S) ",
+		"NAME": "BS ",
+		"UNITS": "m s-1"
+	},
+	"302": {
+		"COMMENTS": "calculated from lat,lon",
+		"EPIC_KEY": "BS_302",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "302",
+		"LONGNAME": "Drifter Buoy Speed (cm/s)",
+		"NAME": "BS ",
+		"UNITS": "cm s-1"
+	},
+	"310": {
+		"COMMENTS": "oceanographic (going to), using true north",
+		"EPIC_KEY": "CD_310",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "vdir",
+		"KEY": "310",
+		"LONGNAME": "CURRENT DIRECTION (T)     ",
+		"NAME": "CD ",
+		"UNITS": "degrees"
+	},
+	"311": {
+		"COMMENTS": "oceanographic (going to)",
+		"EPIC_KEY": "BD_311",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "311",
+		"LONGNAME": "DRIFTER BUOY DIRECTION   ",
+		"NAME": "BD ",
+		"UNITS": "degrees"
+	},
+	"316": {
+		"COMMENTS": "calculated from lat,lon",
+		"EPIC_KEY": "BU_316",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "316",
+		"LONGNAME": "Drifter Buoy u (cm/s)    ",
+		"NAME": "BU ",
+		"UNITS": "cm s-1"
+	},
+	"317": {
+		"COMMENTS": "calculated from lat,lon",
+		"EPIC_KEY": "BV_317",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "317",
+		"LONGNAME": "Drifter Buoy v (cm/s)    ",
+		"NAME": "BV ",
+		"UNITS": "cm s-1"
+	},
+	"318": {
+		"COMMENTS": "calculated from lat,lon",
+		"EPIC_KEY": "BU_318",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "318",
+		"LONGNAME": "DRIFTER BUOY U (M/S)     ",
+		"NAME": "BU ",
+		"UNITS": "m s-1"
+	},
+	"319": {
+		"COMMENTS": "calculated from lat,lon",
+		"EPIC_KEY": "BV_319",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "319",
+		"LONGNAME": "DRIFTER BUOY V (M/S)     ",
+		"NAME": "BV ",
+		"UNITS": "m s-1"
+	},
+	"320": {
+		"COMMENTS": "measured w/r true N",
+		"EPIC_KEY": "U_320",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "320",
+		"LONGNAME": "ZONAL CURRENT (CM/S)     ",
+		"NAME": "U  ",
+		"UNITS": "cm s-1"
+	},
+	"321": {
+		"COMMENTS": "measured w/r true N",
+		"EPIC_KEY": "V_321",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "321",
+		"LONGNAME": "MERIDIONAL CURRENT (CM/S)",
+		"NAME": "V  ",
+		"UNITS": "cm s-1"
+	},
+	"322": {
+		"COMMENTS": "relative w/r true N",
+		"EPIC_KEY": "U_322",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "322",
+		"LONGNAME": "ZONAL CURRENT (CM/S)     ",
+		"NAME": "U  ",
+		"UNITS": "cm s-1"
+	},
+	"323": {
+		"COMMENTS": "relative w/r true N",
+		"EPIC_KEY": "V_323",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "323",
+		"LONGNAME": "MERIDIONAL CURRENT (CM/S)",
+		"NAME": "V  ",
+		"UNITS": "cm s-1"
+	},
+	"324": {
+		"COMMENTS": "instrument w/r true N",
+		"EPIC_KEY": "U_324",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "324",
+		"LONGNAME": "ZONAL CURRENT (CM/S)     ",
+		"NAME": "U  ",
+		"UNITS": "cm s-1"
+	},
+	"325": {
+		"COMMENTS": "instrument w/r true N",
+		"EPIC_KEY": "V_325",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "325",
+		"LONGNAME": "MERIDIONAL CURRENT (CM/S)",
+		"NAME": "V  ",
+		"UNITS": "cm s-1"
+	},
+	"326": {
+		"COMMENTS": "tracked w/r true N",
+		"EPIC_KEY": "U_326",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "326",
+		"LONGNAME": "ZONAL CURRENT (CM/S)     ",
+		"NAME": "U  ",
+		"UNITS": "cm s-1"
+	},
+	"327": {
+		"COMMENTS": "tracked w/r true N",
+		"EPIC_KEY": "V_327",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "327",
+		"LONGNAME": "MERIDIONAL CURRENT (CM/S)",
+		"NAME": "V  ",
+		"UNITS": "cm s-1"
+	},
+	"328": {
+		"COMMENTS": "tracked TOPS",
+		"EPIC_KEY": "W_328",
+		"FORMAT": " ",
+		"GENERIC_NAME": "w",
+		"KEY": "328",
+		"LONGNAME": "VERTICAL VELOCITY (CM/S) ",
+		"NAME": "W  ",
+		"UNITS": "cm s-1"
+	},
+	"329": {
+		"COMMENTS": "",
+		"EPIC_KEY": "W_329",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "w",
+		"KEY": "329",
+		"LONGNAME": "VERTICAL VELOCITY (CM/S) ",
+		"NAME": "W  ",
+		"UNITS": "cm s-1"
+	},
+	"330": {
+		"COMMENTS": "measured w/r magnetic N",
+		"EPIC_KEY": "U_330",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "330",
+		"LONGNAME": "ZONAL CURRENT (CM/S)     ",
+		"NAME": "U  ",
+		"UNITS": "cm s-1"
+	},
+	"331": {
+		"COMMENTS": "measured w/r magnetic N",
+		"EPIC_KEY": "V_331",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "331",
+		"LONGNAME": "MERIDIONAL CURRENT (CM/S)",
+		"NAME": "V  ",
+		"UNITS": "cm s-1"
+	},
+	"332": {
+		"COMMENTS": "relative w/r magnetic N",
+		"EPIC_KEY": "U_332",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "332",
+		"LONGNAME": "ZONAL CURRENT (CM/S)     ",
+		"NAME": "U  ",
+		"UNITS": "cm s-1"
+	},
+	"333": {
+		"COMMENTS": "relative w/r magnetic N",
+		"EPIC_KEY": "V_333",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "333",
+		"LONGNAME": "MERIDIONAL CURRENT (CM/S)",
+		"NAME": "V  ",
+		"UNITS": "cm s-1"
+	},
+	"334": {
+		"COMMENTS": "instrument w/r magnetic N",
+		"EPIC_KEY": "U_334",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "334",
+		"LONGNAME": "ZONAL CURRENT (CM/S)     ",
+		"NAME": "U  ",
+		"UNITS": "cm s-1"
+	},
+	"335": {
+		"COMMENTS": "instrument w/r magnetic N",
+		"EPIC_KEY": "V_335",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "335",
+		"LONGNAME": "MERIDIONAL CURRENT (CM/S)",
+		"NAME": "V  ",
+		"UNITS": "cm s-1"
+	},
+	"336": {
+		"COMMENTS": "tracked w/r magnetic N",
+		"EPIC_KEY": "U_336",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "336",
+		"LONGNAME": "ZONAL CURRENT (CM/S)     ",
+		"NAME": "U  ",
+		"UNITS": "cm s-1"
+	},
+	"337": {
+		"COMMENTS": "tracked w/r magnetic N",
+		"EPIC_KEY": "V_337",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "337",
+		"LONGNAME": "MERIDIONAL CURRENT (CM/S)",
+		"NAME": "V  ",
+		"UNITS": "cm s-1"
+	},
+	"340": {
+		"COMMENTS": "geostrophic",
+		"EPIC_KEY": "Ug_340",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "340",
+		"LONGNAME": "GEOSTROPHIC ZONAL (CM/S) ",
+		"NAME": "Ug ",
+		"UNITS": "cm s-1"
+	},
+	"341": {
+		"COMMENTS": "geostrophic",
+		"EPIC_KEY": "Vg_341",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "341",
+		"LONGNAME": "GEOSTR MERIDIONAL (CM/S) ",
+		"NAME": "Vg ",
+		"UNITS": "cm s-1"
+	},
+	"342": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Umg_342",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "342",
+		"LONGNAME": "Umodel-Ugeost (cm/s)     ",
+		"NAME": "Umg",
+		"UNITS": "cm s-1"
+	},
+	"344": {
+		"COMMENTS": "geostrophic vel normal to track",
+		"EPIC_KEY": "Ut_344",
+		"FORMAT": " ",
+		"GENERIC_NAME": "un",
+		"KEY": "344",
+		"LONGNAME": "TRACK NORMAL GEOST (CM/S)",
+		"NAME": "Ut ",
+		"UNITS": "cm s-1"
+	},
+	"350": {
+		"COMMENTS": "",
+		"EPIC_KEY": "HX_350",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "350",
+		"LONGNAME": "COMPASS HX               ",
+		"NAME": "HX ",
+		"UNITS": " "
+	},
+	"351": {
+		"COMMENTS": "",
+		"EPIC_KEY": "HY_351",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "351",
+		"LONGNAME": "COMPASS HY               ",
+		"NAME": "HY ",
+		"UNITS": " "
+	},
+	"360": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AX_360",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "360",
+		"LONGNAME": "ACCELERATION AX          ",
+		"NAME": "AX ",
+		"UNITS": " "
+	},
+	"361": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AY_361",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "361",
+		"LONGNAME": "ACCELERATION AY          ",
+		"NAME": "AY ",
+		"UNITS": " "
+	},
+	"362": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AU_362",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "362",
+		"LONGNAME": "ACCELERATION AU          ",
+		"NAME": "AU ",
+		"UNITS": " "
+	},
+	"363": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AV_363",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "363",
+		"LONGNAME": "ACCELERATION AV          ",
+		"NAME": "AV ",
+		"UNITS": " "
+	},
+	"370": {
+		"COMMENTS": "tracked TOPS position",
+		"EPIC_KEY": "X_370",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "370",
+		"LONGNAME": "X POSITION IN NET        ",
+		"NAME": "X  ",
+		"UNITS": " "
+	},
+	"371": {
+		"COMMENTS": "tracked TOPS position",
+		"EPIC_KEY": "Y_371",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "371",
+		"LONGNAME": "Y POSITION IN NET        ",
+		"NAME": "Y  ",
+		"UNITS": " "
+	},
+	"372": {
+		"COMMENTS": "tracked TOPS position",
+		"EPIC_KEY": "Z_372",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "372",
+		"LONGNAME": "Z POSITION IN NET        ",
+		"NAME": "Z  ",
+		"UNITS": " "
+	},
+	"375": {
+		"COMMENTS": "measured w/r true N",
+		"EPIC_KEY": "U1_375",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u1",
+		"KEY": "375",
+		"LONGNAME": "U Tidal Amplitude (CM/S) species1",
+		"NAME": "U1 ",
+		"UNITS": "cm s-1"
+	},
+	"376": {
+		"COMMENTS": "measured w/r true N",
+		"EPIC_KEY": "V1_376",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v1",
+		"KEY": "376",
+		"LONGNAME": "V Tidal Amplitude (CM/S) species1",
+		"NAME": "V1 ",
+		"UNITS": "cm s-1"
+	},
+	"377": {
+		"COMMENTS": "measured w/r true N",
+		"EPIC_KEY": "U2_377",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u2",
+		"KEY": "377",
+		"LONGNAME": "U Tidal Amplitude (CM/S) species2",
+		"NAME": "U2 ",
+		"UNITS": "cm s-1"
+	},
+	"378": {
+		"COMMENTS": "measured w/r true N",
+		"EPIC_KEY": "V2_378",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v2",
+		"KEY": "378",
+		"LONGNAME": "V Tidal Amplitude (CM/S) species2",
+		"NAME": "V2 ",
+		"UNITS": "cm s-1"
+	},
+	"380": {
+		"COMMENTS": "total transport per unit width",
+		"EPIC_KEY": "ZT_380",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "380",
+		"LONGNAME": "ZONAL TRANSPORT, M**2/SEC",
+		"NAME": "ZT ",
+		"UNITS": "m2 s-1"
+	},
+	"381": {
+		"COMMENTS": "total transport per unit width",
+		"EPIC_KEY": "MT_381",
+		"FORMAT": " ",
+		"GENERIC_NAME": "U",
+		"KEY": "381",
+		"LONGNAME": "MERIDIONAL TRANSPRT,M^2/S",
+		"NAME": "MT ",
+		"UNITS": "m2 s-1"
+	},
+	"382": {
+		"COMMENTS": "positive zonal transport per unit width",
+		"EPIC_KEY": "ZT+_382",
+		"FORMAT": " ",
+		"GENERIC_NAME": "V",
+		"KEY": "382",
+		"LONGNAME": "ZONAL TRANSPORT (+)      ",
+		"NAME": "ZT+",
+		"UNITS": "m2 s-1"
+	},
+	"383": {
+		"COMMENTS": "positive meridional transport per unit width",
+		"EPIC_KEY": "MT+_383",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "383",
+		"LONGNAME": "MERIDIONAL TRANSPORT (+) ",
+		"NAME": "MT+",
+		"UNITS": "m2 s-1"
+	},
+	"384": {
+		"COMMENTS": "negative zonal transport per unit width",
+		"EPIC_KEY": "ZT-_384",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "384",
+		"LONGNAME": "ZONAL TRANSPORT (-)      ",
+		"NAME": "ZT-",
+		"UNITS": "m2 s-1"
+	},
+	"385": {
+		"COMMENTS": "negative meridional transport per unit width",
+		"EPIC_KEY": "MT-_385",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "385",
+		"LONGNAME": "MERIDIONAL TRANSPORT (-) ",
+		"NAME": "MT-",
+		"UNITS": "m2 s-1"
+	},
+	"386": {
+		"COMMENTS": "volume transport",
+		"EPIC_KEY": "ZT_386",
+		"FORMAT": " ",
+		"GENERIC_NAME": "U",
+		"KEY": "386",
+		"LONGNAME": "ZONAL TRANSPORT, M**3/SEC",
+		"NAME": "ZT ",
+		"UNITS": "m3 s-1"
+	},
+	"387": {
+		"COMMENTS": "volume transport",
+		"EPIC_KEY": "MT_387",
+		"FORMAT": " ",
+		"GENERIC_NAME": "V",
+		"KEY": "387",
+		"LONGNAME": "MERIDIONAL TRANSPRT,M^3/S",
+		"NAME": "MT ",
+		"UNITS": "m3 s-1"
+	},
+	"388": {
+		"COMMENTS": "volume transport normal to track",
+		"EPIC_KEY": "TR_388",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "388",
+		"LONGNAME": "TRK NORMAL TRNSPRT, M^3/S",
+		"NAME": "TR ",
+		"UNITS": "m3 s-1"
+	},
+	"390": {
+		"COMMENTS": "transport per unit width",
+		"EPIC_KEY": "ZU_390",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "390",
+		"LONGNAME": "ZONAL TRANSPORT UPPER LIM",
+		"NAME": "ZU ",
+		"UNITS": "m2 s-1"
+	},
+	"391": {
+		"COMMENTS": "transport per unit width",
+		"EPIC_KEY": "MU_391",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "391",
+		"LONGNAME": "MERIDIONAL TRNS UPPER LIM",
+		"NAME": "MU ",
+		"UNITS": "m2 s-1"
+	},
+	"392": {
+		"COMMENTS": "transport per unit width",
+		"EPIC_KEY": "ZL_392",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "392",
+		"LONGNAME": "ZONAL TRANSPORT LOWER LIM",
+		"NAME": "ZL ",
+		"UNITS": "m2 s-1"
+	},
+	"393": {
+		"COMMENTS": "transport per unit width",
+		"EPIC_KEY": "ML_393",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "393",
+		"LONGNAME": "MERIDIONAL TRNS LOWER LIM",
+		"NAME": "ML ",
+		"UNITS": "m2 s-1"
+	},
+	"394": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ZCW_394",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "394",
+		"LONGNAME": "ZONAL CURRENT WIDTH      ",
+		"NAME": "ZCW",
+		"UNITS": " "
+	},
+	"395": {
+		"COMMENTS": "",
+		"EPIC_KEY": "MCW_395",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "395",
+		"LONGNAME": "MERIDIONAL CURRENT WIDTH ",
+		"NAME": "MCW",
+		"UNITS": " "
+	},
+	"396": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Dx_396",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "396",
+		"LONGNAME": "ZONAL MOORING LINE DRAG  ",
+		"NAME": "Dx ",
+		"UNITS": " "
+	},
+	"397": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Dy_397",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "397",
+		"LONGNAME": "MERIDIANAL MOOR LINE DRAG",
+		"NAME": "Dy ",
+		"UNITS": " "
+	},
+	"398": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DRG_398",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "398",
+		"LONGNAME": "DRAG ON MOORING LINE     ",
+		"NAME": "DRG",
+		"UNITS": " "
+	},
+	"400": {
+		"COMMENTS": "",
+		"EPIC_KEY": "WS_400",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "400",
+		"LONGNAME": "WIND SPEED (CM/S)        ",
+		"NAME": "WS ",
+		"UNITS": "cm s-1"
+	},
+	"401": {
+		"COMMENTS": "",
+		"EPIC_KEY": "WS_401",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "401",
+		"LONGNAME": "WIND SPEED (M/S)         ",
+		"NAME": "WS ",
+		"UNITS": "m s-1"
+	},
+	"402": {
+		"COMMENTS": "greatest speed in interval (drifters)",
+		"EPIC_KEY": "WG_402",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "402",
+		"LONGNAME": "WIND GUST (M/S)          ",
+		"NAME": "WG ",
+		"UNITS": "m s-1"
+	},
+	"403": {
+		"COMMENTS": "Wind Speed",
+		"EPIC_KEY": "WS_403",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": " ",
+		"KEY": "403",
+		"LONGNAME": "Wind Speed               ",
+		"NAME": "WS ",
+		"UNITS": "knots"
+	},
+	"404": {
+		"COMMENTS": "",
+		"EPIC_KEY": "WS_404",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "404",
+		"LONGNAME": "Wind Speed               ",
+		"NAME": "WS ",
+		"UNITS": "m s-1"
+	},
+	"405": {
+		"COMMENTS": "Relative Wind Speed",
+		"EPIC_KEY": "RWS_405",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "405",
+		"LONGNAME": "Wind Speed (rel. to ship)",
+		"NAME": "RWS",
+		"UNITS": "m s-1"
+	},
+	"410": {
+		"COMMENTS": "     0-360 degrees",
+		"EPIC_KEY": "WD_410",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "410",
+		"LONGNAME": "WIND DIRECTION           ",
+		"NAME": "WD ",
+		"UNITS": "degrees"
+	},
+	"411": {
+		"COMMENTS": "     -180 to 180 degrees",
+		"EPIC_KEY": "WD_411",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "411",
+		"LONGNAME": "WIND DIRECTION           ",
+		"NAME": "WD ",
+		"UNITS": "degrees"
+	},
+	"412": {
+		"COMMENTS": "Wind Direction (from)",
+		"EPIC_KEY": "WD_412",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": " ",
+		"KEY": "412",
+		"LONGNAME": "Wind Direction (from)    ",
+		"NAME": "WD ",
+		"UNITS": "degrees_T"
+	},
+	"413": {
+		"COMMENTS": "Wind Direction (toward)",
+		"EPIC_KEY": "WD_413",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": " ",
+		"KEY": "413",
+		"LONGNAME": "Wind Direction (toward)  ",
+		"NAME": "WD ",
+		"UNITS": "degrees_T"
+	},
+	"414": {
+		"COMMENTS": "Relative Wind Direction",
+		"EPIC_KEY": "RWD_414",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "414",
+		"LONGNAME": "Wind Dir. (rel. to bow)  ",
+		"NAME": "RWD",
+		"UNITS": "degrees"
+	},
+	"420": {
+		"COMMENTS": "oceanographic sense (going to)",
+		"EPIC_KEY": "WU_420",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "420",
+		"LONGNAME": "WIND U (CM/S)            ",
+		"NAME": "WU ",
+		"UNITS": "cm s-1"
+	},
+	"421": {
+		"COMMENTS": "oceanographic sense (going to)",
+		"EPIC_KEY": "WV_421",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "421",
+		"LONGNAME": "WIND V (CM/S)            ",
+		"NAME": "WV ",
+		"UNITS": "cm s-1"
+	},
+	"422": {
+		"COMMENTS": "oceanographic sense (going to)",
+		"EPIC_KEY": "WU_422",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "422",
+		"LONGNAME": "WIND U (M/S)             ",
+		"NAME": "WU ",
+		"UNITS": "m s-1"
+	},
+	"423": {
+		"COMMENTS": "oceanographic sense (going to)",
+		"EPIC_KEY": "WV_423",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "423",
+		"LONGNAME": "WIND V (M/S)             ",
+		"NAME": "WV ",
+		"UNITS": "m s-1"
+	},
+	"430": {
+		"COMMENTS": "positive toward east",
+		"EPIC_KEY": "WU_430",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "430",
+		"LONGNAME": "Zonal Wind               ",
+		"NAME": "WU ",
+		"UNITS": "m s-1"
+	},
+	"431": {
+		"COMMENTS": "positive toward north",
+		"EPIC_KEY": "WV_431",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "431",
+		"LONGNAME": "Meridional Wind          ",
+		"NAME": "WV ",
+		"UNITS": "m s-1"
+	},
+	"440": {
+		"COMMENTS": "Zonal Wind Stress",
+		"EPIC_KEY": "T-X_440",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "440",
+		"LONGNAME": "ZONAL WIND STRESS        ",
+		"NAME": "T-X",
+		"UNITS": "dyne cm-2"
+	},
+	"441": {
+		"COMMENTS": "Meridional Wind Stress",
+		"EPIC_KEY": "T-Y_441",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "441",
+		"LONGNAME": "MERIDIONAL WIND STRESS   ",
+		"NAME": "T-Y",
+		"UNITS": "dyne cm-2"
+	},
+	"442": {
+		"COMMENTS": "Zonal pseudo wind stress",
+		"EPIC_KEY": "PTx_442",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "442",
+		"LONGNAME": "ZONAL PSEUDO WIND STRESS ",
+		"NAME": "PTx",
+		"UNITS": "m2 s-2"
+	},
+	"443": {
+		"COMMENTS": "Meridional pseudo wind stress",
+		"EPIC_KEY": "PTy_443",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "443",
+		"LONGNAME": "MERID PSEUDO WIND STRESS ",
+		"NAME": "PTy",
+		"UNITS": "m2 s-2"
+	},
+	"444": {
+		"COMMENTS": "sqrt(PTx**2 + PTy**2)  (Prog WNDSTR)",
+		"EPIC_KEY": "Txy_444",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "444",
+		"LONGNAME": "TOTAL PSEUDO WIND STRESS ",
+		"NAME": "Txy",
+		"UNITS": "m2 s-2"
+	},
+	"446": {
+		"COMMENTS": "Zonal true wind stress",
+		"EPIC_KEY": "Tx_446",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "446",
+		"LONGNAME": "ZONAL WIND STRESS        ",
+		"NAME": " Tx",
+		"UNITS": " "
+	},
+	"447": {
+		"COMMENTS": "Meridional true wind stress",
+		"EPIC_KEY": "Ty_447",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "447",
+		"LONGNAME": "MERID WIND STRESS        ",
+		"NAME": " Ty",
+		"UNITS": " "
+	},
+	"448": {
+		"COMMENTS": "sqrt(Tx**2 + Ty**2) (Prog WNDSTR)",
+		"EPIC_KEY": "Txy_448",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "448",
+		"LONGNAME": "TOTAL WIND STRESS        ",
+		"NAME": "Txy",
+		"UNITS": " "
+	},
+	"449": {
+		"COMMENTS": "geopotential energy",
+		"EPIC_KEY": "GP_449",
+		"FORMAT": "f10.2 ",
+		"GENERIC_NAME": "GP",
+		"KEY": "449",
+		"LONGNAME": "Geopotential             ",
+		"NAME": "GP ",
+		"UNITS": "m2/s2"
+	},
+	"450": {
+		"COMMENTS": "Wind work",
+		"EPIC_KEY": "WW_450",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "450",
+		"LONGNAME": "WIND WORK                ",
+		"NAME": "WW ",
+		"UNITS": "m3 s-3"
+	},
+	"460": {
+		"COMMENTS": "X is longitude",
+		"EPIC_KEY": "U'X_460",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "460",
+		"LONGNAME": "GRADIENT DU/DX           ",
+		"NAME": "U'X",
+		"UNITS": "1E-5 s-1"
+	},
+	"461": {
+		"COMMENTS": "X is longitude",
+		"EPIC_KEY": "V'X_461",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "461",
+		"LONGNAME": "GRADIENT DV/DX           ",
+		"NAME": "V'X",
+		"UNITS": "1E-5 s-1"
+	},
+	"462": {
+		"COMMENTS": "Y is latitude",
+		"EPIC_KEY": "U'Y_462",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "462",
+		"LONGNAME": "GRADIENT DU/DY           ",
+		"NAME": "U'Y",
+		"UNITS": "1E-5 s-1"
+	},
+	"463": {
+		"COMMENTS": "Y is latitude",
+		"EPIC_KEY": "V'Y_463",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "463",
+		"LONGNAME": "GRADIENT DV/DY           ",
+		"NAME": "V'Y",
+		"UNITS": "1E-5 s-1"
+	},
+	"464": {
+		"COMMENTS": "Z is depth",
+		"EPIC_KEY": "U'Z_464",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "464",
+		"LONGNAME": "GRADIENT DU/DZ           ",
+		"NAME": "U'Z",
+		"UNITS": "s-1"
+	},
+	"465": {
+		"COMMENTS": "Z is depth ",
+		"EPIC_KEY": "V'Z_465",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "465",
+		"LONGNAME": "GRADIENT DV/DZ           ",
+		"NAME": "V'Z",
+		"UNITS": "s-1"
+	},
+	"466": {
+		"COMMENTS": "SQRT(U'Z^2+V'Z^2)",
+		"EPIC_KEY": "Shr_466",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "466",
+		"LONGNAME": "Current Shear            ",
+		"NAME": "Shr",
+		"UNITS": "s-1"
+	},
+	"480": {
+		"COMMENTS": "Outgoing long wave radiation",
+		"EPIC_KEY": "OLR_480",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "480",
+		"LONGNAME": "OLR                      ",
+		"NAME": "OLR",
+		"UNITS": "W/M**2"
+	},
+	"485": {
+		"COMMENTS": "Rainfall derived from OLR",
+		"EPIC_KEY": "RN_485",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "485",
+		"LONGNAME": "RAIN                     ",
+		"NAME": "RN ",
+		"UNITS": "MM"
+	},
+	"500": {
+		"COMMENTS": "EPIC-- N is positive, S is negative",
+		"EPIC_KEY": "LAT_500",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "lat",
+		"KEY": "500",
+		"LONGNAME": "LATITUDE                 ",
+		"NAME": "LAT",
+		"UNITS": "degree_north"
+	},
+	"501": {
+		"COMMENTS": "Classic EPIC-- W is pos, eg, 165W=165, 170E=190",
+		"EPIC_KEY": "LON_501",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "lon",
+		"KEY": "501",
+		"LONGNAME": "LONGITUDE                ",
+		"NAME": "LON",
+		"UNITS": "degree_west"
+	},
+	"502": {
+		"COMMENTS": "New EPIC-- E is pos, eg, 165E=165, 170W=190",
+		"EPIC_KEY": "LON_502",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "lon",
+		"KEY": "502",
+		"LONGNAME": "LONGITUDE                ",
+		"NAME": "LON",
+		"UNITS": "degree_east"
+	},
+	"510": {
+		"COMMENTS": "N is positive, S is negative",
+		"EPIC_KEY": "LAT_510",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "lat",
+		"KEY": "510",
+		"LONGNAME": "PROJECTED LATITUDE       ",
+		"NAME": "LAT",
+		"UNITS": "degree_north"
+	},
+	"511": {
+		"COMMENTS": "W is positive",
+		"EPIC_KEY": "LON_511",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "lon",
+		"KEY": "511",
+		"LONGNAME": "PROJECTED LONGITUDE      ",
+		"NAME": "LON",
+		"UNITS": "degree_west"
+	},
+	"512": {
+		"COMMENTS": "E is positive",
+		"EPIC_KEY": "LON_512",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "lon",
+		"KEY": "512",
+		"LONGNAME": "PROJECTED LONGITUDE      ",
+		"NAME": "LON",
+		"UNITS": "degree_east"
+	},
+	"513": {
+		"COMMENTS": "Positive toward end of section",
+		"EPIC_KEY": "XS_513",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "dist",
+		"KEY": "513",
+		"LONGNAME": "Section Distance         ",
+		"NAME": "XS ",
+		"UNITS": "km"
+	},
+	"514": {
+		"COMMENTS": "Positive counterclockwise from section",
+		"EPIC_KEY": "YS_514",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "dist",
+		"KEY": "514",
+		"LONGNAME": "Transverse Distance      ",
+		"NAME": "YS ",
+		"UNITS": "km"
+	},
+	"520": {
+		"COMMENTS": "",
+		"EPIC_KEY": "S_520",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "dist",
+		"KEY": "520",
+		"LONGNAME": "Distance                 ",
+		"NAME": "S  ",
+		"UNITS": "km"
+	},
+	"521": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AD_521",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "dist",
+		"KEY": "521",
+		"LONGNAME": "Alongshore Distance      ",
+		"NAME": "AD ",
+		"UNITS": "km"
+	},
+	"522": {
+		"COMMENTS": "",
+		"EPIC_KEY": "OD_522",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "dist",
+		"KEY": "522",
+		"LONGNAME": "Offshore Distance        ",
+		"NAME": "OD ",
+		"UNITS": "km"
+	},
+	"600": {
+		"COMMENTS": "EPIC Time series time hhmm as real number",
+		"EPIC_KEY": "TIM_600",
+		"FORMAT": "f10.0",
+		"GENERIC_NAME": "time",
+		"KEY": "600",
+		"LONGNAME": "TIME (EPIC)              ",
+		"NAME": "TIM",
+		"UNITS": " "
+	},
+	"601": {
+		"COMMENTS": "units since YYYY-MM-dd hh",
+		"EPIC_KEY": "TIM_601",
+		"FORMAT": " ",
+		"GENERIC_NAME": "time",
+		"KEY": "601",
+		"LONGNAME": "TIME                     ",
+		"NAME": "TIM",
+		"UNITS": " "
+	},
+	"620": {
+		"COMMENTS": "EPIC Time series date yymmdd as real number",
+		"EPIC_KEY": "DAT_620",
+		"FORMAT": "f10.0",
+		"GENERIC_NAME": "time",
+		"KEY": "620",
+		"LONGNAME": "DATE (EPIC)              ",
+		"NAME": "DAT",
+		"UNITS": " "
+	},
+	"621": {
+		"COMMENTS": "Date,Time without year (mmdd.hhmm, real no)",
+		"EPIC_KEY": "DAT_621",
+		"FORMAT": " ",
+		"GENERIC_NAME": "time",
+		"KEY": "621",
+		"LONGNAME": "MMDD.HHMM                ",
+		"NAME": "DAT",
+		"UNITS": " "
+	},
+	"622": {
+		"COMMENTS": "Days from the start of the century",
+		"EPIC_KEY": "TIM_622",
+		"FORMAT": " ",
+		"GENERIC_NAME": "time",
+		"KEY": "622",
+		"LONGNAME": "GREENWICH DAYS           ",
+		"NAME": "TIM",
+		"UNITS": " "
+	},
+	"623": {
+		"COMMENTS": "Days after 85/01/01",
+		"EPIC_KEY": "TIM_623",
+		"FORMAT": " ",
+		"GENERIC_NAME": "time",
+		"KEY": "623",
+		"LONGNAME": "GEOSAT DAYS              ",
+		"NAME": "TIM",
+		"UNITS": " "
+	},
+	"624": {
+		"COMMENTS": "2 integers, jul day, millisec since midnight",
+		"EPIC_KEY": "TIM_624",
+		"FORMAT": " ",
+		"GENERIC_NAME": "time",
+		"KEY": "624",
+		"LONGNAME": "EPIC SYSTEM TIME         ",
+		"NAME": "TIM",
+		"UNITS": " "
+	},
+	"625": {
+		"COMMENTS": "integer, delta seconds",
+		"EPIC_KEY": "TIM_625",
+		"FORMAT": " ",
+		"GENERIC_NAME": "time",
+		"KEY": "625",
+		"LONGNAME": "SECONDS SINCE START      ",
+		"NAME": "TIM",
+		"UNITS": "s"
+	},
+	"626": {
+		"COMMENTS": "real, delta seconds",
+		"EPIC_KEY": "TIM_626",
+		"FORMAT": " ",
+		"GENERIC_NAME": "time",
+		"KEY": "626",
+		"LONGNAME": "DAYS SINCE START         ",
+		"NAME": "TIM",
+		"UNITS": "d"
+	},
+	"627": {
+		"COMMENTS": "Real number, decimal part gives time of day",
+		"EPIC_KEY": "TIM_627",
+		"FORMAT": " ",
+		"GENERIC_NAME": "time",
+		"KEY": "627",
+		"LONGNAME": "Julian Days              ",
+		"NAME": "TIM",
+		"UNITS": " "
+	},
+	"628": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DUR_628",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "628",
+		"LONGNAME": "Sample Duration          ",
+		"NAME": "DUR",
+		"UNITS": "min"
+	},
+	"650": {
+		"COMMENTS": "Mick Spillane's model",
+		"EPIC_KEY": "H_650",
+		"FORMAT": " ",
+		"GENERIC_NAME": "H",
+		"KEY": "650",
+		"LONGNAME": "LAYER THICKNESS          ",
+		"NAME": "H  ",
+		"UNITS": "m"
+	},
+	"651": {
+		"COMMENTS": "Mick Spillane's model",
+		"EPIC_KEY": "n_651",
+		"FORMAT": " ",
+		"GENERIC_NAME": "n",
+		"KEY": "651",
+		"LONGNAME": "LAYER NUMBER             ",
+		"NAME": "n  ",
+		"UNITS": " "
+	},
+	"700": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SD_700",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "700",
+		"LONGNAME": "STANDARD DEVIATION       ",
+		"NAME": "SD ",
+		"UNITS": " "
+	},
+	"710": {
+		"COMMENTS": "",
+		"EPIC_KEY": "N_710",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "710",
+		"LONGNAME": "NUMBER OF POINTS         ",
+		"NAME": "N  ",
+		"UNITS": " "
+	},
+	"721": {
+		"COMMENTS": "Acoustic Doppler",
+		"EPIC_KEY": "PG_721",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "721",
+		"LONGNAME": "PERCENT GOOD PINGS       ",
+		"NAME": "PG ",
+		"UNITS": " "
+	},
+	"722": {
+		"COMMENTS": "RD Acoustic Doppler",
+		"EPIC_KEY": "EV_722",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "722",
+		"LONGNAME": "ERROR VELOCITY           ",
+		"NAME": "EV ",
+		"UNITS": " "
+	},
+	"723": {
+		"COMMENTS": "RD Acoustic Doppler",
+		"EPIC_KEY": "AMP_723",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "723",
+		"LONGNAME": "AMPLITUDE                ",
+		"NAME": "AMP",
+		"UNITS": " "
+	},
+	"810": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SDD_810",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "810",
+		"LONGNAME": "STAND. DEV. (DYN.HT)     ",
+		"NAME": "SDD",
+		"UNITS": " "
+	},
+	"820": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SDT_820",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "820",
+		"LONGNAME": "STAND. DEV. (TEMP)       ",
+		"NAME": "SDT",
+		"UNITS": " "
+	},
+	"840": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SDS_840",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "840",
+		"LONGNAME": "STAND. DEV. (SAL)        ",
+		"NAME": "SDS",
+		"UNITS": " "
+	},
+	"841": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SD+_841",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "841",
+		"LONGNAME": "SAL+STAND. DEV.          ",
+		"NAME": "SD+",
+		"UNITS": " "
+	},
+	"842": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SD-_842",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "842",
+		"LONGNAME": "SAL-STAND. DEV.          ",
+		"NAME": "SD-",
+		"UNITS": " "
+	},
+	"843": {
+		"COMMENTS": "",
+		"EPIC_KEY": "S+2_843",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "843",
+		"LONGNAME": "SAL+2 STAND. DEV.        ",
+		"NAME": "S+2",
+		"UNITS": " "
+	},
+	"844": {
+		"COMMENTS": "",
+		"EPIC_KEY": "S-2_844",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "844",
+		"LONGNAME": "SAL-2 STAND. DEV.        ",
+		"NAME": "S-2",
+		"UNITS": " "
+	},
+	"850": {
+		"COMMENTS": "std. deviation of burst pressures",
+		"EPIC_KEY": "SDP_850",
+		"FORMAT": "f10.5",
+		"GENERIC_NAME": "pres",
+		"KEY": "850",
+		"LONGNAME": "STAND. DEV. (PRESS)     ",
+		"NAME": "SDP",
+		"UNITS": "mbar"
+	},
+	"851": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SED_851",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "851",
+		"LONGNAME": "STAND. ERR. (DYN.HT)     ",
+		"NAME": "SED",
+		"UNITS": " "
+	},
+	"852": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SET_852",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "852",
+		"LONGNAME": "STAND. ERR. (TEMP)       ",
+		"NAME": "SET",
+		"UNITS": " "
+	},
+	"853": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SES_853",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "853",
+		"LONGNAME": "STAND. ERR. (SAL)        ",
+		"NAME": "SES",
+		"UNITS": " "
+	},
+	"854": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SEP_854",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "854",
+		"LONGNAME": "STAND. ERR. (PRESS)      ",
+		"NAME": "SEP",
+		"UNITS": " "
+	},
+	"900": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Fvt_900",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "900",
+		"LONGNAME": "Fluorometer Volts        ",
+		"NAME": "Fvt",
+		"UNITS": "Volts"
+	},
+	"901": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Fvt_901",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "901",
+		"LONGNAME": "Fluorometer Volts(CTD)   ",
+		"NAME": "Fvt",
+		"UNITS": "Volts"
+	},
+	"902": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Irr_902",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "902",
+		"LONGNAME": "Irradiance(CTD)          ",
+		"NAME": "Irr",
+		"UNITS": "uEin cm-2 s-1"
+	},
+	"903": {
+		"COMMENTS": "J.Murray 5/13/92",
+		"EPIC_KEY": "F_903",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "903",
+		"LONGNAME": "Fluorometer (CTD)        ",
+		"NAME": "F  ",
+		"UNITS": "mg m-3"
+	},
+	"904": {
+		"COMMENTS": "J.Murray 5/13/92",
+		"EPIC_KEY": "Tr_904",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "904",
+		"LONGNAME": "Transmissometry (CTD)    ",
+		"NAME": "Tr ",
+		"UNITS": "%"
+	},
+	"905": {
+		"COMMENTS": "J.Murray 5/13/92",
+		"EPIC_KEY": "PAR_905",
+		"FORMAT": " ",
+		"GENERIC_NAME": "par",
+		"KEY": "905",
+		"LONGNAME": "Photosynthetic Active Radiation",
+		"NAME": "PAR",
+		"UNITS": "uEin m-2 s-1"
+	},
+	"906": {
+		"COMMENTS": "(fluorometric) J.Murray 5/9/94",
+		"EPIC_KEY": "Fch_906",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "906",
+		"LONGNAME": "Chlorophyll A            ",
+		"NAME": "Fch",
+		"UNITS": "ugrams/l"
+	},
+	"907": {
+		"COMMENTS": "(fluorometric) J.Murray 5/9/94",
+		"EPIC_KEY": "Fph_907",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "907",
+		"LONGNAME": "Phaeopigments      ",
+		"NAME": "Fph",
+		"UNITS": "ugrams/l"
+	},
+	"908": {
+		"COMMENTS": "S.Salo 7/1/98",
+		"EPIC_KEY": "PAR_908",
+		"FORMAT": " ",
+		"GENERIC_NAME": "par",
+		"KEY": "908",
+		"LONGNAME": "Photosynthetic Active Radiation",
+		"NAME": "PAR",
+		"UNITS": "uEin cm-2 s-1"
+	},
+	"910": {
+		"COMMENTS": "PERCENT",
+		"EPIC_KEY": "RH_910",
+		"FORMAT": " ",
+		"GENERIC_NAME": "rh",
+		"KEY": "910",
+		"LONGNAME": "RELATIVE HUMIDITY (%)    ",
+		"NAME": "RH ",
+		"UNITS": "%"
+	},
+	"911": {
+		"COMMENTS": "",
+		"EPIC_KEY": "RH_911",
+		"FORMAT": " ",
+		"GENERIC_NAME": "rh",
+		"KEY": "911",
+		"LONGNAME": "RELATIVE HUMIDITY MIN (%)",
+		"NAME": "RH ",
+		"UNITS": "%"
+	},
+	"912": {
+		"COMMENTS": "",
+		"EPIC_KEY": "RH_912",
+		"FORMAT": " ",
+		"GENERIC_NAME": "rh",
+		"KEY": "912",
+		"LONGNAME": "RELATIVE HUMIDITY MAX (%)",
+		"NAME": "RH ",
+		"UNITS": "%"
+	},
+	"913": {
+		"COMMENTS": "For Ferret",
+		"EPIC_KEY": "SH_913",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "913",
+		"LONGNAME": "SPECIFIC HUMIDITY (G/KG) ",
+		"NAME": "SH ",
+		"UNITS": "g kg-1"
+	},
+	"915": {
+		"COMMENTS": "",
+		"EPIC_KEY": "BP_915",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "915",
+		"LONGNAME": "BAROMETRIC PRESSURE (MB) ",
+		"NAME": "BP ",
+		"UNITS": "mbar"
+	},
+	"916": {
+		"COMMENTS": "PAR (instrument units)",
+		"EPIC_KEY": "PAR_916",
+		"FORMAT": "f5.2",
+		"GENERIC_NAME": "par",
+		"KEY": "916",
+		"LONGNAME": "Photosynthetically Active Radiation",
+		"NAME": "PAR",
+		"UNITS": "V"
+	},
+	"917": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PAR_917",
+		"FORMAT": "F7.1",
+		"GENERIC_NAME": "par",
+		"KEY": "917",
+		"LONGNAME": "Photosynthetically Active Radiation",
+		"NAME": "PAR",
+		"UNITS": "umol photons m-2 s-1"
+	},
+	"920": {
+		"COMMENTS": "OKTAS",
+		"EPIC_KEY": "CC_920",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "920",
+		"LONGNAME": "CLOUD COVER (OKTAS)      ",
+		"NAME": "CC ",
+		"UNITS": " "
+	},
+	"921": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CT_921",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "921",
+		"LONGNAME": "Cloud Type Code          ",
+		"NAME": "CT ",
+		"UNITS": " "
+	},
+	"922": {
+		"COMMENTS": "",
+		"EPIC_KEY": "VIS_922",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "922",
+		"LONGNAME": "Visibility Code          ",
+		"NAME": "VIS",
+		"UNITS": " "
+	},
+	"923": {
+		"COMMENTS": "",
+		"EPIC_KEY": "WC_923",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "923",
+		"LONGNAME": "Weather Code             ",
+		"NAME": "WC ",
+		"UNITS": " "
+	},
+	"924": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SC_924",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "924",
+		"LONGNAME": "Seastate Code            ",
+		"NAME": "SC ",
+		"UNITS": " "
+	},
+	"925": {
+		"COMMENTS": "",
+		"EPIC_KEY": "D_925",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "depth",
+		"KEY": "925",
+		"LONGNAME": "Water Depth              ",
+		"NAME": "D  ",
+		"UNITS": "m"
+	},
+	"931": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Chv_931",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "931",
+		"LONGNAME": "Chlorophyll-a Volts(CTD) ",
+		"NAME": "Chv",
+		"UNITS": "Volts"
+	},
+	"932": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Cla_932",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "932",
+		"LONGNAME": "Chlorophyll-a(CTD)       ",
+		"NAME": "Cla",
+		"UNITS": "ugrams/l"
+	},
+	"933": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Chl_933",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "933",
+		"LONGNAME": "Chlorophyll              ",
+		"NAME": "Chl",
+		"UNITS": "ug/L"
+	},
+	"935": {
+		"COMMENTS": "WetLabs A-3",
+		"EPIC_KEY": "VA3_935",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "935",
+		"LONGNAME": "ChlAM Voltage            ",
+		"NAME": "VA3",
+		"UNITS": "volts"
+	},
+	"936": {
+		"COMMENTS": " WetLabs A-3",
+		"EPIC_KEY": "AA3_936",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "936",
+		"LONGNAME": "Chlorophyll-a Absorption ",
+		"NAME": "AA3",
+		"UNITS": "m-1"
+	},
+	"937": {
+		"COMMENTS": "WetLabs A-3",
+		"EPIC_KEY": "CA3_937",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "937",
+		"LONGNAME": "Chlorophyll-a Conc       ",
+		"NAME": "CA3",
+		"UNITS": "ugrams/l"
+	},
+	"938": {
+		"COMMENTS": "Chlorophyll from WOD2001",
+		"EPIC_KEY": "CPHL_938",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "938",
+		"LONGNAME": "Chlorophyll             ",
+		"NAME": "CPHL",
+		"UNITS": "mg/m3"
+	},
+	"941": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DB_941",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "941",
+		"LONGNAME": "Dry Bulb Temp            ",
+		"NAME": "DB ",
+		"UNITS": "degree C"
+	},
+	"942": {
+		"COMMENTS": "",
+		"EPIC_KEY": "WB_942",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "942",
+		"LONGNAME": "Wet Bulb Temp            ",
+		"NAME": "WB ",
+		"UNITS": "degree C"
+	},
+	"951": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DP_951",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "951",
+		"LONGNAME": "Dew Point                ",
+		"NAME": "DP ",
+		"UNITS": "degree C"
+	},
+	"961": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Rn_961",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "961",
+		"LONGNAME": "Rainfall                 ",
+		"NAME": "Rn ",
+		"UNITS": "10-2 in"
+	},
+	"962": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Rr_962",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "962",
+		"LONGNAME": "Rain Rate                ",
+		"NAME": "Rr ",
+		"UNITS": "mm/hr"
+	},
+	"971": {
+		"COMMENTS": "",
+		"EPIC_KEY": "rFv_971",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "971",
+		"LONGNAME": "raw fluorometer Volts(CTD)   ",
+		"NAME": "rFv",
+		"UNITS": "Volts"
+	},
+	"972": {
+		"COMMENTS": "",
+		"EPIC_KEY": "rCv_972",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "972",
+		"LONGNAME": "raw chl-a Volts(CTD)     ",
+		"NAME": "rCv",
+		"UNITS": "Volts"
+	},
+	"973": {
+		"COMMENTS": "Wetlabs wetstar fluorometer chlorophyll",
+		"EPIC_KEY": "fWS_973",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "973",
+		"LONGNAME": "wetStar fluorometer chl  ",
+		"NAME": "fWS",
+		"UNITS": "ug/L"
+	},
+	"974": {
+		"COMMENTS": "Sea Point fluorometer chlorophyll",
+		"EPIC_KEY": "fSP_974",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "974",
+		"LONGNAME": "SeaPoint fluorometer chl ",
+		"NAME": "fSP",
+		"UNITS": "ug/L"
+	},
+	"975": {
+		"COMMENTS": "Wetlabs wetstar fluorometer",
+		"EPIC_KEY": "VWS_975",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "975",
+		"LONGNAME": "wetStar Voltage          ",
+		"NAME": "VWS",
+		"UNITS": "volts"
+	},
+	"976": {
+		"COMMENTS": "SeaPoint fluorometer",
+		"EPIC_KEY": "VSP_976",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "976",
+		"LONGNAME": "SeaPoint Voltage         ",
+		"NAME": "VSP",
+		"UNITS": "volts"
+	},
+	"980": {
+		"COMMENTS": "formazin nephelometric units",
+		"EPIC_KEY": "Trb_980",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "turb",
+		"KEY": "980",
+		"LONGNAME": "Turbidity(FNU)          ",
+		"NAME": "Trb ",
+		"UNITS": "FNU"
+	},
+	"981": {
+		"COMMENTS": "sediment concentration",
+		"EPIC_KEY": "Sed_981",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "sed",
+		"KEY": "981",
+		"LONGNAME": "Sediment concentration   ",
+		"NAME": "Sed",
+		"UNITS": "g/l"
+	},
+	"990": {
+		"COMMENTS": " individuals per liter",
+		"EPIC_KEY": "BUG_990",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "990",
+		"LONGNAME": "Plankton Concentration   ",
+		"NAME": "BUG",
+		"UNITS": "number/l"
+	},
+	"991": {
+		"COMMENTS": "oncentration of Copepod Nauplii (< 150 micrometers)",
+		"EPIC_KEY": "SmCNpl_991",
+		"FORMAT": "  ",
+		"GENERIC_NAME": "CopNpl",
+		"KEY": "991",
+		"LONGNAME": "Copepod Nauplii (< 150 micrometers) Conc.",
+		"NAME": "SmCNpl",
+		"UNITS": "number/l"
+	},
+	"992": {
+		"COMMENTS": " Concentration of Copepod Nauplii (>= 150 micrometers)",
+		"EPIC_KEY": "LgCNpl_992",
+		"FORMAT": " ",
+		"GENERIC_NAME": "CopNpl",
+		"KEY": "992",
+		"LONGNAME": "Copepod Nauplii (>= 150 micrometers) Conc.",
+		"NAME": "LgCNpl",
+		"UNITS": "number/l"
+	},
+	"993": {
+		"COMMENTS": "Copepod Nauplii Concentration ",
+		"EPIC_KEY": "TCNpl_993",
+		"FORMAT": " ",
+		"GENERIC_NAME": "CopNpl",
+		"KEY": "993",
+		"LONGNAME": "Copepod Nauplii Concentration",
+		"NAME": "TCNpl",
+		"UNITS": "number/l"
+	},
+	"994": {
+		"COMMENTS": "Zooplankton Displacement Volume Conc.",
+		"EPIC_KEY": "DV_994",
+		"FORMAT": "f5.2",
+		"GENERIC_NAME": " ",
+		"KEY": "994",
+		"LONGNAME": "Zooplankton Disp. Vol.    ",
+		"NAME": "DV",
+		"UNITS": "ml/m**3"
+	},
+	"995": {
+		"COMMENTS": "Zooplankton Dry Weight Conc.",
+		"EPIC_KEY": "DW_995",
+		"FORMAT": "f5.1",
+		"GENERIC_NAME": " ",
+		"KEY": "995",
+		"LONGNAME": "Zooplankton Dry Wt./Vol.  ",
+		"NAME": "DW",
+		"UNITS": "mg/m**3"
+	},
+	"996": {
+		"COMMENTS": "Zooplankton Dry Weight Areal Conc.",
+		"EPIC_KEY": "DWA_996",
+		"FORMAT": "f5.1",
+		"GENERIC_NAME": " ",
+		"KEY": "996",
+		"LONGNAME": "Zooplankton Dry Wt./Area ",
+		"NAME": "DWA",
+		"UNITS": "mg/m**2"
+	},
+	"1141": {
+		"COMMENTS": "ping 12/10/90",
+		"EPIC_KEY": "YDF_1141",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1141",
+		"LONGNAME": "MERID DIFFUS HEAT FLUX   ",
+		"NAME": "YDF",
+		"UNITS": "W m-2"
+	},
+	"1142": {
+		"COMMENTS": "ping 12/10/90",
+		"EPIC_KEY": "MHF_1142",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1142",
+		"LONGNAME": "MERID ADVECT HEAT FLUX   ",
+		"NAME": "MHF",
+		"UNITS": "W m-2"
+	},
+	"1143": {
+		"COMMENTS": "ping 12/10/90",
+		"EPIC_KEY": "VE_1143",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1143",
+		"LONGNAME": "VERTICAL ENTRAINMENT     ",
+		"NAME": "VE ",
+		"UNITS": "W m-2"
+	},
+	"1144": {
+		"COMMENTS": "ping 12/11/90",
+		"EPIC_KEY": "Qt_1144",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1144",
+		"LONGNAME": "HEAT CONTENT CHANGE      ",
+		"NAME": "Qt ",
+		"UNITS": "W m-2"
+	},
+	"1145": {
+		"COMMENTS": "ping 12/11/90",
+		"EPIC_KEY": "Qt*_1145",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1145",
+		"LONGNAME": "QT*=QNET+QU+QW+QZ        ",
+		"NAME": "Qt*",
+		"UNITS": "W m-2"
+	},
+	"1200": {
+		"COMMENTS": "ADCP Ensemble Length",
+		"EPIC_KEY": "Tim_1200",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ens_length",
+		"KEY": "1200",
+		"LONGNAME": "Ensemble Length          ",
+		"NAME": "Tim ",
+		"UNITS": "s"
+	},
+	"1201": {
+		"COMMENTS": "ADCP Error Velocity",
+		"EPIC_KEY": "Werr_1201",
+		"FORMAT": "F8.1",
+		"GENERIC_NAME": "w",
+		"KEY": "1201",
+		"LONGNAME": "Error Velocity           ",
+		"NAME": "Werr",
+		"UNITS": "cm/s"
+	},
+	"1202": {
+		"COMMENTS": "ADCP Beam Averaged AGC",
+		"EPIC_KEY": "AGC_1202",
+		"FORMAT": "F5.1",
+		"GENERIC_NAME": "AGC",
+		"KEY": "1202",
+		"LONGNAME": "Avg. Echo Intensity (AGC)",
+		"NAME": "AGC ",
+		"UNITS": "counts"
+	},
+	"1203": {
+		"COMMENTS": "ADCP Percent Good Pings",
+		"EPIC_KEY": "PGd_1203",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1203",
+		"LONGNAME": "Percent Good Pings       ",
+		"NAME": "PGd ",
+		"UNITS": " "
+	},
+	"1204": {
+		"COMMENTS": "Vertical Velocity",
+		"EPIC_KEY": "w_1204",
+		"FORMAT": " ",
+		"GENERIC_NAME": "w",
+		"KEY": "1204",
+		"LONGNAME": "Vertical Velocity        ",
+		"NAME": "w   ",
+		"UNITS": "cm/s"
+	},
+	"1205": {
+		"COMMENTS": "Eastward Velocity",
+		"EPIC_KEY": "u_1205",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "1205",
+		"LONGNAME": "Eastward Velocity        ",
+		"NAME": "u   ",
+		"UNITS": "cm/s"
+	},
+	"1206": {
+		"COMMENTS": "Northward Velocity",
+		"EPIC_KEY": "v_1206",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "1206",
+		"LONGNAME": "Northward Velocity       ",
+		"NAME": "v   ",
+		"UNITS": "cm/s"
+	},
+	"1207": {
+		"COMMENTS": "ADCP Records",
+		"EPIC_KEY": "Rec_1207",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1207",
+		"LONGNAME": "Records                  ",
+		"NAME": "Rec ",
+		"UNITS": " "
+	},
+	"1208": {
+		"COMMENTS": "ADCP Pings",
+		"EPIC_KEY": "Png_1208",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1208",
+		"LONGNAME": "Pings                    ",
+		"NAME": "Png ",
+		"UNITS": " "
+	},
+	"1209": {
+		"COMMENTS": "ADCP AGC (1202) Std Dev",
+		"EPIC_KEY": "EISD_1209",
+		"FORMAT": "F5.1",
+		"GENERIC_NAME": "AGC",
+		"KEY": "1209",
+		"LONGNAME": "Echo Intensity (AGC) Std. Dev.",
+		"NAME": "EISD",
+		"UNITS": "counts"
+	},
+	"1210": {
+		"COMMENTS": "ADCP Built-in Test Status",
+		"EPIC_KEY": "BIT_1210",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1210",
+		"LONGNAME": "ADCP BIT Status          ",
+		"NAME": "BIT ",
+		"UNITS": " "
+	},
+	"1211": {
+		"COMMENTS": "ADCP Transducer Temp",
+		"EPIC_KEY": "Tx_1211",
+		"FORMAT": "F10.2",
+		"GENERIC_NAME": "temp",
+		"KEY": "1211",
+		"LONGNAME": "ADCP Transducer Temp.    ",
+		"NAME": "Tx  ",
+		"UNITS": "deg. C"
+	},
+	"1215": {
+		"COMMENTS": "ADCP heading",
+		"EPIC_KEY": "Hdg_1215",
+		"FORMAT": "F10.2",
+		"GENERIC_NAME": "hdg",
+		"KEY": "1215",
+		"LONGNAME": "INST Heading             ",
+		"NAME": "Hdg ",
+		"UNITS": "degrees"
+	},
+	"1216": {
+		"COMMENTS": "ADCP pitch",
+		"EPIC_KEY": "Ptch_1216",
+		"FORMAT": "F10.2",
+		"GENERIC_NAME": "ptch",
+		"KEY": "1216",
+		"LONGNAME": "INST Pitch               ",
+		"NAME": "Ptch",
+		"UNITS": "degrees"
+	},
+	"1217": {
+		"COMMENTS": "ADCP roll",
+		"EPIC_KEY": "Roll_1217",
+		"FORMAT": "F10.2",
+		"GENERIC_NAME": "roll",
+		"KEY": "1217",
+		"LONGNAME": "INST Roll                ",
+		"NAME": "Roll",
+		"UNITS": "degrees"
+	},
+	"1218": {
+		"COMMENTS": "ADCP Hdg. Std. Dev.",
+		"EPIC_KEY": "HSD_1218",
+		"FORMAT": " ",
+		"GENERIC_NAME": "hdg",
+		"KEY": "1218",
+		"LONGNAME": "Heading Std. Dev.        ",
+		"NAME": "HSD ",
+		"UNITS": "degrees"
+	},
+	"1219": {
+		"COMMENTS": "ADCP Pitch Std. Dev.",
+		"EPIC_KEY": "PSD_1219",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ptch",
+		"KEY": "1219",
+		"LONGNAME": "Pitch Std. Dev.          ",
+		"NAME": "PSD ",
+		"UNITS": "degrees"
+	},
+	"1220": {
+		"COMMENTS": "ADCP Roll Std. Dev.",
+		"EPIC_KEY": "RSD_1220",
+		"FORMAT": " ",
+		"GENERIC_NAME": "roll",
+		"KEY": "1220",
+		"LONGNAME": "Roll Std. Dev.           ",
+		"NAME": "RSD ",
+		"UNITS": "degrees"
+	},
+	"1221": {
+		"COMMENTS": "ADCP Beam 1 AGC",
+		"EPIC_KEY": "AGC1_1221",
+		"FORMAT": " ",
+		"GENERIC_NAME": "AGC",
+		"KEY": "1221",
+		"LONGNAME": "Echo Intensity (AGC) Beam 1",
+		"NAME": "AGC1",
+		"UNITS": "counts"
+	},
+	"1222": {
+		"COMMENTS": "ADCP Beam 2 AGC",
+		"EPIC_KEY": "AGC2_1222",
+		"FORMAT": " ",
+		"GENERIC_NAME": "AGC",
+		"KEY": "1222",
+		"LONGNAME": "Echo Intensity (AGC) Beam 2",
+		"NAME": "AGC2",
+		"UNITS": "counts"
+	},
+	"1223": {
+		"COMMENTS": "ADCP Beam 3 AGC",
+		"EPIC_KEY": "AGC3_1223",
+		"FORMAT": " ",
+		"GENERIC_NAME": "AGC",
+		"KEY": "1223",
+		"LONGNAME": "Echo Intensity (AGC) Beam 3",
+		"NAME": "AGC3",
+		"UNITS": "counts"
+	},
+	"1224": {
+		"COMMENTS": "ADCP Beam 4 AGC",
+		"EPIC_KEY": "AGC4_1224",
+		"FORMAT": " ",
+		"GENERIC_NAME": "AGC",
+		"KEY": "1224",
+		"LONGNAME": "Echo Intensity (AGC) Beam 4",
+		"NAME": "AGC4",
+		"UNITS": "counts"
+	},
+	"1231": {
+		"COMMENTS": "ADCP Mn Bksctr, ref to last bin",
+		"EPIC_KEY": "Sv_1231",
+		"FORMAT": " ",
+		"GENERIC_NAME": "Sv",
+		"KEY": "1231",
+		"LONGNAME": "Mean Backscattering Strength",
+		"NAME": "Sv  ",
+		"UNITS": "dB"
+	},
+	"1232": {
+		"COMMENTS": "ADCP Mn Bksctr, ref to noise cal",
+		"EPIC_KEY": "Sv_1232",
+		"FORMAT": " ",
+		"GENERIC_NAME": "Sv",
+		"KEY": "1232",
+		"LONGNAME": "Mean Backscattering Strength",
+		"NAME": "Sv  ",
+		"UNITS": "dB"
+	},
+	"1233": {
+		"COMMENTS": "ADCP Bksctr., ref to noise cal",
+		"EPIC_KEY": "Sv1_1233",
+		"FORMAT": " ",
+		"GENERIC_NAME": "Sv",
+		"KEY": "1233",
+		"LONGNAME": "Backscattering Strength Beam 1",
+		"NAME": "Sv1 ",
+		"UNITS": "dB"
+	},
+	"1234": {
+		"COMMENTS": "ADCP Bksctr., ref to noise cal",
+		"EPIC_KEY": "Sv2_1234",
+		"FORMAT": " ",
+		"GENERIC_NAME": "Sv",
+		"KEY": "1234",
+		"LONGNAME": "Backscattering Strength Beam 2",
+		"NAME": "Sv2 ",
+		"UNITS": "dB"
+	},
+	"1235": {
+		"COMMENTS": "ADCP Bksctr., ref to noise cal",
+		"EPIC_KEY": "Sv3_1235",
+		"FORMAT": " ",
+		"GENERIC_NAME": "Sv",
+		"KEY": "1235",
+		"LONGNAME": "Backscattering Strength Beam 3",
+		"NAME": "Sv3 ",
+		"UNITS": "dB"
+	},
+	"1236": {
+		"COMMENTS": "ADCP Bksctr., ref to noise cal",
+		"EPIC_KEY": "Sv4_1236",
+		"FORMAT": " ",
+		"GENERIC_NAME": "Sv",
+		"KEY": "1236",
+		"LONGNAME": "Backscattering Strength Beam 4",
+		"NAME": "Sv4 ",
+		"UNITS": "dB"
+	},
+	"1237": {
+		"COMMENTS": "ADCP Bksctr. Std. Dev.",
+		"EPIC_KEY": "SvSD_1237",
+		"FORMAT": " ",
+		"GENERIC_NAME": "Sv",
+		"KEY": "1237",
+		"LONGNAME": "Backscattering Strength Std. Dev",
+		"NAME": "SvSD",
+		"UNITS": "dB"
+	},
+	"1241": {
+		"COMMENTS": "ADCP Percent Good Beam 1",
+		"EPIC_KEY": "PGd1_1241",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1241",
+		"LONGNAME": "Percent Good Beam 1         ",
+		"NAME": "PGd1",
+		"UNITS": " "
+	},
+	"1242": {
+		"COMMENTS": "ADCP Percent Good Beam 2",
+		"EPIC_KEY": "PGd2_1242",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1242",
+		"LONGNAME": "Percent Good Beam 2         ",
+		"NAME": "PGd2",
+		"UNITS": " "
+	},
+	"1243": {
+		"COMMENTS": "ADCP Percent Good Beam 3",
+		"EPIC_KEY": "PGd3_1243",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1243",
+		"LONGNAME": "Percent Good Beam 3         ",
+		"NAME": "PGd3",
+		"UNITS": " "
+	},
+	"1244": {
+		"COMMENTS": "ADCP Percent Good Beam 4",
+		"EPIC_KEY": "PGd4_1244",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1244",
+		"LONGNAME": "Percent Good Beam 4         ",
+		"NAME": "PGd4",
+		"UNITS": " "
+	},
+	"1245": {
+		"COMMENTS": "ADCP Percent 4-Beam Solns. Good",
+		"EPIC_KEY": "PG4B_1245",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1245",
+		"LONGNAME": "Percent 4-Beam Solns. Good  ",
+		"NAME": "PG4B",
+		"UNITS": " "
+	},
+	"1246": {
+		"COMMENTS": "ADCP Percent 3-Beam Solns. Good",
+		"EPIC_KEY": "PG3B_1246",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1246",
+		"LONGNAME": "Percent 3-Beam Solns. Good  ",
+		"NAME": "PG3B",
+		"UNITS": " "
+	},
+	"1247": {
+		"COMMENTS": "ADCP Percent Error Vel. Good",
+		"EPIC_KEY": "PGWe_1247",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1247",
+		"LONGNAME": "Percent Error Vel. Good     ",
+		"NAME": "PGWe",
+		"UNITS": " "
+	},
+	"1251": {
+		"COMMENTS": "ADCP Beam 1 Status",
+		"EPIC_KEY": "St1_1251",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1251",
+		"LONGNAME": "Status Beam 1               ",
+		"NAME": "St1 ",
+		"UNITS": " "
+	},
+	"1252": {
+		"COMMENTS": "ADCP Beam 2 Status",
+		"EPIC_KEY": "St2_1252",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1252",
+		"LONGNAME": "Status Beam 2               ",
+		"NAME": "St2 ",
+		"UNITS": " "
+	},
+	"1253": {
+		"COMMENTS": "ADCP Beam 3 Status",
+		"EPIC_KEY": "St3_1253",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1253",
+		"LONGNAME": "Status Beam 3               ",
+		"NAME": "St3 ",
+		"UNITS": " "
+	},
+	"1254": {
+		"COMMENTS": "ADCP Beam 4 Status",
+		"EPIC_KEY": "St4_1254",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1254",
+		"LONGNAME": "Status Beam 4               ",
+		"NAME": "St4 ",
+		"UNITS": " "
+	},
+	"1255": {
+		"COMMENTS": "ADCP Bin Status",
+		"EPIC_KEY": "StBn_1255",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1255",
+		"LONGNAME": "Bin Status                  ",
+		"NAME": "StBn",
+		"UNITS": " "
+	},
+	"1260": {
+		"COMMENTS": "ADCP Btm. Trk. Error Velocity",
+		"EPIC_KEY": "BTWe_1260",
+		"FORMAT": " ",
+		"GENERIC_NAME": "w",
+		"KEY": "1260",
+		"LONGNAME": "BT Error Velocity           ",
+		"NAME": "BTWe",
+		"UNITS": "cm/s"
+	},
+	"1261": {
+		"COMMENTS": "ADCP Btm. Trk. Eastward Velocity",
+		"EPIC_KEY": "BTu_1261",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u",
+		"KEY": "1261",
+		"LONGNAME": "BT Eastward Velocity        ",
+		"NAME": "BTu ",
+		"UNITS": "cm/s"
+	},
+	"1262": {
+		"COMMENTS": "ADCP Btm. Trk. Northward Velocity",
+		"EPIC_KEY": "BTv_1262",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v",
+		"KEY": "1262",
+		"LONGNAME": "BT Northward Velocity       ",
+		"NAME": "BTv ",
+		"UNITS": "cm/s"
+	},
+	"1263": {
+		"COMMENTS": "ADCP Btm. Trk. Vertical Velocity",
+		"EPIC_KEY": "BTw_1263",
+		"FORMAT": " ",
+		"GENERIC_NAME": "w",
+		"KEY": "1263",
+		"LONGNAME": "BT Vertical Velocity        ",
+		"NAME": "BTw ",
+		"UNITS": "cm/s"
+	},
+	"1264": {
+		"COMMENTS": "ADCP Btm. Trk. Range Beam1",
+		"EPIC_KEY": "BTR1_1264",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1264",
+		"LONGNAME": "BT Range Beam 1             ",
+		"NAME": "BTR1",
+		"UNITS": "m"
+	},
+	"1265": {
+		"COMMENTS": "ADCP Btm. Trk. Range Beam2",
+		"EPIC_KEY": "BTR2_1265",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1265",
+		"LONGNAME": "BT Range Beam 2             ",
+		"NAME": "BTR2",
+		"UNITS": "m"
+	},
+	"1266": {
+		"COMMENTS": "ADCP Btm. Trk. Range Beam3",
+		"EPIC_KEY": "BTR3_1266",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1266",
+		"LONGNAME": "BT Range Beam 3             ",
+		"NAME": "BTR3",
+		"UNITS": "m"
+	},
+	"1267": {
+		"COMMENTS": "ADCP Btm. Trk. Range Beam4",
+		"EPIC_KEY": "BTR4_1267",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1267",
+		"LONGNAME": "BT Range Beam 4             ",
+		"NAME": "BTR4",
+		"UNITS": "m"
+	},
+	"1268": {
+		"COMMENTS": "ADCP Btm. Trk. Range Average",
+		"EPIC_KEY": "BTRa_1268",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1268",
+		"LONGNAME": "BT Average Range            ",
+		"NAME": "BTRa",
+		"UNITS": "m"
+	},
+	"1269": {
+		"COMMENTS": "ADCP Btm. Trk. Range St Dev",
+		"EPIC_KEY": "BTSD_1269",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1269",
+		"LONGNAME": "BT Range Std. Dev.          ",
+		"NAME": "BTSD",
+		"UNITS": "m"
+	},
+	"1270": {
+		"COMMENTS": "ADCP Btm. Trk. Beam 1 % Good Pings",
+		"EPIC_KEY": "BTP1_1270",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1270",
+		"LONGNAME": "BT Percent Good Beam 1      ",
+		"NAME": "BTP1",
+		"UNITS": " "
+	},
+	"1271": {
+		"COMMENTS": "ADCP Btm. Trk. Beam 2 % Good Pings",
+		"EPIC_KEY": "BTP2_1271",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1271",
+		"LONGNAME": "BT Percent Good Beam 2      ",
+		"NAME": "BTP2",
+		"UNITS": " "
+	},
+	"1272": {
+		"COMMENTS": "ADCP Btm. Trk. Beam 3 % Good Pings",
+		"EPIC_KEY": "BTP3_1272",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1272",
+		"LONGNAME": "BT Percent Good Beam 3      ",
+		"NAME": "BTP3",
+		"UNITS": " "
+	},
+	"1273": {
+		"COMMENTS": "ADCP Btm. Trk. Beam 4 % Good Pings",
+		"EPIC_KEY": "BTP4_1273",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1273",
+		"LONGNAME": "BT Percent Good Beam 4      ",
+		"NAME": "BTP4",
+		"UNITS": " "
+	},
+	"1275": {
+		"COMMENTS": "ADCP Vel. normal to track",
+		"EPIC_KEY": "Un_1275",
+		"FORMAT": " ",
+		"GENERIC_NAME": "un",
+		"KEY": "1275",
+		"LONGNAME": "Track Normal Velocity       ",
+		"NAME": "Un  ",
+		"UNITS": "cm/s"
+	},
+	"1276": {
+		"COMMENTS": "ADCP Vel. tangential to track",
+		"EPIC_KEY": "Vt_1276",
+		"FORMAT": " ",
+		"GENERIC_NAME": "vt",
+		"KEY": "1276",
+		"LONGNAME": "Track Tangential Velocity   ",
+		"NAME": "Vt  ",
+		"UNITS": "cm/s"
+	},
+	"1277": {
+		"COMMENTS": "ADCP velocity along beam 1",
+		"EPIC_KEY": "vel1_1277",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": " ",
+		"KEY": "1277",
+		"LONGNAME": "Beam 1 velocity (mm/s)    ",
+		"NAME": "vel1",
+		"UNITS": "mm s-1"
+	},
+	"1278": {
+		"COMMENTS": "ADCP velocity along beam 2",
+		"EPIC_KEY": "vel2_1278",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": " ",
+		"KEY": "1278",
+		"LONGNAME": "Beam 2 velocity (mm/s)    ",
+		"NAME": "vel2",
+		"UNITS": "mm s-1"
+	},
+	"1279": {
+		"COMMENTS": "ADCP velocity along beam 3",
+		"EPIC_KEY": "vel3_1279",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": " ",
+		"KEY": "1279",
+		"LONGNAME": "Beam 3 velocity (mm/s)    ",
+		"NAME": "vel3",
+		"UNITS": "mm s-1"
+	},
+	"1280": {
+		"COMMENTS": "ADCP velocity along beam 4",
+		"EPIC_KEY": "vel4_1280",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": " ",
+		"KEY": "1280",
+		"LONGNAME": "Beam 4 velocity (mm/s)    ",
+		"NAME": "vel4",
+		"UNITS": "mm s-1"
+	},
+	"1281": {
+		"COMMENTS": "ADCP attenuation of beam 1",
+		"EPIC_KEY": "att1_1281",
+		"FORMAT": "i10",
+		"GENERIC_NAME": " ",
+		"KEY": "1281",
+		"LONGNAME": "Beam 1 attenuation        ",
+		"NAME": "att1",
+		"UNITS": "counts"
+	},
+	"1282": {
+		"COMMENTS": "ADCP attenuation of beam 2",
+		"EPIC_KEY": "att2_1282",
+		"FORMAT": "i10",
+		"GENERIC_NAME": " ",
+		"KEY": "1282",
+		"LONGNAME": "Beam 2 attenuation        ",
+		"NAME": "att2",
+		"UNITS": "counts"
+	},
+	"1283": {
+		"COMMENTS": "ADCP attenuation of beam 3",
+		"EPIC_KEY": "att3_1283",
+		"FORMAT": "i10",
+		"GENERIC_NAME": " ",
+		"KEY": "1283",
+		"LONGNAME": "Beam 3 attenuation        ",
+		"NAME": "att3",
+		"UNITS": "counts"
+	},
+	"1284": {
+		"COMMENTS": "ADCP attenuation of beam 4",
+		"EPIC_KEY": "att4_1284",
+		"FORMAT": "i10",
+		"GENERIC_NAME": " ",
+		"KEY": "1284",
+		"LONGNAME": "Beam 4 attenuation        ",
+		"NAME": "att4",
+		"UNITS": "counts"
+	},
+	"1285": {
+		"COMMENTS": "ADCP correlation of beam 1",
+		"EPIC_KEY": "cor1_1285",
+		"FORMAT": "i10",
+		"GENERIC_NAME": " ",
+		"KEY": "1285",
+		"LONGNAME": "Beam 1 correlation        ",
+		"NAME": "cor1",
+		"UNITS": "counts"
+	},
+	"1286": {
+		"COMMENTS": "ADCP correlation of beam 2",
+		"EPIC_KEY": "cor2_1286",
+		"FORMAT": "i10",
+		"GENERIC_NAME": " ",
+		"KEY": "1286",
+		"LONGNAME": "Beam 2 correlation        ",
+		"NAME": "cor2",
+		"UNITS": "counts"
+	},
+	"1287": {
+		"COMMENTS": "ADCP correlation of beam 3",
+		"EPIC_KEY": "cor3_1287",
+		"FORMAT": "i10",
+		"GENERIC_NAME": " ",
+		"KEY": "1287",
+		"LONGNAME": "Beam 3 correlation        ",
+		"NAME": "cor3",
+		"UNITS": "counts"
+	},
+	"1288": {
+		"COMMENTS": "ADCP correlation of beam 4",
+		"EPIC_KEY": "cor4_1288",
+		"FORMAT": "i10",
+		"GENERIC_NAME": " ",
+		"KEY": "1288",
+		"LONGNAME": "Beam 4 correlation        ",
+		"NAME": "cor4",
+		"UNITS": "counts"
+	},
+	"1290": {
+		"COMMENTS": "",
+		"EPIC_KEY": "xmtc_1290",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "xmitc",
+		"KEY": "1290",
+		"LONGNAME": "ADCP transmit current     ",
+		"NAME": "xmtc",
+		"UNITS": "amps"
+	},
+	"1291": {
+		"COMMENTS": "",
+		"EPIC_KEY": "xmtv_1291",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "xmitv",
+		"KEY": "1291",
+		"LONGNAME": "ADCP transmit voltage     ",
+		"NAME": "xmtv",
+		"UNITS": "volts"
+	},
+	"1292": {
+		"COMMENTS": "",
+		"EPIC_KEY": "dac_1292",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "dac",
+		"KEY": "1292",
+		"LONGNAME": "ADCP DAC output           ",
+		"NAME": "dac ",
+		"UNITS": "counts"
+	},
+	"1293": {
+		"COMMENTS": "",
+		"EPIC_KEY": "vdc_1293",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "vdc",
+		"KEY": "1293",
+		"LONGNAME": "ADCP VDC voltage          ",
+		"NAME": "vdc ",
+		"UNITS": "volts"
+	},
+	"1294": {
+		"COMMENTS": "ADCP Pressure at Transducer Head",
+		"EPIC_KEY": "P_1294",
+		"FORMAT": "F15.2",
+		"GENERIC_NAME": "pres",
+		"KEY": "1294",
+		"LONGNAME": "ADCP Pressure",
+		"NAME": "P",
+		"UNITS": "deca-pascals"
+	},
+	"1295": {
+		"COMMENTS": "ADCP Pressure Variance at Transducer Head",
+		"EPIC_KEY": "PVAR_1295",
+		"FORMAT": "F15.2",
+		"GENERIC_NAME": "pvar",
+		"KEY": "1295",
+		"LONGNAME": "ADCP Pressure Variance",
+		"NAME": "PVAR",
+		"UNITS": "deca-pascals"
+	},
+	"1301": {
+		"COMMENTS": "Pounds Per Square Inch Absolute",
+		"EPIC_KEY": "BPR_1301",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1301",
+		"LONGNAME": "BOTTOM PRESSURE            ",
+		"NAME": "BPR  ",
+		"UNITS": "PSIA"
+	},
+	"1371": {
+		"COMMENTS": "measured w/r true N",
+		"EPIC_KEY": "U48_1371",
+		"FORMAT": " ",
+		"GENERIC_NAME": "u48",
+		"KEY": "1371",
+		"LONGNAME": "U Amplitude (CM/S) 48hrs ",
+		"NAME": "U48",
+		"UNITS": "cm s-1"
+	},
+	"1372": {
+		"COMMENTS": "measured w/r true N",
+		"EPIC_KEY": "V48_1372",
+		"FORMAT": " ",
+		"GENERIC_NAME": "v48",
+		"KEY": "1372",
+		"LONGNAME": "V Amplitude (CM/S) 48hrs ",
+		"NAME": "V48",
+		"UNITS": "cm s-1"
+	},
+	"1380": {
+		"COMMENTS": "Instrument resistance",
+		"EPIC_KEY": "Res_1380",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "res",
+		"KEY": "1380",
+		"LONGNAME": "MTR resistance          ",
+		"NAME": "Res ",
+		"UNITS": "ohm"
+	},
+	"1401": {
+		"COMMENTS": "compass heading",
+		"EPIC_KEY": "hdg_1401",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "comp",
+		"KEY": "1401",
+		"LONGNAME": "AMP compass heading     ",
+		"NAME": "hdg ",
+		"UNITS": "degrees"
+	},
+	"1402": {
+		"COMMENTS": "vane reading",
+		"EPIC_KEY": "van_1402",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "vane",
+		"KEY": "1402",
+		"LONGNAME": "AMP vane                ",
+		"NAME": "van ",
+		"UNITS": "degrees"
+	},
+	"1403": {
+		"COMMENTS": "current orientation to instrument",
+		"EPIC_KEY": "van_1403",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "vane",
+		"KEY": "1403",
+		"LONGNAME": "VANE ANGLE              ",
+		"NAME": "van ",
+		"UNITS": "degrees"
+	},
+	"1404": {
+		"COMMENTS": "instrument orientation to magnetic north",
+		"EPIC_KEY": "comp_1404",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "comp",
+		"KEY": "1404",
+		"LONGNAME": "COMPASS (m)             ",
+		"NAME": "comp",
+		"UNITS": "degreeM"
+	},
+	"1406": {
+		"COMMENTS": "orientation of BASS pods",
+		"EPIC_KEY": "comp_1406",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "comp",
+		"KEY": "1406",
+		"LONGNAME": "ORIENTATION (BASS)      ",
+		"NAME": "comp",
+		"UNITS": "degrees"
+	},
+	"1407": {
+		"COMMENTS": "MIDAS raw compass voltage",
+		"EPIC_KEY": "comp_1407",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "comp",
+		"KEY": "1407",
+		"LONGNAME": "RAW COMPASS VOLTS (MIDAS)",
+		"NAME": "comp",
+		"UNITS": "counts"
+	},
+	"1408": {
+		"COMMENTS": "vacm grey code compass",
+		"EPIC_KEY": "rcomp_1408",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "comp",
+		"KEY": "1408",
+		"LONGNAME": "ENCODED COMPASS        ",
+		"NAME": "rcomp",
+		"UNITS": "128.lvl.binary"
+	},
+	"1409": {
+		"COMMENTS": "vacm grey code vane",
+		"EPIC_KEY": "rvane_1409",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "vane",
+		"KEY": "1409",
+		"LONGNAME": "ENCODED VANE           ",
+		"NAME": "rvane",
+		"UNITS": "128.lvl.binary"
+	},
+	"1411": {
+		"COMMENTS": "instantaneous dir., magnetic north (oceanographic)",
+		"EPIC_KEY": "bear_1411",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "dir",
+		"KEY": "1411",
+		"LONGNAME": "bearing (m)      ",
+		"NAME": "bear",
+		"UNITS": "degreeM"
+	},
+	"1412": {
+		"COMMENTS": "instantaneous dir., true north (oceanographic)",
+		"EPIC_KEY": "bear_1412",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "dir",
+		"KEY": "1412",
+		"LONGNAME": "bearing (t)      ",
+		"NAME": "bear",
+		"UNITS": "degreeT"
+	},
+	"1413": {
+		"COMMENTS": "instantaneous dir., rotated (oceanographic)",
+		"EPIC_KEY": "bear_1413",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "dir",
+		"KEY": "1413",
+		"LONGNAME": "bearing (r)      ",
+		"NAME": "bear",
+		"UNITS": "degrees"
+	},
+	"1414": {
+		"COMMENTS": "averaged dir., magnetic north (oceanographic)",
+		"EPIC_KEY": "vdir_1414",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "vdir",
+		"KEY": "1414",
+		"LONGNAME": "vector direction (m)",
+		"NAME": "vdir",
+		"UNITS": "degreeM"
+	},
+	"1415": {
+		"COMMENTS": "averaged dir., true north (oceanographic)",
+		"EPIC_KEY": "vdir_1415",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "vdir",
+		"KEY": "1415",
+		"LONGNAME": "vector direction (t)",
+		"NAME": "vdir",
+		"UNITS": "degreeT"
+	},
+	"1416": {
+		"COMMENTS": "averaged dir., rotated (oceanographic)",
+		"EPIC_KEY": "vdir_1416",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "vdir",
+		"KEY": "1416",
+		"LONGNAME": "vector direction (r)",
+		"NAME": "vdir",
+		"UNITS": "degrees"
+	},
+	"1500": {
+		"COMMENTS": "N positive S negative",
+		"EPIC_KEY": "LAT_1500",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "start_lat",
+		"KEY": "1500",
+		"LONGNAME": "START LATITUDE           ",
+		"NAME": "LAT",
+		"UNITS": "degree_north"
+	},
+	"1501": {
+		"COMMENTS": "W positive 165W=165",
+		"EPIC_KEY": "LON_1501",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "start_lon",
+		"KEY": "1501",
+		"LONGNAME": "START LONGITUDE          ",
+		"NAME": "LON",
+		"UNITS": "degree_west"
+	},
+	"1502": {
+		"COMMENTS": "E positive 165W=195",
+		"EPIC_KEY": "LON_1502",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "start_lon",
+		"KEY": "1502",
+		"LONGNAME": "START LONGITUDE          ",
+		"NAME": "LON",
+		"UNITS": "degree_east"
+	},
+	"1510": {
+		"COMMENTS": "N positive S negative",
+		"EPIC_KEY": "LAT_1510",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "end_lat",
+		"KEY": "1510",
+		"LONGNAME": "END LATITUDE             ",
+		"NAME": "LAT",
+		"UNITS": "degree_north"
+	},
+	"1511": {
+		"COMMENTS": "W positive 165W=165",
+		"EPIC_KEY": "LON_1511",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "end_lon",
+		"KEY": "1511",
+		"LONGNAME": "END LONGITUDE            ",
+		"NAME": "LON",
+		"UNITS": "degree_west"
+	},
+	"1512": {
+		"COMMENTS": "E positive 165W=195",
+		"EPIC_KEY": "LON_1512",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "end_lon",
+		"KEY": "1512",
+		"LONGNAME": "END LONGITUDE            ",
+		"NAME": "LON",
+		"UNITS": "degree_east"
+	},
+	"1601": {
+		"COMMENTS": "Billy Kessler's WEPOCS CTD",
+		"EPIC_KEY": "IQ_1601",
+		"FORMAT": " ",
+		"GENERIC_NAME": "iq",
+		"KEY": "1601",
+		"LONGNAME": "WEPOCS QUALITY ID         ",
+		"NAME": "IQ",
+		"UNITS": " "
+	},
+	"1701": {
+		"COMMENTS": "trichloroflouoromethane",
+		"EPIC_KEY": "F11_1701",
+		"FORMAT": "f10.6",
+		"GENERIC_NAME": "f11",
+		"KEY": "1701",
+		"LONGNAME": "CFC-11 (PMOL/KG)         ",
+		"NAME": "F11",
+		"UNITS": "pmol/kg"
+	},
+	"1702": {
+		"COMMENTS": "dichlorofluoromethane",
+		"EPIC_KEY": "F12_1702",
+		"FORMAT": "f10.6",
+		"GENERIC_NAME": "f12",
+		"KEY": "1702",
+		"LONGNAME": "CFC-12 (PMOL/KG)         ",
+		"NAME": "F12",
+		"UNITS": "pmol/kg"
+	},
+	"1711": {
+		"COMMENTS": "CFC-11 equilibrium partial-pressure",
+		"EPIC_KEY": "PF11_1711",
+		"FORMAT": "f5.2",
+		"GENERIC_NAME": "pf11",
+		"KEY": "1711",
+		"LONGNAME": "PCFC-11                 ",
+		"NAME": "PF11",
+		"UNITS": " "
+	},
+	"1712": {
+		"COMMENTS": "CFC-12 equilibrium partial-pressure",
+		"EPIC_KEY": "PF12_1712",
+		"FORMAT": "f5.2",
+		"GENERIC_NAME": "pf12",
+		"KEY": "1712",
+		"LONGNAME": "PCFC-12                 ",
+		"NAME": "PF12",
+		"UNITS": " "
+	},
+	"1721": {
+		"COMMENTS": "cfc11 partial pressure age",
+		"EPIC_KEY": "PF11AGE_1721",
+		"FORMAT": "f8.3",
+		"GENERIC_NAME": "pf11age",
+		"KEY": "1721",
+		"LONGNAME": "Pf11age              ",
+		"NAME": "PF11AGE",
+		"UNITS": "years"
+	},
+	"1722": {
+		"COMMENTS": "cfc12 partial pressure age",
+		"EPIC_KEY": "PF12AGE_1722",
+		"FORMAT": "f8.3",
+		"GENERIC_NAME": "pf12age",
+		"KEY": "1722",
+		"LONGNAME": "Pf12age              ",
+		"NAME": "PF12AGE",
+		"UNITS": "years"
+	},
+	"1723": {
+		"COMMENTS": "cfcratio partial pressure age",
+		"EPIC_KEY": "PFRATAGE_1723",
+		"FORMAT": "f8.3",
+		"GENERIC_NAME": "pfratage",
+		"KEY": "1723",
+		"LONGNAME": "Pfratage            ",
+		"NAME": "PFRATAGE",
+		"UNITS": "years"
+	},
+	"1731": {
+		"COMMENTS": "corrected trichloroflouoromethane",
+		"EPIC_KEY": "F11CORR_1731",
+		"FORMAT": "f10.6",
+		"GENERIC_NAME": "f11corr",
+		"KEY": "1731",
+		"LONGNAME": "CORRECTED CFC-11     ",
+		"NAME": "F11CORR",
+		"UNITS": "pmol/kg"
+	},
+	"1732": {
+		"COMMENTS": "corrected dichlorofluoromethane",
+		"EPIC_KEY": "F12CORR_1732",
+		"FORMAT": "f10.6",
+		"GENERIC_NAME": "f12corr",
+		"KEY": "1732",
+		"LONGNAME": "CORRECTED CFC-12     ",
+		"NAME": "F12CORR",
+		"UNITS": "pmol/kg"
+	},
+	"1751": {
+		"COMMENTS": "Dissolved Organic Carbon (micromoles/kg)",
+		"EPIC_KEY": "TCO2_1751",
+		"FORMAT": "f6.1",
+		"GENERIC_NAME": "dic",
+		"KEY": "1751",
+		"LONGNAME": "TOTAL CO2 (micromoles/kg)",
+		"NAME": "TCO2",
+		"UNITS": "uM/kg"
+	},
+	"1752": {
+		"COMMENTS": "Normalized Dissolved Organic Carbon (micromoles/kg)",
+		"EPIC_KEY": "NTCO2_1752",
+		"FORMAT": "f6.1",
+		"GENERIC_NAME": "ndic",
+		"KEY": "1752",
+		"LONGNAME": "NORMALIZED TCO2 (uM/kg)",
+		"NAME": "NTCO2",
+		"UNITS": "uM/kg"
+	},
+	"1753": {
+		"COMMENTS": "Dissolved Inorganic Carbon (micromoles/kg) from Dick Feely",
+		"EPIC_KEY": "DIC_1753",
+		"FORMAT": "f6.1",
+		"GENERIC_NAME": "dic",
+		"KEY": "1753",
+		"LONGNAME": "DISS. INORG. CARBON (umol/kg)",
+		"NAME": "DIC",
+		"UNITS": "umol/kg"
+	},
+	"1754": {
+		"COMMENTS": "Total Alkalinity from Dick Feely",
+		"EPIC_KEY": "TALK_1754",
+		"FORMAT": "f6.1",
+		"GENERIC_NAME": "alk",
+		"KEY": "1754",
+		"LONGNAME": "TOTAL ALKALINITY (uM/kg)",
+		"NAME": "TALK",
+		"UNITS": "uM/kg"
+	},
+	"1755": {
+		"COMMENTS": "Partial CO2 Pressure from Dick Feely",
+		"EPIC_KEY": "PCO2_1755",
+		"FORMAT": "f6.4",
+		"GENERIC_NAME": "pco2",
+		"KEY": "1755",
+		"LONGNAME": "PARTIAL CO2 PRESSURE (microATM)",
+		"NAME": "PCO2",
+		"UNITS": "uATM"
+	},
+	"1756": {
+		"COMMENTS": "Total alkalinity from WOD2001",
+		"EPIC_KEY": "TALK_1756",
+		"FORMAT": " ",
+		"GENERIC_NAME": "alk",
+		"KEY": "1756",
+		"LONGNAME": "Total Alkalinity        ",
+		"NAME": "TALK",
+		"UNITS": "meq/l"
+	},
+	"1800": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Teq_1800",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": " ",
+		"KEY": "1800",
+		"LONGNAME": "Equilibrator Temperature",
+		"NAME": "Teq ",
+		"UNITS": "degree C"
+	},
+	"1801": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CH4a_1801",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ch4",
+		"KEY": "1801",
+		"LONGNAME": "CH4air                  ",
+		"NAME": "CH4a",
+		"UNITS": "ppb"
+	},
+	"1802": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CH4w_1802",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ch4",
+		"KEY": "1802",
+		"LONGNAME": "CH4water                ",
+		"NAME": "CH4w",
+		"UNITS": "nmol/L"
+	},
+	"1803": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CH4e_1803",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ch4",
+		"KEY": "1803",
+		"LONGNAME": "CH4equilibrator         ",
+		"NAME": "CH4e",
+		"UNITS": "ppb"
+	},
+	"1804": {
+		"COMMENTS": "",
+		"EPIC_KEY": "COa_1804",
+		"FORMAT": " ",
+		"GENERIC_NAME": "co",
+		"KEY": "1804",
+		"LONGNAME": "COair                   ",
+		"NAME": "COa ",
+		"UNITS": "ppb"
+	},
+	"1805": {
+		"COMMENTS": "",
+		"EPIC_KEY": "COw_1805",
+		"FORMAT": " ",
+		"GENERIC_NAME": "co",
+		"KEY": "1805",
+		"LONGNAME": "COwater                 ",
+		"NAME": "COw ",
+		"UNITS": "nmol/L"
+	},
+	"1806": {
+		"COMMENTS": "",
+		"EPIC_KEY": "COe_1806",
+		"FORMAT": " ",
+		"GENERIC_NAME": "co",
+		"KEY": "1806",
+		"LONGNAME": "COequilibrator          ",
+		"NAME": "COe ",
+		"UNITS": "ppb"
+	},
+	"1807": {
+		"COMMENTS": "",
+		"EPIC_KEY": "O3_1807",
+		"FORMAT": " ",
+		"GENERIC_NAME": "o3",
+		"KEY": "1807",
+		"LONGNAME": "Ozone                   ",
+		"NAME": "O3  ",
+		"UNITS": "ppb"
+	},
+	"1808": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DMSa_1808",
+		"FORMAT": " ",
+		"GENERIC_NAME": "dms",
+		"KEY": "1808",
+		"LONGNAME": "DMSair                  ",
+		"NAME": "DMSa",
+		"UNITS": "ppt"
+	},
+	"1809": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DMSw_1809",
+		"FORMAT": " ",
+		"GENERIC_NAME": "dms",
+		"KEY": "1809",
+		"LONGNAME": "DMSwater                ",
+		"NAME": "DMSw",
+		"UNITS": "nmol/L"
+	},
+	"1810": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Rn_1810",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1810",
+		"LONGNAME": "Radon                   ",
+		"NAME": "Rn  ",
+		"UNITS": "mBq m-3"
+	},
+	"1811": {
+		"COMMENTS": "",
+		"EPIC_KEY": "pC4a_1811",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ch4",
+		"KEY": "1811",
+		"LONGNAME": "pCH4air                 ",
+		"NAME": "pC4a",
+		"UNITS": "micro-atm"
+	},
+	"1812": {
+		"COMMENTS": "",
+		"EPIC_KEY": "pC4w_1812",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ch4",
+		"KEY": "1812",
+		"LONGNAME": "pCH4water               ",
+		"NAME": "pC4w",
+		"UNITS": "micro-atm"
+	},
+	"1814": {
+		"COMMENTS": "",
+		"EPIC_KEY": "pCOa_1814",
+		"FORMAT": " ",
+		"GENERIC_NAME": "co",
+		"KEY": "1814",
+		"LONGNAME": "pCOair                  ",
+		"NAME": "pCOa",
+		"UNITS": "micro-atm"
+	},
+	"1815": {
+		"COMMENTS": "",
+		"EPIC_KEY": "pCOw_1815",
+		"FORMAT": " ",
+		"GENERIC_NAME": "co",
+		"KEY": "1815",
+		"LONGNAME": "pCOwater                ",
+		"NAME": "pCOw",
+		"UNITS": "micro-atm"
+	},
+	"1816": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SO2_1816",
+		"FORMAT": " ",
+		"GENERIC_NAME": "so2",
+		"KEY": "1816",
+		"LONGNAME": "Atmospheric Sulfur Dioxide",
+		"NAME": "SO2 ",
+		"UNITS": "ppb"
+	},
+	"1851": {
+		"COMMENTS": "condensation nuclei",
+		"EPIC_KEY": "CN_1851",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1851",
+		"LONGNAME": "Total Particles Dp>12nm ",
+		"NAME": "CN  ",
+		"UNITS": "cm-3"
+	},
+	"1852": {
+		"COMMENTS": "ultrafine condensation nuclei",
+		"EPIC_KEY": "UFCN_1852",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1852",
+		"LONGNAME": "Total Particles Dp>3nm  ",
+		"NAME": "UFCN",
+		"UNITS": "cm-3"
+	},
+	"1853": {
+		"COMMENTS": "condensation nuclei",
+		"EPIC_KEY": "CN_1853",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1853",
+		"LONGNAME": "Total Particles Dp>13nm ",
+		"NAME": "CN  ",
+		"UNITS": "cm-3"
+	},
+	"1861": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ASB_1861",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1861",
+		"LONGNAME": "Aerosol Scat Blue       ",
+		"NAME": "ASB ",
+		"UNITS": "Mm-1"
+	},
+	"1862": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ASG_1862",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1862",
+		"LONGNAME": "Aerosol Scat Green      ",
+		"NAME": "ASG ",
+		"UNITS": "Mm-1"
+	},
+	"1863": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ASR_1863",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1863",
+		"LONGNAME": "Aerosol Scat Red        ",
+		"NAME": "ASR ",
+		"UNITS": "Mm-1"
+	},
+	"1864": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ABSB_1864",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1864",
+		"LONGNAME": "Aerosol Back Scat Blue  ",
+		"NAME": "ABSB",
+		"UNITS": "Mm-1"
+	},
+	"1865": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ABSG_1865",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1865",
+		"LONGNAME": "Aerosol Back Scat Green ",
+		"NAME": "ABSG",
+		"UNITS": "Mm-1"
+	},
+	"1866": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ABSR_1866",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1866",
+		"LONGNAME": "Aerosol Back Scat Red   ",
+		"NAME": "ABSR",
+		"UNITS": "Mm-1"
+	},
+	"1867": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SASB_1867",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1867",
+		"LONGNAME": "Submicron AeroScat Blue ",
+		"NAME": "SASB",
+		"UNITS": "Mm-1"
+	},
+	"1868": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SASG_1868",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1868",
+		"LONGNAME": "Submicron AeroScat Green",
+		"NAME": "SASG",
+		"UNITS": "Mm-1"
+	},
+	"1869": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SASR_1869",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1869",
+		"LONGNAME": "Submicron AeroScat Red  ",
+		"NAME": "SASR",
+		"UNITS": "Mm-1"
+	},
+	"1870": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SBSB_1870",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1870",
+		"LONGNAME": "Submicron Aero BkScat Blue ",
+		"NAME": "SBSB",
+		"UNITS": "Mm-1"
+	},
+	"1871": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SBSG_1871",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1871",
+		"LONGNAME": "Submicron Aero BkScat Green",
+		"NAME": "SBSG",
+		"UNITS": "Mm-1"
+	},
+	"1872": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SBSR_1872",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1872",
+		"LONGNAME": "Submicron Aero BkScat Red  ",
+		"NAME": "SBSR",
+		"UNITS": "Mm-1"
+	},
+	"1873": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AAb_1873",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1873",
+		"LONGNAME": "Aerosol Absorbance          ",
+		"NAME": "AAb ",
+		"UNITS": "Mm-1"
+	},
+	"1874": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SAAb_1874",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1874",
+		"LONGNAME": "Submicron Aerosol Absorbance",
+		"NAME": "SAAb",
+		"UNITS": "Mm-1"
+	},
+	"1875": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ASST_1875",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1875",
+		"LONGNAME": "Aerosol Scat Nephelometer Temp    ",
+		"NAME": "ASST ",
+		"UNITS": "degC"
+	},
+	"1876": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ASSRH_1876",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1876",
+		"LONGNAME": "Aerosol Scat Nephelometer RH      ",
+		"NAME": "ASSRH",
+		"UNITS": "%"
+	},
+	"1877": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ASSP_1877",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1877",
+		"LONGNAME": "Aerosol Scat Nephelometer Pressure",
+		"NAME": "ASSP ",
+		"UNITS": "mbar"
+	},
+	"1879": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AODAMS_1879",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1879",
+		"LONGNAME": "AOD measurement airmass",
+		"NAME": "AODAMS",
+		"UNITS": "atmosphere "
+	},
+	"1880": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AODMZA_1880",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1880",
+		"LONGNAME": "AOD measurement zenith angle",
+		"NAME": "AODMZA",
+		"UNITS": "degrees"
+	},
+	"1881": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD1_1881",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1881",
+		"LONGNAME": "Aerosol Optical Depth Ch-1 ",
+		"NAME": "AOD1 ",
+		"UNITS": " "
+	},
+	"1882": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD2_1882",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1882",
+		"LONGNAME": "Aerosol Optical Depth Ch-2 ",
+		"NAME": "AOD2 ",
+		"UNITS": " "
+	},
+	"1883": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD3_1883",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1883",
+		"LONGNAME": "Aerosol Optical Depth Ch-3 ",
+		"NAME": "AOD3 ",
+		"UNITS": " "
+	},
+	"1884": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD4_1884",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1884",
+		"LONGNAME": "Aerosol Optical Depth Ch-4 ",
+		"NAME": "AOD4 ",
+		"UNITS": " "
+	},
+	"1885": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD5_1885",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1885",
+		"LONGNAME": "Aerosol Optical Depth Ch-5 ",
+		"NAME": "AOD5 ",
+		"UNITS": " "
+	},
+	"1886": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD6_1886",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1886",
+		"LONGNAME": "Aerosol Optical Depth Ch-6 ",
+		"NAME": "AOD6 ",
+		"UNITS": " "
+	},
+	"1887": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD7_1887",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1887",
+		"LONGNAME": "Aerosol Optical Depth Ch-7 ",
+		"NAME": "AOD7 ",
+		"UNITS": " "
+	},
+	"1888": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD8_1888",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1888",
+		"LONGNAME": "Aerosol Optical Depth Ch-8 ",
+		"NAME": "AOD8 ",
+		"UNITS": " "
+	},
+	"1889": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD9_1889",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1889",
+		"LONGNAME": "Aerosol Optical Depth Ch-9 ",
+		"NAME": "AOD9 ",
+		"UNITS": " "
+	},
+	"1890": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AOD10_1890",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1890",
+		"LONGNAME": "Aerosol Optical Depth Ch-10",
+		"NAME": "AOD10",
+		"UNITS": " "
+	},
+	"1891": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AAb1_1891",
+		"FORMAT": "  ",
+		"GENERIC_NAME": " ",
+		"KEY": "1891",
+		"LONGNAME": "Aerosol Absorbance at wavelength 1",
+		"NAME": "AAb1",
+		"UNITS": "Mm-1"
+	},
+	"1892": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AAb2_1892",
+		"FORMAT": "  ",
+		"GENERIC_NAME": " ",
+		"KEY": "1892",
+		"LONGNAME": "Aerosol Absorbance at wavelength 2",
+		"NAME": "AAb2",
+		"UNITS": "Mm-1"
+	},
+	"1893": {
+		"COMMENTS": "",
+		"EPIC_KEY": "AAb3_1893",
+		"FORMAT": "  ",
+		"GENERIC_NAME": " ",
+		"KEY": "1893",
+		"LONGNAME": "Aerosol Absorbance at wavelength 3",
+		"NAME": "AAb3",
+		"UNITS": "Mm-1"
+	},
+	"1894": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SAAb1_1894",
+		"FORMAT": "  ",
+		"GENERIC_NAME": " ",
+		"KEY": "1894",
+		"LONGNAME": "Submicron Aerosol Absorbance at wavelength 1",
+		"NAME": "SAAb1",
+		"UNITS": "Mm-1"
+	},
+	"1895": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SAAb2_1895",
+		"FORMAT": "  ",
+		"GENERIC_NAME": " ",
+		"KEY": "1895",
+		"LONGNAME": "Submicron Aerosol Absorbance at wavelength 2",
+		"NAME": "SAAb2",
+		"UNITS": "Mm-1"
+	},
+	"1896": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SAAb3_1896",
+		"FORMAT": "  ",
+		"GENERIC_NAME": " ",
+		"KEY": "1896",
+		"LONGNAME": "Submicron Aerosol Absorbance at wavelength 3",
+		"NAME": "SAAb3",
+		"UNITS": "Mm-1"
+	},
+	"1900": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V00_1900",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1900",
+		"LONGNAME": "VARIABLE 0               ",
+		"NAME": "V00",
+		"UNITS": " "
+	},
+	"1901": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V01_1901",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1901",
+		"LONGNAME": "VARIABLE 1               ",
+		"NAME": "V01",
+		"UNITS": " "
+	},
+	"1902": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V02_1902",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1902",
+		"LONGNAME": "VARIABLE 2               ",
+		"NAME": "V02",
+		"UNITS": " "
+	},
+	"1903": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V03_1903",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1903",
+		"LONGNAME": "VARIABLE 3               ",
+		"NAME": "V03",
+		"UNITS": " "
+	},
+	"1904": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V04_1904",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1904",
+		"LONGNAME": "VARIABLE 4               ",
+		"NAME": "V04",
+		"UNITS": " "
+	},
+	"1905": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V05_1905",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1905",
+		"LONGNAME": "VARIABLE 5               ",
+		"NAME": "V05",
+		"UNITS": " "
+	},
+	"1906": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V06_1906",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1906",
+		"LONGNAME": "VARIABLE 6               ",
+		"NAME": "V06",
+		"UNITS": " "
+	},
+	"1907": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V07_1907",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1907",
+		"LONGNAME": "VARIABLE 7               ",
+		"NAME": "V07",
+		"UNITS": " "
+	},
+	"1908": {
+		"COMMENTS": "",
+		"EPIC_KEY": "V08_1908",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1908",
+		"LONGNAME": "VARIABLE 8               ",
+		"NAME": "V08",
+		"UNITS": " "
+	},
+	"1920": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Na_1920",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1920",
+		"LONGNAME": "Soluble Submicron Aerosol Sodium                 ",
+		"NAME": "Na    ",
+		"UNITS": "ug/m^3"
+	},
+	"1921": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Na_1921",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1921",
+		"LONGNAME": "Soluble Supermicron Aerosol Sodium               ",
+		"NAME": "Na    ",
+		"UNITS": "ug/m^3"
+	},
+	"1922": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Na_1922",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1922",
+		"LONGNAME": "Soluble Sub10micron Aerosol Sodium               ",
+		"NAME": "Na    ",
+		"UNITS": "ug/m^3"
+	},
+	"1923": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "NH4_1923",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1923",
+		"LONGNAME": "Soluble Submicron Aerosol Ammonium               ",
+		"NAME": "NH4   ",
+		"UNITS": "ug/m^3"
+	},
+	"1924": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "NH4_1924",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1924",
+		"LONGNAME": "Soluble Supermicron Aerosol Ammonium             ",
+		"NAME": "NH4   ",
+		"UNITS": "ug/m^3"
+	},
+	"1925": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "NH4_1925",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1925",
+		"LONGNAME": "Soluble Sub10micron Aerosol Ammonium             ",
+		"NAME": "NH4   ",
+		"UNITS": "ug/m^3"
+	},
+	"1926": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "K_1926",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1926",
+		"LONGNAME": "Soluble Submicron Aerosol Potassium              ",
+		"NAME": "K     ",
+		"UNITS": "ug/m^3"
+	},
+	"1927": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "K_1927",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1927",
+		"LONGNAME": "Soluble Supermicron Aerosol Potassium            ",
+		"NAME": "K     ",
+		"UNITS": "ug/m^3"
+	},
+	"1928": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "K_1928",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1928",
+		"LONGNAME": "Soluble Sub10micron Aerosol Potassium            ",
+		"NAME": "K     ",
+		"UNITS": "ug/m^3"
+	},
+	"1929": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Mg_1929",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1929",
+		"LONGNAME": "Soluble Submicron Aerosol Magnesium              ",
+		"NAME": "Mg    ",
+		"UNITS": "ug/m^3"
+	},
+	"1930": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Mg_1930",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1930",
+		"LONGNAME": "Soluble Supermicron Aerosol Magnesium            ",
+		"NAME": "Mg    ",
+		"UNITS": "ug/m^3"
+	},
+	"1931": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Mg_1931",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1931",
+		"LONGNAME": "Soluble Sub10micron Aerosol Magnesium            ",
+		"NAME": "Mg    ",
+		"UNITS": "ug/m^3"
+	},
+	"1932": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Ca_1932",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1932",
+		"LONGNAME": "Soluble Submicron Aerosol Calcium                ",
+		"NAME": "Ca    ",
+		"UNITS": "ug/m^3"
+	},
+	"1933": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Ca_1933",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1933",
+		"LONGNAME": "Soluble Supermicron Aerosol Calcium              ",
+		"NAME": "Ca    ",
+		"UNITS": "ug/m^3"
+	},
+	"1934": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Ca_1934",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1934",
+		"LONGNAME": "Soluble Sub10micron Aerosol Calcium              ",
+		"NAME": "Ca    ",
+		"UNITS": "ug/m^3"
+	},
+	"1935": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssK_1935",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1935",
+		"LONGNAME": "Soluble Submicron Aerosol non-Seasalt Potassium  ",
+		"NAME": "nssK  ",
+		"UNITS": "ug/m^3"
+	},
+	"1936": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssK_1936",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1936",
+		"LONGNAME": "Soluble Supermicron Aerosol non-Seasalt Potassium",
+		"NAME": "nssK  ",
+		"UNITS": "ug/m^3"
+	},
+	"1937": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssK_1937",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1937",
+		"LONGNAME": "Soluble Sub10micron Aerosol non-Seasalt Potassium",
+		"NAME": "nssK  ",
+		"UNITS": "ug/m^3"
+	},
+	"1938": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssMg_1938",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1938",
+		"LONGNAME": "Soluble Submicron Aerosol non-Seasalt Magnesium  ",
+		"NAME": "nssMg ",
+		"UNITS": "ug/m^3"
+	},
+	"1939": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssMg_1939",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1939",
+		"LONGNAME": "Soluble Supermicron Aerosol non-Seasalt Magnesium",
+		"NAME": "nssMg ",
+		"UNITS": "ug/m^3"
+	},
+	"1940": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssMg_1940",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1940",
+		"LONGNAME": "Soluble Sub10micron Aerosol non-Seasalt Magnesium",
+		"NAME": "nssMg ",
+		"UNITS": "ug/m^3"
+	},
+	"1941": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssCa_1941",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1941",
+		"LONGNAME": "Soluble Submicron Aerosol non-Seasalt Calcium    ",
+		"NAME": "nssCa ",
+		"UNITS": "ug/m^3"
+	},
+	"1942": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssCa_1942",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1942",
+		"LONGNAME": "Soluble Supermicron Aerosol non-Seasalt Calcium  ",
+		"NAME": "nssCa ",
+		"UNITS": "ug/m^3"
+	},
+	"1943": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssCa_1943",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1943",
+		"LONGNAME": "Soluble Sub10micron Aerosol non-Seasalt Calcium  ",
+		"NAME": "nssCa ",
+		"UNITS": "ug/m^3"
+	},
+	"1944": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Cl_1944",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1944",
+		"LONGNAME": "Soluble Submicron Aerosol Chloride               ",
+		"NAME": "Cl    ",
+		"UNITS": "ug/m^3"
+	},
+	"1945": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Cl_1945",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1945",
+		"LONGNAME": "Soluble Supermicron Aerosol Chloride             ",
+		"NAME": "Cl    ",
+		"UNITS": "ug/m^3"
+	},
+	"1946": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Cl_1946",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1946",
+		"LONGNAME": "Soluble Sub10micron Aerosol Chloride             ",
+		"NAME": "Cl    ",
+		"UNITS": "ug/m^3"
+	},
+	"1947": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "NO3_1947",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1947",
+		"LONGNAME": "Soluble Submicron Aerosol Nitrate                ",
+		"NAME": "NO3   ",
+		"UNITS": "ug/m^3"
+	},
+	"1948": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "NO3_1948",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1948",
+		"LONGNAME": "Soluble Supermicron Aerosol Nitrate              ",
+		"NAME": "NO3   ",
+		"UNITS": "ug/m^3"
+	},
+	"1949": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "NO3_1949",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1949",
+		"LONGNAME": "Soluble Sub10micron Aerosol Nitrate              ",
+		"NAME": "NO3   ",
+		"UNITS": "ug/m^3"
+	},
+	"1950": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "SO4_1950",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1950",
+		"LONGNAME": "Soluble Submicron Aerosol Sulfate                ",
+		"NAME": "SO4   ",
+		"UNITS": "ug/m^3"
+	},
+	"1951": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "SO4_1951",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1951",
+		"LONGNAME": "Soluble Supermicron Aerosol Sulfate              ",
+		"NAME": "SO4   ",
+		"UNITS": "ug/m^3"
+	},
+	"1952": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "SO4_1952",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1952",
+		"LONGNAME": "Soluble Sub10micron Aerosol Sulfate              ",
+		"NAME": "SO4   ",
+		"UNITS": "ug/m^3"
+	},
+	"1953": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssSO4_1953",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1953",
+		"LONGNAME": "Soluble Submicron Aerosol non-Seasalt Sulfate    ",
+		"NAME": "nssSO4",
+		"UNITS": "ug/m^3"
+	},
+	"1954": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssSO4_1954",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1954",
+		"LONGNAME": "Soluble Supermicron Aerosol non-Seasalt Sulfate  ",
+		"NAME": "nssSO4",
+		"UNITS": "ug/m^3"
+	},
+	"1955": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "nssSO4_1955",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1955",
+		"LONGNAME": "Soluble Sub10micron Aerosol non-Seasalt Sulfate  ",
+		"NAME": "nssSO4",
+		"UNITS": "ug/m^3"
+	},
+	"1956": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "MSA_1956",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1956",
+		"LONGNAME": "Soluble Submicron Aerosol Methane Sulfonic Acid  ",
+		"NAME": "MSA   ",
+		"UNITS": "ug/m^3"
+	},
+	"1957": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "MSA_1957",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1957",
+		"LONGNAME": "Soluble Supermicron Aerosol Methane Sulfonic Acid",
+		"NAME": "MSA   ",
+		"UNITS": "ug/m^3"
+	},
+	"1958": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "MSA_1958",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1958",
+		"LONGNAME": "Soluble Sub10micron Aerosol Methane Sulfonic Acid",
+		"NAME": "MSA   ",
+		"UNITS": "ug/m^3"
+	},
+	"1959": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "OC_1959",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1959",
+		"LONGNAME": "Submicron Aerosol Organic Carbon                 ",
+		"NAME": "OC    ",
+		"UNITS": "ug/m^3"
+	},
+	"1960": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "OC_1960",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1960",
+		"LONGNAME": "Supermicron Aerosol Organic Carbon               ",
+		"NAME": "OC    ",
+		"UNITS": "ug/m^3"
+	},
+	"1961": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "OC_1961",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1961",
+		"LONGNAME": "Sub10micron Aerosol Organic Carbon               ",
+		"NAME": "OC    ",
+		"UNITS": "ug/m^3"
+	},
+	"1962": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "BC_1962",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1962",
+		"LONGNAME": "Submicron Aerosol Black Carbon                   ",
+		"NAME": "BC    ",
+		"UNITS": "ug/m^3"
+	},
+	"1963": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "BC_1963",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1963",
+		"LONGNAME": "Supermicron Aerosol Black Carbon                 ",
+		"NAME": "BC    ",
+		"UNITS": "ug/m^3"
+	},
+	"1964": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "BC_1964",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1964",
+		"LONGNAME": "Sub10micron Aerosol Black Carbon                 ",
+		"NAME": "BC    ",
+		"UNITS": "ug/m^3"
+	},
+	"1965": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "mass_1965",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1965",
+		"LONGNAME": "Submicron Aerosol mass                           ",
+		"NAME": "mass  ",
+		"UNITS": "ug/m^3"
+	},
+	"1966": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "mass_1966",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1966",
+		"LONGNAME": "Supermicron Aerosol mass                         ",
+		"NAME": "mass  ",
+		"UNITS": "ug/m^3"
+	},
+	"1967": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "mass_1967",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1967",
+		"LONGNAME": "Sub10micron Aerosol mass                         ",
+		"NAME": "mass  ",
+		"UNITS": "ug/m^3"
+	},
+	"1968": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Al_1968",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1968",
+		"LONGNAME": "Submicron Aerosol Aluminum                       ",
+		"NAME": "Al    ",
+		"UNITS": "ug/m^3"
+	},
+	"1969": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Al_1969",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1969",
+		"LONGNAME": "Supermicron Aerosol Aluminum                     ",
+		"NAME": "Al    ",
+		"UNITS": "ug/m^3"
+	},
+	"1970": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Al_1970",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1970",
+		"LONGNAME": "Sub10micron Aerosol Aluminum                     ",
+		"NAME": "Al    ",
+		"UNITS": "ug/m^3"
+	},
+	"1971": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Fe_1971",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1971",
+		"LONGNAME": "Submicron Aerosol Iron                           ",
+		"NAME": "Fe    ",
+		"UNITS": "ug/m^3"
+	},
+	"1972": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Fe_1972",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1972",
+		"LONGNAME": "Supermicron Aerosol Iron                         ",
+		"NAME": "Fe    ",
+		"UNITS": "ug/m^3"
+	},
+	"1973": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Fe_1973",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1973",
+		"LONGNAME": "Sub10micron Aerosol Iron                         ",
+		"NAME": "Fe    ",
+		"UNITS": "ug/m^3"
+	},
+	"1974": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Si_1974",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1974",
+		"LONGNAME": "Submicron Aerosol Silicon                        ",
+		"NAME": "Si    ",
+		"UNITS": "ug/m^3"
+	},
+	"1975": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Si_1975",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1975",
+		"LONGNAME": "Supermicron Aerosol Silicon                      ",
+		"NAME": "Si    ",
+		"UNITS": "ug/m^3"
+	},
+	"1976": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Si_1976",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1976",
+		"LONGNAME": "Sub10micron Aerosol Silicon                      ",
+		"NAME": "Si    ",
+		"UNITS": "ug/m^3"
+	},
+	"1977": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Ca_1977",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1977",
+		"LONGNAME": "Submicron Aerosol Calcium                        ",
+		"NAME": "Ca    ",
+		"UNITS": "ug/m^3"
+	},
+	"1978": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Ca_1978",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1978",
+		"LONGNAME": "Supermicron Aerosol Calcium                      ",
+		"NAME": "Ca    ",
+		"UNITS": "ug/m^3"
+	},
+	"1979": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Ca_1979",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1979",
+		"LONGNAME": "Sub10micron Aerosol Calcium                      ",
+		"NAME": "Ca    ",
+		"UNITS": "ug/m^3"
+	},
+	"1980": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Ti_1980",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1980",
+		"LONGNAME": "Submicron Aerosol Titanium                       ",
+		"NAME": "Ti    ",
+		"UNITS": "ug/m^3"
+	},
+	"1981": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Ti_1981",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1981",
+		"LONGNAME": "Supermicron Aerosol Titanium                     ",
+		"NAME": "Ti    ",
+		"UNITS": "ug/m^3"
+	},
+	"1982": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Ti_1982",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1982",
+		"LONGNAME": "Sub10micron Aerosol Titanium                     ",
+		"NAME": "Ti    ",
+		"UNITS": "ug/m^3"
+	},
+	"1983": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "IOM_1983",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1983",
+		"LONGNAME": "Submicron Aerosol Inorganic Oxidized Material    ",
+		"NAME": "IOM   ",
+		"UNITS": "ug/m^3"
+	},
+	"1984": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "IOM_1984",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1984",
+		"LONGNAME": "Supermicron Aerosol Inorganic Oxidized Material  ",
+		"NAME": "IOM   ",
+		"UNITS": "ug/m^3"
+	},
+	"1985": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "IOM_1985",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1985",
+		"LONGNAME": "Sub10micron Aerosol Inorganic Oxidized Material  ",
+		"NAME": "IOM   ",
+		"UNITS": "ug/m^3"
+	},
+	"1986": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Oxlate_1986",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1986",
+		"LONGNAME": "Soluble Submicron Aerosol Oxalate                ",
+		"NAME": "Oxlate",
+		"UNITS": "ug/m^3"
+	},
+	"1987": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Oxlate_1987",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1987",
+		"LONGNAME": "Soluble Supermicron Aerosol Oxalate              ",
+		"NAME": "Oxlate",
+		"UNITS": "ug/m^3"
+	},
+	"1988": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Oxlate_1988",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1988",
+		"LONGNAME": "Soluble Sub10micron Aerosol Oxalate              ",
+		"NAME": "Oxlate",
+		"UNITS": "ug/m^3"
+	},
+	"1989": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "Br_1989",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1989",
+		"LONGNAME": "Soluble Submicron Aerosol Bromide                ",
+		"NAME": "Br    ",
+		"UNITS": "ug/m^3"
+	},
+	"1990": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Br_1990",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1990",
+		"LONGNAME": "Soluble Supermicron Aerosol Bromide              ",
+		"NAME": "Br    ",
+		"UNITS": "ug/m^3"
+	},
+	"1991": {
+		"COMMENTS": "",
+		"EPIC_KEY": "Br_1991",
+		"FORMAT": " ",
+		"GENERIC_NAME": " ",
+		"KEY": "1991",
+		"LONGNAME": "Soluble Sub10micron Aerosol Bromide              ",
+		"NAME": "Br    ",
+		"UNITS": "ug/m^3"
+	},
+	"2060": {
+		"COMMENTS": "Dissolved oxygen calculated from CTD values",
+		"EPIC_KEY": "O_2060",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "ox",
+		"KEY": "2060",
+		"LONGNAME": "OXYGEN (ML/L)            ",
+		"NAME": "O  ",
+		"UNITS": "ml/l"
+	},
+	"2070": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ST_2070",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "den",
+		"KEY": "2070",
+		"LONGNAME": "SIGMA-T (KG/M**3)        ",
+		"NAME": "ST ",
+		"UNITS": "kg m-3"
+	},
+	"2071": {
+		"COMMENTS": "",
+		"EPIC_KEY": "STH_2071",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "potden",
+		"KEY": "2071",
+		"LONGNAME": "SIGMA-THETA (KG/M**3)    ",
+		"NAME": "STH",
+		"UNITS": "kg m-3 "
+	},
+	"2980": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CDOM_2980",
+		"FORMAT": "",
+		"GENERIC_NAME": "ppb ",
+		"KEY": "2980",
+		"LONGNAME": "Colored Dissolved Organic Material",
+		"NAME": "CDOM",
+		"UNITS": "output from eco-fluorometers"
+	},
+	"3001": {
+		"COMMENTS": "ADCP Electronics Box Temp.",
+		"EPIC_KEY": "Tec_3001",
+		"FORMAT": "F10.2",
+		"GENERIC_NAME": "temp",
+		"KEY": "3001",
+		"LONGNAME": "ADCP Electronics Temp. ",
+		"NAME": "Tec ",
+		"UNITS": "deg. C"
+	},
+	"3002": {
+		"COMMENTS": "ADCP Supply Voltage",
+		"EPIC_KEY": "Vs_3002",
+		"FORMAT": "F10.2",
+		"GENERIC_NAME": " ",
+		"KEY": "3002",
+		"LONGNAME": "ADCP Voltage          ",
+		"NAME": "Vs  ",
+		"UNITS": "v"
+	},
+	"3003": {
+		"COMMENTS": "seas barometric pressure",
+		"EPIC_KEY": "sBP_3003",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "BP",
+		"KEY": "3003",
+		"LONGNAME": "seas barometric pressure",
+		"NAME": "sBP",
+		"UNITS": "mbs"
+	},
+	"3004": {
+		"COMMENTS": "seas wet bulb temp",
+		"EPIC_KEY": "sWB_3004",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "wbT",
+		"KEY": "3004",
+		"LONGNAME": "seas wet bulb temp",
+		"NAME": "sWB",
+		"UNITS": "degree C"
+	},
+	"3005": {
+		"COMMENTS": "seas air temp",
+		"EPIC_KEY": "sAT_3005",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "atemp",
+		"KEY": "3005",
+		"LONGNAME": "seas air temp",
+		"NAME": "sAT",
+		"UNITS": "degree C"
+	},
+	"3006": {
+		"COMMENTS": "seas wind direction",
+		"EPIC_KEY": "sWD_3006",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WD",
+		"KEY": "3006",
+		"LONGNAME": "seas wind direction",
+		"NAME": "sWD",
+		"UNITS": "degree"
+	},
+	"3007": {
+		"COMMENTS": "manual wet bulb temp",
+		"EPIC_KEY": "mWB_3007",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "wbulb",
+		"KEY": "3007",
+		"LONGNAME": "manual wet bulb temp",
+		"NAME": "mWB",
+		"UNITS": "degree C"
+	},
+	"3008": {
+		"COMMENTS": "manual air temp",
+		"EPIC_KEY": "mAT_3008",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "dbulb",
+		"KEY": "3008",
+		"LONGNAME": "manual air temp",
+		"NAME": "mAT",
+		"UNITS": "degree C"
+	},
+	"3009": {
+		"COMMENTS": "manual water temp",
+		"EPIC_KEY": "mT_3009",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "temp",
+		"KEY": "3009",
+		"LONGNAME": "manual water temp",
+		"NAME": "mT",
+		"UNITS": "degree C"
+	},
+	"3010": {
+		"COMMENTS": "depth from Miller Freeman",
+		"EPIC_KEY": "MFdep_3010",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "depth",
+		"KEY": "3010",
+		"LONGNAME": "Miller Freeman depth",
+		"NAME": "MFdep",
+		"UNITS": "meters"
+	},
+	"3011": {
+		"COMMENTS": "gps1 lat 1 min",
+		"EPIC_KEY": "lat1_3011",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "lat",
+		"KEY": "3011",
+		"LONGNAME": "gps1 lat 1 min",
+		"NAME": "lat1",
+		"UNITS": "degrees"
+	},
+	"3012": {
+		"COMMENTS": "gps1 lon 1 min",
+		"EPIC_KEY": "lon1_3012",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "long",
+		"KEY": "3012",
+		"LONGNAME": "gps1 lon 1 min",
+		"NAME": "lon1",
+		"UNITS": "degrees"
+	},
+	"3013": {
+		"COMMENTS": "seacat temperature",
+		"EPIC_KEY": "sct_3013",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "temp",
+		"KEY": "3013",
+		"LONGNAME": "seacat temperature",
+		"NAME": "sct",
+		"UNITS": "degree C"
+	},
+	"3014": {
+		"COMMENTS": "seacat conductivity",
+		"EPIC_KEY": "scc_3014",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "cond",
+		"KEY": "3014",
+		"LONGNAME": "seacat conductivity",
+		"NAME": "scc",
+		"UNITS": "mmhos"
+	},
+	"3015": {
+		"COMMENTS": "seacat salinity",
+		"EPIC_KEY": "scs_3015",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "sal",
+		"KEY": "3015",
+		"LONGNAME": "seacat salinity",
+		"NAME": "scs",
+		"UNITS": "ppt"
+	},
+	"3016": {
+		"COMMENTS": "seacat depth",
+		"EPIC_KEY": "scz_3016",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "depth",
+		"KEY": "3016",
+		"LONGNAME": "seacat depth",
+		"NAME": "scz",
+		"UNITS": "meters"
+	},
+	"3017": {
+		"COMMENTS": "ADCP Transducer Temp.",
+		"EPIC_KEY": "Tx_3017",
+		"FORMAT": "F10.2",
+		"GENERIC_NAME": "temp",
+		"KEY": "3017",
+		"LONGNAME": "ADCP Transducer Temp.     ",
+		"NAME": "Tx  ",
+		"UNITS": "deg. C"
+	},
+	"3018": {
+		"COMMENTS": "avg true wind dir",
+		"EPIC_KEY": "avTD_3018",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WD",
+		"KEY": "3018",
+		"LONGNAME": "avg true wind dir",
+		"NAME": "avTD",
+		"UNITS": "degree"
+	},
+	"3019": {
+		"COMMENTS": "avg true wind speed",
+		"EPIC_KEY": "avTS_3019",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WS",
+		"KEY": "3019",
+		"LONGNAME": "avg true wind speed",
+		"NAME": "avTS",
+		"UNITS": "m/sec"
+	},
+	"3020": {
+		"COMMENTS": "avg conductivity",
+		"EPIC_KEY": "avC_3020",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "C",
+		"KEY": "3020",
+		"LONGNAME": "avg conductivity",
+		"NAME": "avC",
+		"UNITS": "mmhos"
+	},
+	"3021": {
+		"COMMENTS": "avg temperature",
+		"EPIC_KEY": "avT_3021",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "T",
+		"KEY": "3021",
+		"LONGNAME": "avg temperature",
+		"NAME": "avT",
+		"UNITS": "degree C"
+	},
+	"3022": {
+		"COMMENTS": "avg salinity",
+		"EPIC_KEY": "avS_3022",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "S",
+		"KEY": "3022",
+		"LONGNAME": "avg salinity",
+		"NAME": "avS",
+		"UNITS": "ppt"
+	},
+	"3023": {
+		"COMMENTS": "rm young wind speed",
+		"EPIC_KEY": "rWS_3023",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WS",
+		"KEY": "3023",
+		"LONGNAME": "rm young wind speed",
+		"NAME": "rWS",
+		"UNITS": "knots"
+	},
+	"3024": {
+		"COMMENTS": "rm young wind dir",
+		"EPIC_KEY": "rWD_3024",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WD",
+		"KEY": "3024",
+		"LONGNAME": "rm young wind dir",
+		"NAME": "rWD",
+		"UNITS": "degree"
+	},
+	"3025": {
+		"COMMENTS": "rm young air temp",
+		"EPIC_KEY": "rAT_3025",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "atemp",
+		"KEY": "3025",
+		"LONGNAME": "rm young air temp",
+		"NAME": "rAT",
+		"UNITS": "degree C"
+	},
+	"3026": {
+		"COMMENTS": "oc true direction",
+		"EPIC_KEY": "ocWD_3026",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WD",
+		"KEY": "3026",
+		"LONGNAME": "oc true direction",
+		"NAME": "ocWD",
+		"UNITS": "degree"
+	},
+	"3027": {
+		"COMMENTS": "oc wind speed",
+		"EPIC_KEY": "ocWS_3027",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WS",
+		"KEY": "3027",
+		"LONGNAME": "oc wind speed",
+		"NAME": "ocWS",
+		"UNITS": "knots"
+	},
+	"3028": {
+		"COMMENTS": "OC Wind Dir Avg",
+		"EPIC_KEY": "ocWDA_3028",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WD",
+		"KEY": "3028",
+		"LONGNAME": "OC Wind Dir Avg",
+		"NAME": "ocWDA",
+		"UNITS": "degree"
+	},
+	"3029": {
+		"COMMENTS": "OC Wind Spd Avg",
+		"EPIC_KEY": "ocWSA_3029",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WS",
+		"KEY": "3029",
+		"LONGNAME": "OC Wind Spd Avg",
+		"NAME": "ocWSA",
+		"UNITS": "knots"
+	},
+	"3030": {
+		"COMMENTS": "light intensity",
+		"EPIC_KEY": "light_3030",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "light",
+		"KEY": "3030",
+		"LONGNAME": "light intensity",
+		"NAME": "light",
+		"UNITS": "volts"
+	},
+	"3031": {
+		"COMMENTS": "fluorometer",
+		"EPIC_KEY": "fluor_3031",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "fluor",
+		"KEY": "3031",
+		"LONGNAME": "fluorometer",
+		"NAME": "fluor",
+		"UNITS": "volts"
+	},
+	"3032": {
+		"COMMENTS": "depth from MF EK500",
+		"EPIC_KEY": "EKdep_3032",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "depth",
+		"KEY": "3032",
+		"LONGNAME": "EK500 depth",
+		"NAME": "EKdep",
+		"UNITS": "meters"
+	},
+	"3033": {
+		"COMMENTS": "depth from MF EQ50",
+		"EPIC_KEY": "EQdep_3033",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "depth",
+		"KEY": "3033",
+		"LONGNAME": "EQ50 depth",
+		"NAME": "EQdep",
+		"UNITS": "meters"
+	},
+	"3034": {
+		"COMMENTS": "oc true direction",
+		"EPIC_KEY": "rWD_3034",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WD",
+		"KEY": "3034",
+		"LONGNAME": "RMY true direction",
+		"NAME": "rWD",
+		"UNITS": "degree"
+	},
+	"3035": {
+		"COMMENTS": "oc wind speed",
+		"EPIC_KEY": "rWS_3035",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "WS",
+		"KEY": "3035",
+		"LONGNAME": "RMY wind speed",
+		"NAME": "rWS",
+		"UNITS": "knots"
+	},
+	"3036": {
+		"COMMENTS": "ship direction",
+		"EPIC_KEY": "SD_3036",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "SD",
+		"KEY": "3036",
+		"LONGNAME": "gps ship direction",
+		"NAME": "SD",
+		"UNITS": "degrees"
+	},
+	"3037": {
+		"COMMENTS": "ship speed",
+		"EPIC_KEY": "SS_3037",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "SS",
+		"KEY": "3037",
+		"LONGNAME": "gps ship speed",
+		"NAME": "SS",
+		"UNITS": "knots"
+	},
+	"3038": {
+		"COMMENTS": "ship east vel",
+		"EPIC_KEY": "su_3038",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "su",
+		"KEY": "3038",
+		"LONGNAME": "gps ship u component",
+		"NAME": "su",
+		"UNITS": "knots"
+	},
+	"3039": {
+		"COMMENTS": "ship north vel",
+		"EPIC_KEY": "sv_3039",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "sv",
+		"KEY": "3039",
+		"LONGNAME": "gps ship v component",
+		"NAME": "sv",
+		"UNITS": "knots"
+	},
+	"3040": {
+		"COMMENTS": "ship heading",
+		"EPIC_KEY": "SD_3040",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "SD",
+		"KEY": "3040",
+		"LONGNAME": "Ship Heading           ",
+		"NAME": "SD",
+		"UNITS": "degrees"
+	},
+	"3050": {
+		"COMMENTS": "Qualimetrics Air Temp",
+		"EPIC_KEY": "qAT_3050",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "atemp",
+		"KEY": "3050",
+		"LONGNAME": "Qualimetrics Air Temp ",
+		"NAME": "qAT",
+		"UNITS": "degree C"
+	},
+	"3051": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "AT_3051",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "atemp",
+		"KEY": "3051",
+		"LONGNAME": "Air Temperature       ",
+		"NAME": "AT ",
+		"UNITS": "degree C"
+	},
+	"3052": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "AT_3052",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "atemp",
+		"KEY": "3052",
+		"LONGNAME": "Air Temperature       ",
+		"NAME": "AT ",
+		"UNITS": "degree C"
+	},
+	"3053": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "AT_3053",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "atemp",
+		"KEY": "3053",
+		"LONGNAME": "Air Temperature       ",
+		"NAME": "AT ",
+		"UNITS": "degree C"
+	},
+	"3055": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "qDP_3055",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": " ",
+		"KEY": "3055",
+		"LONGNAME": "Qualimetrics Dew Point",
+		"NAME": "qDP",
+		"UNITS": "degree C"
+	},
+	"3056": {
+		"COMMENTS": " ",
+		"EPIC_KEY": "DP_3056",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": " ",
+		"KEY": "3056",
+		"LONGNAME": "Dew Point             ",
+		"NAME": "DP ",
+		"UNITS": "degree C"
+	},
+	"3060": {
+		"COMMENTS": "Ship Heading ",
+		"EPIC_KEY": "Hdg_3060",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": "hdg",
+		"KEY": "3060",
+		"LONGNAME": "Ship Heading       ",
+		"NAME": "Hdg",
+		"UNITS": "degrees_T"
+	},
+	"3061": {
+		"COMMENTS": "Ship Heading ",
+		"EPIC_KEY": "Hdg_3061",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": "hdg",
+		"KEY": "3061",
+		"LONGNAME": "Gyrocompass Heading",
+		"NAME": "Hdg",
+		"UNITS": "degrees_T"
+	},
+	"3062": {
+		"COMMENTS": "Ship Heading ",
+		"EPIC_KEY": "Hdg_3062",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": "hdg",
+		"KEY": "3062",
+		"LONGNAME": "Ashtech 3DF Heading",
+		"NAME": "Hdg",
+		"UNITS": "degrees_T"
+	},
+	"3070": {
+		"COMMENTS": "Ship Course Over Ground",
+		"EPIC_KEY": "COG_3070",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": "COG",
+		"KEY": "3070",
+		"LONGNAME": "Course Over Ground                     ",
+		"NAME": "COG",
+		"UNITS": "degrees_T"
+	},
+	"3071": {
+		"COMMENTS": "Ship Course Over Ground",
+		"EPIC_KEY": "COG_3071",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": "COG",
+		"KEY": "3071",
+		"LONGNAME": "Course Over Ground (Trimble P-code GPS)",
+		"NAME": "COG",
+		"UNITS": "degrees_T"
+	},
+	"3072": {
+		"COMMENTS": "Ship Course Over Ground",
+		"EPIC_KEY": "COG_3072",
+		"FORMAT": "F6.2",
+		"GENERIC_NAME": "COG",
+		"KEY": "3072",
+		"LONGNAME": "Course Over Ground (North Star GPS)    ",
+		"NAME": "COG",
+		"UNITS": "degrees_T"
+	},
+	"3080": {
+		"COMMENTS": "Ship Speed Over Ground",
+		"EPIC_KEY": "SOG_3080",
+		"FORMAT": "F5.2",
+		"GENERIC_NAME": "SOG",
+		"KEY": "3080",
+		"LONGNAME": "Speed Over Ground                     ",
+		"NAME": "SOG",
+		"UNITS": "knots"
+	},
+	"3081": {
+		"COMMENTS": "Ship Speed Over Ground",
+		"EPIC_KEY": "SOG_3081",
+		"FORMAT": "F5.2",
+		"GENERIC_NAME": "SOG",
+		"KEY": "3081",
+		"LONGNAME": "Speed Over Ground (Trimble P-code GPS)",
+		"NAME": "SOG",
+		"UNITS": "knots"
+	},
+	"3082": {
+		"COMMENTS": "Ship Speed Over Ground",
+		"EPIC_KEY": "SOG_3082",
+		"FORMAT": "F5.2",
+		"GENERIC_NAME": "SOG",
+		"KEY": "3082",
+		"LONGNAME": "Speed Over Ground (North Star GPS)    ",
+		"NAME": "SOG",
+		"UNITS": "knots"
+	},
+	"3090": {
+		"COMMENTS": "Latitude ",
+		"EPIC_KEY": "LAT_3090",
+		"FORMAT": "F8.5",
+		"GENERIC_NAME": "lat",
+		"KEY": "3090",
+		"LONGNAME": "Latitude (Trimble P-code GPS)",
+		"NAME": "LAT",
+		"UNITS": "degree_north"
+	},
+	"3091": {
+		"COMMENTS": "Latitude ",
+		"EPIC_KEY": "LAT_3091",
+		"FORMAT": "F8.5",
+		"GENERIC_NAME": "lat",
+		"KEY": "3091",
+		"LONGNAME": "Latitude (North Star GPS)    ",
+		"NAME": "LAT",
+		"UNITS": "degree_north"
+	},
+	"3095": {
+		"COMMENTS": "Longitude ",
+		"EPIC_KEY": "LON_3095",
+		"FORMAT": "F9.5",
+		"GENERIC_NAME": "lon",
+		"KEY": "3095",
+		"LONGNAME": "Longitude (Trimble P-code GPS)",
+		"NAME": "LON",
+		"UNITS": "degree_east"
+	},
+	"3096": {
+		"COMMENTS": "Longitude",
+		"EPIC_KEY": "LON_3096",
+		"FORMAT": "F9.5",
+		"GENERIC_NAME": "lon",
+		"KEY": "3096",
+		"LONGNAME": "Longitude (North Star GPS)    ",
+		"NAME": "LON",
+		"UNITS": "degree_east"
+	},
+	"4000": {
+		"COMMENTS": "basic measurement, vmcm",
+		"EPIC_KEY": "upr_4000",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "rotor",
+		"KEY": "4000",
+		"LONGNAME": "UPPER ROTOR SPEED     ",
+		"NAME": "upr",
+		"UNITS": "counts"
+	},
+	"4001": {
+		"COMMENTS": "interval upper rotor speed, Seadata tripod",
+		"EPIC_KEY": "upr_4001",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "rotor",
+		"KEY": "4001",
+		"LONGNAME": "UPPER ROTOR SPEED     ",
+		"NAME": "upr",
+		"UNITS": "cm/s"
+	},
+	"4002": {
+		"COMMENTS": "basic measurement, vmcm",
+		"EPIC_KEY": "lowr_4002",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "rotor",
+		"KEY": "4002",
+		"LONGNAME": "LOWER ROTOR SPEED    ",
+		"NAME": "lowr",
+		"UNITS": "counts"
+	},
+	"4003": {
+		"COMMENTS": "interval lower rotor speed, Seadata tripod",
+		"EPIC_KEY": "lowr_4003",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "rotor",
+		"KEY": "4003",
+		"LONGNAME": "LOWER ROTOR SPEED    ",
+		"NAME": "lowr",
+		"UNITS": "cm/s"
+	},
+	"4004": {
+		"COMMENTS": "difference, interval rotor speed, Seadata tripod",
+		"EPIC_KEY": "rdif_4004",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "rotor",
+		"KEY": "4004",
+		"LONGNAME": "ROTOR SPEED DIFFERENCE  ",
+		"NAME": "rdif",
+		"UNITS": "cm/s"
+	},
+	"4005": {
+		"COMMENTS": "vacm rotor counter",
+		"EPIC_KEY": "rot_4005",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "rotor",
+		"KEY": "4005",
+		"LONGNAME": "ROTOR COUNTS             ",
+		"NAME": "rot",
+		"UNITS": "counts"
+	},
+	"4006": {
+		"COMMENTS": "scalar speed from rotor counts",
+		"EPIC_KEY": "rspd_4006",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "speed",
+		"KEY": "4006",
+		"LONGNAME": "ROTOR SPEED             ",
+		"NAME": "rspd",
+		"UNITS": "cm s-1"
+	},
+	"4007": {
+		"COMMENTS": "vector speed from U and V",
+		"EPIC_KEY": "vspd_4007",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "vspd",
+		"KEY": "4007",
+		"LONGNAME": "VECTOR SPEED            ",
+		"NAME": "vspd",
+		"UNITS": "cm s-1"
+	},
+	"4008": {
+		"COMMENTS": "clock counter",
+		"EPIC_KEY": "cnt_4008",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "count",
+		"KEY": "4008",
+		"LONGNAME": "clock counter            ",
+		"NAME": "cnt",
+		"UNITS": "counts"
+	},
+	"4009": {
+		"COMMENTS": "VACM rotor spd normalized by vector spd to measure wave effect",
+		"EPIC_KEY": "stead_4009",
+		"FORMAT": "f10.4",
+		"GENERIC_NAME": "steadiness",
+		"KEY": "4009",
+		"LONGNAME": "STEADINESS             ",
+		"NAME": "stead",
+		"UNITS": " "
+	},
+	"4010": {
+		"COMMENTS": "basic measurement, transmissometer",
+		"EPIC_KEY": "tran_4010",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "trans",
+		"KEY": "4010",
+		"LONGNAME": "TRANSMISSION (VOLTS)     ",
+		"NAME": "tran",
+		"UNITS": "volts"
+	},
+	"4011": {
+		"COMMENTS": "normalized by 95% of air transmission",
+		"EPIC_KEY": "ptrn_4011",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "trans",
+		"KEY": "4011",
+		"LONGNAME": "PERCENT TRANSMISSION     ",
+		"NAME": "ptrn",
+		"UNITS": " "
+	},
+	"4012": {
+		"COMMENTS": "MIDAS raw transmissometer voltage",
+		"EPIC_KEY": "rtrn_4012",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "trans",
+		"KEY": "4012",
+		"LONGNAME": "RAW TRANSMISSOMETER VOLTS",
+		"NAME": "rtrn",
+		"UNITS": "counts"
+	},
+	"4015": {
+		"COMMENTS": "MIDAS raw tiltx voltage",
+		"EPIC_KEY": "rtltx_4015",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "tilt",
+		"KEY": "4015",
+		"LONGNAME": "RAW TILTX VOLTS          ",
+		"NAME": "rtltx",
+		"UNITS": "counts"
+	},
+	"4016": {
+		"COMMENTS": "MIDAS raw tilty voltage",
+		"EPIC_KEY": "rtlty_4016",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "tilt",
+		"KEY": "4016",
+		"LONGNAME": "RAW TILTY VOLTS          ",
+		"NAME": "rtlty",
+		"UNITS": "counts"
+	},
+	"4017": {
+		"COMMENTS": "orientation of BASS pods",
+		"EPIC_KEY": "tiltx_4017",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "tilt",
+		"KEY": "4017",
+		"LONGNAME": "TILT IN POD X-Z PLANE    ",
+		"NAME": "tiltx",
+		"UNITS": "degrees"
+	},
+	"4018": {
+		"COMMENTS": "orientation of BASS pods",
+		"EPIC_KEY": "tilty_4018",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "tilt",
+		"KEY": "4018",
+		"LONGNAME": "TILT IN POD Y_Z PLANE    ",
+		"NAME": "tilty",
+		"UNITS": "degrees"
+	},
+	"4019": {
+		"COMMENTS": "averaged instrument tilt FSIacm",
+		"EPIC_KEY": "tilta_4019",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "tilt",
+		"KEY": "4019",
+		"LONGNAME": "TILT ANGLE               ",
+		"NAME": "tilta",
+		"UNITS": "degrees"
+	},
+	"4020": {
+		"COMMENTS": "burst pressure minus interval pressure, Seadata tripod",
+		"EPIC_KEY": "P_4020",
+		"FORMAT": "f10.5",
+		"GENERIC_NAME": "pres",
+		"KEY": "4020",
+		"LONGNAME": "AVERAGE RELATIVE PRESSURE",
+		"NAME": "P   ",
+		"UNITS": "mbar"
+	},
+	"4022": {
+		"COMMENTS": "interval pressure measurement, Seadata tripod",
+		"EPIC_KEY": "P_4022",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "pres",
+		"KEY": "4022",
+		"LONGNAME": "INTERVAL PRESSURE        ",
+		"NAME": "P   ",
+		"UNITS": "mbar"
+	},
+	"4023": {
+		"COMMENTS": "average of burst pressures",
+		"EPIC_KEY": "P_4023",
+		"FORMAT": "f10.3",
+		"GENERIC_NAME": "pres",
+		"KEY": "4023",
+		"LONGNAME": "AVERAGE BURST PRESSURE   ",
+		"NAME": "P   ",
+		"UNITS": "mbar"
+	},
+	"4026": {
+		"COMMENTS": "Paroscientific, temp. compensated, A,B calibration",
+		"EPIC_KEY": "rpres_4026",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "pres",
+		"KEY": "4026",
+		"LONGNAME": "RAW PRESSURE (PAROS,COMP,AB)",
+		"NAME": "rpres",
+		"UNITS": "counts"
+	},
+	"4027": {
+		"COMMENTS": "Paroscientific, not temp. compensated, A,B calibration",
+		"EPIC_KEY": "rpres_4027",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "pres",
+		"KEY": "4027",
+		"LONGNAME": "RAW PRESSURE (PAROS,UNCOMP,AB)",
+		"NAME": "rpres",
+		"UNITS": "counts"
+	},
+	"4028": {
+		"COMMENTS": "Paroscientific, temp. compensated, C,D calibration",
+		"EPIC_KEY": "rpres_4028",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "pres",
+		"KEY": "4028",
+		"LONGNAME": "RAW PRESSURE (PAROS,COMP,CD)",
+		"NAME": "rpres",
+		"UNITS": "counts"
+	},
+	"4029": {
+		"COMMENTS": "Paroscientific, not temp. compensated, C,D calibration",
+		"EPIC_KEY": "rpres_4029",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "pres",
+		"KEY": "4029",
+		"LONGNAME": "RAW PRESSURE (PAROS,UNCOMP,CD)",
+		"NAME": "rpres",
+		"UNITS": "counts"
+	},
+	"4030": {
+		"COMMENTS": "vacm raw pressure",
+		"EPIC_KEY": "rpres_4030",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "pres",
+		"KEY": "4030",
+		"LONGNAME": "RAW PRESSURE (VACM)",
+		"NAME": "rpres",
+		"UNITS": "counts"
+	},
+	"4031": {
+		"COMMENTS": "mx-vacm with 2 mx-variables",
+		"EPIC_KEY": "rpres_4031",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "pres",
+		"KEY": "4031",
+		"LONGNAME": "RAW PRESSURE (MX2)",
+		"NAME": "rpres",
+		"UNITS": "counts"
+	},
+	"4032": {
+		"COMMENTS": "mx-vacm with 4 mx-variables",
+		"EPIC_KEY": "rpres_4032",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "pres",
+		"KEY": "4032",
+		"LONGNAME": "RAW PRESSURE (MX4)",
+		"NAME": "rpres",
+		"UNITS": "counts"
+	},
+	"4041": {
+		"COMMENTS": "Seabird cell raw temperature",
+		"EPIC_KEY": "rtemp_4041",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "temp",
+		"KEY": "4041",
+		"LONGNAME": "RAW TEMPERATURE (SEABIRD) ",
+		"NAME": "rtemp",
+		"UNITS": "counts"
+	},
+	"4042": {
+		"COMMENTS": "MIDAS thermister raw temperature",
+		"EPIC_KEY": "rtemp_4042",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "temp",
+		"KEY": "4042",
+		"LONGNAME": "RAW TEMPERATURE (MIDAS THERM) ",
+		"NAME": "rtemp",
+		"UNITS": "counts"
+	},
+	"4043": {
+		"COMMENTS": "vacm raw temperature",
+		"EPIC_KEY": "rtemp_4043",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "temp",
+		"KEY": "4043",
+		"LONGNAME": "RAW TEMPERATURE (VACM) ",
+		"NAME": "rtemp",
+		"UNITS": "counts"
+	},
+	"4045": {
+		"COMMENTS": "mx-vacm with 2 mx-variables",
+		"EPIC_KEY": "rtemp_4045",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "temp",
+		"KEY": "4045",
+		"LONGNAME": "RAW TEMPERATURE (MX2)",
+		"NAME": "rtemp",
+		"UNITS": "counts"
+	},
+	"4046": {
+		"COMMENTS": "mx-vacm with 4 mx-variables",
+		"EPIC_KEY": "rtemp_4046",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "temp",
+		"KEY": "4046",
+		"LONGNAME": "RAW TEMPERATURE (MX4)",
+		"NAME": "rtemp",
+		"UNITS": "counts"
+	},
+	"4050": {
+		"COMMENTS": "variance of east component, burst BASS data",
+		"EPIC_KEY": "UVAR_4050",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "uvar",
+		"KEY": "4050",
+		"LONGNAME": "EAST VELOCITY VARIANCE   ",
+		"NAME": "UVAR",
+		"UNITS": "cm2/s2"
+	},
+	"4051": {
+		"COMMENTS": "covariance of east and north, burst BASS data",
+		"EPIC_KEY": "UVCOV_4051",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "uvcovar",
+		"KEY": "4051",
+		"LONGNAME": "U-V VELOCITY COVARIANCE ",
+		"NAME": "UVCOV",
+		"UNITS": "cm2/s2"
+	},
+	"4052": {
+		"COMMENTS": "variance of north component, burst BASS data",
+		"EPIC_KEY": "VVAR_4052",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "vvar",
+		"KEY": "4052",
+		"LONGNAME": "NORTH VELOCITY VARIANCE  ",
+		"NAME": "VVAR",
+		"UNITS": "cm2/s2"
+	},
+	"4053": {
+		"COMMENTS": "covariance of east and up, burst BASS data",
+		"EPIC_KEY": "UWCOV_4053",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "uwcovar",
+		"KEY": "4053",
+		"LONGNAME": "U-W VELOCITY COVARIANCE ",
+		"NAME": "UWCOV",
+		"UNITS": "cm2/s2"
+	},
+	"4054": {
+		"COMMENTS": "covariance of north and up, burst BASS data",
+		"EPIC_KEY": "VWCOV_4054",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "vwcovar",
+		"KEY": "4054",
+		"LONGNAME": "V-W VELOCITY COVARIANCE ",
+		"NAME": "VWCOV",
+		"UNITS": "cm2/s2"
+	},
+	"4055": {
+		"COMMENTS": "variance of up component, burst BASS data",
+		"EPIC_KEY": "WVAR_4055",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "wvar",
+		"KEY": "4055",
+		"LONGNAME": "UP VELOCITY VARIANCE     ",
+		"NAME": "WVAR",
+		"UNITS": "cm2/s2"
+	},
+	"4056": {
+		"COMMENTS": "zero crossing period of east component, burst BASS data",
+		"EPIC_KEY": "peru_4056",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "period_u",
+		"KEY": "4056",
+		"LONGNAME": "ZERO CROSSING PERIOD, U  ",
+		"NAME": "peru",
+		"UNITS": "s"
+	},
+	"4057": {
+		"COMMENTS": "zero crossing period of north component, burst BASS data",
+		"EPIC_KEY": "perv_4057",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "period_v",
+		"KEY": "4057",
+		"LONGNAME": "ZERO CROSSING PERIOD, V  ",
+		"NAME": "perv",
+		"UNITS": "s"
+	},
+	"4060": {
+		"COMMENTS": "",
+		"EPIC_KEY": "wp_4060",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "wave_period",
+		"KEY": "4060",
+		"LONGNAME": "average wave period       ",
+		"NAME": "wp  ",
+		"UNITS": "s"
+	},
+	"4061": {
+		"COMMENTS": "",
+		"EPIC_KEY": "wh_4061",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "wave_height",
+		"KEY": "4061",
+		"LONGNAME": "significant wave height   ",
+		"NAME": "wh  ",
+		"UNITS": "m"
+	},
+	"4062": {
+		"COMMENTS": "direction dominant waves are coming from, measured clockwise from true north",
+		"EPIC_KEY": "wd_4062",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "wave_dir",
+		"KEY": "4062",
+		"LONGNAME": "mean wave direction ",
+		"NAME": "wd  ",
+		"UNITS": "degrees"
+	},
+	"4063": {
+		"COMMENTS": "",
+		"EPIC_KEY": "dwp_4063",
+		"FORMAT": "f10.2",
+		"GENERIC_NAME": "wave_period",
+		"KEY": "4063",
+		"LONGNAME": "dominant wave period     ",
+		"NAME": "dwp ",
+		"UNITS": "s"
+	},
+	"4070": {
+		"COMMENTS": "basic data of BASS pod",
+		"EPIC_KEY": "BASA_4070",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "bass",
+		"KEY": "4070",
+		"LONGNAME": "BASS COUNTS, AXIS A      ",
+		"NAME": "BASA",
+		"UNITS": "counts"
+	},
+	"4071": {
+		"COMMENTS": "basic data of BASS pod",
+		"EPIC_KEY": "BASB_4071",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "bass",
+		"KEY": "4071",
+		"LONGNAME": "BASS COUNTS, AXIS B      ",
+		"NAME": "BASB",
+		"UNITS": "counts"
+	},
+	"4072": {
+		"COMMENTS": "basic data of BASS pod",
+		"EPIC_KEY": "BASC_4072",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "bass",
+		"KEY": "4072",
+		"LONGNAME": "BASS COUNTS, AXIS C      ",
+		"NAME": "BASC",
+		"UNITS": "counts"
+	},
+	"4073": {
+		"COMMENTS": "basic data of BASS pod",
+		"EPIC_KEY": "BASD_4073",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "bass",
+		"KEY": "4073",
+		"LONGNAME": "BASS COUNTS, AXIS D      ",
+		"NAME": "BASD",
+		"UNITS": "counts"
+	},
+	"4074": {
+		"COMMENTS": "bad data cycle count, BASS pod",
+		"EPIC_KEY": "BadBA_4074",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "badbass",
+		"KEY": "4074",
+		"LONGNAME": "BAD BASS COUNT, AXIS A   ",
+		"NAME": "BadBA",
+		"UNITS": "count"
+	},
+	"4075": {
+		"COMMENTS": "bad data cycle count, BASS pod",
+		"EPIC_KEY": "BadBB_4075",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "badbass",
+		"KEY": "4075",
+		"LONGNAME": "BAD BASS COUNT, AXIS B   ",
+		"NAME": "BadBB",
+		"UNITS": "count"
+	},
+	"4076": {
+		"COMMENTS": "bad data cycle count, BASS pod",
+		"EPIC_KEY": "BadBC_4076",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "badbass",
+		"KEY": "4076",
+		"LONGNAME": "BAD BASS COUNT, AXIS C   ",
+		"NAME": "BadBC",
+		"UNITS": "count"
+	},
+	"4077": {
+		"COMMENTS": "bad data cycle count, BASS pod",
+		"EPIC_KEY": "BadBC_4077",
+		"FORMAT": "f10.1",
+		"GENERIC_NAME": "badbass",
+		"KEY": "4077",
+		"LONGNAME": "BAD BASS COUNT, AXIS D   ",
+		"NAME": "BadBC",
+		"UNITS": "count"
+	},
+	"4080": {
+		"COMMENTS": "U component (magnetic)",
+		"EPIC_KEY": "u_4080",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "u",
+		"KEY": "4080",
+		"LONGNAME": "East(m)                   ",
+		"NAME": "u   ",
+		"UNITS": "cm s-1"
+	},
+	"4081": {
+		"COMMENTS": "V component (magnetic)",
+		"EPIC_KEY": "v_4081",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "v",
+		"KEY": "4081",
+		"LONGNAME": "North(m)                  ",
+		"NAME": "v   ",
+		"UNITS": "cm s-1"
+	},
+	"4082": {
+		"COMMENTS": "U component (true north)",
+		"EPIC_KEY": "u_4082",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "u",
+		"KEY": "4082",
+		"LONGNAME": "East(t)                   ",
+		"NAME": "u   ",
+		"UNITS": "cm s-1 "
+	},
+	"4083": {
+		"COMMENTS": "V component (true North)",
+		"EPIC_KEY": "v_4083",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "v",
+		"KEY": "4083",
+		"LONGNAME": "North(t)                  ",
+		"NAME": "v   ",
+		"UNITS": "cm s-1"
+	},
+	"4084": {
+		"COMMENTS": "U component (rotated)",
+		"EPIC_KEY": "u_4084",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "u",
+		"KEY": "4084",
+		"LONGNAME": "East(r)                   ",
+		"NAME": "u   ",
+		"UNITS": "cm s-1 "
+	},
+	"4085": {
+		"COMMENTS": "V component (rotated)",
+		"EPIC_KEY": "v_4085",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "v",
+		"KEY": "4085",
+		"LONGNAME": "North(r)                  ",
+		"NAME": "v   ",
+		"UNITS": "cm s-1"
+	},
+	"4086": {
+		"COMMENTS": "instantaneous east comp (magnetic) FSIacm",
+		"EPIC_KEY": "u_4086",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "u",
+		"KEY": "4086",
+		"LONGNAME": "instant East(m)           ",
+		"NAME": "u   ",
+		"UNITS": "cm s-1"
+	},
+	"4087": {
+		"COMMENTS": "instantaneous north comp (magnetic) FSIacm",
+		"EPIC_KEY": "v_4087",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "v",
+		"KEY": "4087",
+		"LONGNAME": "instant North(m)          ",
+		"NAME": "v   ",
+		"UNITS": "cm s-1"
+	},
+	"4088": {
+		"COMMENTS": "instantaneous east comp (true north) FSIacm",
+		"EPIC_KEY": "u_4088",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "u",
+		"KEY": "4088",
+		"LONGNAME": "instant East(t)           ",
+		"NAME": "u   ",
+		"UNITS": "cm s-1"
+	},
+	"4089": {
+		"COMMENTS": "instantaneous north comp (true north) FSIacm",
+		"EPIC_KEY": "v_4089",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "v",
+		"KEY": "4089",
+		"LONGNAME": "instant North(t)          ",
+		"NAME": "v   ",
+		"UNITS": "cm s-1"
+	},
+	"4091": {
+		"COMMENTS": "instantaneous vertical velocity FSIacm",
+		"EPIC_KEY": "w_4091",
+		"FORMAT": "f8.2",
+		"GENERIC_NAME": "w",
+		"KEY": "4091",
+		"LONGNAME": "instant vertical velocity ",
+		"NAME": "w   ",
+		"UNITS": "cm s-1"
+	},
+	"4095": {
+		"COMMENTS": "vacm east register",
+		"EPIC_KEY": "re_4095",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "u",
+		"KEY": "4095",
+		"LONGNAME": "east register             ",
+		"NAME": "re  ",
+		"UNITS": "counts"
+	},
+	"4096": {
+		"COMMENTS": "vacm north register",
+		"EPIC_KEY": "rn_4096",
+		"FORMAT": "i10",
+		"GENERIC_NAME": "v",
+		"KEY": "4096",
+		"LONGNAME": "north register            ",
+		"NAME": "rn  ",
+		"UNITS": "counts"
+	},
+	"4202": {
+		"COMMENTS": "",
+		"EPIC_KEY": "BTLNBR_FLAG_4202",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4202",
+		"LONGNAME": "Bottle Number Flag ",
+		"NAME": "BTLNBR_FLAG",
+		"UNITS": " "
+	},
+	"4203": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDPRS_4203",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "depth",
+		"KEY": "4203",
+		"LONGNAME": "Pressure                ",
+		"NAME": "CTDPRS",
+		"UNITS": "dbar"
+	},
+	"4204": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDPRS_FLAG_4204",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4204",
+		"LONGNAME": "Pressure Flag      ",
+		"NAME": "CTDPRS_FLAG",
+		"UNITS": " "
+	},
+	"4210": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDTMP_4210",
+		"FORMAT": "f9.4",
+		"GENERIC_NAME": "temp",
+		"KEY": "4210",
+		"LONGNAME": "Temperature            ",
+		"NAME": "CTDTMP ",
+		"UNITS": "degC"
+	},
+	"4211": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDTMP_4211",
+		"FORMAT": "f9.4",
+		"GENERIC_NAME": "temp",
+		"KEY": "4211",
+		"LONGNAME": "Temperature, ITS-90    ",
+		"NAME": "CTDTMP ",
+		"UNITS": "degC"
+	},
+	"4212": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDTMP_4212",
+		"FORMAT": "f9.4",
+		"GENERIC_NAME": "temp",
+		"KEY": "4212",
+		"LONGNAME": "Temperature, IPTS-68   ",
+		"NAME": "CTDTMP ",
+		"UNITS": "degC"
+	},
+	"4213": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDTMP_FLAG_4213",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4213",
+		"LONGNAME": "Temperature Flag   ",
+		"NAME": "CTDTMP_FLAG",
+		"UNITS": " "
+	},
+	"4214": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDSAL_4214",
+		"FORMAT": "f9.4",
+		"GENERIC_NAME": "sal",
+		"KEY": "4214",
+		"LONGNAME": "CTD Salinity, PSS-78   ",
+		"NAME": "CTDSAL ",
+		"UNITS": "PSU"
+	},
+	"4215": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDSAL_FLAG_4215",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4215",
+		"LONGNAME": "CTD Salinity Flag  ",
+		"NAME": "CTDSAL_FLAG",
+		"UNITS": " "
+	},
+	"4216": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SALNTY_4216",
+		"FORMAT": "f9.4",
+		"GENERIC_NAME": "sal",
+		"KEY": "4216",
+		"LONGNAME": "Bottle Salinity, PSS-78",
+		"NAME": "SALNTY ",
+		"UNITS": "PSU"
+	},
+	"4217": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SALNTY_FLAG_4217",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4217",
+		"LONGNAME": "Bottle Salinity Flag",
+		"NAME": "SALNTY_FLAG",
+		"UNITS": " "
+	},
+	"4220": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDOST_4220",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ox",
+		"KEY": "4220",
+		"LONGNAME": "CTD OXYGEN, %SAT         ",
+		"NAME": "CTDOST",
+		"UNITS": "%"
+	},
+	"4221": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDOXY_4221",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "ox",
+		"KEY": "4221",
+		"LONGNAME": "CTD Oxygen              ",
+		"NAME": "CTDOXY",
+		"UNITS": "umol/kg"
+	},
+	"4222": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CTDOXY_FLAG_4222",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4222",
+		"LONGNAME": "CTD Oxygen Flag    ",
+		"NAME": "CTDOXY_FLAG",
+		"UNITS": " "
+	},
+	"4223": {
+		"COMMENTS": "",
+		"EPIC_KEY": "OXYGEN_4223",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "ox",
+		"KEY": "4223",
+		"LONGNAME": "Bottle Oxygen          ",
+		"NAME": "OXYGEN ",
+		"UNITS": "umol/kg"
+	},
+	"4224": {
+		"COMMENTS": "",
+		"EPIC_KEY": "OXYGEN_FLAG_4224",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4224",
+		"LONGNAME": "Bottle Oxygen Flag ",
+		"NAME": "OXYGEN_FLAG",
+		"UNITS": " "
+	},
+	"4225": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SILCAT_4225",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "SiO4          ",
+		"KEY": "4225",
+		"LONGNAME": "Silicate",
+		"NAME": "SILCAT ",
+		"UNITS": "umol/kg"
+	},
+	"4226": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SILCAT_FLAG_4226",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4226",
+		"LONGNAME": "Silicate Flag      ",
+		"NAME": "SILCAT_FLAG",
+		"UNITS": " "
+	},
+	"4227": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NITRAT_4227",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "NO3            ",
+		"KEY": "4227",
+		"LONGNAME": "Nitrate",
+		"NAME": "NITRAT ",
+		"UNITS": "umol/kg"
+	},
+	"4228": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NITRAT_FLAG_4228",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4228",
+		"LONGNAME": "Nitrate Flag       ",
+		"NAME": "NITRAT_FLAG",
+		"UNITS": " "
+	},
+	"4229": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NO2+NO3_4229",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "NO2+NO3",
+		"KEY": "4229",
+		"LONGNAME": "Nitrate plus Nitrite",
+		"NAME": "NO2+NO3",
+		"UNITS": "umol/kg"
+	},
+	"4230": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NO2+NO3_FLAG_4230",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4230",
+		"LONGNAME": "NO2+NO3 Flag      ",
+		"NAME": "NO2+NO3_FLAG",
+		"UNITS": " "
+	},
+	"4231": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NITRIT_4231",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "NO2",
+		"KEY": "4231",
+		"LONGNAME": "Nitrite                ",
+		"NAME": "NITRIT ",
+		"UNITS": "umol/kg"
+	},
+	"4232": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NITRIT_FLAG_4232",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4232",
+		"LONGNAME": "Nitrite Flag       ",
+		"NAME": "NITRIT_FLAG",
+		"UNITS": " "
+	},
+	"4233": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PHSPHT_4233",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "PO4",
+		"KEY": "4233",
+		"LONGNAME": "Phosphate              ",
+		"NAME": "PHSPHT ",
+		"UNITS": "umol/kg"
+	},
+	"4234": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PHSPHT_FLAG_4234",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4234",
+		"LONGNAME": "Phosphate Flag     ",
+		"NAME": "PHSPHT_FLAG",
+		"UNITS": " "
+	},
+	"4235": {
+		"COMMENTS": "",
+		"EPIC_KEY": "SILCAT_4235",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "SiO4   ",
+		"KEY": "4235",
+		"LONGNAME": "Silicate               ",
+		"NAME": "SILCAT ",
+		"UNITS": "umol/l   "
+	},
+	"4236": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NITRAT_4236",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "NO3    ",
+		"KEY": "4236",
+		"LONGNAME": "Nitrate                ",
+		"NAME": "NITRAT ",
+		"UNITS": "umol/l   "
+	},
+	"4237": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NITRIT_4237",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "NO2    ",
+		"KEY": "4237",
+		"LONGNAME": "Nitrite                ",
+		"NAME": "NITRIT ",
+		"UNITS": "umol/l   "
+	},
+	"4238": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PHSPHT_4238",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "PO4    ",
+		"KEY": "4238",
+		"LONGNAME": "Phosphate              ",
+		"NAME": "PHSPHT ",
+		"UNITS": "umol/l   "
+	},
+	"4239": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NO2NO3_4239",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "NO2NO3",
+		"KEY": "4239",
+		"LONGNAME": "Nitrate plus Nitrite    ",
+		"NAME": "NO2NO3",
+		"UNITS": "umol/l"
+	},
+	"4241": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CFC-11_4241",
+		"FORMAT": "f9.3",
+		"GENERIC_NAME": "f11",
+		"KEY": "4241",
+		"LONGNAME": "Freon-11               ",
+		"NAME": "CFC-11 ",
+		"UNITS": "pmol/kg"
+	},
+	"4242": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CFC-11_FLAG_4242",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4242",
+		"LONGNAME": "Freon-11 Flag      ",
+		"NAME": "CFC-11_FLAG",
+		"UNITS": " "
+	},
+	"4243": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CFC-12_4243",
+		"FORMAT": "f9.3",
+		"GENERIC_NAME": "f12",
+		"KEY": "4243",
+		"LONGNAME": "Freon-12               ",
+		"NAME": "CFC-12 ",
+		"UNITS": "pmol/kg"
+	},
+	"4244": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CFC-12_FLAG_4244",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4244",
+		"LONGNAME": "Freon-12 Flag      ",
+		"NAME": "CFC-12_FLAG",
+		"UNITS": " "
+	},
+	"4245": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CFC113_4245",
+		"FORMAT": "f9.3",
+		"GENERIC_NAME": "f113 ",
+		"KEY": "4245",
+		"LONGNAME": "Freon-113              ",
+		"NAME": "CFC113 ",
+		"UNITS": "pmol/kg"
+	},
+	"4246": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CFC113_FLAG_4246",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4246",
+		"LONGNAME": "Freon-113 Flag     ",
+		"NAME": "CFC113_FLAG",
+		"UNITS": " "
+	},
+	"4247": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CCL4_4247",
+		"FORMAT": "f9.3",
+		"GENERIC_NAME": "ccl4 ",
+		"KEY": "4247",
+		"LONGNAME": "Carbon Tetrachloride     ",
+		"NAME": "CCL4 ",
+		"UNITS": "pmol/kg"
+	},
+	"4248": {
+		"COMMENTS": "",
+		"EPIC_KEY": "CCL4_FLAG_4248",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4248",
+		"LONGNAME": "Carbon Tetrachloride Flag",
+		"NAME": "CCL4_FLAG",
+		"UNITS": " "
+	},
+	"4251": {
+		"COMMENTS": "",
+		"EPIC_KEY": "TRITUM_4251",
+		"FORMAT": "f9.3",
+		"GENERIC_NAME": "tritium",
+		"KEY": "4251",
+		"LONGNAME": "Tritium                ",
+		"NAME": "TRITUM ",
+		"UNITS": "TU "
+	},
+	"4252": {
+		"COMMENTS": "",
+		"EPIC_KEY": "TRITUM_FLAG_4252",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4252",
+		"LONGNAME": "Tritium Flag       ",
+		"NAME": "TRITUM_FLAG",
+		"UNITS": " "
+	},
+	"4253": {
+		"COMMENTS": "",
+		"EPIC_KEY": "HELIUM_4253",
+		"FORMAT": "f9.4",
+		"GENERIC_NAME": "helium ",
+		"KEY": "4253",
+		"LONGNAME": "Helium                 ",
+		"NAME": "HELIUM ",
+		"UNITS": "nmol/kg"
+	},
+	"4254": {
+		"COMMENTS": "",
+		"EPIC_KEY": "HELIUM_FLAG_4254",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4254",
+		"LONGNAME": "Helium Flag        ",
+		"NAME": "HELIUM_FLAG",
+		"UNITS": " "
+	},
+	"4255": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NEON_4255",
+		"FORMAT": "f8.3",
+		"GENERIC_NAME": "neon ",
+		"KEY": "4255",
+		"LONGNAME": "Neon                   ",
+		"NAME": "NEON   ",
+		"UNITS": "nmol/kg  "
+	},
+	"4256": {
+		"COMMENTS": "",
+		"EPIC_KEY": "NEON_FLAG_4256",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4256",
+		"LONGNAME": "Neon Flag            ",
+		"NAME": "NEON_FLAG",
+		"UNITS": " "
+	},
+	"4261": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DELHE3_4261",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "delhe3 ",
+		"KEY": "4261",
+		"LONGNAME": "Delta-He3              ",
+		"NAME": "DELHE3 ",
+		"UNITS": "%"
+	},
+	"4262": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DELHE3_FLAG_4262",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4262",
+		"LONGNAME": "Delta-He3 Flag     ",
+		"NAME": "DELHE3_FLAG",
+		"UNITS": " "
+	},
+	"4263": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DELC14_4263",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "delc14 ",
+		"KEY": "4263",
+		"LONGNAME": "Delta-C14              ",
+		"NAME": "DELC14 ",
+		"UNITS": "0/00"
+	},
+	"4264": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DELC14_FLAG_4264",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4264",
+		"LONGNAME": "Delta-C14 Flag     ",
+		"NAME": "DELC14_FLAG",
+		"UNITS": " "
+	},
+	"4265": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DELC13_4265",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "delc13 ",
+		"KEY": "4265",
+		"LONGNAME": "Delta-C13              ",
+		"NAME": "DELC13 ",
+		"UNITS": "0/00"
+	},
+	"4266": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DELC13_FLAG_4266",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4266",
+		"LONGNAME": "Delta-C13 Flag     ",
+		"NAME": "DELC13_FLAG",
+		"UNITS": " "
+	},
+	"4267": {
+		"COMMENTS": "",
+		"EPIC_KEY": "O18O16_4267",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "o18o16 ",
+		"KEY": "4267",
+		"LONGNAME": "O18/O16 Ratio          ",
+		"NAME": "O18O16 ",
+		"UNITS": "0/00"
+	},
+	"4268": {
+		"COMMENTS": "",
+		"EPIC_KEY": "O18O16_FLAG_4268",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4268",
+		"LONGNAME": "O18/O16 Ratio Flag ",
+		"NAME": "O18O16_FLAG",
+		"UNITS": " "
+	},
+	"4269": {
+		"COMMENTS": "",
+		"EPIC_KEY": "TCARBN_4269",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "tcarbn ",
+		"KEY": "4269",
+		"LONGNAME": "Total Carbon           ",
+		"NAME": "TCARBN ",
+		"UNITS": "umol/kg"
+	},
+	"4270": {
+		"COMMENTS": "",
+		"EPIC_KEY": "TCARBN_FLAG_4270",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4270",
+		"LONGNAME": "Total Carbon Flag  ",
+		"NAME": "TCARBN_FLAG",
+		"UNITS": " "
+	},
+	"4271": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ALKALI_4271",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "alk",
+		"KEY": "4271",
+		"LONGNAME": "Alkalinity             ",
+		"NAME": "ALKALI ",
+		"UNITS": "umol/kg"
+	},
+	"4272": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ALKALI_FLAG_4272",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4272",
+		"LONGNAME": "Alkalinity Flag    ",
+		"NAME": "ALKALI_FLAG",
+		"UNITS": " "
+	},
+	"4281": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PCO2_4281",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "pco2 ",
+		"KEY": "4281",
+		"LONGNAME": "Partial Pressure of CO2  ",
+		"NAME": "PCO2 ",
+		"UNITS": "uatm "
+	},
+	"4282": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PCO2_FLAG_4282",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4282",
+		"LONGNAME": "PCO2 Flag            ",
+		"NAME": "PCO2_FLAG",
+		"UNITS": " "
+	},
+	"4283": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PH_4283",
+		"FORMAT": "f9.2",
+		"GENERIC_NAME": "pH ",
+		"KEY": "4283",
+		"LONGNAME": "pH                         ",
+		"NAME": "PH ",
+		"UNITS": " "
+	},
+	"4284": {
+		"COMMENTS": "",
+		"EPIC_KEY": "PH_FLAG_4284",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4284",
+		"LONGNAME": "pH Flag                ",
+		"NAME": "PH_FLAG",
+		"UNITS": " "
+	},
+	"4291": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ARGOPRS_FLAG_4291",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4291",
+		"LONGNAME": "Argo Pressure Flag    ",
+		"NAME": "ARGOPRS_FLAG ",
+		"UNITS": " "
+	},
+	"4292": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ARGOTMP_FLAG_4292",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4292",
+		"LONGNAME": "Argo Temperature Flag ",
+		"NAME": "ARGOTMP_FLAG ",
+		"UNITS": " "
+	},
+	"4293": {
+		"COMMENTS": "",
+		"EPIC_KEY": "ARGOSAL_FLAG_4293",
+		"FORMAT": " ",
+		"GENERIC_NAME": "flag",
+		"KEY": "4293",
+		"LONGNAME": "Argo Salinity Flag    ",
+		"NAME": "ARGOSAL_FLAG ",
+		"UNITS": " "
+	},
+	"4301": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "XCO2a_4301",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "XCO2",
+		"KEY": "4301",
+		"LONGNAME": "Mole Fraction of CO2 in Air",
+		"NAME": "XCO2a",
+		"UNITS": "ppm"
+	},
+	"4302": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "XCO2w_4302",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "XCO2",
+		"KEY": "4302",
+		"LONGNAME": "Mole Fraction of CO2 in Water",
+		"NAME": "XCO2w",
+		"UNITS": "ppm"
+	},
+	"4303": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "fCO2a_4303",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "fCO2a",
+		"KEY": "4303",
+		"LONGNAME": "Fugacity of CO2 in Air",
+		"NAME": "fCO2a",
+		"UNITS": "uatm"
+	},
+	"4304": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "fCO2w_4304",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "fCO2w",
+		"KEY": "4304",
+		"LONGNAME": "Fugacity of CO2 in Water",
+		"NAME": "fCO2w",
+		"UNITS": "uatm"
+	},
+	"4305": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "pCO2a_4305",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "pCO2a",
+		"KEY": "4305",
+		"LONGNAME": "Partial Pressure of CO2 in Air",
+		"NAME": "pCO2a",
+		"UNITS": "uatm"
+	},
+	"4306": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "pCO2w_4306",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "pCO2w",
+		"KEY": "4306",
+		"LONGNAME": "Partial Pressure of CO2 in Water",
+		"NAME": "pCO2w",
+		"UNITS": "uatm"
+	},
+	"4307": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "dfCO2_4307",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "dfCO2",
+		"KEY": "4307",
+		"LONGNAME": "Delta fCO2",
+		"NAME": "dfCO2",
+		"UNITS": "uatm"
+	},
+	"4308": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "dpCO2_4308",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "dpCO2",
+		"KEY": "4308",
+		"LONGNAME": "Delta pCO2",
+		"NAME": "dpCO2",
+		"UNITS": "uatm"
+	},
+	"4309": {
+		"COMMENTS": "",
+		"EPIC_KEY": "EqT_4309",
+		"FORMAT": "Underway CO2 obs (ITS-90)",
+		"GENERIC_NAME": "degC",
+		"KEY": "4309",
+		"LONGNAME": "Equilibrator Temperature",
+		"NAME": "EqT",
+		"UNITS": "f9.3"
+	},
+	"4311": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "FiltXCO2a_4311",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "XCO2",
+		"KEY": "4311",
+		"LONGNAME": "Filtered Mole Fraction of CO2 in Air",
+		"NAME": "FiltXCO2a",
+		"UNITS": "ppm"
+	},
+	"4312": {
+		"COMMENTS": "Underway CO2 obs",
+		"EPIC_KEY": "FiltXCO2w_4312",
+		"FORMAT": "f9.1",
+		"GENERIC_NAME": "XCO2",
+		"KEY": "4312",
+		"LONGNAME": "Filtered Mole Fraction of CO2 in Water",
+		"NAME": "FiltXCO2w",
+		"UNITS": "ppm"
+	},
+	"5000": {
+		"COMMENTS": "",
+		"EPIC_KEY": "OXYV1_5000",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ox",
+		"KEY": "5000",
+		"LONGNAME": "OXYGEN, SBE43 Voltage             ",
+		"NAME": "OXYV1",
+		"UNITS": "V"
+	},
+	"5001": {
+		"COMMENTS": "",
+		"EPIC_KEY": "OXYV2_5001",
+		"FORMAT": " ",
+		"GENERIC_NAME": "ox",
+		"KEY": "5001",
+		"LONGNAME": "OXYGEN, SBE43 Voltage             ",
+		"NAME": "OXYV2",
+		"UNITS": "V"
+	},
+	"9991": {
+		"COMMENTS": "x axis",
+		"EPIC_KEY": "x_9991",
+		"FORMAT": " ",
+		"GENERIC_NAME": "x",
+		"KEY": "9991",
+		"LONGNAME": "x axis",
+		"NAME": "x",
+		"UNITS": " "
+	},
+	"9992": {
+		"COMMENTS": "y axis",
+		"EPIC_KEY": "y_9992",
+		"FORMAT": " ",
+		"GENERIC_NAME": "y",
+		"KEY": "9992",
+		"LONGNAME": "y axis",
+		"NAME": "y",
+		"UNITS": " "
+	},
+	"9993": {
+		"COMMENTS": "z axis",
+		"EPIC_KEY": "z_9993",
+		"FORMAT": " ",
+		"GENERIC_NAME": "z",
+		"KEY": "9993",
+		"LONGNAME": "z axis",
+		"NAME": "z",
+		"UNITS": " "
+	},
+	"9994": {
+		"COMMENTS": "t axis ",
+		"EPIC_KEY": "t_9994",
+		"FORMAT": " ",
+		"GENERIC_NAME": "t",
+		"KEY": "9994",
+		"LONGNAME": "t axis",
+		"NAME": "t",
+		"UNITS": " "
+	},
+	"9998": {
+		"COMMENTS": "",
+		"EPIC_KEY": "DESCENT_9998",
+		"FORMAT": " ",
+		"GENERIC_NAME": "descent",
+		"KEY": "9998",
+		"LONGNAME": "Descent Rate, Descent Rate of CTD             ",
+		"NAME": "DESCENT",
+		"UNITS": "m/s"
+	},
+	"9999": {
+		"COMMENTS": "",
+		"EPIC_KEY": "BINS_9999",
+		"FORMAT": " ",
+		"GENERIC_NAME": "bins",
+		"KEY": "9999",
+		"LONGNAME": "Sample Number, Sample Bins             ",
+		"NAME": "BINS",
+		"UNITS": "#"
+	}
+}

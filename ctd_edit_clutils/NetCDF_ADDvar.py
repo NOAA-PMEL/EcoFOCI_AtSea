@@ -30,7 +30,10 @@ import os
 #Science Stack
 from netCDF4 import Dataset
 
-#User Defined Stack
+#User Stack
+# Relative User Stack
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.sys.path.insert(1, parent_dir)
 import io_utils.ConfigParserLocal as ConfigParserLocal
 
 
@@ -82,7 +85,7 @@ parser.add_argument('add_epic_var', metavar='add_epic_var', type=str, help='name
 args = parser.parse_args()
 
 # If these variables are not defined, no data will be archived into the nc file for that parameter.
-EPIC_VARS_dict = ConfigParserLocal.get_config('epickey.json')
+EPIC_VARS_dict = ConfigParserLocal.get_config(parent_dir + '/config_files/epickey.json', ftype='json')
 
 
 ctd_data_files = [x for x in os.listdir(args.sourcedir) if x.endswith('.nc')]

@@ -114,16 +114,20 @@ class CTDProfilePlot(object):
       fig = plt.figure(1)
       ax1 = fig.add_subplot(111)
       p1 = ax1.plot(xdata[0], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[0])))
+      plt.setp(p1, color=self.var2format(epic_key[0])['color'],
+                   linestyle=self.var2format(epic_key[0])['linestyle'],
+                   linewidth=self.var2format(epic_key[0])['linewidth'])
       if secondary:
         p1 = ax1.plot(xdata[1],ydata)
-        plt.setp(p1, **(self.var2format(epic_key[1])))
+        plt.setp(p1, color=self.var2format(epic_key[1])['color'],
+                     linestyle=self.var2format(epic_key[1])['linestyle'],
+                     linewidth=self.var2format(epic_key[1])['linewidth'])
 
       ax1.invert_yaxis()
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel, fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[0])['format'])
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -133,48 +137,14 @@ class CTDProfilePlot(object):
       fig = plt.figure(1)
       ax1 = fig.add_subplot(111)
       p1 = ax1.plot(xdata[0], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[0])))
-      if secondary:
-        p1 = ax1.plot(xdata[1],ydata)
-        plt.setp(p1, **(self.var2format(epic_key[1])))
-
-      ax1.invert_yaxis()
-      plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
-      plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
-
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
-      ax1.xaxis.set_major_formatter(fmt)
-      ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
-
-      #plot second param
-      ax2 = ax1.twiny()
-      p1 = ax2.plot(xdata[2], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[2])))
-      if secondary:
-        p1 = ax2.plot(xdata[3],ydata)
-        plt.setp(p1, **(self.var2format(epic_key[3])))
-
-      plt.ylabel('Depth (dB)', fontsize=12, fontweight='bold')
-      plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
-
-      #set xticks and labels to be at the same spot for all the vars
-      ax1.set_xticks(np.linspace(ax1.get_xbound()[0], ax1.get_xbound()[1], self.max_xticks))
-      ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
-
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
-      ax2.xaxis.set_major_formatter(fmt)
-      ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
-
-      return plt, fig
-
-    def plot3var(self, epic_key=None, xdata=None, ydata=None, xlabel=None, secondary=False, **kwargs):
-      fig = plt.figure(1)
-      ax1 = fig.add_subplot(111)
-      p1 = ax1.plot(xdata[0], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[0])))
+      plt.setp(p1, color=self.var2format(epic_key[0])['color'],
+                   linestyle=self.var2format(epic_key[0])['linestyle'],
+                   linewidth=self.var2format(epic_key[0])['linewidth'])
       if secondary and not (xdata[1].size == 0):
         p1 = ax1.plot(xdata[1],ydata)
-        plt.setp(p1, **(self.var2format(epic_key[1])))
+        plt.setp(p1, color=self.var2format(epic_key[1])['color'],
+                     linestyle=self.var2format(epic_key[1])['linestyle'],
+                     linewidth=self.var2format(epic_key[1])['linewidth'])
         #set plot limits for two vars by finding the absolute range and adding 10%
         abmin=np.min([np.nanmin(xdata[0]),np.nanmin(xdata[1])])
         abmax=np.max([np.nanmax(xdata[0]),np.nanmax(xdata[1])])
@@ -184,26 +154,91 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
     
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[0])['format'])
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
       #plot second param
       ax2 = ax1.twiny()
       p1 = ax2.plot(xdata[2], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[2])))
+      plt.setp(p1, color=self.var2format(epic_key[2])['color'],
+                   linestyle=self.var2format(epic_key[2])['linestyle'],
+                   linewidth=self.var2format(epic_key[2])['linewidth'])
       if secondary and not (xdata[3].size == 0):
         p1 = ax2.plot(xdata[3],ydata)
-        plt.setp(p1, **(self.var2format(epic_key[3])))
+        plt.setp(p1, color=self.var2format(epic_key[3])['color'],
+                     linestyle=self.var2format(epic_key[3])['linestyle'],
+                     linewidth=self.var2format(epic_key[3])['linewidth'])
         #set plot limits for two vars by finding the absolute range and adding 10%
         abmin=np.min([np.nanmin(xdata[2]),np.nanmin(xdata[3])])
         abmax=np.max([np.nanmax(xdata[2]),np.nanmax(xdata[3])])
-        ax2.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
+        try:
+          ax2.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
+        except:
+          ax2.set_xlim([0,1])
 
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
+      #set xticks and labels to be at the same spot for all three vars
+      ax1.set_xticks(np.linspace(ax1.get_xbound()[0], ax1.get_xbound()[1], self.max_xticks))
+      ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
+
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[2])['format'])
+      ax2.xaxis.set_major_formatter(fmt)
+      ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
+
+
+      return plt, fig
+
+    def plot3var(self, epic_key=None, xdata=None, ydata=None, xlabel=None, secondary=False, **kwargs):
+      fig = plt.figure(1)
+      ax1 = fig.add_subplot(111)
+      p1 = ax1.plot(xdata[0], ydata)
+      plt.setp(p1, color=self.var2format(epic_key[0])['color'],
+                   linestyle=self.var2format(epic_key[0])['linestyle'],
+                   linewidth=self.var2format(epic_key[0])['linewidth'])
+      if secondary and not (xdata[1].size == 0):
+        p1 = ax1.plot(xdata[1],ydata)
+        plt.setp(p1, color=self.var2format(epic_key[1])['color'],
+                     linestyle=self.var2format(epic_key[1])['linestyle'],
+                     linewidth=self.var2format(epic_key[1])['linewidth'])
+        #set plot limits for two vars by finding the absolute range and adding 10%
+        abmin=np.min([np.nanmin(xdata[0]),np.nanmin(xdata[1])])
+        abmax=np.max([np.nanmax(xdata[0]),np.nanmax(xdata[1])])
+        ax1.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
+
+      ax1.invert_yaxis()
+      plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
+      plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
+    
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[0])['format'])
+      ax1.xaxis.set_major_formatter(fmt)
+      ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
+
+      #plot second param
+      ax2 = ax1.twiny()
+      p1 = ax2.plot(xdata[2], ydata)
+      plt.setp(p1, color=self.var2format(epic_key[2])['color'],
+                   linestyle=self.var2format(epic_key[2])['linestyle'],
+                   linewidth=self.var2format(epic_key[2])['linewidth'])
+      if secondary and not (xdata[3].size == 0):
+        p1 = ax2.plot(xdata[3],ydata)
+        plt.setp(p1, color=self.var2format(epic_key[3])['color'],
+                     linestyle=self.var2format(epic_key[3])['linestyle'],
+                     linewidth=self.var2format(epic_key[3])['linewidth'])
+        #set plot limits for two vars by finding the absolute range and adding 10%
+        abmin=np.min([np.nanmin(xdata[2]),np.nanmin(xdata[3])])
+        abmax=np.max([np.nanmax(xdata[2]),np.nanmax(xdata[3])])
+        try:
+          ax2.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
+        except:
+          ax2.set_xlim([0,1])
+
+      plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
+      plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
+
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[2])['format'])
       ax2.xaxis.set_major_formatter(fmt)
       ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -213,10 +248,14 @@ class CTDProfilePlot(object):
       # Second, show the right spine.
       ax3.spines["top"].set_visible(True)
       p1 = ax3.plot(xdata[4], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[4])))
+      plt.setp(p1, color=self.var2format(epic_key[4])['color'],
+                   linestyle=self.var2format(epic_key[4])['linestyle'],
+                   linewidth=self.var2format(epic_key[4])['linewidth'])
       if secondary and not (xdata[5].size == 0):
         p1 = ax2.plot(xdata[5],ydata)
-        plt.setp(p1, **(self.var2format(epic_key[5])))
+        plt.setp(p1, color=self.var2format(epic_key[5])['color'],
+                     linestyle=self.var2format(epic_key[5])['linestyle'],
+                     linewidth=self.var2format(epic_key[5])['linewidth'])
         #set plot limits for two vars by finding the absolute range and adding 10%
         abmin=np.min([np.nanmin(xdata[4]),np.nanmin(xdata[5])])
         abmax=np.max([np.nanmax(xdata[4]),np.nanmax(xdata[5])])
@@ -232,7 +271,7 @@ class CTDProfilePlot(object):
       ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
       ax3.set_xticks(np.linspace(ax3.get_xbound()[0], ax3.get_xbound()[1], self.max_xticks))
 
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[4])['format'])
       ax3.xaxis.set_major_formatter(fmt)
       ax3.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -242,31 +281,39 @@ class CTDProfilePlot(object):
       fig = plt.figure(1)
       ax1 = fig.add_subplot(111)
       p1 = ax1.plot(xdata[0], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[0])))
+      plt.setp(p1, color=self.var2format(epic_key[0])['color'],
+                   linestyle=self.var2format(epic_key[0])['linestyle'],
+                   linewidth=self.var2format(epic_key[0])['linewidth'])
       if secondary and not (xdata[1].size == 0):
         p1 = ax1.plot(xdata[1],ydata2)
-        plt.setp(p1, **(self.var2format(epic_key[1])))
+        plt.setp(p1, color=self.var2format(epic_key[1])['color'],
+                     linestyle=self.var2format(epic_key[1])['linestyle'],
+                     linewidth=self.var2format(epic_key[1])['linewidth'])
 
       ax1.invert_yaxis()
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
     
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[0])['format'])
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
       #plot second param
       ax2 = ax1.twiny()
       p1 = ax2.plot(xdata[2], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[2])))
+      plt.setp(p1, color=self.var2format(epic_key[2])['color'],
+                   linestyle=self.var2format(epic_key[2])['linestyle'],
+                   linewidth=self.var2format(epic_key[2])['linewidth'])
       if secondary and not (xdata[3].size == 0):
         p1 = ax2.plot(xdata[3],ydata2)
-        plt.setp(p1, **(self.var2format(epic_key[3])))
+        plt.setp(p1, color=self.var2format(epic_key[3])['color'],
+                     linestyle=self.var2format(epic_key[3])['linestyle'],
+                     linewidth=self.var2format(epic_key[3])['linewidth'])
 
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[2])['format'])
       ax2.xaxis.set_major_formatter(fmt)
       ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -276,10 +323,14 @@ class CTDProfilePlot(object):
       # Second, show the right spine.
       ax3.spines["top"].set_visible(True)
       p1 = ax3.plot(xdata[4], ydata)
-      plt.setp(p1, **(self.var2format(epic_key[4])))
+      plt.setp(p1, color=self.var2format(epic_key[4])['color'],
+                   linestyle=self.var2format(epic_key[4])['linestyle'],
+                   linewidth=self.var2format(epic_key[4])['linewidth'])
       if secondary and not (xdata[5].size == 0):
         p1 = ax3.plot(xdata[5],ydata2)
-        plt.setp(p1, **(self.var2format(epic_key[5])))
+        plt.setp(p1, color=self.var2format(epic_key[5])['color'],
+                     linestyle=self.var2format(epic_key[5])['linestyle'],
+                     linewidth=self.var2format(epic_key[5])['linewidth'])
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[2], fontsize=self.labelsize, fontweight='bold')
 
@@ -288,7 +339,7 @@ class CTDProfilePlot(object):
       ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
       ax3.set_xticks(np.linspace(ax3.get_xbound()[0], ax3.get_xbound()[1], self.max_xticks))
 
-      fmt=mpl.ticker.FormatStrFormatter('%.3f')
+      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[4])['format'])
       ax3.xaxis.set_major_formatter(fmt)
       ax3.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -321,34 +372,42 @@ class CTDProfilePlot(object):
         plotdic['color']='red'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
+        plotdic['format']='%.3f'
       elif epic_key in ['T2_35']:
         plotdic['color']='magenta'
         plotdic['linestyle']='--'
         plotdic['linewidth']=0.5
+        plotdic['format']='%.3f'
       elif epic_key in ['S_41', 'OST_62', 'O_65']:
         plotdic['color']='blue'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
+        plotdic['format']='%.3f'
       elif epic_key in ['S_42', 'CTDOST_4220', 'CTDOXY_4221']:
         plotdic['color']='cyan'
         plotdic['linestyle']='--'
         plotdic['linewidth']=0.5
+        plotdic['format']='%3.1f'
       elif epic_key in ['ST_70','Trb_980','SigmaT']:
         plotdic['color']='black'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
+        plotdic['format']='%.3f'
       elif epic_key in ['F_903','fWS_973','Fch_906']:
         plotdic['color']='green'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
+        plotdic['format']='%.2f'
       elif epic_key in ['PAR_905']:
         plotdic['color']='darkorange'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.75
+        plotdic['format']='%5.f'
       else:
         plotdic['color']='black'
         plotdic['linestyle']='--'
         plotdic['linewidth']=1.0      
+        plotdic['format']='%.3f'
 
       return plotdic
 
