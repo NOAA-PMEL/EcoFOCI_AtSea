@@ -101,7 +101,7 @@ for count, ncfile in enumerate(ctd_data_files): #cycle through all available fil
 
     try :
         epic_var_ind = (args.add_epic_var).split('_')[1]
-        print "Adding {0} by searching for {1}".format(args.add_epic_var, epic_var_ind)
+        print("Adding {0} by searching for {1}".format(args.add_epic_var, epic_var_ind))
         newvar = nchandle.createVariable(EPIC_VARS_dict[epic_var_ind]['EPIC_KEY'],'f4',('time','dep','lat','lon',), fill_value=1e35)
         newvar.setncattr('name',EPIC_VARS_dict[epic_var_ind]['NAME']) 
         newvar.long_name = EPIC_VARS_dict[epic_var_ind]['LONGNAME'] 
@@ -111,7 +111,7 @@ for count, ncfile in enumerate(ctd_data_files): #cycle through all available fil
         newvar.epic_code = int(epic_var_ind) 
 
 
-        print "adding history attribute"
+        print("adding history attribute")
         if not 'History' in global_atts.keys():
             histtime=datetime.datetime.utcnow()
             nchandle.setncattr('History','{histtime:%B %d, %Y %H:%M} UTC {variable} added'.format(histtime=histtime,variable=args.add_epic_var))
@@ -121,7 +121,7 @@ for count, ncfile in enumerate(ctd_data_files): #cycle through all available fil
 
 
     except:
-        print "{0} - not added".format(args.add_epic_var)
+        print("{0} - not added".format(args.add_epic_var))
 
       
     nchandle.close()
