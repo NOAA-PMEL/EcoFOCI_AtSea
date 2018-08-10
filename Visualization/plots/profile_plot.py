@@ -127,7 +127,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel, fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[0])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[0])['format'])
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -154,7 +154,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
     
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[0])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[0])['format'])
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -184,7 +184,7 @@ class CTDProfilePlot(object):
       ax1.set_xticks(np.linspace(ax1.get_xbound()[0], ax1.get_xbound()[1], self.max_xticks))
       ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
 
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[2])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[2])['format'])
       ax2.xaxis.set_major_formatter(fmt)
       ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -212,7 +212,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
     
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[0])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[0])['format'])
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -238,7 +238,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[2])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[2])['format'])
       ax2.xaxis.set_major_formatter(fmt)
       ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -271,7 +271,7 @@ class CTDProfilePlot(object):
       ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
       ax3.set_xticks(np.linspace(ax3.get_xbound()[0], ax3.get_xbound()[1], self.max_xticks))
 
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[4])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[4])['format'])
       ax3.xaxis.set_major_formatter(fmt)
       ax3.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -294,7 +294,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[0], fontsize=self.labelsize, fontweight='bold')
     
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[0])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[0])['format'])
       ax1.xaxis.set_major_formatter(fmt)
       ax1.tick_params(axis='both', which='major', labelsize=self.labelsize)
 
@@ -313,7 +313,7 @@ class CTDProfilePlot(object):
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
       plt.xlabel(xlabel[1], fontsize=self.labelsize, fontweight='bold')
 
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[2])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[2])['format'])
       ax2.xaxis.set_major_formatter(fmt)
       ax2.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -339,7 +339,7 @@ class CTDProfilePlot(object):
       ax2.set_xticks(np.linspace(ax2.get_xbound()[0], ax2.get_xbound()[1], self.max_xticks))
       ax3.set_xticks(np.linspace(ax3.get_xbound()[0], ax3.get_xbound()[1], self.max_xticks))
 
-      fmt=mpl.ticker.FormatStrFormatter(self.var2format(epic_key[4])['format'])
+      fmt=mpl.ticker.StrMethodFormatter(self.var2format(epic_key[4])['format'])
       ax3.xaxis.set_major_formatter(fmt)
       ax3.tick_params(axis='x', which='major', labelsize=self.labelsize)
 
@@ -372,42 +372,49 @@ class CTDProfilePlot(object):
         plotdic['color']='red'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
-        plotdic['format']='%.3f'
+        plotdic['format']='{x:.3f}'
       elif epic_key in ['T2_35']:
         plotdic['color']='magenta'
         plotdic['linestyle']='--'
         plotdic['linewidth']=0.5
-        plotdic['format']='%.3f'
+        plotdic['format']='{x:.3f}'
       elif epic_key in ['S_41', 'OST_62', 'O_65']:
         plotdic['color']='blue'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
-        plotdic['format']='%.3f'
+        if epic_key in ['S_41']:
+          plotdic['format']='{x:.3f}'
+        else:
+          plotdic['format']='{x:3.1f}'
       elif epic_key in ['S_42', 'CTDOST_4220', 'CTDOXY_4221']:
         plotdic['color']='cyan'
         plotdic['linestyle']='--'
         plotdic['linewidth']=0.5
-        plotdic['format']='%3.1f'
+        plotdic['format']='{x:3.1f}'
+        if epic_key in ['S_42']:
+          plotdic['format']='{x:.3f}'
+        else:
+          plotdic['format']='{x:3.1f}'
       elif epic_key in ['ST_70','Trb_980','SigmaT']:
         plotdic['color']='black'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
-        plotdic['format']='%.3f'
+        plotdic['format']='{x:.3f}'
       elif epic_key in ['F_903','fWS_973','Fch_906']:
         plotdic['color']='green'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.5
-        plotdic['format']='%.2f'
+        plotdic['format']='{x:.2f}'
       elif epic_key in ['PAR_905']:
         plotdic['color']='darkorange'
         plotdic['linestyle']='-'
         plotdic['linewidth']=0.75
-        plotdic['format']='%5.f'
+        plotdic['format']='{x:5.0f}'
       else:
         plotdic['color']='black'
         plotdic['linestyle']='--'
         plotdic['linewidth']=1.0      
-        plotdic['format']='%.3f'
+        plotdic['format']='{x:.3f}'
 
       return plotdic
 
