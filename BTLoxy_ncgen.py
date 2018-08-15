@@ -176,7 +176,11 @@ else:
         data_dic.update({'BTL_103':tdata['nb'].values})
 
         cruise = args.CruiseID.lower()
-        cast = list(tdata.groupby('cast_y').groups.keys())[0]
+        try:
+            cast = list(tdata.groupby('cast_y').groups.keys())[0]
+        except:
+            print ("Cast Y not found: not sure why but skipping")
+            continue
         profile_name = args.output + cruise +\
                        cast.lower().replace('ctd','c') +\
                        '_oxy.nc' 
