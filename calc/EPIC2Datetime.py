@@ -15,7 +15,7 @@ __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
 __created__  = datetime.datetime(2016, 7, 21)
 __modified__ = datetime.datetime(2016, 7, 21)
-__version__  = "0.1.0"
+__version__  = "0.2.1"
 __status__   = "Development"
 
 def EPIC2Datetime( timeword_1, timeword_2):
