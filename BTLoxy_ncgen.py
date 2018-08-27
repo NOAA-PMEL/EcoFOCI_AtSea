@@ -31,6 +31,9 @@
  python 2.7 
 
 """
+import warnings
+#remove the numpy/pandas/cython warnings
+warnings.filterwarnings(action='ignore', message="numpy.dtype size changed,")
 
 #System Stack
 import datetime
@@ -179,7 +182,7 @@ else:
         try:
             cast = list(tdata.groupby('cast_y').groups.keys())[0]
         except:
-            print ("Cast Y not found: not sure why but skipping")
+            print ("Oxygen Sample but no Btl Report - likely a bucket sample. Modify {cast} in bottle report".format(cast=cast))
             continue
         profile_name = args.output + cruise +\
                        cast.lower().replace('ctd','c') +\
