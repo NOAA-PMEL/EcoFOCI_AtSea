@@ -52,6 +52,7 @@ The config file is a YAML formatted file that specifies the variables and attrib
 ##### Bottle netcdf archive instructions
 - From upcast Bottle Data
 - Routines have been tested with python - 3.6
+- Output is EPIC Format netcdf
 
 #### SCS_shptrack2gpx.py
 
