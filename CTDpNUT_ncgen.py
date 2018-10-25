@@ -110,7 +110,8 @@ else:
 #loop through all ctd files - skip files without downcast for now
 for ind,cast in enumerate(ctd_ncfiles):
     
-    nut_cast = cast.split('/')[-1].replace('_ctd','_nut')
+    cast = cast.lower()
+    nut_cast = cast.split('/')[-1].replace('_ctd','_nut').lower()
     print("Merging {ctdfile} and {nutfile}".format(ctdfile=cast,nutfile=(args.nut_ncpath + nut_cast)))
     ###nc readin/out
     df = EcoFOCI_netCDF(cast)
