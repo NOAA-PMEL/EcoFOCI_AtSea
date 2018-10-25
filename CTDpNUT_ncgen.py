@@ -110,9 +110,13 @@ else:
 #loop through all ctd files - skip files without downcast for now
 for ind,cast in enumerate(ctd_ncfiles):
     
+<<<<<<< HEAD
     #following two lines make filecase inconsequential when matching and results in lowercase
     cast = "/".join(cast.split('/')[:-1]+[cast.split('/')[-1].lower()])
     nut_cast = cast.split('/')[-1].replace('_ctd','_nut').lower()
+=======
+    nut_cast = cast.split('/')[-1].replace('_ctd','_nut')
+>>>>>>> parent of 691d77c... force matching of filenames to be all lowercase
     print("Merging {ctdfile} and {nutfile}".format(ctdfile=cast,nutfile=(args.nut_ncpath + nut_cast)))
     ###nc readin/out
     df = EcoFOCI_netCDF(cast)
