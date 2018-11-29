@@ -108,9 +108,9 @@ this program.  It can be of the .pyini (json) form or .yaml form
 
 """
 if args.PointerFile.split('.')[-1] == 'pyini':
-	pointer_file = ConfigParserLocal.get_config(args.PointerFile)
+	pointer_file = ConfigParserLocal.get_config(args.PointerFile,'pyini')
 elif args.PointerFile.split('.')[-1] == 'yaml':
-	pointer_file = ConfigParserLocal.get_config_yaml(args.PointerFile)
+	pointer_file = ConfigParserLocal.get_config(args.PointerFile,'yaml')
 else:
 	sys.exit("PointerFile format not recognized")
 
@@ -178,6 +178,7 @@ if not args.delta_x:
 	ax1.xaxis.set_minor_formatter(DateFormatter('%d'))
 	ax1.xaxis.set_major_formatter(DateFormatter('%b %y'))
 	ax1.xaxis.set_tick_params(which='major', pad=15)
+	ax1.set_ylim([pointer_file['maxdepth_m'],0])
 
 	plt.tight_layout()
 	plt.savefig('images/' + pointer_file['CruiseID'] + '_' + pointer_file['EPIC_Key'] + '.png', transparent=False, dpi = (300))
@@ -185,11 +186,13 @@ if not args.delta_x:
 else:
 	cbar = plt.colorbar()
 	cbar.set_label(pointer_file['Clabel'],rotation=0, labelpad=90)
-	plt.contourf(ProfileDist[::-1],depth_array,temparray.T, 
+	plt.contourf(ProfileDist,depth_array,temparray.T, 
 		extend='both', cmap=cmocean.cm.cmap_d[pointer_file['colormap_name']], levels=np.arange(pointer_file['rangemin'],pointer_file['rangemax'],0.25), alpha=0.75)
 
 	ax1.invert_yaxis()
 	ax1.invert_xaxis()
+	ax1.set_ylim([pointer_file['maxdepth_m'],0])
+
 	plt.tight_layout()
 	plt.savefig('images/' + pointer_file['CruiseID'] + '_' + pointer_file['EPIC_Key'] + '.png', transparent=False, dpi = (300))
 	plt.close()

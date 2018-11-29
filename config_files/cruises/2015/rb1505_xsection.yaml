@@ -1,0 +1,53 @@
+---
+CruiseID: RB1505
+Date_Ticks: multi_month
+start_time: ''
+end_time: ''
+EPIC_Key: fWS_973
+Ylabel: Depth
+Xlabel: Distance/Time
+Clabel: Chlorophyl Fluorescence
+dtype: xsection
+depth_interval_m: 1
+maxdepth_m: 60 
+rangemin: 0
+rangemax: 10
+colormap_name: algae
+#S_42 - haline, T_28 - thermal, O_65 - oxy , F_903 - algae
+output_type: png
+plot_stylesheet: seaborn-poster
+ctd_data_path: /Users/bell/ecoraid/2015/CTDcasts/rb1505/final_data/ctd/
+ctd_files:
+
+#BCA
+- rb1505c047_ctd.nc
+- rb1505c046_ctd.nc
+- rb1505c045_ctd.nc
+- rb1505c044_ctd.nc
+- rb1505c043_ctd.nc
+
+#DBO5
+#- rb1505c063_ctd.nc
+#- rb1505c062_ctd.nc
+#- rb1505c061_ctd.nc
+#- rb1505c060_ctd.nc
+#- rb1505c059_ctd.nc
+#- rb1505c058_ctd.nc
+
+#BCB
+#- rb1505c067_ctd.nc
+#- rb1505c066_ctd.nc
+#- rb1505c065_ctd.nc
+#- rb1505c064_ctd.nc
+
+#BCC
+#- rb1505c074_ctd.nc
+#- rb1505c073_ctd.nc
+#- rb1505c072_ctd.nc
+#- rb1505c071_ctd.nc
+#- rb1505c070_ctd.nc
+#- rb1505c069_ctd.nc
+#- rb1505c068_ctd.nc
+
+notes:
+
