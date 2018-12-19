@@ -1,0 +1,92 @@
+---
+S_42:
+  name: S
+  generic_name: sal
+  EPIC_KEY: 42
+  units: psu
+  longname: SALINITY (PSU)
+  sbe_label: Sal11
+S_41:
+  name: S
+  generic_name: sal
+  EPIC_KEY: 41
+  units: psu
+  longname: SALINITY (PSU)
+  sbe_label: Sal00
+CTDOXY_4221:
+  name: CTDOXY
+  generic_name: ox
+  EPIC_KEY: 4221
+  units: umol/kg
+  longname: OXYGEN (UMOL/KG)
+  sbe_label: Sbox1Mm/Kg
+T_28:
+  name: T
+  generic_name: temp
+  EPIC_KEY: 28
+  units: C
+  longname: TEMPERATURE (C)
+  sbe_label: T090C
+OST_62:
+  name: OST
+  generic_name: ox
+  EPIC_KEY: 62
+  units: '%'
+  longname: OXYGEN %SAT
+  sbe_label: Sbeox0PS
+O_65:
+  name: O
+  generic_name: ox
+  EPIC_KEY: 65
+  units: umol/kg
+  longname: OXYGEN (UMOL/KG)
+  sbe_label: Sbox0Mm/Kg
+T2_35:
+  name: T2
+  generic_name: temp
+  EPIC_KEY: 35
+  units: C
+  longname: Secondary Temperature
+  sbe_label: T190C
+BTL_103:
+  name: BTL
+  generic_name: btl
+  EPIC_KEY: 103
+  units: ''
+  longname: NISKIN BOTTLE NUMBER
+  sbe_label: nb
+PAR_905:
+  name: PAR
+  generic_name: par
+  EPIC_KEY: 905
+  units: uEin m-2 s-1
+  longname: Photosynthetic Active Radiation
+  sbe_label: Par
+F_903:
+  name: F
+  generic_name: f
+  EPIC_KEY: 903
+  units: mg m-3
+  longname: Fluorometer (CTD)
+  sbe_label: FlECO-AFL
+CTDOST_4220:
+  name: CTDOST
+  generic_name: ox
+  EPIC_KEY: 4220
+  units: '%'
+  longname: OXYGEN %SAT
+  sbe_label: Sbeox1PS
+ST_70:
+  name: ST
+  generic_name: den
+  EPIC_KEY: 70
+  units: kg m-3
+  longname: SIGMA-T (KG/M**3)
+  sbe_label: Sigma-t00
+STH_71:
+  name: STH
+  generic_name: potden
+  EPIC_KEY: 71
+  units: kg m-3
+  longname: SIGMA-THETA (KG/M**3)
+  sbe_label:  
