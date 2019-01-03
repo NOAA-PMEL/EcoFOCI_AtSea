@@ -53,7 +53,7 @@ ncpath = args.infile
 # Get all netcdf files from mooring directory
 ncfiles = [f for f in os.listdir(args.infile) if f.endswith('.nc')]
 
-for ncfile in ncfiles:
+for ncfile in sorted(ncfiles):
     ncfile = ncpath + ncfile
     ###nc readin/out
     df = EcoFOCI_netCDF(ncfile)
