@@ -56,25 +56,6 @@ __status__   = "Development"
 __keywords__ = 'CTD', 'Plots', 'Cruise', 'QC'
 
 
-
-"""--------------------------------Plot Routines---------------------------------------"""
-
-def twovar_minmax_plotbounds(var1,var2):
-    """expects missing values to be np.nan"""
-    if np.isnan(var1).all() and np.isnan(var2).all():
-        min_bound = -1
-        max_bound = 1
-    elif np.isnan(var1).all() and not np.isnan(var2).all():
-        min_bound = var2[~np.isnan(var2)].min()
-        max_bound = var2[~np.isnan(var2)].max()
-    elif np.isnan(var2).all() and not np.isnan(var1).all():
-        min_bound = var1[~np.isnan(var1)].min()
-        max_bound = var1[~np.isnan(var1)].max()
-    else:
-        min_bound = np.min((var1[~np.isnan(var1)].min(), var2[~np.isnan(var2)].min()))
-        max_bound = np.max((var1[~np.isnan(var1)].max(), var2[~np.isnan(var2)].max()))
-        
-    return (min_bound, max_bound)
    
 
 """------------------------------------- Main -----------------------------------------"""

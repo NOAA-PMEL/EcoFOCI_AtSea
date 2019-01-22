@@ -146,8 +146,8 @@ class CTDProfilePlot(object):
                      linestyle=self.var2format(epic_key[1])['linestyle'],
                      linewidth=self.var2format(epic_key[1])['linewidth'])
         #set plot limits for two vars by finding the absolute range and adding 10%
-        abmin=np.min([np.nanmin(xdata[0]),np.nanmin(xdata[1])])
-        abmax=np.max([np.nanmax(xdata[0]),np.nanmax(xdata[1])])
+        abmin=np.nanmin([np.nanmin(xdata[0]),np.nanmin(xdata[1])])
+        abmax=np.nanmax([np.nanmax(xdata[0]),np.nanmax(xdata[1])])
         ax1.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
 
       ax1.invert_yaxis()
@@ -170,8 +170,8 @@ class CTDProfilePlot(object):
                      linestyle=self.var2format(epic_key[3])['linestyle'],
                      linewidth=self.var2format(epic_key[3])['linewidth'])
         #set plot limits for two vars by finding the absolute range and adding 10%
-        abmin=np.min([np.nanmin(xdata[2]),np.nanmin(xdata[3])])
-        abmax=np.max([np.nanmax(xdata[2]),np.nanmax(xdata[3])])
+        abmin=np.nanmin([np.nanmin(xdata[2]),np.nanmin(xdata[3])])
+        abmax=np.nanmax([np.nanmax(xdata[2]),np.nanmax(xdata[3])])
         try:
           ax2.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
         except:
@@ -204,8 +204,8 @@ class CTDProfilePlot(object):
                      linestyle=self.var2format(epic_key[1])['linestyle'],
                      linewidth=self.var2format(epic_key[1])['linewidth'])
         #set plot limits for two vars by finding the absolute range and adding 10%
-        abmin=np.min([np.nanmin(xdata[0]),np.nanmin(xdata[1])])
-        abmax=np.max([np.nanmax(xdata[0]),np.nanmax(xdata[1])])
+        abmin=np.nanmin([np.nanmin(xdata[0]),np.nanmin(xdata[1])])
+        abmax=np.nanmax([np.nanmax(xdata[0]),np.nanmax(xdata[1])])
         ax1.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
 
       ax1.invert_yaxis()
@@ -228,8 +228,8 @@ class CTDProfilePlot(object):
                      linestyle=self.var2format(epic_key[3])['linestyle'],
                      linewidth=self.var2format(epic_key[3])['linewidth'])
         #set plot limits for two vars by finding the absolute range and adding 10%
-        abmin=np.min([np.nanmin(xdata[2]),np.nanmin(xdata[3])])
-        abmax=np.max([np.nanmax(xdata[2]),np.nanmax(xdata[3])])
+        abmin=np.nanmin([np.nanmin(xdata[2]),np.nanmin(xdata[3])])
+        abmax=np.nanmax([np.nanmax(xdata[2]),np.nanmax(xdata[3])])
         try:
           ax2.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
         except:
@@ -257,8 +257,8 @@ class CTDProfilePlot(object):
                      linestyle=self.var2format(epic_key[5])['linestyle'],
                      linewidth=self.var2format(epic_key[5])['linewidth'])
         #set plot limits for two vars by finding the absolute range and adding 10%
-        abmin=np.min([np.nanmin(xdata[4]),np.nanmin(xdata[5])])
-        abmax=np.max([np.nanmax(xdata[4]),np.nanmax(xdata[5])])
+        abmin=np.nanmin([np.nanmin(xdata[4]),np.nanmin(xdata[5])])
+        abmax=np.nanmax([np.nanmax(xdata[4]),np.nanmax(xdata[5])])
         ax3.set_xlim([abmin - 0.1*(abmax-abmin),abmax + 0.1*(abmax-abmin)])
 
       plt.ylabel('Depth (dB)', fontsize=self.labelsize, fontweight='bold')
