@@ -17,13 +17,13 @@
 
  Future
  ======
- Remove Basemap dependancy for cartopy
+ Remove Basemap dependancy and replace with cartopy
  Full python 3.6 compatibility
 
  Compatibility:
  ==============
- python >=3.6 - Not working
- python 2.7 
+ python >=3.6 **Tested (with basemap)
+ python 2.7 (failed)
 
 """
 
@@ -58,9 +58,18 @@ __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
 __created__  = datetime.datetime(2014, 5, 22)
 __modified__ = datetime.datetime(2014, 5, 22)
-__version__  = "0.1.0"
+__version__  = "0.2.0"
 __status__   = "Development"
 __keywords__ = 'CTD', 'Cruise Map', 'Cruise', 'MySQL'
+
+"""--------------------------------Version 3+----------------------------------------"""
+
+if (sys.version_info > (3, 6)):
+    # Python 3 code in this block
+    pass
+else:
+    # Python 2 code in this block
+    sys.exit("Only support python >= 3.6")
 
 """--------------------------------SQL Init----------------------------------------"""
 
@@ -90,7 +99,7 @@ class NumpyMySQLConverter(mysql.connector.conversion.MySQLConverter):
 def connect_to_DB(**kwargs):
     # Open database connection
     try:
-        db = mysql.connector.connect(**kwargs)
+        db = mysql.connector.connect(use_pure=True,**kwargs)
     except mysql.connector.Error as err:
       """
       if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -187,6 +196,78 @@ def convert_timedelta(duration):
         minutes = str(minutes)    
     return hours+':'+minutes
         
+def cartopy_plot():
+    """
+    To take the place of the basemap routine below
+    """
+    pass
+
+def basemap_plot(cast_lon,cast_lat,
+                    mooring_lon,mooring_lat,
+                    rmooring_lon,rmooring_lat,
+                    data_argo_lon,data_argo_lat,
+                    data_drifters_lon,data_drifters_lat, topoin,elons,elats, filetype):
+
+    fig = plt.figure()
+    ax = plt.subplot(111)
+    m = Basemap(resolution='i',projection='merc', llcrnrlat=cast_lat.min()-2.5, \
+        urcrnrlat=cast_lat.max()+2.5,llcrnrlon=-1*(cast_lon.max()+5),urcrnrlon=-1*(cast_lon.min()-5),\
+        lat_ts=45)
+
+
+    # Cruise Data
+    x_cast, y_cast = m(-1. * cast_lon,cast_lat)
+    x_moor, y_moor = m(-1. * mooring_lon,mooring_lat)
+    xr_moor, yr_moor = m(-1. * rmooring_lon,rmooring_lat)
+    xa_moor, ya_moor = m(-1. * data_argo_lon,data_argo_lat)
+    xd_moor, yd_moor = m(-1. * data_drifters_lon,data_drifters_lat)
+
+    elons, elats = np.meshgrid(elons, elats)
+    ex, ey = m(elons, elats)
+
+    #CS = m.imshow(topoin, cmap='Greys_r') #
+    CS_l = m.contour(ex,ey,topoin, levels=[-1000, -200, -100, -70], linestyle='--', linewidths=0.2, colors='black', alpha=.75) 
+    CS = m.contourf(ex,ey,topoin, levels=[-1000, -200, -100, -70, ], colors=('#737373','#969696','#bdbdbd','#d9d9d9','#f0f0f0'), extend='both', alpha=.75) 
+    plt.clabel(CS_l, inline=1, fontsize=8, fmt='%1.0f')
+    
+    
+    #plot points
+    m.scatter(x_cast,y_cast,10,marker='+',color='r', alpha=.75)
+    m.scatter(x_moor,y_moor,12,marker='o',facecolors='none', edgecolors='k', alpha=.75)
+    m.scatter(xr_moor,yr_moor,12,marker='o',facecolors='none', edgecolors='y', alpha=.75)
+    m.scatter(xa_moor,ya_moor,12,marker='*',facecolors='none', edgecolors='b', alpha=.75)
+    m.scatter(xd_moor,yd_moor,12,marker='o',facecolors='b', edgecolors='b', alpha=.75)
+
+    #add station labels
+    for i,v in enumerate(x_cast):
+        plt.text(x_cast[i]+500,y_cast[i]-8000,cast_name[i], fontsize=2 ) 
+    #add station labels
+    for i,v in enumerate(x_moor):
+        plt.text(x_moor[i]+500,y_moor[i]-8000,mooring_name[i], fontsize=2 ) 
+    for i,v in enumerate(xr_moor):
+        plt.text(xr_moor[i]+500,yr_moor[i]-8000,rmooring_name[i], fontsize=2 ) 
+    for i,v in enumerate(xa_moor):
+        plt.text(xa_moor[i]+500,ya_moor[i]-8000,data_argo_name[i], fontsize=2 ) 
+    for i,v in enumerate(xd_moor):
+        plt.text(xd_moor[i]+500,yd_moor[i]-8000,data_drifters_name[i], fontsize=2 ) 
+        
+        
+    #m.drawcountries(linewidth=0.5)
+    m.drawcoastlines(linewidth=0.5)
+    m.drawparallels(np.arange(46,80,4.),labels=[1,0,0,0],color='black',dashes=[1,1],labelstyle='+/-',linewidth=0.2) # draw parallels
+    m.drawmeridians(np.arange(-180,-140,5.),labels=[0,0,0,1],color='black',dashes=[1,1],labelstyle='+/-',linewidth=0.2) # draw meridians
+    m.fillcontinents(color='white')
+
+    DefaultSize = fig.get_size_inches()
+    fig.set_size_inches( (DefaultSize[0]*1.5, DefaultSize[1]*1.5) )
+
+    if filetype in ['png']:
+        plt.savefig('images/' + cruiseID + '/' + cruiseID + '_map.png', bbox_inches='tight', dpi = (300))
+    if filetype in ['svg']:
+        plt.savefig('images/' + cruiseID + '/' + cruiseID + '_map.svg', bbox_inches='tight', dpi = (300))
+    plt.close()
+
+
 """-------------------------------------  kml -----------------------------------------"""
 
 def kml_description_box(kml,data):
@@ -329,7 +410,7 @@ for cruiseID in cruiseID_input:
     print('Working on Cruise: {}'.format(cruiseID))
     # ctd db
     #get information from local config file - a json formatted file
-    db_config = ConfigParserLocal.get_config('../config_files/db_config_cruises.yaml')
+    db_config = ConfigParserLocal.get_config('../../EcoFOCI_Config/EcoFOCI_AtSea/db_config_cruises.yaml')
 
     #get db meta information for mooring
     ### connect to DB
@@ -342,7 +423,7 @@ for cruiseID in cruiseID_input:
     close_DB(db)
     
     # mooring db
-    db_config = ConfigParserLocal.get_config('../config_files/db_config_mooring.yaml')
+    db_config = ConfigParserLocal.get_config('../../EcoFOCI_Config/EcoFOCI_AtSea/db_config_mooring.yaml')
 
     #get db meta information for mooring
     ### connect to DB
@@ -365,7 +446,7 @@ for cruiseID in cruiseID_input:
     #get db meta info for drifters and argo floats
     ### connect to DB
     # mooring db
-    db_config = ConfigParserLocal.get_config('../config_files/db_config_drifters.yaml')
+    db_config = ConfigParserLocal.get_config('../../EcoFOCI_Config/EcoFOCI_AtSea/db_config_drifters.yaml')
 
     (db,cursor) = connect_to_DB(host=db_config['systems'][args.host]['host'], 
                                 user=db_config['login']['user'], 
@@ -451,69 +532,23 @@ for cruiseID in cruiseID_input:
         elons = elons[find_nearest(elons,-1*(cast_lon.max()+5)):find_nearest(elons,-1*(cast_lon.min()-5))]
         elats = elats[find_nearest(elats,cast_lat.min()-5):find_nearest(elats,cast_lat.max()+5)]
         
-        
-        fig = plt.figure()
-        ax = plt.subplot(111)
-        m = Basemap(resolution='i',projection='merc', llcrnrlat=cast_lat.min()-2.5, \
-            urcrnrlat=cast_lat.max()+2.5,llcrnrlon=-1*(cast_lon.max()+5),urcrnrlon=-1*(cast_lon.min()-5),\
-            lat_ts=45)
-
-
-        # Cruise Data
-        x_cast, y_cast = m(-1. * cast_lon,cast_lat)
-        x_moor, y_moor = m(-1. * mooring_lon,mooring_lat)
-        xr_moor, yr_moor = m(-1. * rmooring_lon,rmooring_lat)
-        xa_moor, ya_moor = m(-1. * data_argo_lon,data_argo_lat)
-        xd_moor, yd_moor = m(-1. * data_drifters_lon,data_drifters_lat)
-    
-        #ETOPO 5 contour data 
-        
-
-        elons, elats = np.meshgrid(elons, elats)
-        ex, ey = m(elons, elats)
-
-        #CS = m.imshow(topoin, cmap='Greys_r') #
-        CS_l = m.contour(ex,ey,topoin, levels=[-1000, -200, -100, -70], linestyle='--', linewidths=0.2, colors='black', alpha=.75) 
-        CS = m.contourf(ex,ey,topoin, levels=[-1000, -200, -100, -70, ], colors=('#737373','#969696','#bdbdbd','#d9d9d9','#f0f0f0'), extend='both', alpha=.75) 
-        plt.clabel(CS_l, inline=1, fontsize=8, fmt='%1.0f')
-        
-        
-        #plot points
-        m.scatter(x_cast,y_cast,10,marker='+',color='r', alpha=.75)
-        m.scatter(x_moor,y_moor,12,marker='o',facecolors='none', edgecolors='k', alpha=.75)
-        m.scatter(xr_moor,yr_moor,12,marker='o',facecolors='none', edgecolors='y', alpha=.75)
-        m.scatter(xa_moor,ya_moor,12,marker='*',facecolors='none', edgecolors='b', alpha=.75)
-        m.scatter(xd_moor,yd_moor,12,marker='o',facecolors='b', edgecolors='b', alpha=.75)
-    
-        #add station labels
-        for i,v in enumerate(x_cast):
-            plt.text(x_cast[i]+500,y_cast[i]-8000,cast_name[i], fontsize=2 ) 
-        #add station labels
-        for i,v in enumerate(x_moor):
-            plt.text(x_moor[i]+500,y_moor[i]-8000,mooring_name[i], fontsize=2 ) 
-        for i,v in enumerate(xr_moor):
-            plt.text(xr_moor[i]+500,yr_moor[i]-8000,rmooring_name[i], fontsize=2 ) 
-        for i,v in enumerate(xa_moor):
-            plt.text(xa_moor[i]+500,ya_moor[i]-8000,data_argo_name[i], fontsize=2 ) 
-        for i,v in enumerate(xd_moor):
-            plt.text(xd_moor[i]+500,yd_moor[i]-8000,data_drifters_name[i], fontsize=2 ) 
-            
-            
-        #m.drawcountries(linewidth=0.5)
-        m.drawcoastlines(linewidth=0.5)
-        m.drawparallels(np.arange(46,80,4.),labels=[1,0,0,0],color='black',dashes=[1,1],labelstyle='+/-',linewidth=0.2) # draw parallels
-        m.drawmeridians(np.arange(-180,-140,5.),labels=[0,0,0,1],color='black',dashes=[1,1],labelstyle='+/-',linewidth=0.2) # draw meridians
-        m.fillcontinents(color='white')
-    
-        DefaultSize = fig.get_size_inches()
-        fig.set_size_inches( (DefaultSize[0]*1.5, DefaultSize[1]*1.5) )
-    
-        if args.png:
-            plt.savefig('images/' + cruiseID + '/' + cruiseID + '_map.png', bbox_inches='tight', dpi = (300))
         if args.svg:
-            plt.savefig('images/' + cruiseID + '/' + cruiseID + '_map.svg', bbox_inches='tight', dpi = (300))
-        plt.close()
-        
+            basemap_plot(cast_lon,cast_lat,
+                mooring_lon,mooring_lat,
+                rmooring_lon,rmooring_lat,
+                data_argo_lon,data_argo_lat,
+                data_drifters_lon,data_drifters_lat, topoin,elons,elats, filetype='svg')
+        if args.png:
+            basemap_plot(cast_lon,cast_lat,
+                mooring_lon,mooring_lat,
+                rmooring_lon,rmooring_lat,
+                data_argo_lon,data_argo_lat,
+                data_drifters_lon,data_drifters_lat, topoin,elons,elats, filetype='png')
+
+
+
+        #cartopy_plot()
+
     ### KML for google Earth
     if args.kml:
         print("Generating .kml")
@@ -599,7 +634,7 @@ for cruiseID in cruiseID_input:
                '        </Placemark>\n'
                ).format(cast_lat[ind],-1*cast_lon[ind],sqldate2GEdate(cast_date[ind],cast_time[ind]))
     
-        fid = open('images/' + cruiseID + '/' + cruiseID + '.kml', 'wb')
+        fid = open('images/' + cruiseID + '/' + cruiseID + '.kml', 'w')
         #fid.write( 'Content-Type: application/vnd.google-earth.kml+xml\n' )
         fid.write( kml_header + kml_style + kml_type + kml + kml_footer )
         fid.close()
@@ -693,13 +728,13 @@ for cruiseID in cruiseID_input:
             '}\n'
             )
           
-        fid = open('images/' + cruiseID + '/' + cruiseID + '.geo.json', 'wb')
+        fid = open('images/' + cruiseID + '/' + cruiseID + '.geo.json', 'w')
         fid.write( geojson_header + geojson_Features + geojson_tail )
         fid.close()        
             
     ### CSV file for any additional purpose
     if args.csv:
     
-        with open('images/' + cruiseID + '/' + cruiseID + '.csv', 'wb') as fid:
+        with open('images/' + cruiseID + '/' + cruiseID + '.csv', 'w') as fid:
             for row, cast in enumerate(cast_name):
                 fid.write( "{0}, {1}, {2}\n".format(cast, cast_lat[row], cast_lon[row]) )
