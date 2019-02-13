@@ -1,14 +1,26 @@
 #!/usr/bin/env python
 
 """
+Background:
+===========
+
 PostCruiseMetaDBadd.py
 
 Adds MetaInformation from cruisecastlogs db to netcdf files
 
-Input - CruiseID
-Output - png map and kml map
+Input - filepath, CruiseID
 
-Using Anaconda packaged Python 
+History:
+=======
+
+2019-02-12: Migrate to python3 - breaks py27 via the raw_input() to input() update
+
+ Compatibility:
+ ==============
+ python >=3.6 **tested**
+ python 2.7 - not supported 
+
+
 """
 
 #System Stack
@@ -31,7 +43,7 @@ __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
 __created__  = datetime.datetime(2014, 5, 22)
 __modified__ = datetime.datetime(2014, 5, 22)
-__version__  = "0.1.0"
+__version__  = "0.2.0"
 __status__   = "Development"
 __keywords__ = 'CTD', 'MetaInformation', 'Cruise', 'MySQL'
 
@@ -84,7 +96,7 @@ def read_data(db, cursor, table, cruiseID, legNO=''):
 def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
             
     table='cruisecastlogs'
-    db_config = ConfigParserLocal.get_config_yaml('../EcoFOCI_Config/AtSeaPrograms/config_files/db_config_cruises.yaml')
+    db_config = ConfigParserLocal.get_config('../EcoFOCI_Config/AtSeaPrograms/config_files/db_config_cruises.yaml','yaml')
     if server == 'pavlof':
         host='pavlof'
     else:
@@ -92,19 +104,12 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
 
     print("Host is {host}".format(host=host))
 
-    if not leg:
-        (db,cursor) = connect_to_DB(db_config['systems'][host]['host'], 
-            db_config['login']['user'], db_config['login']['password'], 
-            db_config['database']['database'], db_config['systems'][host]['port'])
-        data = read_data(db, cursor, table, cruiseID)
-        close_DB(db)
-    else:
-        (db,cursor) = connect_to_DB(db_config['systems'][host]['host'], 
-            db_config['login']['user'], db_config['login']['password'], 
-            db_config['database']['database'], db_config['systems'][host]['port'])
-        data = read_data(db, cursor, table, cruiseID, legNO=leg)
-        cruiseID = cruiseID + leg
-        close_DB(db)
+    (db,cursor) = connect_to_DB(db_config['systems'][host]['host'], 
+        db_config['login']['user'], db_config['login']['password'], 
+        db_config['database']['database'], db_config['systems'][host]['port'])
+    data = read_data(db, cursor, table, cruiseID)
+    close_DB(db)
+
     
     print("Adding Meta Information from {0}".format(cruiseID))
     ## exit if db is empty
@@ -173,7 +178,7 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
     
 if __name__ == '__main__':
 
-    user_in = raw_input("Please enter the abs path to the .nc file: or \n path, file1, file2: ")
+    user_in = input("Please enter the abs path to the .nc file: or \n path, file1, file2: ")
     user_out = user_in
-    cruiseid = raw_input("Please enter the cruiseid (eg. dy1702l1):  ")
+    cruiseid = input("Please enter the cruiseid (eg. dy1702l1):  ")
     AddMeta_fromDB(user_in, user_out, cruiseid)
