@@ -23,9 +23,16 @@ History:
 
 """
 
+import sys
+
+#must be python 3.6 or greater
+try:
+  assert(sys.version_info >= (3,6))
+except AssertionError:
+  sys.exit("Must be running python 3.6 or greater")
+
 #System Stack
 import datetime
-import sys
 import os, socket
 
 #DB Stack

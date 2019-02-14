@@ -29,9 +29,17 @@
 
 from __future__ import (absolute_import, division, print_function)
 
+
+import sys
+
+#must be python 3.6 or greater
+try:
+  assert(sys.version_info >= (3,6))
+except AssertionError:
+  sys.exit("Must be running python 3.6 or greater")
+
 #System Stack
 import datetime
-import sys
 import os
 import argparse
 
@@ -62,14 +70,6 @@ __version__  = "0.2.0"
 __status__   = "Development"
 __keywords__ = 'CTD', 'Cruise Map', 'Cruise', 'MySQL'
 
-"""--------------------------------Version 3+----------------------------------------"""
-
-if (sys.version_info > (3, 6)):
-    # Python 3 code in this block
-    pass
-else:
-    # Python 2 code in this block
-    sys.exit("Only support python >= 3.6")
 
 """--------------------------------SQL Init----------------------------------------"""
 
