@@ -23,7 +23,7 @@
  Compatibility:
  ==============
  python >=3.6 **Tested (with basemap)
- python 2.7 (failed)
+ python 2.7 (failed - may be due to conda issues)
 
 """
 
