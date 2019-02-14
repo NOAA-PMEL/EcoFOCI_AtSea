@@ -111,9 +111,10 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
 
     print("Host is {host}".format(host=host))
 
+    print(db_config['systems'][host]['port'])
     (db,cursor) = connect_to_DB(db_config['systems'][host]['host'], 
         db_config['login']['user'], db_config['login']['password'], 
-        db_config['database']['database'], db_config['systems'][host]['port'])
+        db_config['database'], db_config['systems'][host]['port'])
     data = read_data(db, cursor, table, cruiseID)
     close_DB(db)
 
@@ -132,17 +133,14 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
     for ncfile in nc_path:
         
         ncfid = Dataset(ncfile,'a')
-        if not leg:
-            castxxx = ncfile.lower().split(cruiseID.lower())[-1].split('_')[0][1:]
-        else:
-            castxxx = ncfile.lower().split(cruiseID.lower())[-1].split('_')[0][1:]
+        castxxx = ncfile.lower().split(cruiseID.lower())[-1].split('_')[0][1:]
 
         print('castxxx = ' + castxxx)
         castID = 'CTD' + castxxx
         print(castID)
         
         try:
-            castmeta = [x for x in data.itervalues() if x['ConsecutiveCastNo'] == castID][0]
+            castmeta = [x for x in data.values() if x['ConsecutiveCastNo'] == castID][0]
             ncfid.setncattr('CAST',castxxx)
             ncfid.setncattr('WATER_MASS',castmeta['WaterMassCode'])
             ncfid.setncattr('BAROMETER',int(castmeta['Pressure']))
