@@ -7,6 +7,7 @@ Recalculate derived parameters (density, salinity, dissolved oxygen)
 
  History:
  --------
+ 2019-02-19: Python 3 tested
  2018-07-19: explicit function paramater lableing (instead of positional)
  2017-01-03: Update program to use NetCDF Read unified API
  
@@ -17,8 +18,8 @@ migrate to xarray for data
 
  Compatibility:
  ==============
- python >=3.6 - Not Tested
- python 2.7 
+ python >=3.6 - **Tested**
+ python 2.7 - Valid as of 2/19/19 but not to be expected to work or fixed if broken
 
  """
 #System Stack
@@ -70,7 +71,7 @@ def sigmaTheta(user_in, user_out):
     nc_path = [nc_path + fi for fi in os.listdir(nc_path) if fi.endswith('.nc') and not fi.endswith('_cf_ctd.nc')]
 
     for ncfile in nc_path:
-        print ("Working on sigma-theta for {0}...").format(ncfile)
+        print ("Working on sigma-theta for {0}...".format(ncfile))
    
         #open/read netcdf files
         df = EcoFOCI_netCDF(ncfile)
@@ -91,7 +92,7 @@ def sigmaTheta(user_in, user_out):
                                                      t=data['T2_35'][0,:,0,0],
                                                      p=data['dep'][:]))-1000
             except:
-                print "No secondary temp and/or salinity in file"
+                print("No secondary temp and/or salinity in file")
         else:
             sigTh_pri = sw.eos80.dens0(s=data['S_41'][0,:,0,0],
                                        t=sw.ptmp(s=data['S_41'][0,:,0,0],
@@ -103,7 +104,7 @@ def sigmaTheta(user_in, user_out):
                                                      t=data['T2_35'][0,:,0,0],
                                                      p=data['dep'][0,:,0,0]))-1000
             except:
-                print "No secondary temp and/or salinity in file"
+                print("No secondary temp and/or salinity in file")
 
         #replace nan with 1e35
         sigTh_pri[np.isnan(sigTh_pri)] = 1e35
@@ -117,7 +118,7 @@ def sigmaTheta(user_in, user_out):
         try:
             repl_var(nchandle,'STH_2071', sigTh_sec)
         except:
-            print "STH_2071 not in file"        
+            print("STH_2071 not in file")       
         df.close()
 
     processing_complete = True
@@ -138,7 +139,7 @@ def sigmaT(user_in, user_out):
     nc_path = [nc_path + fi for fi in os.listdir(nc_path) if fi.endswith('.nc') and not fi.endswith('_cf_ctd.nc')]
 
     for ncfile in nc_path:
-        print ("Working on density for {0}...").format(ncfile)
+        print ("Working on density for {0}...".format(ncfile))
    
         #open/read netcdf files
         df = EcoFOCI_netCDF(ncfile)
@@ -155,7 +156,7 @@ def sigmaT(user_in, user_out):
             sigT_sec = sw.eos80.dens0(s=data['S_42'][0,:,0,0],
                                       t=data['T2_35'][0,:,0,0])-1000
         except:
-            print "No secondary temp and/or salinity in file"
+            print("No secondary temp and/or salinity in file")
             
         #replace nan with 1e35
         sigT_pri[np.isnan(sigT_pri)] = 1e35
@@ -169,7 +170,7 @@ def sigmaT(user_in, user_out):
         try:
             repl_var(nchandle,'ST_2070', sigT_sec)
         except:
-            print "ST_2070 not in file"        
+            print("ST_2070 not in file")       
         df.close()
 
     processing_complete = True
@@ -190,7 +191,7 @@ def O2PercentSat(user_in, user_out):
     nc_path = [nc_path + fi for fi in os.listdir(nc_path) if fi.endswith('.nc') and not fi.endswith('_cf_ctd.nc')]
     
     for ncfile in nc_path:
-        print ("Working on oxygen for {0}...").format(ncfile)
+        print ("Working on oxygen for {0}...".format(ncfile))
 
         #open/read netcdf files
         df = EcoFOCI_netCDF(ncfile)
@@ -248,7 +249,7 @@ def O2PercentSat(user_in, user_out):
                                                p=data['dep'][0,:,0,0])
             OxPerSat_sec = ( (data['CTDOXY_4221'][0,:,0,0] * sigmatheta_sec / 44660) / Oxsol_sec ) * 100.
         except:
-            print "No secondary sensor"
+            print("No secondary sensor")
              
         #replace nan/1e35 with 1e35, >1e10
         OxPerSat_pri[np.isnan(OxPerSat_pri)] = 1e35
@@ -257,14 +258,14 @@ def O2PercentSat(user_in, user_out):
             OxPerSat_sec[np.isnan(OxPerSat_sec)] = 1e35
             OxPerSat_sec[data['CTDOXY_4221'][0,:,0,0] >= 1e10] = 1e35
         except:
-            print "No secondary sensor"
+            print("No secondary sensor")
             
         #update Oxygen
         repl_var(nchandle,'OST_62', OxPerSat_pri)
         try:
             repl_var(nchandle,'CTDOST_4220', OxPerSat_sec)
         except:
-            print "CTDOST_4220 not in file"
+            print("CTDOST_4220 not in file")
         df.close()
     
     processing_complete = True
@@ -287,7 +288,7 @@ def O2_conv_mll2umkg(user_in, user_out):
     nc_path = [nc_path + fi for fi in os.listdir(nc_path) if fi.endswith('.nc') and not fi.endswith('_cf_ctd.nc')]
 
     for ncfile in nc_path:
-        print ("Working on oxygen unit conversion for {0}...").format(ncfile)
+        print ("Working on oxygen unit conversion for {0}...".format(ncfile))
    
         #open/read netcdf files
         df = EcoFOCI_netCDF(ncfile)
@@ -306,7 +307,7 @@ def O2_conv_mll2umkg(user_in, user_out):
                                      t=data['T2_35'][0,:,0,0],
                                      p=data['dep'][:]) / 1000.
         except:
-            print "No secondary temp and/or salinity in file"
+            print("No secondary temp and/or salinity in file")
             
         #replace nan with 1e35
         # convert from ml/l to micromole/l then compensate for density to get micromole/kg
@@ -323,7 +324,7 @@ def O2_conv_mll2umkg(user_in, user_out):
         try:
             repl_var(nchandle,'CTDOXY_4221', oxy_ml_update_sec)
         except:
-            print "O_2060 not in file"        
+            print("O_2060 not in file")        
         df.close()
 
     processing_complete = True
