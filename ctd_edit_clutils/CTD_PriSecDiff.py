@@ -3,12 +3,12 @@
 """
  Background:
  ===========
- CTD_SalDiff.py
+ CTD_PriSecDiff.py
  
  
  Purpose:
  ========
- Calculate the depth averaged difference between primary and secondary salinity and report statistics
+ Calculate the depth averaged difference between primary and secondary salinity/temperature and report statistics
  
  History:
  ========
@@ -16,8 +16,8 @@
 
 Compatibility:
  ==============
- python >=3.6 - Not Tested
- python 2.7 
+ python >=3.6 - **Tested**
+ python 2.7 - may work but not supported
 """
 
 #System Stack
@@ -87,9 +87,11 @@ for count, ncfile in enumerate(sorted(ctd_data_files)): #cycle through all avail
     data = ncreadfile_dic(nchandle, vars_dic.keys())
 
     inst_dif = data['S_41'][0,:,0,0] - data['S_42'][0,:,0,0]
+    inst_dif = data['T_20'][0,:,0,0] - data['T2_35'][0,:,0,0]
 
-    print("{file} - mean:{mean}, std:{std}".format(file=ncfile,
-        mean=np.nanmean(inst_dif), std=np.nanstd(inst_dif)))
+    print("{file}: Salinity - mean:{smean}, std:{sstd}; Temperature - mean:{tmean}, std:{tstd}".format(file=ncfile,
+        smean=np.nanmean(inst_dif), sstd=np.nanstd(inst_dif),
+        tmean=np.nanmean(inst_dif), tstd=np.nanstd(inst_dif)))
       
     nchandle.close()
     
