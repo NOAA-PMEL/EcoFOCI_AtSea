@@ -114,7 +114,7 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
     print(db_config['systems'][host]['port'])
     (db,cursor) = connect_to_DB(db_config['systems'][host]['host'], 
         db_config['login']['user'], db_config['login']['password'], 
-        db_config['database'], db_config['systems'][host]['port'])
+        db_config['database']['database'], db_config['systems'][host]['port'])
     data = read_data(db, cursor, table, cruiseID)
     close_DB(db)
 
@@ -162,9 +162,10 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
 
         try:
             ### look for existing lat/lon and update if missing
+            print((ncfid.variables['lat'][:]))
             if ((ncfid.variables['lat'][:] == -999.9) or 
                     (ncfid.variables['lat'][:] == -999.9) or 
-                    (ncfid.variables['lat'][:] == 1e35) or 
+                    (ncfid.variables['lat'][:] >= 1e35) or 
                     np.isnan(ncfid.variables['lat'][:])):
                 print("updating location")
                 ncfid.variables['lat'][:] = castmeta['LatitudeDeg'] + castmeta['LatitudeMin'] / 60.
