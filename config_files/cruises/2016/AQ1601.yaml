@@ -6,6 +6,7 @@ Trb_980:
   units: FNU
   longname: Turbidity(FNU)
   sbe_label: TurbWETntu0
+  fortran: ''
 S_42:
   name: S
   generic_name: sal
@@ -13,6 +14,7 @@ S_42:
   units: psu
   longname: SALINITY (PSU)
   sbe_label: Sal11
+  fortran: ''
 S_41:
   name: S
   generic_name: sal
@@ -20,6 +22,7 @@ S_41:
   units: psu
   longname: SALINITY (PSU)
   sbe_label: Sal00
+  fortran: ''
 D_3:
   name: D
   generic_name: depth
@@ -27,6 +30,7 @@ D_3:
   units: m
   longname: DEPTH (M)
   sbe_label: DepSM
+  fortran: ''
 T_28:
   name: T
   generic_name: temp
@@ -34,6 +38,7 @@ T_28:
   units: C
   longname: TEMPERATURE (C)
   sbe_label: T090C
+  fortran: ''
 O_60:
   name: O
   generic_name: ox
@@ -41,6 +46,7 @@ O_60:
   units: ml/l
   longname: OXYGEN (ML/L)
   sbe_label: 
+  fortran: ''
 O_2060:
   name: O
   generic_name: ox
@@ -48,6 +54,7 @@ O_2060:
   units: ml/l
   longname: OXYGEN (ML/L)
   sbe_label: 
+  fortran: ''
 T2_35:
   name: T2
   generic_name: temp
@@ -55,6 +62,7 @@ T2_35:
   units: C
   longname: Secondary Temperature
   sbe_label: T190C
+  fortran: ''
 PAR_905:
   name: PAR
   generic_name: par
@@ -62,6 +70,7 @@ PAR_905:
   units: uEin m-2 s-1
   longname: Photosynthetic Active Radiation
   sbe_label: Par
+  fortran: ''
 ST_70:
   name: ST
   generic_name: den
@@ -69,6 +78,7 @@ ST_70:
   units: kg m-3
   longname: SIGMA-T (KG/M**3)
   sbe_label: Sigma-t00
+  fortran: ''
 ST_2070:
   name: ST
   generic_name: den
@@ -76,3 +86,4 @@ ST_2070:
   units: kg m-3
   longname: SIGMA-T (KG/M**3)
   sbe_label: Sigma-t11
+  fortran: ''
