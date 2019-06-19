@@ -171,8 +171,9 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
                 ncfid.variables['lat'][:] = castmeta['LatitudeDeg'] + castmeta['LatitudeMin'] / 60.
                 ncfid.variables['lon'][:] = castmeta['LongitudeDeg'] + castmeta['LongitudeMin'] / 60.
             else:
-                print("I failed to update the lat/lon!!!")
+                print("I failed to update the lat/lon!!!\nexisting values are:")
                 print(ncfid.variables['lat'][:])
+                print(ncfid.variables['lon'][:])
         except:
             print("Couldn't update locations")
             

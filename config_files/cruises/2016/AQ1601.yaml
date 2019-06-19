@@ -1,0 +1,78 @@
+---
+Trb_980:
+  name: Trb
+  generic_name: turb
+  EPIC_KEY: 980
+  units: FNU
+  longname: Turbidity(FNU)
+  sbe_label: TurbWETntu0
+S_42:
+  name: S
+  generic_name: sal
+  EPIC_KEY: 42
+  units: psu
+  longname: SALINITY (PSU)
+  sbe_label: Sal11
+S_41:
+  name: S
+  generic_name: sal
+  EPIC_KEY: 41
+  units: psu
+  longname: SALINITY (PSU)
+  sbe_label: Sal00
+D_3:
+  name: D
+  generic_name: depth
+  EPIC_KEY: 3
+  units: m
+  longname: DEPTH (M)
+  sbe_label: DepSM
+T_28:
+  name: T
+  generic_name: temp
+  EPIC_KEY: 28
+  units: C
+  longname: TEMPERATURE (C)
+  sbe_label: T090C
+O_60:
+  name: O
+  generic_name: ox
+  EPIC_KEY: 60
+  units: ml/l
+  longname: OXYGEN (ML/L)
+  sbe_label: 
+O_2060:
+  name: O
+  generic_name: ox
+  EPIC_KEY: 2060
+  units: ml/l
+  longname: OXYGEN (ML/L)
+  sbe_label: 
+T2_35:
+  name: T2
+  generic_name: temp
+  EPIC_KEY: 35
+  units: C
+  longname: Secondary Temperature
+  sbe_label: T190C
+PAR_905:
+  name: PAR
+  generic_name: par
+  EPIC_KEY: 905
+  units: uEin m-2 s-1
+  longname: Photosynthetic Active Radiation
+  sbe_label: Par
+ST_70:
+  name: ST
+  generic_name: den
+  EPIC_KEY: 70
+  units: kg m-3
+  longname: SIGMA-T (KG/M**3)
+  sbe_label: Sigma-t00
+ST_2070:
+  name: ST
+  generic_name: den
+  EPIC_KEY: 2070
+  units: kg m-3
+  longname: SIGMA-T (KG/M**3)
+  sbe_label: Sigma-t11
