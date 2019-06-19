@@ -7,6 +7,7 @@ Recalculate derived parameters (density, salinity, dissolved oxygen)
 
  History:
  --------
+ 2019-06-19: discussion of what sigmat is vs sigma
  2019-02-19: Python 3 tested
  2018-07-19: explicit function paramater lableing (instead of positional)
  2017-01-03: Update program to use NetCDF Read unified API
@@ -57,6 +58,15 @@ def repl_var(nchandle, var_name, val=1e35):
 
 """------------------------------------- Recalculations -----------------------------------------"""
 def sigmaTheta(user_in, user_out):
+    """
+    Examples:
+
+    Sigma = (rho(t,s,p) - 1000) kg/m3
+    Sigma-t = (rho(s,t,p=0) - 1000) kg/m3 (density at atmospheric pressure)
+    Sigma-theta = (rho(t=theta,s,0) - 1000 kg/m3 (density with effect of adiabatic 
+        cooling/heating effect [using potential temperature] and the pressure effect removed).
+
+    """
 
     cruiseID = user_in.split('/')[-2]
     leg = cruiseID.lower().split('L')
@@ -125,6 +135,15 @@ def sigmaTheta(user_in, user_out):
     return processing_complete 
 
 def sigmaT(user_in, user_out):
+    """
+    Examples:
+
+    Sigma = (rho(t,s,p) - 1000) kg/m3
+    Sigma-t = (rho(s,t,p=0) - 1000) kg/m3 (density at atmospheric pressure)
+    Sigma-theta = (rho(t=theta,s,0) - 1000 kg/m3 (density with effect of adiabatic 
+        cooling/heating effect [using potential temperature] and the pressure effect removed).
+
+    """
 
     cruiseID = user_in.split('/')[-2]
     leg = cruiseID.lower().split('L')
