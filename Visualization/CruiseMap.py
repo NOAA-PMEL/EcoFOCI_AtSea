@@ -223,6 +223,8 @@ def cartopy_plot(cast_lon,cast_lat,
         bathy_sub = bathy.sel(latitude=slice(72,66),longitude=slice(-178,-155))
     if args.region in ['AK']:
         bathy_sub = bathy.sel(latitude=slice(73,50),longitude=slice(-180,-140))
+    else:
+        sys.exit("Region abrieviation not recognized.  See help (-h)")
 
     projection=ccrs.LambertConformal(central_longitude=-160.0)
     transformation=ccrs.PlateCarree()

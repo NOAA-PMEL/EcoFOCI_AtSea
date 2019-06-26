@@ -18,7 +18,7 @@
 
 Compatibility:
  ==============
- python >=3.6 - Not Tested
+ python >=3.6 *Tested
  python 2.7 
 """
 

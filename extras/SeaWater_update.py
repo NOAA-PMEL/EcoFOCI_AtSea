@@ -136,6 +136,8 @@ def sigmaTheta(user_in, user_out):
 
 def sigmaT(user_in, user_out):
     """
+    from https://www.seabird.com/faqs
+    
     Examples:
 
     Sigma = (rho(t,s,p) - 1000) kg/m3
