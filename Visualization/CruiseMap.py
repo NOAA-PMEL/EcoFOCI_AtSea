@@ -58,7 +58,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
-from cartopy.mpl.gridliner import LONGITUDE_FORMATTER, LATITUDE_FORMATTER
+from cartopy.mpl.ticker import LongitudeFormatter, LatitudeFormatter
 
 import xarray as xa
 import cmocean
@@ -165,8 +165,8 @@ def make_map(projection=ccrs.PlateCarree()):
         gl.xlabels_top = False
         gl.ylabels_left = False
         gl.xlocator = mticker.FixedLocator([-180, -170, -160, -150, -140, -130])
-        gl.xformatter = LONGITUDE_FORMATTER
-        gl.yformatter = LATITUDE_FORMATTER
+        ax.xaxis.set_major_formatter = LongitudeFormatter
+        ax.yaxis.set_major_formatter = LatitudeFormatter
         gl.ylabel_style = {'size': 10, 'color': 'gray'}
         gl.xlabel_style = {'size': 10, 'color': 'gray'}
     return fig, ax
@@ -226,7 +226,12 @@ def cartopy_plot(cast_lon,cast_lat,
     else:
         sys.exit("Region abrieviation not recognized.  See help (-h)")
 
-    projection=ccrs.LambertConformal(central_longitude=-160.0)
+
+    if args.labels:
+        projection=ccrs.PlateCarree()
+    else:
+        projection=ccrs.LambertConformal(central_longitude=-160.0)
+
     transformation=ccrs.PlateCarree()
 
    # Cruise Data
@@ -394,6 +399,7 @@ def kml_description_box(kml,data):
 
 
     return kml
+
 """------------------------------------- Main -----------------------------------------"""
 
 
@@ -407,6 +413,7 @@ parser.add_argument("-geojson",'--geojson', action="store_true", help=('Make Geo
 parser.add_argument("-csv",'--csv', action="store_true", help=('Output .csv file') )
 parser.add_argument("-host",'--host', type=str, default='localhost', help=('local or pavlof') )
 parser.add_argument("-reg",'--region', type=str, default='BS',help='BS,GOA,CK,AK')
+parser.add_argument("-labels",'--labels', action="store_true", help='turn on lat/lon labels')
 ####
 # Data of interest resides in multiple databases on Pavlof
 # Deployed Moorings and Recovered Moorings have independant tables in the ecofoci database
