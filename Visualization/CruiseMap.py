@@ -157,14 +157,14 @@ def read_data(db, cursor, table, cruiseID, dbvar='CruiseID', latvarname='Latitud
 
 """------------------------------------- MAPS -----------------------------------------"""
 def make_map(projection=ccrs.PlateCarree()):
-    fig, ax = plt.subplots(figsize=(8, 8),
+    fig, ax = plt.subplots(figsize=(12, 8),
                            subplot_kw=dict(projection=projection))
-    if projection == ccrs.PlateCarree():
+    if (projection == ccrs.PlateCarree()) or (projection == ccrs.Mercator()):
         gl = ax.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
                           linewidth=1., color='gray', alpha=0.25, linestyle='--')
         gl.xlabels_top = False
         gl.ylabels_left = False
-        gl.xlocator = mticker.FixedLocator([-180, -170, -160, -150, -140, -130])
+        #gl.xlocator = mticker.FixedLocator([-180, -170, -160, -150, -140, -130])
         ax.xaxis.set_major_formatter = LongitudeFormatter
         ax.yaxis.set_major_formatter = LatitudeFormatter
         gl.ylabel_style = {'size': 10, 'color': 'gray'}
@@ -217,20 +217,20 @@ def cartopy_plot(cast_lon,cast_lat,
 
     if args.region in ['BS']:
         bathy_sub = bathy.sel(latitude=slice(66,51),longitude=slice(-180,-152))
-    if args.region in ['GOA']:
+    elif args.region in ['GOA']:
         bathy_sub = bathy.sel(latitude=slice(60,51),longitude=slice(-160,-135))
-    if args.region in ['CK']:
-        bathy_sub = bathy.sel(latitude=slice(72,66),longitude=slice(-178,-155))
-    if args.region in ['AK']:
-        bathy_sub = bathy.sel(latitude=slice(73,50),longitude=slice(-180,-140))
+    elif args.region in ['CK']:
+        bathy_sub = bathy.sel(latitude=slice(76,66),longitude=slice(-178,-150))
+    elif args.region in ['AK']:
+        bathy_sub = bathy.sel(latitude=slice(76,50),longitude=slice(-180,-140))
     else:
         sys.exit("Region abrieviation not recognized.  See help (-h)")
 
 
     if args.labels:
-        projection=ccrs.PlateCarree()
+        projection=ccrs.Mercator()
     else:
-        projection=ccrs.LambertConformal(central_longitude=-160.0)
+        projection=ccrs.LambertConformal(central_longitude=-160.0,standard_parallels=(45,55))
 
     transformation=ccrs.PlateCarree()
 
@@ -254,6 +254,12 @@ def cartopy_plot(cast_lon,cast_lat,
                 colors=('#737373','#969696','#bdbdbd','#d9d9d9','#f0f0f0','#f8f8f8'), 
                 extend='both', alpha=.75,
                 transform=transformation)
+
+    cs = ax.contour(bathy_sub.longitude, bathy_sub.latitude, bathy_sub.topo, 
+                levels=[-1000, -200, -100, -70, -50,], 
+                colors='black', linewidths=0.2,
+                transform=transformation)
+    #plt.clabel(cs,fmt='%1.0f')
 
     #plot points
     ax.scatter(x_cast,y_cast,10,marker='+',color='r', 
@@ -291,8 +297,6 @@ def cartopy_plot(cast_lon,cast_lat,
     ax.coastlines(resolution='50m')
     ax.set_extent(extent)
 
-    DefaultSize = fig.get_size_inches()
-    fig.set_size_inches( (DefaultSize[0]*1.5, DefaultSize[1]*1.5) )
 
     if filetype in ['png']:
         plt.savefig('images/' + cruiseID + '/' + cruiseID + '_map.png', bbox_inches='tight', dpi = (300))
