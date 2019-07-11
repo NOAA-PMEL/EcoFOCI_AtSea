@@ -121,6 +121,9 @@ for ind,cast in enumerate(ctd_ncfiles):
     ncdata_coords=[ncdata.pop(x, '-9999') for x in ['time','time2','lat','lon']]
     df.close()
 
+    if 'depth' in vars_dic:
+        ncdata['dep'] = ncdata['depth']
+
     ### read paired nut file
     try:
         ncdata_nut = {}
@@ -167,8 +170,14 @@ for ind,cast in enumerate(ctd_ncfiles):
     cruise = args.CruiseID.lower()        
 
     #build complete dataframe from nuts to match to ctd
-    nut_df = pd.merge(pd.DataFrame.from_dict(ncdata),pd.DataFrame.from_dict(data_dic),
+    try:
+        nut_df = pd.merge(pd.DataFrame.from_dict(ncdata),pd.DataFrame.from_dict(data_dic),
                 how='outer',on=['dep'])
+    except:
+        print("Failed Merger - skip cast:ctd{}".format(global_atts['CAST']))
+        print("Copy CTD file to output dir")
+        copyfile(cast,args.output+cast.split('/')[-1])
+        continue
 
     if args.csv:
         nut_df.to_csv(args.output + nut_cast.replace('nut.nc','merged.csv'))
