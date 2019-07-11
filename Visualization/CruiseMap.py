@@ -220,7 +220,7 @@ def cartopy_plot(cast_lon,cast_lat,
     elif args.region in ['GOA']:
         bathy_sub = bathy.sel(latitude=slice(60,51),longitude=slice(-160,-135))
     elif args.region in ['CK']:
-        bathy_sub = bathy.sel(latitude=slice(76,66),longitude=slice(-178,-150))
+        bathy_sub = bathy.sel(latitude=slice(74,64),longitude=slice(-178,-150))
     elif args.region in ['AK']:
         bathy_sub = bathy.sel(latitude=slice(76,50),longitude=slice(-180,-140))
     else:
@@ -250,15 +250,16 @@ def cartopy_plot(cast_lon,cast_lat,
                                             facecolor='1.0')
 
     ax.contourf(bathy_sub.longitude, bathy_sub.latitude, bathy_sub.topo, 
-                levels=[-1000, -200, -100, -70, -50,], 
-                colors=('#737373','#969696','#bdbdbd','#d9d9d9','#f0f0f0','#f8f8f8'), 
+                levels=[-2000, -1000, -200, -100, -70, -50,], 
+                colors=('#000000','#737373','#969696','#bdbdbd','#d9d9d9','#f0f0f0','#f8f8f8'),  
                 extend='both', alpha=.75,
                 transform=transformation)
 
+    """
     cs = ax.contour(bathy_sub.longitude, bathy_sub.latitude, bathy_sub.topo, 
                 levels=[-1000, -200, -100, -70, -50,], 
                 colors='black', linewidths=0.2,
-                transform=transformation)
+                transform=transformation)"""
     #plt.clabel(cs,fmt='%1.0f')
 
     #plot points
