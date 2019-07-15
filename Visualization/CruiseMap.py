@@ -255,12 +255,12 @@ def cartopy_plot(cast_lon,cast_lat,
                 extend='both', alpha=.75,
                 transform=transformation)
 
-    """
     cs = ax.contour(bathy_sub.longitude, bathy_sub.latitude, bathy_sub.topo, 
-                levels=[-1000, -200, -100, -70, -50,], 
+                levels=[-2000, -1000, -200, -100, -70, -50,], 
                 colors='black', linewidths=0.2,
-                transform=transformation)"""
-    #plt.clabel(cs,fmt='%1.0f')
+                transform=transformation)
+
+    plt.clabel(cs,fmt='%1.0f')
 
     #plot points
     ax.scatter(x_cast,y_cast,10,marker='+',color='r', 
