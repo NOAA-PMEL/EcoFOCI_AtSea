@@ -12,18 +12,16 @@
  History
  =======
  
- 2019-06-07: Switch basemap for cartopy
- 2018-07-13: Make python3 compliant: WIP
+ 2019-06-07: Switch basemap for cartopy - deprecate basemap entirely
+ 2018-07-13: Make python3 compliant: WIP (COMPLETE)
  2016-09-09: Begin migration to classes for reused routines (db_io)
 
  Future
  ======
- Remove Basemap dependancy and replace with cartopy
- Full python 3.6 compatibility
 
  Compatibility:
  ==============
- python >=3.6 **Tested (with basemap)
+ python >=3.6 **Tested (with cartopy)
  python 2.7 (failed - may be due to conda issues)
 
 """
@@ -211,21 +209,44 @@ def cartopy_plot(cast_lon,cast_lat,
     """
     #using xarray for data read
 
+    if args.topo_res in ['etopo1']:
+        server_url = 'https://coastwatch.pfeg.noaa.gov/erddap/griddap/etopo360'
+        z_var_name = 'altitude'
+    elif args.topo_res in ['etopo5']:
+        server_url = 'https://upwell.pfeg.noaa.gov/erddap/griddap/etopo5'
+        z_var_name = 'ROSE'
+    elif args.topo_res in ['smith_sandwell']:
+        server_url = 'https://coastwatch.pfeg.noaa.gov/erddap/griddap/usgsCeSS111'
+        z_var_name = 'topo'
+    else:
+        sys.exit("Bad Bathymetry ID given")
 
-    server_url = 'https://coastwatch.pfeg.noaa.gov/erddap/griddap/usgsCeSS111'
     bathy = xa.open_dataset(server_url) 
 
-    if args.region in ['BS']:
-        bathy_sub = bathy.sel(latitude=slice(66,51),longitude=slice(-180,-152))
-    elif args.region in ['GOA']:
-        bathy_sub = bathy.sel(latitude=slice(60,51),longitude=slice(-160,-135))
-    elif args.region in ['CK']:
-        bathy_sub = bathy.sel(latitude=slice(74,64),longitude=slice(-178,-150))
-    elif args.region in ['AK']:
-        bathy_sub = bathy.sel(latitude=slice(76,50),longitude=slice(-180,-140))
+    if args.topo_res in ['smith_sandwell']:
+        if args.region in ['BS']:
+            bathy_sub = bathy.sel(latitude=slice(66,51),longitude=slice(-180,-152))
+        elif args.region in ['GOA']:
+            bathy_sub = bathy.sel(latitude=slice(60,51),longitude=slice(-160,-135))
+        elif args.region in ['CK']:
+            bathy_sub = bathy.sel(latitude=slice(74,64),longitude=slice(-178,-150))
+        elif args.region in ['AK']:
+            bathy_sub = bathy.sel(latitude=slice(76,50),longitude=slice(-180,-140))
+        else:
+            sys.exit("Region abrieviation not recognized.  See help (-h)")
+    elif args.topo_res in ['etopo1','etopo5']:
+        if args.region in ['BS']:
+            bathy_sub = bathy.sel(latitude=slice(51,66),longitude=slice(180,208))
+        elif args.region in ['GOA']:
+            bathy_sub = bathy.sel(latitude=slice(51,66),longitude=slice(200,235))
+        elif args.region in ['CK']:
+            bathy_sub = bathy.sel(latitude=slice(64,74),longitude=slice(182,210))
+        elif args.region in ['AK']:
+            bathy_sub = bathy.sel(latitude=slice(50,76),longitude=slice(180,220))
+        else:
+            sys.exit("Region abrieviation not recognized.  See help (-h)")
     else:
-        sys.exit("Region abrieviation not recognized.  See help (-h)")
-
+        bathy_sub = bathy
 
     if args.labels:
         projection=ccrs.Mercator()
@@ -249,13 +270,13 @@ def cartopy_plot(cast_lon,cast_lat,
                                             edgecolor='face',
                                             facecolor='1.0')
 
-    ax.contourf(bathy_sub.longitude, bathy_sub.latitude, bathy_sub.topo, 
+    ax.contourf(bathy_sub.longitude, bathy_sub.latitude, bathy_sub[z_var_name], 
                 levels=[-2000, -1000, -200, -100, -70, -50,], 
                 colors=('#000000','#737373','#969696','#bdbdbd','#d9d9d9','#f0f0f0','#f8f8f8'),  
                 extend='both', alpha=.75,
                 transform=transformation)
 
-    cs = ax.contour(bathy_sub.longitude, bathy_sub.latitude, bathy_sub.topo, 
+    cs = ax.contour(bathy_sub.longitude, bathy_sub.latitude, bathy_sub[z_var_name], 
                 levels=[-2000, -1000, -200, -100, -70, -50,], 
                 colors='black', linewidths=0.2,
                 transform=transformation)
@@ -418,6 +439,8 @@ parser.add_argument("-geojson",'--geojson', action="store_true", help=('Make Geo
 parser.add_argument("-csv",'--csv', action="store_true", help=('Output .csv file') )
 parser.add_argument("-host",'--host', type=str, default='localhost', help=('local or pavlof') )
 parser.add_argument("-reg",'--region', type=str, default='BS',help='BS,GOA,CK,AK')
+parser.add_argument("-topo_res",'--topo_res', type=str, 
+                    default='etopo1',help='etopo1,smith_sandwell,etop5(not available yet)')
 parser.add_argument("-labels",'--labels', action="store_true", help='turn on lat/lon labels')
 ####
 # Data of interest resides in multiple databases on Pavlof
