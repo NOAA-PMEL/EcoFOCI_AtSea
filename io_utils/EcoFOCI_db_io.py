@@ -16,7 +16,7 @@
 
 """
 
-import pymysql
+import mysql.connector
 import ConfigParserLocal 
 import datetime
 
@@ -42,7 +42,7 @@ class EcoFOCI_db_Moorings(object):
 		"""
 		self.db_config = ConfigParserLocal.get_config(db_config_file)
 		try:
-		    self.db = pymysql.connect(self.db_config['host'], 
+		    self.db = mysql.connector.connect(self.db_config['host'], 
 		    						  self.db_config['user'],
 		    						  self.db_config['password'], 
 		    						  self.db_config['database'], 
@@ -51,7 +51,7 @@ class EcoFOCI_db_Moorings(object):
 		    print "db error"
 		    
 		# prepare a cursor object using cursor() method
-		self.cursor = self.db.cursor(pymysql.cursors.DictCursor)
+		self.cursor = self.db.cursor(mysql.connector.cursors.DictCursor)
 		return(self.db,self.cursor)
 
 	def manual_connect_to_DB(self, host='localhost', user='viewer', 
@@ -79,7 +79,7 @@ class EcoFOCI_db_Moorings(object):
 		self.db_config['port'] = port
 
 		try:
-		    self.db = pymysql.connect(self.db_config['host'], 
+		    self.db = mysql.connector.connect(self.db_config['host'], 
 		    						  self.db_config['user'],
 		    						  self.db_config['password'], 
 		    						  self.db_config['database'], 
@@ -88,7 +88,7 @@ class EcoFOCI_db_Moorings(object):
 		    print "db error"
 		    
 		# prepare a cursor object using cursor() method
-		self.cursor = self.db.cursor(pymysql.cursors.DictCursor)
+		self.cursor = self.db.cursor(mysql.connector.cursors.DictCursor)
 		return(self.db,self.cursor)
 
 	def read_mooring(self, table=None, MooringID=None, verbose=False):
@@ -136,7 +136,7 @@ class EcoFOCI_db_Cruises(object):
 		"""
 		self.db_config = ConfigParserLocal.get_config(db_config_file)
 		try:
-		    self.db = pymysql.connect(self.db_config['host'], 
+		    self.db = mysql.connector.connect(self.db_config['host'], 
 		    						  self.db_config['user'],
 		    						  self.db_config['password'], 
 		    						  self.db_config['database'], 
@@ -145,7 +145,7 @@ class EcoFOCI_db_Cruises(object):
 		    print "db error"
 		    
 		# prepare a cursor object using cursor() method
-		self.cursor = self.db.cursor(pymysql.cursors.DictCursor)
+		self.cursor = self.db.cursor(mysql.connector.cursors.DictCursor)
 		return(self.db,self.cursor)
 
 	def manual_connect_to_DB(self, host='localhost', user='viewer', 
@@ -173,7 +173,7 @@ class EcoFOCI_db_Cruises(object):
 		self.db_config['port'] = port
 
 		try:
-		    self.db = pymysql.connect(self.db_config['host'], 
+		    self.db = mysql.connector.connect(self.db_config['host'], 
 		    						  self.db_config['user'],
 		    						  self.db_config['password'], 
 		    						  self.db_config['database'], 
@@ -182,7 +182,7 @@ class EcoFOCI_db_Cruises(object):
 		    print "db error"
 		    
 		# prepare a cursor object using cursor() method
-		self.cursor = self.db.cursor(pymysql.cursors.DictCursor)
+		self.cursor = self.db.cursor(mysql.connector.cursors.DictCursor)
 		return(self.db,self.cursor)
 
 	def read_cruisecastlogs(self, table=None, verbose=False, **kwargs):
