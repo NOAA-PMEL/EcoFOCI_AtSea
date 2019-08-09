@@ -301,7 +301,7 @@ for ncfile in sorted(nc_path):
                           lat=lat_data,
                           lon=lon_data)
 
-        plt = CTDplot.change_range(plt=plt,ylim=[0,100])
+        #plt = CTDplot.change_range(plt=plt,ylim=[0,100])
 
         t = fig.suptitle(ptitle)
         t.set_y(1.06)

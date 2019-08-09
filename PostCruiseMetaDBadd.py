@@ -36,7 +36,7 @@ import datetime
 import os, socket
 
 #DB Stack
-import pymysql
+import mysql.connector
 
 #Science Stack
 from netCDF4 import Dataset
@@ -55,18 +55,50 @@ __status__   = "Development"
 __keywords__ = 'CTD', 'MetaInformation', 'Cruise', 'MySQL'
 
 """--------------------------------SQL Init----------------------------------------"""
+class NumpyMySQLConverter(mysql.connector.conversion.MySQLConverter):
+    """ A mysql.connector Converter that handles Numpy types """
 
-def connect_to_DB(host, user, password, database, port):
+    def _float32_to_mysql(self, value):
+        if np.isnan(value):
+            return None
+        return float(value)
+
+    def _float64_to_mysql(self, value):
+        if np.isnan(value):
+            return None
+        return float(value)
+
+    def _int32_to_mysql(self, value):
+        if np.isnan(value):
+            return None
+        return int(value)
+
+    def _int64_to_mysql(self, value):
+        if np.isnan(value):
+            return None
+        return int(value)
+
+def connect_to_DB(**kwargs):
     # Open database connection
     try:
-        db = pymysql.connect(host, user, password, database, port)
-    except:
-        print("db error")
-        
+        db = mysql.connector.connect(use_pure=True,**kwargs)
+    except mysql.connector.Error as err:
+      """
+      if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+        print("Something is wrong with your user name or password")
+      elif err.errno == errorcode.ER_BAD_DB_ERROR:
+        print("Database does not exist")
+      else:
+        print(err)
+      """
+      print("error - will robinson")
+      
+    db.set_converter_class(NumpyMySQLConverter)
+
     # prepare a cursor object using cursor() method
-    cursor = db.cursor(pymysql.cursors.DictCursor)
-    return(db,cursor)    
-    
+    cursor = db.cursor(dictionary=True)
+    prepcursor = db.cursor(prepared=True)
+    return(db,cursor)
 
 def close_DB(db):
     # disconnect from server
@@ -75,7 +107,7 @@ def close_DB(db):
 def read_data(db, cursor, table, cruiseID, legNO=''):
     """Currently returns all entries from selected table for selected cruise"""
     
-    sql = "SELECT * from `%s` WHERE `cruiseID`='%s' and `Project_Leg`='%s'" % (table, cruiseID, legNO)
+    sql = "SELECT * from `%s` WHERE `uniquecruiseID`='%s'" % (table, cruiseID)
 
     print(sql)
     
@@ -112,9 +144,13 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server='pavlof'):
     print("Host is {host}".format(host=host))
 
     print(db_config['systems'][host]['port'])
-    (db,cursor) = connect_to_DB(db_config['systems'][host]['host'], 
-        db_config['login']['user'], db_config['login']['password'], 
-        db_config['database']['database'], db_config['systems'][host]['port'])
+
+    (db,cursor) = connect_to_DB(host=db_config['systems'][host]['host'], 
+                                user=db_config['login']['user'], 
+                                password=db_config['login']['password'], 
+                                database=db_config['database']['database'], 
+                                port=db_config['systems'][host]['port'])
+
     data = read_data(db, cursor, table, cruiseID)
     close_DB(db)
 
