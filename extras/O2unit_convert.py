@@ -40,7 +40,7 @@ import seawater as sw
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'
 __created__  = datetime.datetime(2014, 10, 30)
-__modified__ = datetime.datetime(2017, 03, 23)
+__modified__ = datetime.datetime(2017, 3, 23)
 __version__  = "0.1.0"
 __status__   = "Development"
 __keywords__ = 'CTD', 'SeaWater', 'Cruise', 'derivations'
@@ -65,16 +65,16 @@ parser.add_argument('-s','--secondary', action="store_true",
                help='secondary instruments')                  
 args = parser.parse_args()
 
-df = pd.read_excel(args.DataPath, sheetname=args.sheetname)
+df = pd.read_excel(args.DataPath, sheet_name=args.sheetname)
 
-print "umol/l to umol/kg \n"
+print("umol/l to umol/kg \n")
 for i in df.index:
     if args.primary:
         print(O2_conv(S=df.Sal00[i],T=df.T090C[i],P=df.PrDM[i],O2conc=df['O2 (uM/l)'][i]))
     if args.secondary:
         print(O2_conv(S=df.Sal11[i],T=df.T190C[i],P=df.PrDM[i],O2conc=df['O2 (uM/l)'][i]))
         
-print "sigma-t"
+print("sigma-t")
 for i in df.index:
     if args.primary:
         print(sw.eos80.dens(s=df.Sal00[i],t=df.T090C[i])-1000.)
