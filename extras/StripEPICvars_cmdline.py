@@ -25,68 +25,91 @@ python 2.7
 
 """
 
-#System Stack
+# System Stack
 import datetime
 import shutil
 import os
 import argparse
 
 
-__author__   = 'Shaun Bell'
-__email__    = 'shaun.bell@noaa.gov'
-__created__  = datetime.datetime(2014, 5, 22)
+__author__ = "Shaun Bell"
+__email__ = "shaun.bell@noaa.gov"
+__created__ = datetime.datetime(2014, 5, 22)
 __modified__ = datetime.datetime(2019, 2, 12)
-__version__  = "0.1.1"
-__status__   = "Development"
-__keywords__ = 'CTD', 'MetaInformation', 'Cruise', 'MySQL'
+__version__ = "0.1.1"
+__status__ = "Development"
+__keywords__ = "CTD", "MetaInformation", "Cruise", "MySQL"
 
-    
+
 """------------------------------------- System ---------------------------------------"""
+
 
 def createDir(path):
     if not os.path.exists(path):
-        os.makedirs(path)    
-    
+        os.makedirs(path)
+
+
 """------------------------------------- EPIC Strip -----------------------------------"""
+
 
 def StripEPIC(user_in, user_out, keep_vars):
 
-    cruiseID = user_in.split('/')[-2]
-    leg = cruiseID.lower().split('L')
+    cruiseID = user_in.split("/")[-2]
+    leg = cruiseID.lower().split("L")
     if len(leg) == 1:
         cruiseID = leg[0]
-        leg = ''
+        leg = ""
     else:
-        cruiseID = leg[0] + 'L' + leg[-1]
+        cruiseID = leg[0] + "L" + leg[-1]
 
     keep_vars = keep_vars
-    
-    #epic flavored nc files
+
+    # epic flavored nc files
     nc_path = user_out
-    nc_path = [nc_path + fi for fi in os.listdir(nc_path) if fi.endswith('.nc')]
+    nc_path = [nc_path + fi for fi in os.listdir(nc_path) if fi.endswith(".nc")]
 
     print(user_in, user_out)
     nocopy_flag = 0
-    if os.path.exists("/".join(nc_path[0].split('/')[:-1])+'/allparameters/'):
-        print("Originals have already been copied... not adding current dir to orig directory")
+    if os.path.exists("/".join(nc_path[0].split("/")[:-1]) + "/allparameters/"):
+        print(
+            "Originals have already been copied... not adding current dir to orig directory"
+        )
         nocopy_flag = 1
-    
-    createDir("/".join(nc_path[0].split('/')[:-1])+'/allparameters/')
+
+    createDir("/".join(nc_path[0].split("/")[:-1]) + "/allparameters/")
 
     for ncfile in nc_path:
         print("Working on {ncfile}".format(ncfile=ncfile))
         if nocopy_flag == 0:
-            shutil.copy (ncfile, "/".join(ncfile.split('/')[:-1])+'/allparameters/'+ncfile.split('/')[-1])
+            shutil.copy(
+                ncfile,
+                "/".join(ncfile.split("/")[:-1])
+                + "/allparameters/"
+                + ncfile.split("/")[-1],
+            )
 
-        os.system("nccopy -V "+ ",".join(keep_vars) + " " + "/".join(ncfile.split('/')[:-1])+'/allparameters/'+ncfile.split('/')[-1] + " " + ncfile)
-    
+        os.system(
+            "nccopy -V "
+            + ",".join(keep_vars)
+            + " "
+            + "/".join(ncfile.split("/")[:-1])
+            + "/allparameters/"
+            + ncfile.split("/")[-1]
+            + " "
+            + ncfile
+        )
+
     processing_complete = True
     return processing_complete
+
+
 """------------------------------------- Main Routine -----------------------------------------"""
 
-parser = argparse.ArgumentParser(description='Maintain only specified EPIC keys')
-parser.add_argument('inputpath', metavar='inputpath', type=str, help='path to .nc file')
-parser.add_argument('--EPIC_Keys', nargs='+', type=str, help='EPIC Keys to keep seperated by spaces')
+parser = argparse.ArgumentParser(description="Maintain only specified EPIC keys")
+parser.add_argument("inputpath", metavar="inputpath", type=str, help="path to .nc file")
+parser.add_argument(
+    "--EPIC_Keys", nargs="+", type=str, help="EPIC Keys to keep seperated by spaces"
+)
 
 args = parser.parse_args()
 

@@ -11,16 +11,23 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -80,7 +87,9 @@ class Ui_MainWindow(object):
         self.presscomboBox.addItem(_fromUtf8(""))
         self.presscomboBox.addItem(_fromUtf8(""))
         self.verticalLayout_2.addWidget(self.presscomboBox)
-        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        spacerItem = QtGui.QSpacerItem(
+            40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum
+        )
         self.verticalLayout_2.addItem(spacerItem)
         self.IPHCcheckBox = QtGui.QCheckBox(self.widget)
         self.IPHCcheckBox.setObjectName(_fromUtf8("IPHCcheckBox"))
@@ -92,11 +101,17 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
-        self.btlSummaryButton.setText(_translate("MainWindow", "Generate Bottle Summary", None))
+        self.btlSummaryButton.setText(
+            _translate("MainWindow", "Generate Bottle Summary", None)
+        )
         self.exitButton.setText(_translate("MainWindow", "Exit", None))
         self.processButton.setText(_translate("MainWindow", "Process Files", None))
-        self.addMetaButton.setText(_translate("MainWindow", "Add Cruise Meta Data", None))
-        self.inputButton.setText(_translate("MainWindow", "Select Cruise Directory", None))
+        self.addMetaButton.setText(
+            _translate("MainWindow", "Add Cruise Meta Data", None)
+        )
+        self.inputButton.setText(
+            _translate("MainWindow", "Select Cruise Directory", None)
+        )
         self.label_2.setText(_translate("MainWindow", "Choose Input Directory", None))
         self.label.setText(_translate("MainWindow", "Choose Output Directory", None))
         self.label_3.setText(_translate("MainWindow", ".cnv press label", None))
@@ -105,4 +120,3 @@ class Ui_MainWindow(object):
         self.presscomboBox.setItemText(2, _translate("MainWindow", "prdm", None))
         self.presscomboBox.setItemText(3, _translate("MainWindow", "prSM", None))
         self.IPHCcheckBox.setText(_translate("MainWindow", "is IPHC", None))
-
