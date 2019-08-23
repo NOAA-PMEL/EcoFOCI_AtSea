@@ -130,7 +130,7 @@ for i, cast in enumerate(gb.groups):
         data_dic.update({"dep": tdata["PrSM"].values})
 
     # using config file, build datadic by looping through each variable and using
-    #'sbe_label'
+    # 'sbe_label'
     for key in EPIC_VARS_dict.keys():
         if EPIC_VARS_dict[key]["sbe_label"]:
             try:
