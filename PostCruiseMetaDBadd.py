@@ -226,7 +226,7 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server="pavlof"):
                 or (ncfid.variables["lat"][:] >= 1e35)
                 or np.isnan(ncfid.variables["lat"][:])
             ):
-                print("updating location")
+                print("filling missing location")
                 ncfid.variables["lat"][:] = (
                     castmeta["LatitudeDeg"] + castmeta["LatitudeMin"] / 60.0
                 )
@@ -234,9 +234,13 @@ def AddMeta_fromDB(user_in, user_out, cruiseID, server="pavlof"):
                     castmeta["LongitudeDeg"] + castmeta["LongitudeMin"] / 60.0
                 )
             else:
-                print("I failed to update the lat/lon!!!\nexisting values are:")
-                print(ncfid.variables["lat"][:])
-                print(ncfid.variables["lon"][:])
+                print("updating location")
+                ncfid.variables["lat"][:] = (
+                    castmeta["LatitudeDeg"] + castmeta["LatitudeMin"] / 60.0
+                )
+                ncfid.variables["lon"][:] = (
+                    castmeta["LongitudeDeg"] + castmeta["LongitudeMin"] / 60.0
+                )
         except:
             print("Couldn't update locations")
 
