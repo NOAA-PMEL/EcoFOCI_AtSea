@@ -12,6 +12,7 @@ Used for discreet oxygen samples from Mordy
 History:
 =======
 
+202-01-03 S.Bell: AGAIN CORRECTED.  Sigma-T by definition is standard atmos pressure so dens0
 2018-04-25 S.Bell: CORRECTED.  Use dens insted of pden and dens0 for general corrections.
     (should be pretty small correction). (maybe potential density is more appropiate but I
     can't find the reference)
@@ -89,6 +90,6 @@ for i in df.index:
 print("sigma-t")
 for i in df.index:
     if args.primary:
-        print(sw.eos80.dens(s=df.Sal00[i], t=df.T090C[i]) - 1000.0)
+        print(sw.eos80.dens0(s=df.Sal00[i], t=df.T090C[i]) - 1000.0)
     if args.secondary:
-        print(sw.eos80.dens(s=df.Sal11[i], t=df.T190C[i]) - 1000.0)
+        print(sw.eos80.dens0(s=df.Sal11[i], t=df.T190C[i]) - 1000.0)
