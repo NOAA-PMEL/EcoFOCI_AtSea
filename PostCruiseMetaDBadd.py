@@ -141,14 +141,14 @@ def read_data(db, cursor, table, cruiseID, legNO=""):
 """------------------------------------- Main -----------------------------------------"""
 
 
-def AddMeta_fromDB(user_in, user_out, cruiseID, server="pavlof"):
+def AddMeta_fromDB(user_in, user_out, cruiseID, server="akutan"):
 
     table = "cruisecastlogs"
     db_config = ConfigParserLocal.get_config(
         "../EcoFOCI_Config/EcoFOCI_AtSea/db_config_cruises.yaml", "yaml"
     )
-    if server == "pavlof":
-        host = "pavlof"
+    if server == "akutan":
+        host = "akutan"
     else:
         host = "localhost"
 
