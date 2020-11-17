@@ -144,6 +144,9 @@ for ind, cast in enumerate(ctd_ncfiles):
         print("No matched Nutrient Data from cast:ctd{}".format(global_atts["CAST"]))
         print("Copy CTD file to output dir")
         copyfile(cast, args.output + cast.split("/")[-1])
+        if args.csv:
+            nc_only = pd.DataFrame.from_dict(ncdata)
+            nc_only.to_csv(args.output + nut_cast.replace("nut.nc", "ctd.csv"))
         continue
 
     data_dic = {}
@@ -187,6 +190,9 @@ for ind, cast in enumerate(ctd_ncfiles):
         print("Failed Merger - skip cast:ctd{}".format(global_atts["CAST"]))
         print("Copy CTD file to output dir")
         copyfile(cast, args.output + cast.split("/")[-1])
+        if args.csv:
+            nc_only = pd.DataFrame.from_dict(ncdata)
+            nc_only.to_csv(args.output + nut_cast.replace("nut.nc", "mergefailed.csv"))
         continue
 
     if args.csv:
