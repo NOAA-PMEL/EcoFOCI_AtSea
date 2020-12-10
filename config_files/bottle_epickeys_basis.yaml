@@ -3,9 +3,9 @@ Tr_904:
   name: Tr
   generic_name: trans
   EPIC_KEY: 904
-  units: '%'
+  units: "%"
   longname: Transmissometry (CTD)
-  sbe_label: 
+  sbe_label:
 Trb_980:
   name: Trb
   generic_name: turb
@@ -52,7 +52,7 @@ OST_62:
   name: OST
   generic_name: ox
   EPIC_KEY: 62
-  units: '%'
+  units: "%"
   longname: OXYGEN %SAT
 O_65:
   name: O
@@ -70,7 +70,7 @@ BTL_103:
   name: BTL
   generic_name: btl
   EPIC_KEY: 103
-  units: 
+  units:
   longname: NISKIN BOTTLE NUMBER
 PAR_905:
   name: PAR
@@ -88,7 +88,7 @@ CTDOST_4220:
   name: CTDOST
   generic_name: ox
   EPIC_KEY: 4220
-  units: '%'
+  units: "%"
   longname: OXYGEN %SAT
 ST_70:
   name: ST

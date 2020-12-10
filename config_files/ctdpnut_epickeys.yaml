@@ -103,14 +103,7 @@ STH_71:
   EPIC_KEY: 71
   units: kg m-3
   longname: SIGMA-THETA (KG/M**3)
-  sbe_label:  
-Trb_980:
-  name: Trb
-  generic_name: turb
-  EPIC_KEY: 980
-  units: FNU
-  longname: Turbidity(FNU)
-  sbe_label:  
+  sbe_label:   
 NH4_189: 
   name: NH4
   generic_name: NH4
@@ -123,12 +116,6 @@ NO3_182:
   EPIC_KEY: 182
   units: uM/l
   longname: 'NITRATE (micromoles/l)'
-BTL_103: 
-  name: BTL
-  generic_name: BTL
-  EPIC_KEY: 103
-  units: ''
-  longname: 'NISKIN BOTTLE NUMBER'
 SI_188: 
   name: SI
   generic_name: SI

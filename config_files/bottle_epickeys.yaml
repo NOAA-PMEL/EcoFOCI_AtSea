@@ -45,7 +45,7 @@ OST_62:
   name: OST
   generic_name: ox
   EPIC_KEY: 62
-  units: '%'
+  units: "%"
   longname: OXYGEN %SAT
   sbe_label: Sbeox0PS
 O_65:
@@ -66,7 +66,7 @@ BTL_103:
   name: BTL
   generic_name: btl
   EPIC_KEY: 103
-  units: ''
+  units: ""
   longname: NISKIN BOTTLE NUMBER
   sbe_label: nb
 PAR_905:
@@ -87,7 +87,7 @@ CTDOST_4220:
   name: CTDOST
   generic_name: ox
   EPIC_KEY: 4220
-  units: '%'
+  units: "%"
   longname: OXYGEN %SAT
   sbe_label: Sbeox1PS
 ST_70:
@@ -103,18 +103,18 @@ STH_71:
   EPIC_KEY: 71
   units: kg m-3
   longname: SIGMA-THETA (KG/M**3)
-  sbe_label: 
+  sbe_label:
 Tr_904:
   name: Tr
   generic_name: trans
   EPIC_KEY: 904
-  units: '%'
+  units: "%"
   longname: Transmissometry (CTD)
-  sbe_label: CStarTr0 
+  sbe_label: CStarTr0
 ATTN_55:
   name: ATTN
   generic_name: ATTN
   EPIC_KEY: 955
-  units: 'm-1'
-  longname: ATTENUATION 
-  sbe_label: CStarAt0 
+  units: "m-1"
+  longname: ATTENUATION
+  sbe_label: CStarAt0

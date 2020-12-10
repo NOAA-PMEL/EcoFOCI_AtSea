@@ -2,22 +2,22 @@
 BTL_PSAL:
   standard_name: sea_water_salinity
   units: psu
-  long_name: 'Bottle Sampled Salinity from Autosal'
+  long_name: "Bottle Sampled Salinity from Autosal"
 BTL_PSAL_QC:
-  standard_name: ''
-  units: ''
-  long_name: 'QC Bottle Sampled Salinity from Autosal'
+  standard_name: ""
+  units: ""
+  long_name: "QC Bottle Sampled Salinity from Autosal"
   _FillValue: 0
   flag_values: "0,1,2,3,4,5,6,7,8,9"
   flag_meanings: >
-          no_qc_performed good_data probably_good_data 
-          bad_data_that_are_potentially_correctable bad_data value_changed 
-          not_used nominal_value interpolated_value missing_value" 
+    no_qc_performed good_data probably_good_data 
+    bad_data_that_are_potentially_correctable bad_data value_changed 
+    not_used nominal_value interpolated_value missing_value"
 BTLID:
-  standard_name: ''
-  units: ''
-  long_name: 'Bottle fire sequence (Niskin Rosette Position)'
+  standard_name: ""
+  units: ""
+  long_name: "Bottle fire sequence (Niskin Rosette Position)"
 Global_Attributes:
-  conventions: ['ACDD-1.3','COARDS','CF-1.7']
-  standard_name_vocabulary: 'CF Standard Name Table v55'
-  institution: 'NOAA/PMEL - EcoFOCI'
+  conventions: ["ACDD-1.3", "COARDS", "CF-1.7"]
+  standard_name_vocabulary: "CF Standard Name Table v55"
+  institution: "NOAA/PMEL - EcoFOCI"
