@@ -1,41 +1,36 @@
-Nutrient Archive Readme
-=======================
+# Nutrient Archive Readme
 
-Author: S.Bell - shaun.bell (at) noaa.gov
+Author: S. Bell - shaun.bell (at) noaa.gov
 Program: EcoFOCI
 Initial Document Date: 2018-07-25
 
-Purpose:   
---------
+## Purpose:   
+
 This document provides guidance and steps to creating archival nutrient data from CTD profiles for EcoFOCI.  It also provides guidance for creating a "merged" CTD + Nutrient data file for usage and analysis from two independantly archived files (CTD data and Nutrient data).
 
-
-Software:
----------
+## Software:
 
 * python 
-	- 3.6 or greater **tested**
-	- 2.7 (probably work, but untested)
+  + 3.6 or greater **tested**
+  + 2.7 (probably work, but untested)
+
 Routines are written in python and tested for 3.6 or greater but may work on version 2.7.  Limited energy will be spent to maintaining 2.7 compatability as it is to be EOL by 2020
 
 * expected that an conda python environment exists.  If using the EcoFOCI server 'pavlof' then you will need to activate the proper environment `source activate py36` or `conda activate py36`.  If using the EcoFOCI server 'akutan' python-3 is the default conda environment.
 
+## Data:
 
-Data:
------
-
-Raw ascii nutrient data as processed/QC'd by E.Wisegarver
+Raw ascii nutrient data as processed/QC'd by E. Wisegarver
 
 Data is expected to be of the format:   
 
-```
+``` 
 cast	niskin	PO4 (uM)	Sil (uM)	NO3 (uM)	NO2 (uM)	NH4 (uM)
 39	1	1.930	31.2	11.2	0.71	7.61
 39	2	1.938	31.5	11.2	0.72	7.78
 39	3	1.936	31.3	11.0	0.75	7.74
 39	4	1.936	31.0	11.0	0.77	7.80
 39	5	1.932	33.2	11.0	0.77	7.65
-
 
 ```
 
@@ -45,15 +40,14 @@ and in order to match niskin and cast information, the *.report_btl file must be
 
 The report file is expected to have the format:
 
-```
+``` 
 cast    date    time    nb  Sal00   Sal11   Sbeox0Mm/Kg Sbeox0PS    Sbeox1Mm/Kg Sbeox1PS    Sigma-t00   PrDM    T090C   C0mS/cm T190C   C1mS/cm Sbeox0V Sbeox1V FlECO-AFLTurbWETntu0
 ctd036  07-Sep-2016 23:31:06    1   32.3731 32.3750 195.671 62.770  193.262 61.997  25.5671 102.266 5.2335  31.423602   5.2347  31.426318   1.8575  1.6237  0.0451  0.5544
 ```
 
-Beyond the cast,date,time,nb parameters, no other variables matter as the archive nutrient data will only have the depth info and nutrient info.
+Beyond the cast, date, time, nb parameters, no other variables matter as the archive nutrient data will only have the depth info and nutrient info.
 
 Currently CTD data is processed and archived as ctd/\*.nc files and upcast bottle data as btl/\*.nc and both are generated during CTD processing.
-
 
 ### Conversion to Archive format
 
@@ -62,7 +56,8 @@ The archive format for EcoFOCI is netcdf.  Currently the flavor of this has been
 The python routine to do this conversion is `Nut_ncgen.py`
 
 The usage is: 
-```
+
+``` 
 usage: Nut_ncgen.py [-h] CruiseID btlpath nutpath output config_file_name
 
 Merge and archive nutrient csv data and bottle data
@@ -81,7 +76,8 @@ optional arguments:
 and it can be found in the root `README.md` documentation.
 
 Long example of usage:   
-```
+
+``` 
 python Nut_ncgen.py DY1707 /full-path-to/dy1707l1.report_btl 
  /full-path-to/DY1707\ Nutrient\ Data.csv 
  /full-path-to/working/ /full-path-to/config_files/nut_uml_epickeys.yaml
@@ -92,7 +88,8 @@ the `nut_uml_epickeys.yaml` is the file that spells out all of the netcdf metain
 A CF compliant file exists but is being held until 2018 processing (2019) as QC flags still need to be determined.
 
 Content looks as follows: 
-```
+
+``` 
 ---
 NH4_189: 
   name: NH4
@@ -134,8 +131,7 @@ NO2_184:
 
 the user will now have a folder of \*.nc files which can be archived in the {cruise}/final_data/nut/ directory (create it if it doesnt exist and change permissions to 775)
 
-***Creating btl netcdf files uses exactly the same process except the program is `BTL_ncgen.py`***
-
+***Creating btl netcdf files uses exactly the same process except the program is `BTL_ncgen.py` ***
 
 **TODO** Document how to add cruise meta-information to files
 
@@ -146,7 +142,8 @@ Merged files take the existing netcdf ctd data and collocate nutrients at the di
 The python routine to do this is called `CTDpNUT_ncgen.py`
 
 The usage is:
-```
+
+``` 
 positional arguments:
   CruiseID          provide the cruiseid
   ctd_ncpath        ctd netcdf directory
@@ -163,7 +160,8 @@ optional arguments:
 This functions more or less the same as the nut and btl creation routines.  The exceptions are that you only need to pass the directory of the netcd ctd and nut files (it will find and combine the same cast numbers) and that the config_file needs to have all the parameters you wish to have in a merged file.  This may just be the combination of the ctd config file and the nutrient config file.  Finally, a csv option is provided as netcdf files may not be useful to the researcher using combined files
 
 an example of the config file is as follows:
-```
+
+``` 
 ---
 Trb_980:
   name: Trb
@@ -318,7 +316,6 @@ NO2_184:
 input and output variable names must be the same (thats the unindented names in the structure above)
 the `sbe_label` tag is only relevant for making the btl and ctd files from sbe files and can be ignored here.
 
-Document History:
------------------
+## Document History:
 
 V1 - 2018-07-25 - Document Creation
