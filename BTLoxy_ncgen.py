@@ -31,35 +31,19 @@
  python 2.7 
 
 """
-import io_utils.EcoFOCI_netCDF_write as EcF_write
-from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
-import io_utils.ConfigParserLocal as ConfigParserLocal
-import pandas as pd
-import numpy as np
-from netCDF4 import Dataset
-import sys
+
 import argparse
 import datetime
+import sys
 import warnings
 
-# remove the numpy/pandas/cython warnings
-warnings.filterwarnings(action="ignore", message="numpy.dtype size changed,")
-
-# System Stack
-import datetime
-import argparse
-import sys
-
-# Science Stack
-from netCDF4 import Dataset
 import numpy as np
 import pandas as pd
+from netCDF4 import Dataset
 
-# User Packages
 import io_utils.ConfigParserLocal as ConfigParserLocal
-from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
 import io_utils.EcoFOCI_netCDF_write as EcF_write
-
+from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"

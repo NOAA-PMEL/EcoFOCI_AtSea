@@ -34,24 +34,20 @@
 
 from __future__ import absolute_import, division, print_function
 
-# System Stack
-import datetime
 import argparse
-import sys
+import datetime
 import os
+import sys
 from shutil import copyfile
 
-# Science Stack
-from netCDF4 import Dataset
 import numpy as np
 import pandas as pd
+from netCDF4 import Dataset
 
-# User Packages
 import io_utils.ConfigParserLocal as ConfigParserLocal
-from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
 import io_utils.EcoFOCI_netCDF_write as EcF_write
+from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
 from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF
-
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"

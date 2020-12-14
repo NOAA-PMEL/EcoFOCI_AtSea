@@ -18,14 +18,12 @@ History:
 
 """
 
-#System Stack
-import datetime
 import argparse
+import datetime
 import os
 
-#Science Stack
-from netCDF4 import Dataset
 import numpy as np
+from netCDF4 import Dataset
 
 #User Stack
 from calc.EPIC2Datetime import EPIC2Datetime

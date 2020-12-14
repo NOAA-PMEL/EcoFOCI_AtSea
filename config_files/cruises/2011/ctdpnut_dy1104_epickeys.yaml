@@ -103,12 +103,6 @@ NO3_182:
   EPIC_KEY: 182
   units: uM/l
   longname: 'NITRATE (micromoles/l)'
-BTL_103: 
-  name: BTL
-  generic_name: BTL
-  EPIC_KEY: 103
-  units: ''
-  longname: 'NISKIN BOTTLE NUMBER'
 SI_188: 
   name: SI
   generic_name: SI
