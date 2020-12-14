@@ -17,7 +17,7 @@ History:
 
  Compatibility:
  ==============
- python >=3.6 **tested**
+ python >=3.8 **tested**
  python 2.7 - not supported 
 
 
@@ -25,11 +25,11 @@ History:
 
 import sys
 
-# must be python 3.6 or greater
+# must be python 3.8 or greater
 try:
-    assert sys.version_info >= (3, 6)
+    assert sys.version_info >= (3, 8)
 except AssertionError:
-    sys.exit("Must be running python 3.6 or greater")
+    sys.exit("Must be running python 3.8 or greater")
 
 # System Stack
 import datetime
