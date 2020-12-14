@@ -1,0 +1,10 @@
+  - package-ecosystem: "pip"
+    # Look for `requirements.txt` in the `root` directory
+    directory: "/"
+    # Check for updates once weekly
+    schedule:
+      interval: "daily"
+      ignore:
+      # Ignore updates to packages that start 'aws'
+      # Wildcards match zero or more arbitrary characters
+      - dependency-name: "flask*"
