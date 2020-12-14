@@ -31,6 +31,15 @@
  python 2.7 
 
 """
+import io_utils.EcoFOCI_netCDF_write as EcF_write
+from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
+import io_utils.ConfigParserLocal as ConfigParserLocal
+import pandas as pd
+import numpy as np
+from netCDF4 import Dataset
+import sys
+import argparse
+import datetime
 import warnings
 
 # remove the numpy/pandas/cython warnings
@@ -86,11 +95,12 @@ parser.add_argument(
     type=str,
     help="full path to config file - btloxy_config.yaml",
 )
-parser.add_argument("--cf", action="store_true", help="make cf compliant netcdf files")
+parser.add_argument("--cf", action="store_true",
+                    help="make cf compliant netcdf files")
 
 args = parser.parse_args()
 
-### Read oxygen file - processed by E. Weisgarver and
+# Read oxygen file - processed by E. Weisgarver and
 # Bottle Report file obtained by concatenating bottle files without headers
 ndf = pd.read_csv(args.oxypath, sep="\t|,", engine="python")
 ndf.rename(
@@ -102,7 +112,8 @@ ndf.rename(
 print("Oxygen Header Summary:")
 print(ndf.info())
 
-reportdf = pd.read_csv(args.btlpath, delimiter="\s+", parse_dates=[["date", "time"]])
+reportdf = pd.read_csv(args.btlpath, delimiter="\s+",
+                       parse_dates=[["date", "time"]])
 
 print("Btl Report Header Summary:")
 print(reportdf.info())
@@ -126,7 +137,7 @@ reportdf["Cast_Niskin"] = [
     for y, x in reportdf.iterrows()
 ]
 
-###three potential merged results
+# three potential merged results
 # Matching Btl and Nut file
 # No Btl - yes nut (no ctd information for this nut value...)
 # Yes Btl - no nut
@@ -142,9 +153,11 @@ gb = temp.groupby("cast_x")
 
 # get config file for output content
 if args.config_file_name.split(".")[-1] in ["json", "pyini"]:
-    EPIC_VARS_dict = ConfigParserLocal.get_config(args.config_file_name, "json")
+    EPIC_VARS_dict = ConfigParserLocal.get_config(
+        args.config_file_name, "json")
 elif args.config_file_name.split(".")[-1] in ["yaml"]:
-    EPIC_VARS_dict = ConfigParserLocal.get_config(args.config_file_name, "yaml")
+    EPIC_VARS_dict = ConfigParserLocal.get_config(
+        args.config_file_name, "yaml")
 else:
     sys.exit("Exiting: config files must have .pyini, .json, or .yaml endings")
 
@@ -173,7 +186,7 @@ if args.cf:
 
         history = "File created by merging oxygen analysis and bottle report files"
         # build netcdf file - filename is castid
-        ### Time should be consistent in all files as a datetime object
+        # Time should be consistent in all files as a datetime object
         # convert timestamp to datetime to epic time
         data_dic["time_temp"] = pd.to_datetime(
             data_dic["time"], format="%Y%m%d %H:%M:%S"
@@ -216,16 +229,18 @@ else:
 
         history = "File created by merging oxygen analysis and bottle report files"
         # build netcdf file - filename is castid
-        ### Time should be consistent in all files as a datetime object
+        # Time should be consistent in all files as a datetime object
         # convert timestamp to datetime to epic time
-        data_dic["time"] = pd.to_datetime(data_dic["time"], format="%Y%m%d %H:%M:%S")
+        data_dic["time"] = pd.to_datetime(
+            data_dic["time"], format="%Y%m%d %H:%M:%S")
         time_datetime = [x.to_pydatetime() for x in data_dic["time"]]
         time1, time2 = np.array(Datetime2EPIC(time_datetime), dtype="f8")
 
         ncinstance = EcF_write.NetCDF_Create_Profile(savefile=profile_name)
         ncinstance.file_create()
         ncinstance.sbeglobal_atts(
-            raw_data_file=args.oxypath.split("/")[-1], CruiseID=cruise, Cast=cast
+            raw_data_file=args.oxypath.split(
+                "/")[-1], CruiseID=cruise, Cast=cast
         )
         ncinstance.dimension_init(depth_len=len(tdata))
         ncinstance.variable_init(EPIC_VARS_dict)
