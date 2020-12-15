@@ -24,7 +24,7 @@ Raw ascii nutrient data as processed/QC'd by E. Wisegarver
 
 Data is expected to be of the format:   
 
-``` 
+```text 
 cast	niskin	PO4 (uM)	Sil (uM)	NO3 (uM)	NO2 (uM)	NH4 (uM)
 39	1	1.930	31.2	11.2	0.71	7.61
 39	2	1.938	31.5	11.2	0.72	7.78
@@ -40,7 +40,7 @@ and in order to match niskin and cast information, the *.report_btl file must be
 
 The report file is expected to have the format:
 
-``` 
+```text 
 cast    date    time    nb  Sal00   Sal11   Sbeox0Mm/Kg Sbeox0PS    Sbeox1Mm/Kg Sbeox1PS    Sigma-t00   PrDM    T090C   C0mS/cm T190C   C1mS/cm Sbeox0V Sbeox1V FlECO-AFLTurbWETntu0
 ctd036  07-Sep-2016 23:31:06    1   32.3731 32.3750 195.671 62.770  193.262 61.997  25.5671 102.266 5.2335  31.423602   5.2347  31.426318   1.8575  1.6237  0.0451  0.5544
 ```
@@ -57,7 +57,7 @@ The python routine to do this conversion is `Nut_ncgen.py`
 
 The usage is: 
 
-``` 
+```text 
 usage: Nut_ncgen.py [-h] CruiseID btlpath nutpath output config_file_name
 
 Merge and archive nutrient csv data and bottle data
@@ -77,7 +77,7 @@ and it can be found in the root `README.md` documentation.
 
 Long example of usage:   
 
-``` 
+```text 
 python Nut_ncgen.py DY1707 /full-path-to/dy1707l1.report_btl 
  /full-path-to/DY1707\ Nutrient\ Data.csv 
  /full-path-to/working/ /full-path-to/config_files/nut_uml_epickeys.yaml
@@ -89,7 +89,7 @@ A CF compliant file exists but is being held until 2018 processing (2019) as QC 
 
 Content looks as follows: 
 
-``` 
+``` yaml 
 ---
 NH4_189: 
   name: NH4
@@ -143,7 +143,7 @@ The python routine to do this is called `CTDpNUT_ncgen.py`
 
 The usage is:
 
-``` 
+```text 
 positional arguments:
   CruiseID          provide the cruiseid
   ctd_ncpath        ctd netcdf directory
@@ -161,7 +161,7 @@ This functions more or less the same as the nut and btl creation routines.  The 
 
 an example of the config file is as follows:
 
-``` 
+``` yaml
 ---
 Trb_980:
   name: Trb
