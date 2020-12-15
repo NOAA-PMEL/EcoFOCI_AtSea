@@ -23,27 +23,25 @@
 
  Compatibility:
  ==============
- python >=3.6
+ python >=3.8
  python 2.7 - not supported
 
 
 """
-# System Stack
+import argparse
 import datetime
 import os
-import argparse
 import sys
 
-# must be python 3.6 or greater
+# must be python 3.8 or greater
 try:
-    assert sys.version_info >= (3, 6)
+    assert sys.version_info >= (3, 8)
 except AssertionError:
-    sys.exit("Must be running python 3.6 or greater")
+    sys.exit("Must be running python 3.8 or greater")
 
 
-# Science Stack
-from netCDF4 import Dataset
 import numpy as np
+from netCDF4 import Dataset
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"

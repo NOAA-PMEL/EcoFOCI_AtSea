@@ -6,9 +6,8 @@
    Using Anaconda packaged Python
 """
 import datetime
-from netCDF4 import Dataset 
-from netCDF4 import MFDataset 
 
+from netCDF4 import Dataset, MFDataset
 
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'

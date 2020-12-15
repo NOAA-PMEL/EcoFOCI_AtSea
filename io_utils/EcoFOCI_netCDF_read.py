@@ -7,9 +7,9 @@ class definitions for netcdf4 wrappers
 """
 
 
+import numpy as np
 # science stack
 from netCDF4 import Dataset, MFDataset
-import numpy as np
 
 
 class EcoFOCI_netCDF(object):

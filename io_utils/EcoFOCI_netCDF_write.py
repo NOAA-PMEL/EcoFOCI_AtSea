@@ -21,7 +21,8 @@
 """
 
 # Standard library.
-import datetime, os
+import datetime
+import os
 
 # Scientific stack.
 import numpy as np

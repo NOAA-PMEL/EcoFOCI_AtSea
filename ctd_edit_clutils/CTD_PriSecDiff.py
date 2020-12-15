@@ -20,15 +20,12 @@
  python 2.7 - may work but not supported
 """
 
-# System Stack
-import datetime
 import argparse
+import datetime
 import os
+
 import numpy as np
-
-# Science Stack
 from netCDF4 import Dataset
-
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"

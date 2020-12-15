@@ -21,26 +21,23 @@
 
  Compatibility:
  ==============
- python >=3.6
+ python >=3.8
  python 2.7 - not supported
 
 """
-# System Stack
-import datetime
 import argparse
+import datetime
 import os
 import sys
 
-# must be python 3.6 or greater
+# must be python 3.8 or greater
 try:
-    assert sys.version_info >= (3, 6)
+    assert sys.version_info >= (3, 8)
 except AssertionError:
-    sys.exit("Must be running python 3.6 or greater")
+    sys.exit("Must be running python 3.8 or greater")
 
-
-# Science Stack
-from netCDF4 import Dataset
 import numpy as np
+from netCDF4 import Dataset
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"
@@ -120,27 +117,30 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-### get all .nc files from chosen directory
-full_path = [args.DataPath + x for x in os.listdir(args.DataPath) if x.endswith(".nc")]
+# get all .nc files from chosen directory
+full_path = [args.DataPath +
+             x for x in os.listdir(args.DataPath) if x.endswith(".nc")]
 
 if args.primary_oxygen:  # O_65
     for ifile, ncfile in enumerate(full_path):
         print(f"Working on file {ncfile} \n")
-        ###nc readin
+        # nc readin
         nchandle = Dataset(ncfile, "a")
         global_atts = get_global_atts(nchandle)
         vars_dic = get_vars(nchandle)
         data = ncreadfile_dic(nchandle, ["O_65"])
-        O2corr = (data["O_65"] * args.primary_oxygen[0]) + args.primary_oxygen[1]
+        O2corr = (data["O_65"] * args.primary_oxygen[0]) + \
+            args.primary_oxygen[1]
         O2corr[0, data["O_65"][0, :, 0, 0] >= 1e10, 0, 0] = 1e35
 
         repl_var(nchandle, "O_65", O2corr)
 
-        ### Look for existing program and edit comments / scoot down one level and add new
+        # Look for existing program and edit comments / scoot down one level and add new
         for i in range(1, 10):
             if ("PROG_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "PROG_CMNT0" + str(i + 1), global_atts["PROG_CMNT0" + str(i)]
+                    "PROG_CMNT0" +
+                    str(i + 1), global_atts["PROG_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -148,7 +148,8 @@ if args.primary_oxygen:  # O_65
                 )
             if ("EDIT_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "EDIT_CMNT0" + str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
+                    "EDIT_CMNT0" +
+                    str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -164,7 +165,7 @@ if args.primary_oxygen:  # O_65
 if args.secondary_oxygen:  # CTDOXY_4221
     for ifile, ncfile in enumerate(full_path):
         print(f"Working on file {ncfile} \n")
-        ###nc readin
+        # nc readin
         nchandle = Dataset(ncfile, "a")
         global_atts = get_global_atts(nchandle)
         vars_dic = get_vars(nchandle)
@@ -176,11 +177,12 @@ if args.secondary_oxygen:  # CTDOXY_4221
 
         repl_var(nchandle, "CTDOXY_4221", O2corr)
 
-        ### Look for existing program and edit comments / scoot down one level and add new
+        # Look for existing program and edit comments / scoot down one level and add new
         for i in range(1, 10):
             if ("PROG_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "PROG_CMNT0" + str(i + 1), global_atts["PROG_CMNT0" + str(i)]
+                    "PROG_CMNT0" +
+                    str(i + 1), global_atts["PROG_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -188,7 +190,8 @@ if args.secondary_oxygen:  # CTDOXY_4221
                 )
             if ("EDIT_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "EDIT_CMNT0" + str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
+                    "EDIT_CMNT0" +
+                    str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -205,18 +208,19 @@ if args.secondary_oxygen:  # CTDOXY_4221
 if args.primary_salinity:  # S_41
     for ifile, ncfile in enumerate(full_path):
         print(f"Working on file {ncfile} \n")
-        ###nc readin
+        # nc readin
         nchandle = Dataset(ncfile, "a")
         global_atts = get_global_atts(nchandle)
         vars_dic = get_vars(nchandle)
         data = ncreadfile_dic(nchandle, ["S_41"])
         repl_var(nchandle, "S_41", data["S_41"] + args.primary_salinity)
 
-        ### Look for existing program and edit comments / scoot down one level and add new
+        # Look for existing program and edit comments / scoot down one level and add new
         for i in range(1, 10):
             if ("PROG_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "PROG_CMNT0" + str(i + 1), global_atts["PROG_CMNT0" + str(i)]
+                    "PROG_CMNT0" +
+                    str(i + 1), global_atts["PROG_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -224,7 +228,8 @@ if args.primary_salinity:  # S_41
                 )
             if ("EDIT_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "EDIT_CMNT0" + str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
+                    "EDIT_CMNT0" +
+                    str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -239,18 +244,19 @@ if args.primary_salinity:  # S_41
 if args.secondary_salinity:  # S_42
     for ifile, ncfile in enumerate(full_path):
         print(f"Working on file {ncfile} \n")
-        ###nc readin
+        # nc readin
         nchandle = Dataset(ncfile, "a")
         global_atts = get_global_atts(nchandle)
         vars_dic = get_vars(nchandle)
         data = ncreadfile_dic(nchandle, ["S_42"])
         repl_var(nchandle, "S_42", data["S_42"] + args.secondary_salinity)
 
-        ### Look for existing program and edit comments / scoot down one level and add new
+        # Look for existing program and edit comments / scoot down one level and add new
         for i in range(1, 10):
             if ("PROG_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "PROG_CMNT0" + str(i + 1), global_atts["PROG_CMNT0" + str(i)]
+                    "PROG_CMNT0" +
+                    str(i + 1), global_atts["PROG_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -258,7 +264,8 @@ if args.secondary_salinity:  # S_42
                 )
             if ("EDIT_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "EDIT_CMNT0" + str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
+                    "EDIT_CMNT0" +
+                    str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -273,7 +280,7 @@ if args.secondary_salinity:  # S_42
 if args.fluorometer:  # fWS_973, or F_903
     for ifile, ncfile in enumerate(full_path):
         print(f"Working on file {ncfile} \n")
-        ###nc readin
+        # nc readin
         nchandle = Dataset(ncfile, "a")
         global_atts = get_global_atts(nchandle)
         vars_dic = get_vars(nchandle)
@@ -287,11 +294,12 @@ if args.fluorometer:  # fWS_973, or F_903
             except:
                 print("No valid Fluorometer key - F_903 or fWS_973 found")
 
-        ### Look for existing program and edit comments / scoot down one level and add new
+        # Look for existing program and edit comments / scoot down one level and add new
         for i in range(1, 10):
             if ("PROG_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "PROG_CMNT0" + str(i + 1), global_atts["PROG_CMNT0" + str(i)]
+                    "PROG_CMNT0" +
+                    str(i + 1), global_atts["PROG_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
@@ -299,12 +307,14 @@ if args.fluorometer:  # fWS_973, or F_903
                 )
             if ("EDIT_CMNT0" + str(i)) in global_atts.keys():
                 nchandle.setncattr(
-                    "EDIT_CMNT0" + str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
+                    "EDIT_CMNT0" +
+                    str(i + 1), global_atts["EDIT_CMNT0" + str(i)]
                 )
             else:
                 nchandle.setncattr(
                     "EDIT_CMNT01",
-                    "Fluorometer offset of: " + str(args.fluorometer) + " applied",
+                    "Fluorometer offset of: " +
+                    str(args.fluorometer) + " applied",
                 )
 
         nchandle.close()

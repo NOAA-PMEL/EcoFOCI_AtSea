@@ -22,20 +22,15 @@ Compatibility:
  python 2.7 
 """
 
-# System Stack
-import datetime
 import argparse
+import datetime
 import os
 
-# Science Stack
 from netCDF4 import Dataset
 
-# User Stack
-# Relative User Stack
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(1, parent_dir)
 import io_utils.ConfigParserLocal as ConfigParserLocal
-
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"
