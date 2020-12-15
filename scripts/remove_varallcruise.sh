@@ -11,9 +11,9 @@ prog_dir="/Users/bell/Programs/Python/EcoFOCI_AtSea/ctd_edit_clutils/"
 
 for files in $data_dir
 do
-    names=(${files//\// })
-    outfile=${names[${#names[@]} - 1]}
+    names=("${files//\// }")
+
     echo "processing file: $files"
-    python ${prog_dir}NetCDF_MissingVar.py ${files} CTDOST_4220
-    python ${prog_dir}NetCDF_MissingVar.py ${files} CTDOXY_4221
+    python ${prog_dir}NetCDF_MissingVar.py "${files}" CTDOST_4220
+    python ${prog_dir}NetCDF_MissingVar.py "${files}" CTDOXY_4221
 done

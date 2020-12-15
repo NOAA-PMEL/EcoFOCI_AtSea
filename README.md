@@ -4,7 +4,7 @@ Collection of utilites for processing and visualizing common data that is gather
 
 * SCS Data
 * CTD Data
-* UnderWay Data   
+* UnderWay Data
 
 ### CTD Basic Editing Utilities
 
@@ -27,7 +27,7 @@ Collection of utilites for processing and visualizing common data that is gather
 
 Help Documentation:   
 
-``` 
+``` text
 usage: Nut_ncgen.py [-h] CruiseID btlpath nutpath output config_file_name
 
 Merge and archive nutrient csv data and bottle data
@@ -45,11 +45,11 @@ optional arguments:
 
 Long example of usage:   
 
-``` 
+`
 python Nut_ncgen.py DY1707 /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/dy1707l1.report_btl 
  /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/DiscreteNutrients/DY1707\ Nutrient\ Data.csv 
  /Users/bell/ecoraid/2017/CTDcasts/dy1707l1/working/ /Users/bell/Programs/Python/EcoFOCI_AtSea/config_files/nut_uml_epickeys.yaml
-```
+`
 
 The config file is a YAML formatted file that specifies the variables and attributes of the netcdf file.  There are many examples in the config_files directory herein.
 
@@ -73,7 +73,7 @@ usage `python CTD_plot.py {full/path/to/file.nc} -{plotflag}`
 
 plotflag options:
 
-``` 
+``` none
   -h, --help            show this help message and exit
   -TSvD, --TSvD         Temperature, Salinity, SigmaT vs depth
   -OxyFluor, --OxyFluor

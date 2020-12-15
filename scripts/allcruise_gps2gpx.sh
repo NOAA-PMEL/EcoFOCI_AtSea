@@ -14,13 +14,13 @@ out_dir="/Volumes/WDC_internal/Users/bell/scratch/"
 csv=1
 for files in $data_dir
 do
-    names=(${files//\// })
+    names=("${files//\// }")
     outfile=${names[${#names[@]} - 1]}
     echo "processing file: $files"
     if [ ${csv} -eq 0 ]
     then
-    	python ${prog_dir}SCS_shptrack2gpx.py -i ${files}  >> ${out_dir}${outfile}.gpx
+    	python ${prog_dir}SCS_shptrack2gpx.py -i "${files}"  >> ${out_dir}"${outfile}".gpx
     else
-    	python ${prog_dir}SCS_shptrack2gpx.py -i ${files} -csv >> ${out_dir}${outfile}.csv
+    	python ${prog_dir}SCS_shptrack2gpx.py -i "${files}" -csv >> ${out_dir}"${outfile}".csv
    	fi
 done

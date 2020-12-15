@@ -25,12 +25,10 @@ python 2.7
 
 """
 
-# System Stack
-import datetime
-import shutil
-import os
 import argparse
-
+import datetime
+import os
+import shutil
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"

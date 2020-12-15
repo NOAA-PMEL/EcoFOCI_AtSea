@@ -91,8 +91,6 @@ def sigmaTheta(user_in, user_out):
 
         # open/read netcdf files
         df = EcoFOCI_netCDF(ncfile)
-        global_atts = df.get_global_atts()
-        vars_dic = df.get_vars()
         data = df.ncreadfile_dic()
         nchandle = df._getnchandle_()
 
@@ -203,8 +201,6 @@ def sigmaT(user_in, user_out):
 
         # open/read netcdf files
         df = EcoFOCI_netCDF(ncfile)
-        global_atts = df.get_global_atts()
-        vars_dic = df.get_vars()
         data = df.ncreadfile_dic()
         nchandle = df._getnchandle_()
 
@@ -263,8 +259,6 @@ def O2PercentSat(user_in, user_out):
 
         # open/read netcdf files
         df = EcoFOCI_netCDF(ncfile)
-        global_atts = df.get_global_atts()
-        vars_dic = df.get_vars()
         data = df.ncreadfile_dic()
         nchandle = df._getnchandle_()
 
@@ -397,8 +391,6 @@ def O2_conv_mll2umkg(user_in, user_out):
 
         # open/read netcdf files
         df = EcoFOCI_netCDF(ncfile)
-        global_atts = df.get_global_atts()
-        vars_dic = df.get_vars()
         data = df.ncreadfile_dic()
         nchandle = df._getnchandle_()
 
