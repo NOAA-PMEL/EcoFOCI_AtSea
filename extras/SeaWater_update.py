@@ -23,17 +23,13 @@ migrate to xarray for data
  python 2.7 - Valid as of 2/19/19 but not to be expected to work or fixed if broken
 
  """
-# System Stack
+import argparse
 import datetime
 import os
-import argparse
 
-# Science Stack
-import seawater as sw
 import numpy as np
+import seawater as sw
 
-# user stack
-# Relative User Stack
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(1, parent_dir)
 from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF

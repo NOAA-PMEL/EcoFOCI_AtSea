@@ -33,21 +33,17 @@
 
 """
 
-# System Stack
-import datetime
 import argparse
+import datetime
 import sys
 
-# Science Stack
-from netCDF4 import Dataset
 import numpy as np
 import pandas as pd
+from netCDF4 import Dataset
 
-# User Packages
 import io_utils.ConfigParserLocal as ConfigParserLocal
-from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
 import io_utils.EcoFOCI_netCDF_write as EcF_write
-
+from calc.EPIC2Datetime import Datetime2EPIC, get_UDUNITS
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"
@@ -86,7 +82,7 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-### Read Nutrient file - processed by E. Weisgarver and
+# Read Nutrient file - processed by E. Weisgarver and
 # Bottle Report file obtained by concatenating bottle files without headers
 ndf = pd.read_csv(args.nutpath, sep="\t|,", engine="python")
 ndf.rename(
@@ -98,7 +94,8 @@ ndf.rename(
 print("Nutrient Header Summary:")
 print(ndf.info())
 
-reportdf = pd.read_csv(args.btlpath, delimiter="\s+", parse_dates=[["date", "time"]])
+reportdf = pd.read_csv(args.btlpath, delimiter="\s+",
+                       parse_dates=[["date", "time"]])
 
 print("Btl Report Header Summary:")
 print(reportdf.info())
@@ -122,7 +119,7 @@ reportdf["Cast_Niskin"] = [
     for y, x in reportdf.iterrows()
 ]
 
-###three potential merged results
+# three potential merged results
 # Matching Btl and Nut file
 # No Btl - yes nut (no ctd information for this nut value...)
 # Yes Btl - no nut
@@ -138,9 +135,11 @@ gb = temp.groupby("cast_y")
 
 # get config file for output content
 if args.config_file_name.split(".")[-1] in ["json", "pyini"]:
-    EPIC_VARS_dict = ConfigParserLocal.get_config(args.config_file_name, "json")
+    EPIC_VARS_dict = ConfigParserLocal.get_config(
+        args.config_file_name, "json")
 elif args.config_file_name.split(".")[-1] in ["yaml"]:
-    EPIC_VARS_dict = ConfigParserLocal.get_config(args.config_file_name, "yaml")
+    EPIC_VARS_dict = ConfigParserLocal.get_config(
+        args.config_file_name, "yaml")
 else:
     sys.exit("Exiting: config files must have .pyini, .json, or .yaml endings")
 
@@ -161,13 +160,15 @@ for i, cast in enumerate(gb.groups):
 
     cruise = args.CruiseID.lower()
     cast = list(tdata.groupby("cast_y").groups.keys())[0]
-    profile_name = args.output + cruise + cast.lower().replace("ctd", "c") + "_nut.nc"
+    profile_name = args.output + cruise + \
+        cast.lower().replace("ctd", "c") + "_nut.nc"
 
     history = "File created by merging nutrient analysis and bottle report files"
     # build netcdf file - filename is castid
-    ### Time should be consistent in all files as a datetime object
+    # Time should be consistent in all files as a datetime object
     # convert timestamp to datetime to epic time
-    data_dic["time"] = pd.to_datetime(data_dic["time"], format="%Y%m%d %H:%M:%S")
+    data_dic["time"] = pd.to_datetime(
+        data_dic["time"], format="%Y%m%d %H:%M:%S")
     time_datetime = [x.to_pydatetime() for x in data_dic["time"]]
     time1, time2 = np.array(Datetime2EPIC(time_datetime), dtype="f8")
 

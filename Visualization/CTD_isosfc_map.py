@@ -17,26 +17,21 @@ Generates png map of isosurface for all casts in a designated cruise
 
 """
 
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
 
-#System Stack
-import datetime
 import argparse
+import datetime
 import os
 import sys
 
-#Science Stack
+import matplotlib as mpl
 import numpy as np
 from netCDF4 import Dataset
 
-# Plotting Stack
-import matplotlib as mpl
 mpl.use('Agg')
-from mpl_toolkits.basemap import Basemap, shiftgrid
-import matplotlib.pyplot as plt
 import matplotlib as mpl
-
-
+import matplotlib.pyplot as plt
+from mpl_toolkits.basemap import Basemap, shiftgrid
 
 """--------------------------------netcdf Routines---------------------------------------"""
 

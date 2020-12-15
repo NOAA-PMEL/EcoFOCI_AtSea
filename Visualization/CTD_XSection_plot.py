@@ -23,34 +23,30 @@
 
 """
 
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
 
-
-#System Stack
-import datetime
 import argparse
+import datetime
 import os
 
+import matplotlib as mpl
 import numpy as np
 import pandas as pd
 
-# Visual Stack
-import matplotlib as mpl
 mpl.use('Agg') 
-import matplotlib.pyplot as plt
-import matplotlib.colors as colors
-from matplotlib.dates import YearLocator, WeekdayLocator, MonthLocator, DayLocator, HourLocator, DateFormatter
-import matplotlib.ticker as ticker
 import cmocean
+import matplotlib.colors as colors
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+from matplotlib.dates import (DateFormatter, DayLocator, HourLocator,
+                              MonthLocator, WeekdayLocator, YearLocator)
 
-# Relative User Stack
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(1, parent_dir)
 from calc.EPIC2Datetime import EPIC2Datetime, get_UDUNITS
 from calc.haversine import distance
 from io_utils import ConfigParserLocal
 from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF
-
 
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'

@@ -21,46 +21,38 @@
 
  Compatibility:
  ==============
- python >=3.6 **Tested (with cartopy)
+ python >=3.8 **Tested (with cartopy)
  python 2.7 (failed - may be due to conda issues)
 
 """
 
 from __future__ import absolute_import, division, print_function
 
-
 import sys
 
-# must be python 3.6 or greater
+# must be python 3.8 or greater
 try:
-    assert sys.version_info >= (3, 6)
+    assert sys.version_info >= (3, 8)
 except AssertionError:
-    sys.exit("Must be running python 3.6 or greater")
+    sys.exit("Must be running python 3.8 or greater")
 
-# System Stack
+import argparse
 import datetime
 import os
-import argparse
 
-# DB Stack
+import matplotlib as mpl
 import mysql.connector
-
-# Science Stack
 import numpy as np
 from netCDF4 import Dataset
 
-# Visual Packages
-import matplotlib as mpl
-
 mpl.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.ticker as mticker
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
-from cartopy.mpl.ticker import LongitudeFormatter, LatitudeFormatter
-
-import xarray as xa
 import cmocean
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
+import xarray as xa
+from cartopy.mpl.ticker import LatitudeFormatter, LongitudeFormatter
 
 # user stack
 # Relative User Stack

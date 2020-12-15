@@ -26,16 +26,9 @@ python >=3.6 - Not Tested
 python 2.7 
 
 """
-import warnings
-
-# remove the numpy/pandas/cython warnings
-warnings.filterwarnings(action="ignore", message="numpy.dtype size changed,")
-
-# System Stack
-import datetime
 import argparse
+import datetime
 
-# Science Stack
 import pandas as pd
 import seawater as sw
 

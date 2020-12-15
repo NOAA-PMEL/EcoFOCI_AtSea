@@ -7,18 +7,15 @@ limit to four variables
 
 """
 
-#System Stack
 import datetime
-
-# science stack
-import numpy as np
-
-# Visual Stack
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from matplotlib.dates import YearLocator, WeekdayLocator, MonthLocator, DayLocator, HourLocator, DateFormatter
 import matplotlib.ticker as ticker
+import numpy as np
+from matplotlib.dates import (DateFormatter, DayLocator, HourLocator,
+                              MonthLocator, WeekdayLocator, YearLocator)
+
 
 
 class CTDProfilePlot(object):

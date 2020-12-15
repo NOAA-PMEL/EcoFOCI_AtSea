@@ -8,19 +8,16 @@
 
 """
 
-# System Stack
-import datetime
 import argparse
+import datetime
 import os
 
-# science stack
-import pandas as pd
 import numpy as np
+import pandas as pd
 from netCDF4 import date2num, num2date
 
-# User Stack
-import io_utils.EcoFOCI_netCDF_write as EcF_write
 import io_utils.ConfigParserLocal as ConfigParserLocal
+import io_utils.EcoFOCI_netCDF_write as EcF_write
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"
@@ -54,7 +51,8 @@ def convert_dms_to_dec(value, dir):
 
 """------------------------------- MAIN------------------------------------------------"""
 
-parser = argparse.ArgumentParser(description="Convert SCS GPGGA gps files to .nc files")
+parser = argparse.ArgumentParser(
+    description="Convert SCS GPGGA gps files to .nc files")
 parser.add_argument("inpath", type=str, help="path to data files")
 parser.add_argument("ConfigFile", type=str, help="full path to nc config file")
 args = parser.parse_args()
@@ -104,5 +102,6 @@ ncinstance.sbeglobal_atts(
 ncinstance.dimension_init(recnum_len=len(data))
 ncinstance.variable_init(EPIC_VARS_dict)
 ncinstance.add_coord_data(recnum=range(1, len(data) + 1))
-ncinstance.add_data(EPIC_VARS_dict, data_dic=data, missing_values=np.nan, pandas=True)
+ncinstance.add_data(EPIC_VARS_dict, data_dic=data,
+                    missing_values=np.nan, pandas=True)
 ncinstance.close()

@@ -19,28 +19,22 @@ Input - CruiseID
  python 2.7 
 
 """
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
 
-#System Stack
+import argparse
 import datetime
 import os
-import argparse
 
-
-#Science Stack
+import matplotlib as mpl
 import numpy as np
 from netCDF4 import Dataset
 
-#Visual Packages
-import matplotlib as mpl
 mpl.use('Agg') 
 import matplotlib.pyplot as plt
 from matplotlib.ticker import AutoMinorLocator
 
-# User Stack
 from plots.profile_plot import CTDProfilePlot
 
-# Relative User Stack
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(1, parent_dir)
 from calc.EPIC2Datetime import EPIC2Datetime, get_UDUNITS

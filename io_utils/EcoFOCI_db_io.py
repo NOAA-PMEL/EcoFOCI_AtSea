@@ -16,9 +16,11 @@
 
 """
 
-import mysql.connector
-import ConfigParserLocal 
 import datetime
+
+import mysql.connector
+
+import ConfigParserLocal
 
 __author__   = 'Shaun Bell'
 __email__    = 'shaun.bell@noaa.gov'

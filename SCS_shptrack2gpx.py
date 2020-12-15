@@ -8,16 +8,12 @@
 
 """
 
-# System Stack
-import datetime
 import argparse
+import datetime
 
-# science stack
 import pandas as pd
 
-# User Stack
 from io_utils import ConfigParserLocal
-
 
 __author__ = "Shaun Bell"
 __email__ = "shaun.bell@noaa.gov"
@@ -56,7 +52,8 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument("-i", "--input", type=str, help="path to data files")
 parser.add_argument("-o", "--output", type=str, help="path to save files")
-parser.add_argument("-csv", "--csv", action="store_true", help="save as csv instead")
+parser.add_argument("-csv", "--csv", action="store_true",
+                    help="save as csv instead")
 
 args = parser.parse_args()
 
@@ -72,12 +69,14 @@ if args.input:
         lat = convert_dms_to_dec(row[4], row[5])
         lon = convert_dms_to_dec(row[6], row[7])
         timestamp = (
-            (pd.to_datetime(row[0] + " " + row[1][:-4], format="%m/%d/%Y %H:%M:%S"))
+            (pd.to_datetime(row[0] + " " + row[1]
+                            [:-4], format="%m/%d/%Y %H:%M:%S"))
             .to_pydatetime()
             .isoformat()
         )
         if args.csv:
-            print("{lat},{lon},{time}").format(lat=lat, lon=lon, time=timestamp)
+            print("{lat},{lon},{time}").format(
+                lat=lat, lon=lon, time=timestamp)
         else:
             print(
                 '<trkpt lat="{lat}" lon="{lon}"><ele>0.0</ele><time>{time}Z</time></trkpt>'
