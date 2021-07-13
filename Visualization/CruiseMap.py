@@ -18,6 +18,7 @@
 
  Future
  ======
+ DEPRICATED: Replaced with tools in ECOFOCIpy
 
  Compatibility:
  ==============
