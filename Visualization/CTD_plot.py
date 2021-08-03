@@ -27,20 +27,18 @@ import os
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
-from calc.EPIC2Datetime import EPIC2Datetime, get_UDUNITS
-from calc.haversine import distance
-from io_utils import ConfigParserLocal
-from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF
+
 from matplotlib.ticker import AutoMinorLocator
 from netCDF4 import Dataset
 
 from plots.profile_plot import CTDProfilePlot
 
-mpl.use('Agg')
-
-
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.sys.path.insert(1, parent_dir)
+from calc.EPIC2Datetime import EPIC2Datetime, get_UDUNITS
+from calc.haversine import distance
+from io_utils import ConfigParserLocal
+from io_utils.EcoFOCI_netCDF_read import EcoFOCI_netCDF
 
 __author__ = 'Shaun Bell'
 __email__ = 'shaun.bell@noaa.gov'
