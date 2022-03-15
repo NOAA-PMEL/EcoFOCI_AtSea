@@ -1,3 +1,10 @@
+| :warning: WARNING          |
+|:---------------------------|
+| Depricated ...             |
+
+*This repository is only provided as a historical checkpoint. It was a collection of old scripts and routines that are no longer relevant and may be removed or deleted in the future.  Do not anticipate updates, repairs, or for the code to even work*
+
+
 # README
 
 Collection of utilites for processing and visualizing common data that is gathered during field cruises.
